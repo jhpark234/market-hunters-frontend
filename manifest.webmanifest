@@ -1,0 +1,17 @@
+{
+  "name": "MarketHunters",
+  "short_name": "MH",
+  "description": "실전형 AI 주식·경제지표 플랫폼",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#020b18",
+  "theme_color": "#07172f",
+  "icons": [
+    {
+      "src": "assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

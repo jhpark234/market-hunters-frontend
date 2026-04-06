@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google-site-verification" content="L8eqhqjEsVB5dfhXCo4rHNy-VlpYryIOZ7rrANznNTg" />
+  <meta name="naver-site-verification" content="91342643867370cf185a94e51a023a36011f8a92" />
+  <meta name="google-adsense-account" content="ca-pub-8741516776558957">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>MarketHunters | 실전형 AI 주식·경제지표 플랫폼</title>
+  <meta name="description" content="코스피, 코스닥, 나스닥 전용 투자 정보 플랫폼. 종목 검색, AI 분석, 뉴스 한글 요약, 경제지표 캘린더와 과거 데이터까지 한 번에 확인하세요." />
+  <meta name="keywords" content="코스피, 코스닥, 나스닥, 주식 AI 분석, 경제지표 캘린더, 미국 CPI, 한국 기준금리" />
+  <meta property="og:title" content="MarketHunters | 실전형 AI 주식·경제지표 플랫폼" />
+  <meta property="og:description" content="국내외 종목, 경제지표, AI 분석, 뉴스 요약을 모바일 퍼스트 화면으로 제공합니다." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-card.svg" />
+  <meta name="theme-color" content="#07172f" />
+  
+  <link rel="canonical" href="https://markethunters.kr/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:url" content="https://markethunters.kr/" />
+  <meta property="og:site_name" content="MarketHunters" />
+
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <!-- Google Tag Manager -->
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id=GTM-PLXLJ4RX'+dl;
+  f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PLXLJ4RX');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8741516776558957"
+     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css?v=20260331-1" />
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLXLJ4RX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager -->
+  <div class="mobile-app-shell">
+    <header class="app-header glass-card">
+      <div class="brand-row">
+        <img src="assets/logo.svg" alt="MarketHunters 로고" class="brand-logo" />
+        <div>
+          <div class="brand-name">MarketHunters</div>
+          <div class="brand-sub">실전형 AI 투자 정보 허브</div>
+        </div>
+      </div>
+      
+      <div class="lang-switch">
+        <a href="/" class="lang-btn active">🇰🇷 KR</a>
+        <a href="/en/" class="lang-btn">🇺🇸 EN</a>
+      </div>
+
+    </header>
+
+    <main class="page-content">
+      <section class="hero-section glass-card">
+        <div class="hero-copy">
+          <span class="section-badge">실전 홈</span>
+          <h1>종목·뉴스·경제지표를 한 화면에서</h1>
+          <p>유저가 바로 쓰기 좋게 검색, AI 분석, 뉴스 한글 요약, 경제지표 상세 이동까지 모바일 기준으로 정리했습니다.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#search-section">종목 찾기</a>
+          <a class="secondary-btn" href="#calendar-section">지표 확인</a>
+          <a class="secondary-btn" href="/stocks.html">인기 종목</a>
+        </div>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card glass-card">
+          <div class="stat-label">시장 지수</div>
+          <div id="indices" class="index-list compact"></div>
+        </article>
+        <article class="stat-card glass-card">
+          <div class="stat-label">AI 시장 브리핑</div>
+          <div id="market-brief-time" class="meta-time">생성: -</div>
+          <div id="brief" class="brief-box">불러오는 중...</div>
+        </article>
+      </section>
+
+      <section id="search-section" class="search-section glass-card">
+        <div class="section-header">
+          <div>
+            <div class="section-eyebrow">Stock Search</div>
+            <h2>종목 검색</h2>
+          </div>
+          <div class="segmented">
+            <button class="seg-btn active" data-market="ALL">전체</button>
+            <button class="seg-btn" data-market="KOSPI">코스피</button>
+            <button class="seg-btn" data-market="KOSDAQ">코스닥</button>
+            <button class="seg-btn" data-market="NASDAQ">나스닥</button>
+          </div>
+        </div>
+        <div class="search-bar-wrap">
+          <input id="search-input" class="search-input" placeholder="삼성전자, 005930, NVDA처럼 검색" />
+          <button id="search-btn" class="search-btn">검색</button>
+        </div>
+        <div id="search-results" class="search-results"></div>
+      </section>
+
+      <section class="market-board">
+        <div class="section-header inline">
+          <div>
+            <div class="section-eyebrow">Market Movers</div>
+            <h2>상승·하락 TOP</h2>
+          </div>
+        </div>
+        <div class="market-panels">
+          <article class="market-panel glass-card">
+            <div class="market-head"><h3>코스피</h3><span>대표주</span></div>
+            <div class="dual-columns mobile-two">
+              <div><div class="subhead up">상승</div><div id="kospi-up" class="stock-list"></div></div>
+              <div><div class="subhead down">하락</div><div id="kospi-down" class="stock-list"></div></div>
+            </div>
+          </article>
+          <article class="market-panel glass-card">
+            <div class="market-head"><h3>코스닥</h3><span>성장주</span></div>
+            <div class="dual-columns mobile-two">
+              <div><div class="subhead up">상승</div><div id="kosdaq-up" class="stock-list"></div></div>
+              <div><div class="subhead down">하락</div><div id="kosdaq-down" class="stock-list"></div></div>
+            </div>
+          </article>
+          <article class="market-panel glass-card">
+            <div class="market-head"><h3>나스닥</h3><span>미국 대표주</span></div>
+            <div class="dual-columns mobile-two">
+              <div><div class="subhead up">상승</div><div id="nasdaq-up" class="stock-list"></div></div>
+              <div><div class="subhead down">하락</div><div id="nasdaq-down" class="stock-list"></div></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="legal-section glass-card">
+        <div class="section-header inline">
+          <div>
+            <div class="section-eyebrow">Safe Information Design</div>
+            <h2>법적 리스크를 낮춘 정보 구조</h2>
+          </div>
+        </div>
+        <div id="legal-box" class="brief-box"></div>
+      </section>
+
+      <section id="calendar-section" class="calendar-section glass-card">
+        <div class="section-header inline">
+          <div>
+            <div class="section-eyebrow">Economic Calendar</div>
+            <h2>경제지표 캘린더</h2>
+          </div>
+          <span class="mini-note">클릭 시 과거 데이터 + 시장 영향 상세 페이지로 이동</span>
+        </div>
+        <div id="economic" class="economic-list"></div>
+      </section>
+
+      <section class="glass-card" style="padding:0; overflow:hidden; border-radius:26px; margin-top:18px;">
+        <div style="
+          display:flex;
+          justify-content:space-between;
+          align-items:flex-start;
+          gap:16px;
+          padding:18px 20px 14px 20px;
+          border-bottom:1px solid rgba(255,255,255,0.06);
+        ">
+          <div style="padding-left:2px;">
+            <div style="
+              font-size:12px;
+              font-weight:800;
+              letter-spacing:0.08em;
+              color:#8fb7ff;
+              text-transform:uppercase;
+              margin-bottom:6px;
+              line-height:1;
+            ">
+              Market Insight
+            </div>
+            <h2 style="
+              margin:0;
+              font-size:18px;
+              line-height:1.2;
+              color:#ffffff;
+            ">
+              주요 칼럼
+            </h2>
+          </div>
+      
+          <div style="
+            font-size:13px;
+            color:#9aa4b2;
+            white-space:nowrap;
+            margin-top:6px;
+            text-align:right;
+          ">
+            매크로 · 지정학 · 기술주
+          </div>
+        </div>
+      
+        <div style="padding:12px;">
+          <a href="insight-us-iran.html" style="
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            gap:14px;
+            text-decoration:none;
+            background:rgba(255,255,255,0.03);
+            border:1px solid rgba(255,255,255,0.07);
+            border-radius:20px;
+            padding:16px 16px;
+            margin-bottom:12px;
+          ">
+            <div style="min-width:0;">
+              <div style="font-size:16px; font-weight:800; color:#eef4ff; line-height:1.35; margin-bottom:6px;">
+                미국 vs 이란 긴장 고조
+              </div>
+              <div style="font-size:13px; color:#9fb0c7; line-height:1.55;">
+                중동 지정학 리스크와 국제 유가, 금융시장 영향
+              </div>
+            </div>
+            <div style="
+              flex:0 0 auto;
+              color:#ffffff;
+              font-size:13px;
+              font-weight:800;
+              align-self:center;
+            ">
+              칼럼
+            </div>
+          </a>
+      
+          <a href="insight-inflation.html" style="
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            gap:14px;
+            text-decoration:none;
+            background:rgba(255,255,255,0.03);
+            border:1px solid rgba(255,255,255,0.07);
+            border-radius:20px;
+            padding:16px 16px;
+            margin-bottom:12px;
+          ">
+            <div style="min-width:0;">
+              <div style="font-size:16px; font-weight:800; color:#eef4ff; line-height:1.35; margin-bottom:6px;">
+                인플레이션 시대, 투자 전략은 어떻게 달라져야 하나
+              </div>
+              <div style="font-size:13px; color:#9fb0c7; line-height:1.55;">
+                물가, 금리, 자산배분과 밸류에이션 환경 변화
+              </div>
+            </div>
+            <div style="
+              flex:0 0 auto;
+              color:#ffffff;
+              font-size:13px;
+              font-weight:800;
+              align-self:center;
+            ">
+              칼럼
+            </div>
+          </a>
+      
+          <a href="insight-ai-economy.html" style="
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            gap:14px;
+            text-decoration:none;
+            background:rgba(255,255,255,0.03);
+            border:1px solid rgba(255,255,255,0.07);
+            border-radius:20px;
+            padding:16px 16px;
+            margin-bottom:12px;
+          ">
+            <div style="min-width:0;">
+              <div style="font-size:16px; font-weight:800; color:#eef4ff; line-height:1.35; margin-bottom:6px;">
+                AI 산업은 금융시장을 어떻게 바꾸고 있나
+              </div>
+              <div style="font-size:13px; color:#9fb0c7; line-height:1.55;">
+                반도체, 데이터센터, 기술주 밸류에이션 변화
+              </div>
+            </div>
+            <div style="
+              flex:0 0 auto;
+              color:#ffffff;
+              font-size:13px;
+              font-weight:800;
+              align-self:center;
+            ">
+              칼럼
+            </div>
+          </a>
+      
+          <a href="insight-china-economy.html" style="
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            gap:14px;
+            text-decoration:none;
+            background:rgba(255,255,255,0.03);
+            border:1px solid rgba(255,255,255,0.07);
+            border-radius:20px;
+            padding:16px 16px;
+            margin-bottom:12px;
+          ">
+            <div style="min-width:0;">
+              <div style="font-size:16px; font-weight:800; color:#eef4ff; line-height:1.35; margin-bottom:6px;">
+                중국 경제 둔화, 글로벌 시장에 미치는 영향
+              </div>
+              <div style="font-size:13px; color:#9fb0c7; line-height:1.55;">
+                부동산, 수출, 원자재, 한국 경제 연관성
+              </div>
+            </div>
+            <div style="
+              flex:0 0 auto;
+              color:#ffffff;
+              font-size:13px;
+              font-weight:800;
+              align-self:center;
+            ">
+              칼럼
+            </div>
+          </a>
+      
+          <a href="insight-interest-rate.html" style="
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            gap:14px;
+            text-decoration:none;
+            background:rgba(255,255,255,0.03);
+            border:1px solid rgba(255,255,255,0.07);
+            border-radius:20px;
+            padding:16px 16px;
+            margin-bottom:12px;
+          ">
+            <div style="min-width:0;">
+              <div style="font-size:16px; font-weight:800; color:#eef4ff; line-height:1.35; margin-bottom:6px;">
+                금리 사이클과 주식시장, 무엇을 봐야 하나
+              </div>
+              <div style="font-size:13px; color:#9fb0c7; line-height:1.55;">
+                연준 정책, 경기 사이클, 업종별 민감도
+              </div>
+            </div>
+            <div style="
+              flex:0 0 auto;
+              color:#ffffff;
+              font-size:13px;
+              font-weight:800;
+              align-self:center;
+            ">
+              칼럼
+            </div>
+          </a>
+      
+          <a href="insight-fomc.html" style="
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            gap:14px;
+            text-decoration:none;
+            background:rgba(255,255,255,0.03);
+            border:1px solid rgba(255,255,255,0.07);
+            border-radius:20px;
+            padding:16px 16px;
+            margin-bottom:4px;
+          ">
+            <div style="min-width:0;">
+              <div style="font-size:16px; font-weight:800; color:#eef4ff; line-height:1.35; margin-bottom:6px;">
+                FOMC 일정과 시장의 해석, 무엇이 중요할까
+              </div>
+              <div style="font-size:13px; color:#9fb0c7; line-height:1.55;">
+                발표문, 점도표, 파월 기자회견의 핵심 포인트
+              </div>
+            </div>
+            <div style="
+              flex:0 0 auto;
+              color:#ffffff;
+              font-size:13px;
+              font-weight:800;
+              align-self:center;
+            ">
+              칼럼
+            </div>
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer style="
+    max-width: 960px;
+    margin: 18px auto 90px auto;
+    padding: 16px 20px;
+    text-align: center;
+    color: #9aa4b2;
+    font-size: 14px;
+    line-height: 1.7;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  ">
+  <p style="margin:0;">
+    본 서비스는 시장 정보와 뉴스 해설을 제공하는 정보 서비스이며 특정 종목의 매수·매도 권유, 목표가 제시, 수익 보장을 제공하지 않습니다.
+  </p>
+</footer>
+
+    <nav class="bottom-nav glass-card">
+      <a href="index.html" class="bottom-item active">홈</a>
+      <a href="#search-section" class="bottom-item">검색</a>
+      <a href="#calendar-section" class="bottom-item">지표</a>
+      <a href="stock.html?symbol=NVDA" class="bottom-item">종목</a>
+    </nav>
+  </div>
+
+  <script src="home_live.js?v=20260331-1"></script>
+  <script src="market_top10.js?v=20260331-1"></script>
+  <script src="search_home.js?v=20260331-1"></script>
+  <script src="home_meta.js?v=20260331-1"></script>
+
+  <script>
+  (async function () {
+    try {
+      const path = window.location.pathname;
+      if (!path.startsWith("/stocks/") && !path.startsWith("/stock/")) return;
+
+      const slug = path
+        .replace(/^\/stocks\//, "")
+        .replace(/^\/stock\//, "")
+        .replace(/\/$/, "")
+        .trim()
+        .toLowerCase();
+
+      if (!slug) return;
+
+      let symbol = "";
+      try {
+        const res = await fetch("/slug_map.json?v=20260331-1", { cache: "no-store" });
+        if (res.ok) {
+          const slugMap = await res.json();
+          symbol = String(slugMap?.[slug] || "").trim();
+        }
+      } catch (_) {}
+
+      if (!symbol) {
+        symbol = slug.toUpperCase().replace(/\.(KS|KQ)$/i, "");
+      }
+
+      if (!symbol) return;
+      window.location.replace("/stock.html?symbol=" + encodeURIComponent(symbol));
+    } catch (e) {
+      console.warn("stocks route redirect skipped", e);
+    }
+  })();
+  </script>
+
+  <footer style="
+  margin: 30px 0 90px 0;
+  padding: 16px 20px;
+  font-size: 14px;
+  color: #9aa4b2;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.06);
+">
+  <a href="about.html" style="color:#9aa4b2; text-decoration:none; margin:0 6px;">소개</a>
+  <span>|</span>
+  <a href="privacy.html" style="color:#9aa4b2; text-decoration:none; margin:0 6px;">개인정보처리방침</a>
+  <span>|</span>
+  <a href="terms.html" style="color:#9aa4b2; text-decoration:none; margin:0 6px;">이용약관</a>
+  <span>|</span>
+  <a href="contact.html" style="color:#9aa4b2; text-decoration:none; margin:0 6px;">문의</a>
+</footer>
+
+</body>
+</html>

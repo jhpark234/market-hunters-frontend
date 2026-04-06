@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+  <title>종목 상세 | MarketHunters</title>
+
+  <meta name="description" content="종목 AI 분석, 뉴스 한글 요약, 차트와 체크포인트를 확인하는 상세 페이지" />
+  <meta name="keywords" content="주식 분석, 종목 분석, AI 주식 분석, NVDA 주식, 테슬라 주식, 삼성전자 주식, MarketHunters" />
+  <meta name="author" content="MarketHunters" />
+  <meta name="theme-color" content="#07172f" />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="canonical" href="https://markethunters.kr/stock.html" />
+
+  <meta property="og:title" content="종목 상세 | MarketHunters" />
+  <meta property="og:description" content="AI 기반 종목 분석과 뉴스 요약, 차트와 핵심 체크포인트 제공" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://markethunters.kr/stock.html" />
+  <meta property="og:image" content="https://markethunters.kr/assets/og-card.svg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="종목 상세 | MarketHunters" />
+  <meta name="twitter:description" content="AI 기반 종목 분석과 뉴스 요약, 차트와 핵심 체크포인트 제공" />
+  <meta name="twitter:image" content="https://markethunters.kr/assets/og-card.svg" />
+
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G-MNXB2Y6Z61"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-G-MNXB2Y6Z61');
+  </script>
+
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PLXLJ4RX');
+  </script>
+
+  <link rel="stylesheet" href="style.css?v=20260331-1" />
+</head>
+<body>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLXLJ4RX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <div class="mobile-app-shell">
+    <div class="detail-shell">
+      <header class="detail-topbar compact-topbar">
+        <a href="index.html" class="back-link">← 홈으로</a>
+        <div class="detail-title-wrap stock-title-wrap">
+          <div class="detail-kicker">Stock Intelligence</div>
+          <h1 id="stock-title">종목 상세</h1>
+          <p id="stock-subtitle">AI 분석과 뉴스 요약을 실전형 화면으로 정리했습니다.</p>
+        </div>
+
+        <div class="lang-switch">
+          <a href="/stock.html" class="lang-btn">🇰🇷 KR</a>
+          <a href="/en/stock.html" class="lang-btn">🇺🇸 EN</a>
+        </div>
+        
+      </header>
+
+      <section class="detail-grid stock-detail-grid">
+        <div class="detail-card">
+          <div class="detail-meta-row">
+            <span id="stock-market" class="detail-pill">-</span>
+            <span id="stock-exchange" class="detail-pill ghost">-</span>
+            <span id="stock-currency" class="detail-pill ghost">-</span>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-label">현재가</div>
+              <div class="metric-value" id="stock-price">-</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-label">등락률</div>
+              <div class="metric-value stock-change flat" id="stock-change">-</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-label">산업 / 메모</div>
+              <div class="metric-value small" id="stock-industry">-</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-label">요약</div>
+              <div class="metric-value small" id="stock-summary">-</div>
+            </div>
+
+            <div class="metric-card metric-card-wide">
+              <div class="metric-label">AI 별점</div>
+              <div class="metric-value small" id="stock-rating">-</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <div class="chart-header-row">
+            <h2>최근 가격 추이</h2>
+            <select id="chart-period" class="period-select">
+              <option value="1D">일</option>
+              <option value="1W">주</option>
+              <option value="1M" selected>월</option>
+              <option value="6M">6개월</option>
+            </select>
+          </div>
+          <canvas id="stock-chart" height="280"></canvas>
+        </div>
+      </section>
+
+      <section class="detail-grid second">
+        <div class="detail-card">
+          <h2>AI 종목 분석</h2>
+          <div id="stock-ai-time" class="meta-time">생성: -</div>
+          <div id="stock-ai-brief" class="bullet-list"></div>
+        </div>
+
+        <div class="detail-card">
+          <h2>뉴스 한글 요약</h2>
+          <div id="news-summary-time" class="meta-time">생성: -</div>
+          <div id="news-summary" class="bullet-list"></div>
+
+          <h3>최근 뉴스</h3>
+          <div id="news-list" class="history-table"></div>
+        </div>
+      </section>
+
+      <section class="detail-card disclaimer-card">
+        <h2>안내</h2>
+        <div id="stock-legal" class="bullet-list"></div>
+      </section>
+    </div>
+
+    <footer style="margin: 30px 0 90px 0; padding: 16px 20px; font-size: 14px; color: #9aa4b2; text-align: center; border-top: 1px solid rgba(255,255,255,0.06);">
+      <a href="about.html" style="color:#9aa4b2; text-decoration:none; margin:0 6px;">소개</a>
+      <span>|</span>
+      <a href="privacy.html" style="color:#9aa4b2; text-decoration:none; margin:0 6px;">개인정보처리방침</a>
+      <span>|</span>
+      <a href="terms.html" style="color:#9aa4b2; text-decoration:none; margin:0 6px;">이용약관</a>
+      <span>|</span>
+      <a href="contact.html" style="color:#9aa4b2; text-decoration:none; margin:0 6px;">문의</a>
+    </footer>
+  </div>
+
+  <script src="stock.js?v=20260405-4"></script>
+</body>
+</html>

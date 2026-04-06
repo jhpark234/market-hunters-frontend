@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>문의하기 | MarketHunters</title>
+  <meta
+    name="description"
+    content="MarketHunters 문의 및 제휴 안내 페이지입니다."
+  />
+</head>
+<body style="margin:0; background:#07172f; color:#eef4ff; font-family:Arial, sans-serif;">
+
+  <div style="max-width:960px; margin:0 auto; padding:48px 20px 80px;">
+    <div style="margin-bottom:18px;">
+      <a href="index.html" style="display:inline-block; color:#9aa4b2; text-decoration:none; font-size:14px;">
+        ← 홈으로
+      </a>
+    </div>
+
+    <section style="
+        background:linear-gradient(180deg, rgba(18,40,79,0.92), rgba(10,26,54,0.96));
+        border:1px solid rgba(255,255,255,0.08);
+        border-radius:22px;
+        padding:32px 24px;
+        box-shadow:0 18px 40px rgba(0,0,0,0.22);
+        margin-bottom:22px;
+      ">
+      <div style="
+          display:inline-block;
+          padding:8px 14px;
+          border-radius:999px;
+          background:rgba(94,157,255,0.12);
+          color:#8fb7ff;
+          font-size:13px;
+          font-weight:700;
+          margin-bottom:14px;">
+        CONTACT
+      </div>
+
+      <h1 style="margin:0 0 14px; font-size:32px; color:#ffffff;">문의하기</h1>
+
+      <p style="margin:0; color:#cfd6e4; font-size:16px; line-height:1.8;">
+        MarketHunters 이용 중 불편한 점이나 개선 제안이 있으시면 언제든지 알려 주세요.
+      </p>
+    </section>
+
+    <section style="display:grid; gap:16px;">
+      
+      <!-- 문의 종류 -->
+      <div style="background:rgba(255,255,255,0.03); border-radius:18px; padding:22px;">
+        <h2 style="color:#5e9dff;">문의 가능한 내용</h2>
+        <ul style="color:#cfd6e4;">
+          <li>사이트 오류</li>
+          <li>종목 정보 문의</li>
+          <li>광고 / 제휴 문의</li>
+        </ul>
+      </div>
+
+      <!-- 이메일 -->
+      <div style="background:rgba(255,255,255,0.03); border-radius:18px; padding:22px;">
+        <h2 style="color:#5e9dff;">연락처</h2>
+        <div style="
+          padding:14px;
+          border-radius:14px;
+          background:rgba(94,157,255,0.08);
+        ">
+          contact@markethunters.com
+        </div>
+      </div>
+
+      <!-- 🔥 여기 폼 추가 -->
+      <div style="background:rgba(255,255,255,0.03); border-radius:18px; padding:22px;">
+        <h2 style="color:#5e9dff;">빠른 문의</h2>
+
+        <form id="contactForm">
+          <input type="hidden" name="accessKey" value="sf_63d314b564134cbf8142d71d">
+          <input type="text" name="honeypot" style="display:none">
+          
+          <input type="email" name="email" placeholder="이메일"
+            style="width:100%; padding:12px; margin-bottom:12px; border-radius:10px; border:none;" required>
+
+          <input type="text" name="subject" placeholder="제목"
+            style="width:100%; padding:12px; margin-bottom:12px; border-radius:10px; border:none;">
+
+          <textarea name="message" placeholder="문의 내용"
+            style="width:100%; padding:12px; margin-bottom:12px; border-radius:10px; border:none;" rows="5" required></textarea>
+
+          <button type="submit" style="
+            width:100%;
+            padding:12px;
+            background:#5e9dff;
+            border:none;
+            border-radius:10px;
+            color:white;
+            font-size:15px;
+          ">
+            문의 보내기
+          </button>
+
+          <div id="statusMsg" style="margin-top:10px;"></div>
+        </form>
+      </div>
+
+      <!-- 응답 안내 -->
+      <div style="background:rgba(255,255,255,0.03); border-radius:18px; padding:22px;">
+        <h2 style="color:#5e9dff;">응답 안내</h2>
+        <p style="color:#cfd6e4;">
+          문의는 1~2일 내 확인됩니다.
+        </p>
+      </div>
+
+    </section>
+
+    <footer style="margin-top:34px; text-align:center; color:#9aa4b2;">
+      <a href="about.html">소개</a> |
+      <a href="privacy.html">개인정보처리방침</a> |
+      <a href="terms.html">이용약관</a> |
+      <a href="contact.html">문의</a>
+    </footer>
+  </div>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = new FormData(form);
+  const status = document.getElementById("statusMsg");
+
+  status.innerText = "전송 중...";
+
+  try {
+    const res = await fetch("https://api.staticforms.xyz/submit", {
+      method: "POST",
+      body: data
+    });
+
+    const json = await res.json();
+
+    if (json.success) {
+      status.innerText = "문의가 전송되었습니다!";
+      form.reset();
+    } else {
+      status.innerText = "전송 실패";
+    }
+  } catch {
+    status.innerText = "오류 발생";
+  }
+});
+</script>
+
+</body>
+</html>

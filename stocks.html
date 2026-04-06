@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>인기 종목 허브 | 미국주식·코스피·코스닥 주가 분석 | MarketHunters</title>
+  <meta
+    name="description"
+    content="미국주식, 코스피, 코스닥 인기 종목 100개의 주가 분석 페이지를 한곳에서 확인하세요. 엔비디아, 애플, 삼성전자, SK하이닉스, 에코프로 등 대표 종목을 빠르게 이동할 수 있습니다."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://markethunters.kr/stocks.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="인기 종목 허브 | MarketHunters" />
+  <meta
+    property="og:description"
+    content="미국주식, 코스피, 코스닥 대표 종목 분석 페이지를 한곳에서 확인하세요."
+  />
+  <meta property="og:url" content="https://markethunters.kr/stocks.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="인기 종목 허브 | MarketHunters" />
+  <meta
+    name="twitter:description"
+    content="미국주식, 코스피, 코스닥 대표 종목 분석 페이지를 한곳에서 확인하세요."
+  />
+
+  <style>
+    :root {
+      --bg: #07172f;
+      --bg-soft: #0d2243;
+      --card: rgba(255,255,255,0.04);
+      --card-border: rgba(255,255,255,0.08);
+      --text: #eef4ff;
+      --muted: #9fb0cc;
+      --blue: #5e9dff;
+      --blue-soft: rgba(94,157,255,0.14);
+      --max: 1240px;
+      --shadow: 0 20px 60px rgba(0,0,0,0.28);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background:
+        radial-gradient(circle at top left, rgba(94,157,255,0.18), transparent 28%),
+        radial-gradient(circle at top right, rgba(76,110,245,0.12), transparent 22%),
+        linear-gradient(180deg, #07172f 0%, #091425 100%);
+      color: var(--text);
+      font-family: Inter, Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .shell {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 18px 56px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #5e9dff 0%, #7e7bff 100%);
+      box-shadow: 0 10px 24px rgba(94,157,255,0.28);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 900;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .ghost-btn,
+    .primary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 0 16px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      font-size: 14px;
+      font-weight: 700;
+      transition: all 0.18s ease;
+    }
+
+    .ghost-btn {
+      background: rgba(255,255,255,0.03);
+      color: var(--text);
+    }
+
+    .ghost-btn:hover {
+      background: rgba(255,255,255,0.06);
+      transform: translateY(-1px);
+    }
+
+    .primary-btn {
+      background: linear-gradient(135deg, #5e9dff 0%, #7797ff 100%);
+      border-color: transparent;
+      color: white;
+      box-shadow: 0 14px 28px rgba(94,157,255,0.22);
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 32px rgba(94,157,255,0.28);
+    }
+
+    .hero {
+      padding: 34px 28px;
+      border-radius: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.03) 100%);
+      border: 1px solid var(--card-border);
+      box-shadow: var(--shadow);
+      margin-bottom: 22px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #7db0ff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.12;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 860px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .search-wrap {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+    }
+
+    .search-input {
+      width: 100%;
+      height: 52px;
+      border-radius: 16px;
+      border: 1px solid var(--card-border);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      padding: 0 16px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .search-input::placeholder {
+      color: #90a1bf;
+    }
+
+    .search-count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 120px;
+      padding: 0 16px;
+      border-radius: 16px;
+      border: 1px solid var(--card-border);
+      background: rgba(255,255,255,0.04);
+      color: #d7e5ff;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 20px;
+    }
+
+    .quick-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--card-border);
+      background: rgba(255,255,255,0.04);
+      font-size: 13px;
+      font-weight: 700;
+      color: #dce8ff;
+      transition: all 0.18s ease;
+    }
+
+    .quick-nav a:hover {
+      background: var(--blue-soft);
+      border-color: rgba(94,157,255,0.32);
+      color: #fff;
+    }
+
+    .section-card {
+      padding: 24px 22px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.03) 100%);
+      border: 1px solid var(--card-border);
+      box-shadow: var(--shadow);
+      margin-bottom: 18px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: -0.03em;
+    }
+
+    .section-head p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .section-tag {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(94,157,255,0.12);
+      color: #b8d2ff;
+      font-size: 12px;
+      font-weight: 800;
+      border: 1px solid rgba(94,157,255,0.22);
+      white-space: nowrap;
+    }
+
+    .stock-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .stock-link {
+      display: block;
+      padding: 14px 14px 13px;
+      border-radius: 18px;
+      border: 1px solid var(--card-border);
+      background: var(--card);
+      transition: all 0.18s ease;
+    }
+
+    .stock-link:hover {
+      background: rgba(94,157,255,0.10);
+      border-color: rgba(94,157,255,0.28);
+      transform: translateY(-1px);
+    }
+
+    .stock-title {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.45;
+    }
+
+    .stock-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .stock-code {
+      font-weight: 700;
+      color: #c8dafd;
+    }
+
+    .footer-note {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .hidden-by-search {
+      display: none !important;
+    }
+
+    @media (max-width: 1024px) {
+      .stock-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      .shell {
+        padding: 18px 14px 42px;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero {
+        padding: 24px 18px;
+        border-radius: 22px;
+      }
+
+      .search-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .section-card {
+        padding: 18px 16px;
+        border-radius: 20px;
+      }
+
+      .section-head {
+        flex-direction: column;
+        align-items: start;
+      }
+
+      .stock-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"인기 종목 허브 | MarketHunters",
+    "url":"https://markethunters.kr/stocks.html",
+    "description":"미국 주식, 코스피, 코스닥 대표 종목 100개의 주가 분석 페이지 모음",
+    "isPartOf":{
+      "@type":"WebSite",
+      "name":"MarketHunters",
+      "url":"https://markethunters.kr"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a href="/" class="brand" aria-label="MarketHunters 홈으로 이동">
+        <span class="brand-badge">MH</span>
+        <span>MarketHunters</span>
+      </a>
+
+      <div class="top-actions">
+        <a href="/" class="ghost-btn">홈으로</a>
+        <a href="/stock.html?symbol=NVDA" class="primary-btn">대표 종목 보기</a>
+
+        <a href="/stocks.html" class="ghost-btn">🇰🇷 KR</a>
+        <a href="/en/stocks.html" class="ghost-btn">🇺🇸 EN</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">STOCK HUB</p>
+      <h1>인기 종목 100개 허브</h1>
+      <p>
+        미국 주식, 코스피, 코스닥 대표 종목의 주가 분석 페이지를 한곳에서 모아봤습니다.
+        엔비디아, 애플, 테슬라, 삼성전자, SK하이닉스, 에코프로 등 자주 찾는 종목을 빠르게 이동할 수 있습니다.
+      </p>
+
+      <div class="search-wrap">
+        <input
+          id="stockSearchInput"
+          class="search-input"
+          type="text"
+          placeholder="종목명 또는 코드 검색 예: 엔비디아, NVDA, 삼성전자, 005930"
+          aria-label="종목 검색"
+        />
+        <div id="searchCount" class="search-count">100개 종목</div>
+      </div>
+    </section>
+
+    <nav class="quick-nav" aria-label="빠른 이동">
+      <a href="#us-stocks">미국 대표주</a>
+      <a href="#kospi-stocks">코스피 대표주</a>
+      <a href="#kosdaq-stocks">코스닥 대표주</a>
+    </nav>
+
+    <section id="us-stocks" class="section-card stock-section">
+      <div class="section-head">
+        <div>
+          <h2>미국 대표주 40</h2>
+          <p>검색량과 관심도가 높은 미국 대표 성장주, 기술주, 소비주 중심</p>
+        </div>
+        <span class="section-tag">US Stocks</span>
+      </div>
+
+      <div class="stock-grid">
+        <a class="stock-link stock-item" href="/stock.html?symbol=NVDA" data-search="엔비디아 NVDA nvidia 미국주식 ai 반도체">
+          <span class="stock-title">엔비디아 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">NVDA</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=AAPL" data-search="애플 AAPL apple 미국주식 아이폰">
+          <span class="stock-title">애플 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">AAPL</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=MSFT" data-search="마이크로소프트 MSFT microsoft 미국주식">
+          <span class="stock-title">마이크로소프트 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">MSFT</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=AMZN" data-search="아마존 AMZN amazon 미국주식">
+          <span class="stock-title">아마존 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">AMZN</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=GOOGL" data-search="알파벳 GOOGL google 구글 미국주식">
+          <span class="stock-title">알파벳 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">GOOGL</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=META" data-search="메타 META facebook 미국주식">
+          <span class="stock-title">메타 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">META</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=TSLA" data-search="테슬라 TSLA tesla 미국주식 전기차">
+          <span class="stock-title">테슬라 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">TSLA</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=AMD" data-search="AMD amd 미국주식 반도체">
+          <span class="stock-title">AMD 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">AMD</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=AVGO" data-search="브로드컴 AVGO broadcom 미국주식 반도체">
+          <span class="stock-title">브로드컴 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">AVGO</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=INTC" data-search="인텔 INTC intel 미국주식 반도체">
+          <span class="stock-title">인텔 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">INTC</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=NFLX" data-search="넷플릭스 NFLX netflix 미국주식">
+          <span class="stock-title">넷플릭스 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">NFLX</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=PLTR" data-search="팔란티어 PLTR palantir 미국주식 ai">
+          <span class="stock-title">팔란티어 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">PLTR</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=SMCI" data-search="슈퍼마이크로컴퓨터 SMCI super micro computer 미국주식">
+          <span class="stock-title">슈퍼마이크로컴퓨터 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">SMCI</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=TSM" data-search="TSM tsmc 대만반도체 미국주식">
+          <span class="stock-title">TSMC 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">TSM</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=QCOM" data-search="퀄컴 QCOM qualcomm 미국주식">
+          <span class="stock-title">퀄컴 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">QCOM</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=ADBE" data-search="어도비 ADBE adobe 미국주식">
+          <span class="stock-title">어도비 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">ADBE</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=CRM" data-search="세일즈포스 CRM salesforce 미국주식">
+          <span class="stock-title">세일즈포스 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">CRM</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=ORCL" data-search="오라클 ORCL oracle 미국주식">
+          <span class="stock-title">오라클 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">ORCL</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=SNOW" data-search="스노우플레이크 SNOW snowflake 미국주식">
+          <span class="stock-title">스노우플레이크 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">SNOW</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=PANW" data-search="팔로알토 PANW palo alto 미국주식 보안">
+          <span class="stock-title">팔로알토네트웍스 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">PANW</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=UBER" data-search="우버 UBER uber 미국주식">
+          <span class="stock-title">우버 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">UBER</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=SHOP" data-search="쇼피파이 SHOP shopify 미국주식">
+          <span class="stock-title">쇼피파이 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">SHOP</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=COIN" data-search="코인베이스 COIN coinbase 미국주식 코인">
+          <span class="stock-title">코인베이스 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">COIN</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=SQ" data-search="블록 SQ square 미국주식">
+          <span class="stock-title">블록 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">SQ</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=PYPL" data-search="페이팔 PYPL paypal 미국주식">
+          <span class="stock-title">페이팔 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">PYPL</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=DIS" data-search="디즈니 DIS disney 미국주식">
+          <span class="stock-title">디즈니 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">DIS</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=NKE" data-search="나이키 NKE nike 미국주식">
+          <span class="stock-title">나이키 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">NKE</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=WMT" data-search="월마트 WMT walmart 미국주식">
+          <span class="stock-title">월마트 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">WMT</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=HD" data-search="홈디포 HD home depot 미국주식">
+          <span class="stock-title">홈디포 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">HD</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=MCD" data-search="맥도날드 MCD mcdonald 미국주식">
+          <span class="stock-title">맥도날드 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">MCD</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=COST" data-search="코스트코 COST costco 미국주식">
+          <span class="stock-title">코스트코 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">COST</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=BABA" data-search="알리바바 BABA alibaba 미국주식">
+          <span class="stock-title">알리바바 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">BABA</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=PDD" data-search="핀둬둬 PDD pdd 미국주식">
+          <span class="stock-title">PDD 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">PDD</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=JD" data-search="징둥 JD 미국주식 jd">
+          <span class="stock-title">JD닷컴 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">JD</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=XPEV" data-search="샤오펑 XPEV 미국주식 전기차">
+          <span class="stock-title">샤오펑 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">XPEV</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=LI" data-search="리오토 LI 미국주식 전기차">
+          <span class="stock-title">리오토 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">LI</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=NIO" data-search="니오 NIO 미국주식 전기차">
+          <span class="stock-title">니오 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">NIO</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=SOFI" data-search="소파이 SOFI 미국주식">
+          <span class="stock-title">소파이 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">SOFI</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=RIVN" data-search="리비안 RIVN 미국주식 전기차">
+          <span class="stock-title">리비안 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">RIVN</span><span>미국</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=LCID" data-search="루시드 LCID 미국주식 전기차">
+          <span class="stock-title">루시드 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">LCID</span><span>미국</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section id="kospi-stocks" class="section-card stock-section">
+      <div class="section-head">
+        <div>
+          <h2>코스피 대표주 30</h2>
+          <p>국내 검색량과 관심도가 높은 대형주, 금융주, 2차전지, 반도체 중심</p>
+        </div>
+        <span class="section-tag">KOSPI</span>
+      </div>
+
+      <div class="stock-grid">
+        <a class="stock-link stock-item" href="/stock.html?symbol=005930.KS" data-search="삼성전자 005930 KS 코스피">
+          <span class="stock-title">삼성전자 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">005930.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=000660.KS" data-search="SK하이닉스 000660 KS 코스피">
+          <span class="stock-title">SK하이닉스 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">000660.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=035420.KS" data-search="NAVER 네이버 035420 KS 코스피">
+          <span class="stock-title">NAVER 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">035420.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=005380.KS" data-search="현대차 005380 KS 코스피">
+          <span class="stock-title">현대차 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">005380.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=000270.KS" data-search="기아 000270 KS 코스피">
+          <span class="stock-title">기아 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">000270.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=051910.KS" data-search="LG화학 051910 KS 코스피">
+          <span class="stock-title">LG화학 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">051910.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=006400.KS" data-search="삼성SDI 006400 KS 코스피">
+          <span class="stock-title">삼성SDI 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">006400.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=068270.KS" data-search="셀트리온 068270 KS 코스피">
+          <span class="stock-title">셀트리온 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">068270.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=207940.KS" data-search="삼성바이오로직스 207940 KS 코스피">
+          <span class="stock-title">삼성바이오로직스 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">207940.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=012330.KS" data-search="현대모비스 012330 KS 코스피">
+          <span class="stock-title">현대모비스 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">012330.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=028260.KS" data-search="삼성물산 028260 KS 코스피">
+          <span class="stock-title">삼성물산 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">028260.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=066570.KS" data-search="LG전자 066570 KS 코스피">
+          <span class="stock-title">LG전자 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">066570.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=003670.KS" data-search="포스코홀딩스 003670 KS 코스피">
+          <span class="stock-title">포스코홀딩스 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">003670.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=096770.KS" data-search="SK이노베이션 096770 KS 코스피">
+          <span class="stock-title">SK이노베이션 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">096770.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=086790.KS" data-search="하나금융지주 086790 KS 코스피">
+          <span class="stock-title">하나금융지주 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">086790.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=105560.KS" data-search="KB금융 105560 KS 코스피">
+          <span class="stock-title">KB금융 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">105560.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=055550.KS" data-search="신한지주 055550 KS 코스피">
+          <span class="stock-title">신한지주 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">055550.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=017670.KS" data-search="SK텔레콤 017670 KS 코스피">
+          <span class="stock-title">SK텔레콤 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">017670.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=032830.KS" data-search="삼성생명 032830 KS 코스피">
+          <span class="stock-title">삼성생명 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">032830.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=034730.KS" data-search="SK 034730 KS 코스피">
+          <span class="stock-title">SK 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">034730.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=018260.KS" data-search="삼성에스디에스 018260 KS 코스피">
+          <span class="stock-title">삼성에스디에스 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">018260.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=047050.KS" data-search="포스코인터내셔널 047050 KS 코스피">
+          <span class="stock-title">포스코인터내셔널 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">047050.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=030200.KS" data-search="KT 030200 KS 코스피">
+          <span class="stock-title">KT 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">030200.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=015760.KS" data-search="한국전력 015760 KS 코스피">
+          <span class="stock-title">한국전력 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">015760.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=010950.KS" data-search="S-OIL 010950 KS 코스피">
+          <span class="stock-title">S-OIL 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">010950.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=036570.KS" data-search="엔씨소프트 036570 KS 코스피">
+          <span class="stock-title">엔씨소프트 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">036570.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=009150.KS" data-search="삼성전기 009150 KS 코스피">
+          <span class="stock-title">삼성전기 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">009150.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=034020.KS" data-search="두산에너빌리티 034020 KS 코스피">
+          <span class="stock-title">두산에너빌리티 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">034020.KS</span><span>코스피</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=024110.KS" data-search="기업은행 024110 KS 코스피">
+          <span class="stock-title">기업은행 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">024110.KS</span><span>코스피</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section id="kosdaq-stocks" class="section-card stock-section">
+      <div class="section-head">
+        <div>
+          <h2>코스닥 대표주 30</h2>
+          <p>2차전지, 엔터, 게임, 바이오 중심의 대표 코스닥 종목 모음</p>
+        </div>
+        <span class="section-tag">KOSDAQ</span>
+      </div>
+
+      <div class="stock-grid">
+        <a class="stock-link stock-item" href="/stock.html?symbol=247540.KQ" data-search="에코프로비엠 247540 KQ 코스닥">
+          <span class="stock-title">에코프로비엠 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">247540.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=086520.KQ" data-search="에코프로 086520 KQ 코스닥">
+          <span class="stock-title">에코프로 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">086520.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=263750.KQ" data-search="펄어비스 263750 KQ 코스닥">
+          <span class="stock-title">펄어비스 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">263750.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=293490.KQ" data-search="카카오게임즈 293490 KQ 코스닥">
+          <span class="stock-title">카카오게임즈 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">293490.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=095660.KQ" data-search="네오위즈 095660 KQ 코스닥">
+          <span class="stock-title">네오위즈 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">095660.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=067160.KQ" data-search="아프리카TV 067160 KQ 코스닥">
+          <span class="stock-title">아프리카TV 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">067160.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=041510.KQ" data-search="에스엠 041510 KQ 코스닥">
+          <span class="stock-title">에스엠 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">041510.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=214150.KQ" data-search="클래시스 214150 KQ 코스닥">
+          <span class="stock-title">클래시스 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">214150.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=215000.KQ" data-search="골프존 215000 KQ 코스닥">
+          <span class="stock-title">골프존 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">215000.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=025980.KQ" data-search="아난티 025980 KQ 코스닥">
+          <span class="stock-title">아난티 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">025980.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=178920.KQ" data-search="PI첨단소재 178920 KQ 코스닥">
+          <span class="stock-title">PI첨단소재 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">178920.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=214450.KQ" data-search="파마리서치 214450 KQ 코스닥">
+          <span class="stock-title">파마리서치 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">214450.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=112040.KQ" data-search="위메이드 112040 KQ 코스닥">
+          <span class="stock-title">위메이드 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">112040.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=065350.KQ" data-search="신성델타테크 065350 KQ 코스닥">
+          <span class="stock-title">신성델타테크 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">065350.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=053800.KQ" data-search="안랩 053800 KQ 코스닥">
+          <span class="stock-title">안랩 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">053800.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=034230.KQ" data-search="파라다이스 034230 KQ 코스닥">
+          <span class="stock-title">파라다이스 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">034230.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=078340.KQ" data-search="컴투스 078340 KQ 코스닥">
+          <span class="stock-title">컴투스 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">078340.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=253450.KQ" data-search="스튜디오드래곤 253450 KQ 코스닥">
+          <span class="stock-title">스튜디오드래곤 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">253450.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=041190.KQ" data-search="우리기술투자 041190 KQ 코스닥">
+          <span class="stock-title">우리기술투자 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">041190.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=058470.KQ" data-search="리노공업 058470 KQ 코스닥">
+          <span class="stock-title">리노공업 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">058470.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=084370.KQ" data-search="유진테크 084370 KQ 코스닥">
+          <span class="stock-title">유진테크 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">084370.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=084990.KQ" data-search="헬릭스미스 084990 KQ 코스닥">
+          <span class="stock-title">헬릭스미스 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">084990.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=036540.KQ" data-search="SFA반도체 036540 KQ 코스닥">
+          <span class="stock-title">SFA반도체 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">036540.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=068760.KQ" data-search="셀트리온제약 068760 KQ 코스닥">
+          <span class="stock-title">셀트리온제약 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">068760.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=091990.KQ" data-search="셀트리온헬스케어 091990 KQ 코스닥">
+          <span class="stock-title">셀트리온헬스케어 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">091990.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=196170.KQ" data-search="알테오젠 196170 KQ 코스닥">
+          <span class="stock-title">알테오젠 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">196170.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=352820.KQ" data-search="하이브 352820 KQ 코스닥">
+          <span class="stock-title">하이브 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">352820.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=041960.KQ" data-search="코미팜 041960 KQ 코스닥">
+          <span class="stock-title">코미팜 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">041960.KQ</span><span>코스닥</span></span>
+        </a>
+        <a class="stock-link stock-item" href="/stock.html?symbol=214450.KQ" data-search="파마리서치 214450 KQ 코스닥">
+          <span class="stock-title">파마리서치 주가 분석</span>
+          <span class="stock-meta"><span class="stock-code">214450.KQ</span><span>코스닥</span></span>
+        </a>
+      </div>
+    </section>
+
+    <p class="footer-note">
+      MarketHunters 종목 허브 페이지입니다. 각 종목 링크를 통해 AI 종목 분석, 최근 뉴스 요약, 가격 흐름과 핵심 체크포인트를 확인할 수 있습니다.
+    </p>
+  </div>
+
+  <script>
+    (function () {
+      const input = document.getElementById("stockSearchInput");
+      const items = Array.from(document.querySelectorAll(".stock-item"));
+      const sections = Array.from(document.querySelectorAll(".stock-section"));
+      const countEl = document.getElementById("searchCount");
+
+      function updateCount(visible) {
+        countEl.textContent = `${visible}개 종목`;
+      }
+
+      function applySearch() {
+        const q = String(input.value || "").trim().toLowerCase();
+        let visibleCount = 0;
+
+        items.forEach((item) => {
+          const text = String(item.dataset.search || "").toLowerCase();
+          const matched = !q || text.includes(q);
+
+          item.classList.toggle("hidden-by-search", !matched);
+          if (matched) visibleCount += 1;
+        });
+
+        sections.forEach((section) => {
+          const visibleItems = section.querySelectorAll(".stock-item:not(.hidden-by-search)");
+          section.classList.toggle("hidden-by-search", visibleItems.length === 0);
+        });
+
+        updateCount(visibleCount);
+      }
+
+      input.addEventListener("input", applySearch);
+      updateCount(items.length);
+    })();
+  </script>
+</body>
+</html>
