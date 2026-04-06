@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+  <title>Stock Detail | MarketHunters</title>
+
+  <meta name="description" content="Detailed stock page with AI analysis, news summary, chart and key checkpoints." />
+  <meta name="keywords" content="stock analysis, AI stock analysis, NVDA stock, Tesla stock, Samsung Electronics stock, MarketHunters" />
+  <meta name="author" content="MarketHunters" />
+  <meta name="theme-color" content="#07172f" />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="canonical" href="https://markethunters.kr/en/stock.html" />
+
+  <meta property="og:title" content="Stock Detail | MarketHunters" />
+  <meta property="og:description" content="AI-powered stock analysis, news summary, charts and key checkpoints." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://markethunters.kr/en/stock.html" />
+  <meta property="og:image" content="https://markethunters.kr/assets/og-card.svg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stock Detail | MarketHunters" />
+  <meta name="twitter:description" content="AI-powered stock analysis, news summary, charts and key checkpoints." />
+  <meta name="twitter:image" content="https://markethunters.kr/assets/og-card.svg" />
+
+  <link rel="manifest" href="../manifest.webmanifest" />
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G-MNXB2Y6Z61"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-G-MNXB2Y6Z61');
+  </script>
+
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PLXLJ4RX');
+  </script>
+
+  <link rel="stylesheet" href="../style.css?v=20260331-1" />
+</head>
+<body>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLXLJ4RX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <div class="mobile-app-shell">
+    <div class="detail-shell">
+      <header class="detail-topbar compact-topbar">
+        <a href="index.html" class="back-link">← Home</a>
+        <div class="detail-title-wrap stock-title-wrap">
+          <div class="detail-kicker">Stock Intelligence</div>
+          <h1 id="stock-title">Stock Detail</h1>
+          <p id="stock-subtitle">AI analysis and news summary in a practical detail view.</p>
+          <div class="lang-switch">
+            <a href="/stock.html" class="lang-btn">🇰🇷 KR</a>
+            <a href="/en/stock.html" class="lang-btn">🇺🇸 EN</a>
+          </div>
+        </div>
+
+        <div class="lang-switch">
+          <a href="/stock.html" class="lang-btn">🇰🇷 KR</a>
+          <a href="/en/stock.html" class="lang-btn">🇺🇸 EN</a>
+        </div>
+        
+      </header>
+
+      <section class="detail-grid stock-detail-grid">
+        <div class="detail-card">
+          <div class="detail-meta-row">
+            <span id="stock-market" class="detail-pill">-</span>
+            <span id="stock-exchange" class="detail-pill ghost">-</span>
+            <span id="stock-currency" class="detail-pill ghost">-</span>
+          </div>
+
+          <div class="metric-grid">
+            <div class="metric-card">
+              <div class="metric-label">Price</div>
+              <div class="metric-value" id="stock-price">-</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-label">Change</div>
+              <div class="metric-value stock-change flat" id="stock-change">-</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-label">Sector / Note</div>
+              <div class="metric-value small" id="stock-industry">-</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-label">Summary</div>
+              <div class="metric-value small" id="stock-summary">-</div>
+            </div>
+
+            <div class="metric-card metric-card-wide">
+              <div class="metric-label">AI Rating</div>
+              <div class="metric-value small" id="stock-rating">-</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-card">
+          <div class="chart-header-row">
+            <h2>Recent Price Trend</h2>
+            <select id="chart-period" class="period-select">
+              <option value="1D">1D</option>
+              <option value="1W">1W</option>
+              <option value="1M" selected>1M</option>
+              <option value="6M">6M</option>
+            </select>
+          </div>
+          <canvas id="stock-chart" height="280"></canvas>
+        </div>
+      </section>
+
+      <section class="detail-grid second">
+        <div class="detail-card">
+          <h2>AI Stock Analysis</h2>
+          <div id="stock-ai-time" class="meta-time">Generated: -</div>
+          <div id="stock-ai-brief" class="bullet-list"></div>
+        </div>
+
+        <div class="detail-card">
+          <h2>News Summary</h2>
+          <div id="news-summary-time" class="meta-time">Generated: -</div>
+          <div id="news-summary" class="bullet-list"></div>
+
+          <h3>Latest News</h3>
+          <div id="news-list" class="history-table"></div>
+        </div>
+      </section>
+
+      <section class="detail-card disclaimer-card">
+        <h2>Notice</h2>
+        <div id="stock-legal" class="bullet-list"></div>
+      </section>
+    </div>
+
+    <footer style="margin: 30px 0 90px 0; padding: 16px 20px; font-size: 14px; color: #9aa4b2; text-align: center; border-top: 1px solid rgba(255,255,255,0.06);">
+      <a href="../about.html" style="color:#9aa4b2; text-decoration:none; margin:0 6px;">About</a>
+      <span>|</span>
+      <a href="../privacy.html" style="color:#9aa4b2; text-decoration:none; margin:0 6px;">Privacy Policy</a>
+      <span>|</span>
+      <a href="../terms.html" style="color:#9aa4b2; text-decoration:none; margin:0 6px;">Terms of Service</a>
+      <span>|</span>
+      <a href="../contact.html" style="color:#9aa4b2; text-decoration:none; margin:0 6px;">Contact</a>
+    </footer>
+  </div>
+
+  <script src="../stock.js?v=20260405-4"></script>
+</body>
+</html>

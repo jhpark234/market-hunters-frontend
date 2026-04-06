@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+  <title>Economic Indicator Detail | MarketHunters</title>
+  <meta name="description" content="Check economic indicator release date, actual value, forecast, previous value and market impact analysis." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#07172f" />
+  <link rel="canonical" href="https://markethunters.kr/en/economic-detail.html" />
+
+  <meta property="og:title" content="Economic Indicator Detail | MarketHunters" />
+  <meta property="og:description" content="Release date, actual value, forecast, previous value and market impact analysis." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://markethunters.kr/en/economic-detail.html" />
+  <meta property="og:image" content="https://markethunters.kr/assets/og-card.svg" />
+
+  <link rel="manifest" href="../manifest.webmanifest" />
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    .eco-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .eco-card {
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(22, 44, 83, 0.78) 0%, rgba(9, 24, 50, 0.88) 100%);
+      border: 1px solid rgba(107, 155, 255, 0.14);
+      border-radius: 24px;
+      padding: 20px 18px 18px;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.04),
+        0 10px 30px rgba(0, 0, 0, 0.22);
+      overflow: hidden;
+    }
+
+    .eco-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(83, 143, 255, 0.12), transparent 35%);
+      pointer-events: none;
+    }
+
+    .eco-label {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: #8fb7ff;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eco-value {
+      font-size: 38px;
+      font-weight: 900;
+      color: #eef4ff;
+      line-height: 1.1;
+      word-break: break-word;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eco-note {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #9aa4b2;
+      line-height: 1.6;
+      word-break: break-word;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eco-delta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1;
+      position: relative;
+      z-index: 1;
+    }
+
+    .eco-delta.up {
+      color: #24d38a;
+      background: rgba(36, 211, 138, 0.12);
+      border: 1px solid rgba(36, 211, 138, 0.18);
+    }
+
+    .eco-delta.down {
+      color: #ff8d8d;
+      background: rgba(255, 141, 141, 0.10);
+      border: 1px solid rgba(255, 141, 141, 0.16);
+    }
+
+    .eco-delta.flat {
+      color: #9aa4b2;
+      background: rgba(154, 164, 178, 0.10);
+      border: 1px solid rgba(154, 164, 178, 0.16);
+    }
+
+    .eco-rich-box {
+      background: linear-gradient(180deg, rgba(13, 30, 58, 0.80), rgba(10, 24, 46, 0.86));
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 22px;
+      padding: 20px;
+      color: #d9e3f2;
+      line-height: 1.9;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+    }
+
+    .eco-rich-box p {
+      margin: 0 0 14px;
+    }
+
+    .eco-rich-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .eco-meta-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: #9aa4b2;
+      font-size: 13px;
+    }
+
+    .eco-section-title {
+      margin-bottom: 14px;
+    }
+
+    .eco-section-title .section-eyebrow {
+      margin-bottom: 6px;
+    }
+
+    .eco-section-title h2 {
+      margin: 0;
+    }
+
+    .eco-callout {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(143, 183, 255, 0.06);
+      border: 1px solid rgba(143, 183, 255, 0.10);
+      color: #c7d7ee;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .eco-source-card {
+      background: linear-gradient(180deg, rgba(13, 30, 58, 0.75), rgba(10, 24, 46, 0.82));
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 20px;
+      padding: 18px 20px;
+    }
+
+    @media (max-width: 980px) {
+      .eco-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .eco-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .eco-value {
+        font-size: 30px;
+      }
+
+      .eco-card,
+      .eco-rich-box,
+      .eco-source-card {
+        border-radius: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="mobile-app-shell">
+    <header class="app-header glass-card">
+      <div class="brand-row">
+        <img src="../assets/logo.svg" alt="MarketHunters logo" class="brand-logo" />
+        <div>
+          <div class="brand-name">MarketHunters</div>
+          <div class="brand-sub">Economic Indicator Detail</div>
+        </div>
+      </div>
+      <div class="header-badges">
+        <span class="pill">Economic Detail</span>
+        <span class="pill ghost" id="eco-country">GLOBAL</span>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <section class="hero-section glass-card">
+        <div class="hero-copy">
+          <span class="section-badge" id="eco-badge">Economic Indicator</span>
+          <h1 id="eco-title">Economic Indicator</h1>
+          <p id="eco-description">Loading economic indicator data...</p>
+        </div>
+        <div class="hero-actions">
+          <a class="secondary-btn" href="index.html#calendar-section">Back to Calendar</a>
+          <a class="primary-btn" href="index.html">Home</a>
+        </div>
+      </section>
+
+      <section class="eco-grid">
+        <article class="eco-card">
+          <div class="eco-label">Release Date</div>
+          <div class="eco-value" id="eco-release-date">-</div>
+          <div class="eco-note" id="eco-release-note">Checking schedule</div>
+          <div class="eco-delta flat" id="eco-release-badge">Schedule</div>
+        </article>
+
+        <article class="eco-card">
+          <div class="eco-label">Actual</div>
+          <div class="eco-value" id="eco-actual">-</div>
+          <div class="eco-note" id="eco-actual-note">Updated after release</div>
+          <div class="eco-delta flat" id="eco-actual-badge">Neutral</div>
+        </article>
+
+        <article class="eco-card">
+          <div class="eco-label">Forecast</div>
+          <div class="eco-value" id="eco-forecast">-</div>
+          <div class="eco-note" id="eco-forecast-note">Market expectation</div>
+          <div class="eco-delta flat" id="eco-forecast-badge">Consensus</div>
+        </article>
+
+        <article class="eco-card">
+          <div class="eco-label">Previous</div>
+          <div class="eco-value" id="eco-previous">-</div>
+          <div class="eco-note" id="eco-previous-note">Previous release</div>
+          <div class="eco-delta flat" id="eco-previous-badge">Previous</div>
+        </article>
+      </section>
+
+      <section class="glass-card">
+        <div class="eco-section-title">
+          <div class="section-eyebrow">Summary</div>
+          <h2>Key Summary</h2>
+        </div>
+        <div class="eco-rich-box" id="eco-summary">
+          Loading summary...
+        </div>
+      </section>
+
+      <section class="glass-card">
+        <div class="eco-section-title">
+          <div class="section-eyebrow">Market Impact</div>
+          <h2>Market Impact Analysis</h2>
+        </div>
+        <div class="eco-rich-box" id="eco-analysis">
+          Loading market impact analysis...
+        </div>
+        <div class="eco-callout" id="eco-callout">
+          Rather than looking only at the number after release, it is important to consider changes versus the previous value and expectations for interest rates.
+        </div>
+      </section>
+
+      <section class="glass-card">
+        <div class="eco-section-title">
+          <div class="section-eyebrow">Source</div>
+          <h2>Source & Update</h2>
+        </div>
+        <div class="eco-source-card">
+          <div class="eco-meta-row">
+            <div>Source: <strong id="eco-source">-</strong></div>
+            <div>Updated: <strong id="eco-updated-at">-</strong></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer style="
+      max-width: 960px;
+      margin: 18px auto 90px auto;
+      padding: 16px 20px;
+      text-align: center;
+      color: #9aa4b2;
+      font-size: 14px;
+      line-height: 1.7;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    ">
+      <p style="margin:0;">
+        This service provides market information and news analysis. It does not provide buy or sell recommendations, target prices or guaranteed returns.
+      </p>
+    </footer>
+
+    <nav class="bottom-nav glass-card">
+      <a href="index.html" class="bottom-item">Home</a>
+      <a href="index.html#search-section" class="bottom-item">Search</a>
+      <a href="index.html#calendar-section" class="bottom-item active">Indicators</a>
+      <a href="stock.html?symbol=NVDA" class="bottom-item">Stock</a>
+    </nav>
+  </div>
+
+  <script src="../economic-detail.js"></script>
+</body>
+</html>

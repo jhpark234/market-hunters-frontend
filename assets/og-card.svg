@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#091a32"/>
+      <stop offset="100%" stop-color="#0d2b55"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="40" fill="url(#g)"/>
+  <circle cx="140" cy="140" r="60" fill="#2f6bff" opacity="0.9"/>
+  <text x="120" y="290" fill="#eef4ff" font-size="72" font-family="Arial, sans-serif" font-weight="700">MarketHunters</text>
+  <text x="120" y="360" fill="#b8cff4" font-size="32" font-family="Arial, sans-serif">실전형 AI 주식 · 경제지표 플랫폼</text>
+  <text x="120" y="420" fill="#8fb2ea" font-size="24" font-family="Arial, sans-serif">KOSPI · KOSDAQ · NASDAQ · Economic Calendar</text>
+</svg>

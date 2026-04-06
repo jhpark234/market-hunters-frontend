@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="google-site-verification" content="L8eqhqjEsVB5dfhXCo4rHNy-VlpYryIOZ7rrANznNTg" />
+  <meta name="naver-site-verification" content="91342643867370cf185a94e51a023a36011f8a92" />
+  <meta name="google-adsense-account" content="ca-pub-8741516776558957">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>MarketHunters | AI Stock & Economic Intelligence Platform</title>
+  <meta name="description" content="AI-powered stock and economic intelligence platform for KOSPI, KOSDAQ and NASDAQ. Search stocks, read AI analysis, news summaries and economic indicators in one place." />
+  <meta name="keywords" content="NASDAQ, KOSPI, KOSDAQ, AI stock analysis, economic calendar, CPI, interest rates" />
+  <meta property="og:title" content="MarketHunters | AI Stock & Economic Intelligence Platform" />
+  <meta property="og:description" content="Global stocks, economic indicators, AI analysis and news summaries in a mobile-first experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-card.svg" />
+  <meta name="theme-color" content="#07172f" />
+  
+  <link rel="canonical" href="https://markethunters.kr/en/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:url" content="https://markethunters.kr/en/" />
+  <meta property="og:site_name" content="MarketHunters" />
+
+  <link rel="manifest" href="../manifest.webmanifest" />
+  <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+  <!-- Google Tag Manager -->
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id=GTM-PLXLJ4RX'+dl;
+  f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PLXLJ4RX');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8741516776558957"
+     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../style.css?v=20260331-1" />
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLXLJ4RX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager -->
+  <div class="mobile-app-shell">
+    <header class="app-header glass-card">
+      <div class="brand-row">
+        <img src="../assets/logo.svg" alt="MarketHunters 로고" class="brand-logo" />
+        <div>
+          <div class="brand-name">MarketHunters</div>
+          <div class="brand-sub">Practical AI Investment Hub</div>
+        </div>
+      </div>
+      
+      <div class="lang-switch">
+        <a href="/" class="lang-btn">🇰🇷 KR</a>
+        <a href="/en/" class="lang-btn active">🇺🇸 EN</a>
+      </div>
+
+    </header>
+
+    <main class="page-content">
+      <section class="hero-section glass-card">
+        <div class="hero-copy">
+          <span class="section-badge">Home</span>
+          <h1>Stocks, News and Economic Indicators on One Screen</h1>
+          <p>Search stocks, read AI analysis, summarized news and economic indicators in a mobile-first interface.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#search-section">Find Stocks</a>
+          <a class="secondary-btn" href="#calendar-section">View Indicators</a>
+          <a class="secondary-btn" href="/stocks.html">Popular Stocks</a>
+        </div>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card glass-card">
+          <div class="stat-label">Market Indices</div>
+          <div id="indices" class="index-list compact"></div>
+        </article>
+        <article class="stat-card glass-card">
+          <div class="stat-label">AI Market Brief</div>
+          <div id="market-brief-time" class="meta-time">Generated: -</div>
+          <div id="brief" class="brief-box">Loading...</div>
+        </article>
+      </section>
+
+      <section id="search-section" class="search-section glass-card">
+        <div class="section-header">
+          <div>
+            <div class="section-eyebrow">Stock Search</div>
+            <h2>Stock Search</h2>
+          </div>
+          <div class="segmented">
+            <button class="seg-btn active" data-market="ALL">All</button>
+            <button class="seg-btn" data-market="KOSPI">KOSPI</button>
+            <button class="seg-btn" data-market="KOSDAQ">KOSDAQ</button>
+            <button class="seg-btn" data-market="NASDAQ">NASDAQ</button>
+          </div>
+        </div>
+        <div class="search-bar-wrap">
+          <input id="search-input" class="search-input" placeholder="Search Samsung, 005930, NVDA" />
+          <button id="search-btn" class="search-btn">Search</button>
+        </div>
+        <div id="search-results" class="search-results"></div>
+      </section>
+
+      <section class="market-board">
+        <div class="section-header inline">
+          <div>
+            <div class="section-eyebrow">Market Movers</div>
+            <h2>Top Gainers & Losers</h2>
+          </div>
+        </div>
+        <div class="market-panels">
+          <article class="market-panel glass-card">
+            <div class="market-head"><h3>KOSPI</h3><span>Blue Chips</span></div>
+            <div class="dual-columns mobile-two">
+              <div><div class="subhead up">Gainers</div><div id="kospi-up" class="stock-list"></div></div>
+              <div><div class="subhead down">Losers</div><div id="kospi-down" class="stock-list"></div></div>
+            </div>
+          </article>
+          <article class="market-panel glass-card">
+            <div class="market-head"><h3>KOSDAQ</h3><span>Growth Stocks</span></div>
+            <div class="dual-columns mobile-two">
+              <div><div class="subhead up">Gainers</div><div id="kosdaq-up" class="stock-list"></div></div>
+              <div><div class="subhead down">Losers</div><div id="kosdaq-down" class="stock-list"></div></div>
+            </div>
+          </article>
+          <article class="market-panel glass-card">
+            <div class="market-head"><h3>NASDAQ</h3><span>US Blue Chips</span></div>
+            <div class="dual-columns mobile-two">
+              <div><div class="subhead up">Gainers</div><div id="nasdaq-up" class="stock-list"></div></div>
+              <div><div class="subhead down">Losers</div><div id="nasdaq-down" class="stock-list"></div></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="legal-section glass-card">
+        <div class="section-header inline">
+          <div>
+            <div class="section-eyebrow">Safe Information Design</div>
+            <h2>Safer Information Structure</h2>
+          </div>
+        </div>
+        <div id="legal-box" class="brief-box"></div>
+      </section>
+
+      <section id="calendar-section" class="calendar-section glass-card">
+        <div class="section-header inline">
+          <div>
+            <div class="section-eyebrow">Economic Calendar</div>
+            <h2>Economic Calendar</h2>
+          </div>
+          <span class="mini-note">Click to view historical data and market impact details</span>
+        </div>
+        <div id="economic" class="economic-list"></div>
+      </section>
+
+      <section class="glass-card" style="padding:0; overflow:hidden; border-radius:26px; margin-top:18px;">
+        <div style="
+          display:flex;
+          justify-content:space-between;
+          align-items:flex-start;
+          gap:16px;
+          padding:18px 20px 14px 20px;
+          border-bottom:1px solid rgba(255,255,255,0.06);
+        ">
+          <div style="padding-left:2px;">
+            <div style="
+              font-size:12px;
+              font-weight:800;
+              letter-spacing:0.08em;
+              color:#8fb7ff;
+              text-transform:uppercase;
+              margin-bottom:6px;
+              line-height:1;
+            ">
+              Market Insight
+            </div>
+            <h2 style="
+              margin:0;
+              font-size:18px;
+              line-height:1.2;
+              color:#ffffff;
+            ">
+              주요 칼럼
+            </h2>
+          </div>
+      
+          <div style="
+            font-size:13px;
+            color:#9aa4b2;
+            white-space:nowrap;
+            margin-top:6px;
+            text-align:right;
+          ">
+            Macro · Geopolitics · Tech Stocks
+          </div>
+        </div>
+      
+        <div style="padding:12px;">
+          <a href="insight-us-iran.html" style="
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            gap:14px;
+            text-decoration:none;
+            background:rgba(255,255,255,0.03);
+            border:1px solid rgba(255,255,255,0.07);
+            border-radius:20px;
+            padding:16px 16px;
+            margin-bottom:12px;
+          ">
+            <div style="min-width:0;">
+              <div style="font-size:16px; font-weight:800; color:#eef4ff; line-height:1.35; margin-bottom:6px;">
+                Rising Tensions Between the US and Iran
+              </div>
+              <div style="font-size:13px; color:#9fb0c7; line-height:1.55;">
+                Geopolitical risks in the Middle East and their impact on oil prices and financial markets
+              </div>
+            </div>
+            <div style="
+              flex:0 0 auto;
+              color:#ffffff;
+              font-size:13px;
+              font-weight:800;
+              align-self:center;
+            ">
+              칼럼
+            </div>
+          </a>
+      
+          <a href="insight-inflation.html" style="
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            gap:14px;
+            text-decoration:none;
+            background:rgba(255,255,255,0.03);
+            border:1px solid rgba(255,255,255,0.07);
+            border-radius:20px;
+            padding:16px 16px;
+            margin-bottom:12px;
+          ">
+            <div style="min-width:0;">
+              <div style="font-size:16px; font-weight:800; color:#eef4ff; line-height:1.35; margin-bottom:6px;">
+                How Investment Strategies Change in an Inflation Era
+              </div>
+              <div style="font-size:13px; color:#9fb0c7; line-height:1.55;">
+                Inflation, interest rates, asset allocation and valuation changes
+              </div>
+            </div>
+            <div style="
+              flex:0 0 auto;
+              color:#ffffff;
+              font-size:13px;
+              font-weight:800;
+              align-self:center;
+            ">
+              칼럼
+            </div>
+          </a>
+      
+          <a href="insight-ai-economy.html" style="
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            gap:14px;
+            text-decoration:none;
+            background:rgba(255,255,255,0.03);
+            border:1px solid rgba(255,255,255,0.07);
+            border-radius:20px;
+            padding:16px 16px;
+            margin-bottom:12px;
+          ">
+            <div style="min-width:0;">
+              <div style="font-size:16px; font-weight:800; color:#eef4ff; line-height:1.35; margin-bottom:6px;">
+                How the AI Industry Is Changing Financial Markets
+              </div>
+              <div style="font-size:13px; color:#9fb0c7; line-height:1.55;">
+                Semiconductor, data center and tech stock valuation changes
+              </div>
+            </div>
+            <div style="
+              flex:0 0 auto;
+              color:#ffffff;
+              font-size:13px;
+              font-weight:800;
+              align-self:center;
+            ">
+              칼럼
+            </div>
+          </a>
+      
+          <a href="insight-china-economy.html" style="
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            gap:14px;
+            text-decoration:none;
+            background:rgba(255,255,255,0.03);
+            border:1px solid rgba(255,255,255,0.07);
+            border-radius:20px;
+            padding:16px 16px;
+            margin-bottom:12px;
+          ">
+            <div style="min-width:0;">
+              <div style="font-size:16px; font-weight:800; color:#eef4ff; line-height:1.35; margin-bottom:6px;">
+                China's Economic Slowdown and Its Global Impact
+              </div>
+              <div style="font-size:13px; color:#9fb0c7; line-height:1.55;">
+                Real estate, exports, commodities and links to the Korean economy
+              </div>
+            </div>
+            <div style="
+              flex:0 0 auto;
+              color:#ffffff;
+              font-size:13px;
+              font-weight:800;
+              align-self:center;
+            ">
+              칼럼
+            </div>
+          </a>
+      
+          <a href="insight-interest-rate.html" style="
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            gap:14px;
+            text-decoration:none;
+            background:rgba(255,255,255,0.03);
+            border:1px solid rgba(255,255,255,0.07);
+            border-radius:20px;
+            padding:16px 16px;
+            margin-bottom:12px;
+          ">
+            <div style="min-width:0;">
+              <div style="font-size:16px; font-weight:800; color:#eef4ff; line-height:1.35; margin-bottom:6px;">
+                Interest Rate Cycles and the Stock Market
+              </div>
+              <div style="font-size:13px; color:#9fb0c7; line-height:1.55;">
+                Federal Reserve policy, business cycles and sector sensitivity
+              </div>
+            </div>
+            <div style="
+              flex:0 0 auto;
+              color:#ffffff;
+              font-size:13px;
+              font-weight:800;
+              align-self:center;
+            ">
+              칼럼
+            </div>
+          </a>
+      
+          <a href="insight-fomc.html" style="
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            gap:14px;
+            text-decoration:none;
+            background:rgba(255,255,255,0.03);
+            border:1px solid rgba(255,255,255,0.07);
+            border-radius:20px;
+            padding:16px 16px;
+            margin-bottom:4px;
+          ">
+            <div style="min-width:0;">
+              <div style="font-size:16px; font-weight:800; color:#eef4ff; line-height:1.35; margin-bottom:6px;">
+                FOMC Schedule and Market Interpretation
+              </div>
+              <div style="font-size:13px; color:#9fb0c7; line-height:1.55;">
+                Key points from statements, dot plots and Powell's press conference
+              </div>
+            </div>
+            <div style="
+              flex:0 0 auto;
+              color:#ffffff;
+              font-size:13px;
+              font-weight:800;
+              align-self:center;
+            ">
+              칼럼
+            </div>
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer style="
+    max-width: 960px;
+    margin: 18px auto 90px auto;
+    padding: 16px 20px;
+    text-align: center;
+    color: #9aa4b2;
+    font-size: 14px;
+    line-height: 1.7;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  ">
+  <p style="margin:0;">
+    This service provides market information and news analysis only. It does not provide buy or sell recommendations, target prices or guaranteed returns.
+  </p>
+</footer>
+
+    <nav class="bottom-nav glass-card">
+      <a href="index.html" class="bottom-item active">Home</a>
+      <a href="#search-section" class="bottom-item">Search</a>
+      <a href="#calendar-section" class="bottom-item">Indicators</a>
+      <a href="stock.html?symbol=NVDA" class="bottom-item">Stock</a>
+    </nav>
+  </div>
+
+  <script src="../home_live.js?v=20260331-1"></script>
+  <script src="../market_top10.js?v=20260331-1"></script>
+  <script src="../search_home.js?v=20260331-1"></script>
+  <script src="../home_meta.js?v=20260331-1"></script>
+
+  <script>
+  (async function () {
+    try {
+      const path = window.location.pathname;
+      if (!path.startsWith("/stocks/") && !path.startsWith("/stock/")) return;
+
+      const slug = path
+        .replace(/^\/stocks\//, "")
+        .replace(/^\/stock\//, "")
+        .replace(/\/$/, "")
+        .trim()
+        .toLowerCase();
+
+      if (!slug) return;
+
+      let symbol = "";
+      try {
+        const res = await fetch("/slug_map.json?v=20260331-1", { cache: "no-store" });
+        if (res.ok) {
+          const slugMap = await res.json();
+          symbol = String(slugMap?.[slug] || "").trim();
+        }
+      } catch (_) {}
+
+      if (!symbol) {
+        symbol = slug.toUpperCase().replace(/\.(KS|KQ)$/i, "");
+      }
+
+      if (!symbol) return;
+      window.location.replace("/stock.html?symbol=" + encodeURIComponent(symbol));
+    } catch (e) {
+      console.warn("stocks route redirect skipped", e);
+    }
+  })();
+  </script>
+
+  <footer style="
+  margin: 30px 0 90px 0;
+  padding: 16px 20px;
+  font-size: 14px;
+  color: #9aa4b2;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.06);
+">
+  <a href="about.html" style="color:#9aa4b2; text-decoration:none; margin:0 6px;">About</a>
+  <span>|</span>
+  <a href="privacy.html" style="color:#9aa4b2; text-decoration:none; margin:0 6px;">Privacy Policy</a>
+  <span>|</span>
+  <a href="terms.html" style="color:#9aa4b2; text-decoration:none; margin:0 6px;">Terms of Service</a>
+  <span>|</span>
+  <a href="contact.html" style="color:#9aa4b2; text-decoration:none; margin:0 6px;">Contact</a>
+</footer>
+
+</body>
+</html>
