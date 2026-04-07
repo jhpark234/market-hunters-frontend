@@ -5,7 +5,7 @@ const API_TIMEOUT_MS = 60000;
 const params = new URLSearchParams(window.location.search);
 
 let rawSymbol = (params.get("symbol") || "").toUpperCase().trim();
-let symbol = rawSymbol || "";
+let symbol = rawSymbol;
 
 let slugMapPromise = null;
 
