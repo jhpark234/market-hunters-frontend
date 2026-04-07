@@ -210,7 +210,8 @@ function updateSEO(detail, meta = {}) {
   const pageDesc = String(
     meta?.description || T.seoDesc(safeName, safeCode)
   ).trim();
-  const canonicalHref = window.location.href;
+  const canonicalHref =
+  "https://www.markethunters.kr" + window.location.pathname;
 
   document.title = pageTitle;
 
