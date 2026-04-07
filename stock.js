@@ -57,22 +57,8 @@ async function initializeSymbolFromLocation() {
     return;
   }
 
-  if (!rawSymbol) {
-    const path = window.location.pathname || "";
-
-    if (
-      path === "/stock" ||
-      path === "/stock.html" ||
-      path === "/en/stock" ||
-      path === "/en/stock.html"
-    ) {
-      rawSymbol = "AAPL";
-      symbol = "AAPL";
-    } else {
-      rawSymbol = "";
-      symbol = "";
-    }
-  }
+  rawSymbol = "";
+  symbol = "";
 }
 
 const PAGE_LANG = document.documentElement.lang === "en" ? "en" : "ko";
@@ -1411,6 +1397,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   ensureLoadingStyles();
   await initializeSymbolFromLocation();
+  console.log("FINAL SYMBOL:", symbol, "PATH:", window.location.pathname);
   loadLegal();
   loadStock();
 });
