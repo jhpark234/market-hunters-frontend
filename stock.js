@@ -47,7 +47,7 @@ async function resolveSymbolFromPath() {
   }
 }
 
-async function initializeSymbolFromLocation() {
+async function initializeSymbolFromLocation() 
   const resolved = await resolveSymbolFromPath();
 
   if (resolved) {
