@@ -5,7 +5,7 @@ const API_TIMEOUT_MS = 60000;
 const params = new URLSearchParams(window.location.search);
 
 let rawSymbol = (params.get("symbol") || "").toUpperCase().trim();
-let symbol = rawSymbol;
+let symbol = rawSymbol || "";
 
 let slugMapPromise = null;
 
@@ -23,18 +23,15 @@ async function resolveSymbolFromPath() {
 
   try {
     const path = window.location.pathname || "";
-    console.log("PATH:", path);
     const cleanPath = path.split("?")[0].replace(/\/+$/, "");
     const match = cleanPath.match(/^\/(?:en\/)?stocks\/([^\/]+)$/i);
     if (!match) return "";
 
     const slug = decodeURIComponent(match[1] || "").trim().toLowerCase();
-    console.log("SLUG:", slug);
     if (!slug) return "";
 
     const slugMap = await loadSlugMap();
     const mapped = String(slugMap?.[slug] || "").trim().toUpperCase();
-    console.log("MAPPED:", mapped);
     if (mapped) return mapped;
 
     if (/^[A-Z][A-Z0-9.-]{0,15}$/i.test(slug) && !/^\d{6}$/i.test(slug)) {
