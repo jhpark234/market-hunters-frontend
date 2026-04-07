@@ -59,6 +59,8 @@ async function resolveSymbolFromPath() {
 
 async function initializeSymbolFromLocation() {
   const resolved = await resolveSymbolFromPath();
+  console.log("DEBUG resolved:", resolved);
+  console.log("DEBUG raw/symbol before set:", rawSymbol, symbol);
 
   if (resolved) {
     rawSymbol = resolved;
@@ -1365,6 +1367,7 @@ async function loadNewsSection(overviewNews = [], targetSymbol = canonicalSymbol
 }
 
 async function loadStock() {
+  console.log("DEBUG loadStock symbol:", symbol, "raw:", rawSymbol, "path:", window.location.pathname);
   try {
     setMetaTime("stock-ai-time", null);
     setMetaTime("news-summary-time", null);
