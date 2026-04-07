@@ -1369,10 +1369,31 @@ async function loadStock() {
     setMetaTime("stock-ai-time", null);
     setMetaTime("news-summary-time", null);
 
-    const overview = await fetchOverviewWithRetry(symbol, 2, 500);
+    let finalSymbol = String(symbol || rawSymbol || "").trim().toUpperCase();
+
+    if (!finalSymbol) {
+      finalSymbol = String(await resolveSymbolFromPath() || "").trim().toUpperCase();
+      if (finalSymbol) {
+        rawSymbol = finalSymbol;
+        symbol = finalSymbol;
+      }
+    }
+
+    if (!finalSymbol) {
+      console.error("loadStock aborted: empty symbol", {
+        rawSymbol,
+        symbol,
+        pathname: window.location.pathname,
+        search: window.location.search
+      });
+      resetDetailToError();
+      return;
+    }
+
+    const overview = await fetchOverviewWithRetry(finalSymbol, 2, 500);
     const detail = overview?.detail || {};
 
-    canonicalSymbol = String(detail?.symbol || rawSymbol).trim().toUpperCase();
+    canonicalSymbol = String(detail?.symbol || finalSymbol).trim().toUpperCase();
 
     fillOverviewBase(overview, {});
     updateSEO(detail, overview?.meta || {});
