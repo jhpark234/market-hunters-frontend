@@ -23,10 +23,11 @@ async function resolveSymbolFromPath() {
 
   try {
     const path = window.location.pathname || "";
-    const match = path.match(/^\/(en\/)?stocks\/([^\/]+)\/?$/i);
+    const cleanPath = path.split("?")[0].replace(/\/+$/, "");
+    const match = cleanPath.match(/^\/(?:en\/)?stocks\/([^\/]+)$/i);
     if (!match) return "";
 
-    const slug = decodeURIComponent(match[2] || "").trim().toLowerCase();
+    const slug = decodeURIComponent(match[1] || "").trim().toLowerCase();
     if (!slug) return "";
 
     const slugMap = await loadSlugMap();
