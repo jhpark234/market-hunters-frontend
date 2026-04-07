@@ -24,20 +24,31 @@ async function resolveSymbolFromPath() {
   try {
     const path = window.location.pathname || "";
     const cleanPath = path.split("?")[0].replace(/\/+$/, "");
-    const match = cleanPath.match(/^\/(?:en\/)?stocks\/([^\/]+)$/i);
-    if (!match) return "";
 
-    const slug = decodeURIComponent(match[1] || "").trim().toLowerCase();
+    // /stocks/tesla  또는 /en/stocks/tesla 둘 다 처리
+    let slug = "";
+
+    if (cleanPath.startsWith("/stocks/")) {
+      slug = cleanPath.replace("/stocks/", "");
+    } else if (cleanPath.startsWith("/en/stocks/")) {
+      slug = cleanPath.replace("/en/stocks/", "");
+    } else {
+      return "";
+    }
+
+    slug = decodeURIComponent(slug).trim().toLowerCase();
     if (!slug) return "";
 
     const slugMap = await loadSlugMap();
     const mapped = String(slugMap?.[slug] || "").trim().toUpperCase();
     if (mapped) return mapped;
 
+    // 미국 티커 직접 입력 fallback
     if (/^[A-Z][A-Z0-9.-]{0,15}$/i.test(slug) && !/^\d{6}$/i.test(slug)) {
       return slug.toUpperCase();
     }
 
+    // .KS / .KQ 붙은 한국 티커 직접 입력 fallback
     if (/^\d{6}\.(KS|KQ)$/i.test(slug)) {
       return slug.toUpperCase();
     }
