@@ -25,13 +25,12 @@ async function resolveSymbolFromPath() {
     const path = window.location.pathname || "";
     const cleanPath = path.split("?")[0].replace(/\/+$/, "");
 
-    // /stocks/tesla  또는 /en/stocks/tesla 둘 다 처리
     let slug = "";
 
     if (cleanPath.startsWith("/stocks/")) {
-      slug = cleanPath.replace("/stocks/", "");
+      slug = cleanPath.slice("/stocks/".length);
     } else if (cleanPath.startsWith("/en/stocks/")) {
-      slug = cleanPath.replace("/en/stocks/", "");
+      slug = cleanPath.slice("/en/stocks/".length);
     } else {
       return "";
     }
@@ -43,18 +42,17 @@ async function resolveSymbolFromPath() {
     const mapped = String(slugMap?.[slug] || "").trim().toUpperCase();
     if (mapped) return mapped;
 
-    // 미국 티커 직접 입력 fallback
     if (/^[A-Z][A-Z0-9.-]{0,15}$/i.test(slug) && !/^\d{6}$/i.test(slug)) {
       return slug.toUpperCase();
     }
 
-    // .KS / .KQ 붙은 한국 티커 직접 입력 fallback
     if (/^\d{6}\.(KS|KQ)$/i.test(slug)) {
       return slug.toUpperCase();
     }
 
     return "";
   } catch (e) {
+    console.error("resolveSymbolFromPath error:", e);
     return "";
   }
 }
