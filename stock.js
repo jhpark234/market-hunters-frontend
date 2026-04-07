@@ -5,7 +5,7 @@ const API_TIMEOUT_MS = 60000;
 const params = new URLSearchParams(window.location.search);
 
 let rawSymbol = (params.get("symbol") || "").toUpperCase().trim();
-let symbol = rawSymbol || "AAPL";
+let symbol = rawSymbol || "";
 
 let slugMapPromise = null;
 
@@ -57,10 +57,16 @@ async function initializeSymbolFromLocation() {
   }
 
   if (!rawSymbol) {
-    rawSymbol = "AAPL";
-    symbol = "AAPL";
+    const path = window.location.pathname || "";
+  
+    if (path === "/stock" || path === "/stock.html" || path === "/en/stock" || path === "/en/stock.html") {
+      rawSymbol = "AAPL";
+      symbol = "AAPL";
+    } else {
+      rawSymbol = "";
+      symbol = "";
+    }
   }
-}
 
 const PAGE_LANG = document.documentElement.lang === "en" ? "en" : "ko";
 
