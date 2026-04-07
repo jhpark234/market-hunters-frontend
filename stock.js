@@ -3,8 +3,64 @@ const ASSET_VERSION = "20260405-2";
 const API_TIMEOUT_MS = 60000;
 
 const params = new URLSearchParams(window.location.search);
-const rawSymbol = (params.get("symbol") || "AAPL").toUpperCase().trim();
-const symbol = rawSymbol;
+
+let rawSymbol = (params.get("symbol") || "").toUpperCase().trim();
+let symbol = rawSymbol || "AAPL";
+
+let slugMapPromise = null;
+
+function loadSlugMap() {
+  if (!slugMapPromise) {
+    slugMapPromise = fetch("/slug_map.json", { cache: "no-store" })
+      .then((res) => (res.ok ? res.json() : {}))
+      .catch(() => ({}));
+  }
+  return slugMapPromise;
+}
+
+async function resolveSymbolFromPath() {
+  if (rawSymbol) return rawSymbol;
+
+  try {
+    const path = window.location.pathname || "";
+    const match = path.match(/^\/(en\/)?stocks\/([^\/]+)\/?$/i);
+    if (!match) return "";
+
+    const slug = decodeURIComponent(match[2] || "").trim().toLowerCase();
+    if (!slug) return "";
+
+    const slugMap = await loadSlugMap();
+    const mapped = String(slugMap?.[slug] || "").trim().toUpperCase();
+    if (mapped) return mapped;
+
+    if (/^[A-Z][A-Z0-9.-]{0,15}$/i.test(slug) && !/^\d{6}$/i.test(slug)) {
+      return slug.toUpperCase();
+    }
+
+    if (/^\d{6}\.(KS|KQ)$/i.test(slug)) {
+      return slug.toUpperCase();
+    }
+
+    return "";
+  } catch (e) {
+    return "";
+  }
+}
+
+async function initializeSymbolFromLocation() {
+  const resolved = await resolveSymbolFromPath();
+
+  if (resolved) {
+    rawSymbol = resolved;
+    symbol = resolved;
+    return;
+  }
+
+  if (!rawSymbol) {
+    rawSymbol = "AAPL";
+    symbol = "AAPL";
+  }
+}
 
 const PAGE_LANG = document.documentElement.lang === "en" ? "en" : "ko";
 
@@ -1330,8 +1386,9 @@ window.addEventListener("resize", () => {
   drawChart(stockPageCache, currentChartPeriod);
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const periodSelect = safeGet("chart-period");
+
   if (periodSelect) {
     periodSelect.addEventListener("change", (e) => {
       currentChartPeriod = e.target.value || "1M";
@@ -1340,6 +1397,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   ensureLoadingStyles();
+  await initializeSymbolFromLocation();
   loadLegal();
   loadStock();
 });
