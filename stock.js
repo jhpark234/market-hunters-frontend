@@ -48,7 +48,7 @@ async function resolveSymbolFromPath() {
   }
 }
 
-async function initializeSymbolFromLocation() 
+async function initializeSymbolFromLocation() {
   const resolved = await resolveSymbolFromPath();
 
   if (resolved) {
@@ -59,8 +59,13 @@ async function initializeSymbolFromLocation()
 
   if (!rawSymbol) {
     const path = window.location.pathname || "";
-  
-    if (path === "/stock" || path === "/stock.html" || path === "/en/stock" || path === "/en/stock.html") {
+
+    if (
+      path === "/stock" ||
+      path === "/stock.html" ||
+      path === "/en/stock" ||
+      path === "/en/stock.html"
+    ) {
       rawSymbol = "AAPL";
       symbol = "AAPL";
     } else {
@@ -68,6 +73,7 @@ async function initializeSymbolFromLocation()
       symbol = "";
     }
   }
+}
 
 const PAGE_LANG = document.documentElement.lang === "en" ? "en" : "ko";
 
