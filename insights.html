@@ -459,7 +459,7 @@
         html += `
           <article class="post-card">
             <div class="post-top">
-              <span class="chip">${p.category || "블로그"}</span>
+              <span class="chip ${getCategoryClass(p.category)}">${p.category || "블로그"}</span>
               <span class="post-date">${formatDate(p.published_date || "")}</span>
             </div>
 
