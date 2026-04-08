@@ -428,7 +428,8 @@ pre{white-space:pre-wrap;margin:0;font:inherit;line-height:1.7}
     color: #d9e6fb;
     border: 1px solid rgba(255,255,255,.05);
   }
-
+  
+  /* 카드 상단에서는 더 진하게 */
   .post-top .chip.guide{
     background:#1e40af !important;
     color:#bfdbfe !important;
