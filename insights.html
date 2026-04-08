@@ -3,223 +3,424 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>MarketHunters 블로그 | 투자 가이드와 시장 해설</title>
-  <meta name="description" content="주식 투자 가이드, 종목 분석, 시장 해설, AI·반도체·금리 인사이트를 MarketHunters 블로그에서 확인하세요." />
+  <title>MarketHunters 블로그</title>
+  <meta name="description" content="주식, 시장, 정보는 MarketHunters 블로그 와 함께" />
   <meta name="theme-color" content="#07172f" />
   <link rel="canonical" href="https://markethunters.kr/insights.html" />
-  <meta name="robots" content="index,follow" />
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css?v=20260408-blog-1" />
+  <meta name="robots" content="index, follow" />
+
   <style>
-    .blog-shell{max-width:1180px;margin:0 auto;padding:20px 16px 96px}
-    .blog-hero{padding:24px;display:grid;gap:18px;margin-bottom:18px}
-    .blog-hero-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
-    .blog-badge{display:inline-flex;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(80,160,255,.14);color:#b9d3ff;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-    .blog-hero h1{margin:0;font-size:32px;line-height:1.2}
-    .blog-hero p{margin:0;color:#c6d4ea;line-height:1.7;font-size:15px;max-width:760px}
-    .blog-chip-row{display:flex;flex-wrap:wrap;gap:10px}
-    .blog-chip{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.06);color:#dce8fa;font-size:13px;font-weight:700}
-    .blog-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:18px 0 14px;flex-wrap:wrap}
-    .blog-filter{display:flex;gap:8px;flex-wrap:wrap}
-    .filter-btn{border:none;cursor:pointer;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.05);color:#cbd9ee;font-weight:800}
-    .filter-btn.active{background:#0d2b57;color:#fff;box-shadow:inset 0 0 0 1px rgba(143,183,255,.25)}
-    .blog-meta-note{font-size:13px;color:#9fb0c7}
-    .featured-post{display:grid;grid-template-columns:1.3fr .9fr;gap:16px;padding:18px;margin-bottom:16px}
-    .featured-main{padding:22px;border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.06)}
-    .featured-kicker{display:inline-flex;padding:7px 11px;border-radius:999px;background:rgba(0,212,255,.12);color:#9eeeff;font-size:12px;font-weight:800;margin-bottom:12px}
-    .featured-main h2{margin:0 0 12px;font-size:28px;line-height:1.28;color:#fff}
-    .featured-main p{margin:0;color:#c6d4ea;line-height:1.7}
-    .post-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;font-size:13px;color:#9db0c8}
-    .featured-side{display:grid;gap:12px}
-    .side-mini{padding:16px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);text-decoration:none}
-    .side-mini strong{display:block;color:#eef4ff;line-height:1.45;margin-bottom:6px}
-    .side-mini span{display:block;color:#9fb0c7;font-size:13px;line-height:1.55}
-    .post-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-    .post-card{display:flex;flex-direction:column;padding:18px;border-radius:22px;text-decoration:none;min-height:250px;transition:transform .18s ease, border-color .18s ease, background .18s ease}
-    .post-card:hover{transform:translateY(-2px);border-color:rgba(143,183,255,.24);background:rgba(255,255,255,.05)}
-    .post-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:14px}
-    .cat-pill{display:inline-flex;align-items:center;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:800;background:rgba(255,255,255,.06);color:#c9d6eb}
-    .post-date{font-size:12px;color:#8fa2ba;white-space:nowrap}
-    .post-title{margin:0 0 10px;font-size:20px;line-height:1.45;color:#eef4ff}
-    .post-summary{margin:0;color:#adc1d9;line-height:1.72;font-size:14px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
-    .post-bottom{margin-top:auto;padding-top:16px;display:flex;justify-content:space-between;align-items:center;gap:10px;color:#8fb7ff;font-size:13px;font-weight:800}
-    .empty-state,.loading-state{padding:40px 22px;text-align:center;color:#b9cae0}
-    .empty-state strong,.loading-state strong{display:block;color:#fff;margin-bottom:8px;font-size:18px}
-    @media (max-width:980px){.featured-post,.post-grid{grid-template-columns:1fr 1fr}.featured-post{grid-template-columns:1fr}.featured-main h2{font-size:24px}}
-    @media (max-width:720px){.blog-shell{padding:16px 12px 96px}.blog-hero{padding:20px}.blog-hero h1{font-size:26px}.post-grid{grid-template-columns:1fr}.featured-main{padding:18px}.featured-main h2{font-size:22px}}
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body{
+      background: radial-gradient(circle at top, #0b1d3a 0%, #061427 45%, #04101e 100%);
+      color:#eaf2ff;
+      font-family: Inter, Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height:100vh;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+
+    .container{
+      width:min(1180px, calc(100% - 28px));
+      margin:0 auto;
+      padding:28px 0 120px;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:900;
+      font-size:20px;
+      letter-spacing:-.02em;
+    }
+
+    .brand-badge{
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, #15396d, #0a1f3d);
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 10px 24px rgba(0,0,0,.22);
+      color:#9fc2ff;
+      font-size:16px;
+      font-weight:900;
+    }
+
+    .hero{
+      background: linear-gradient(135deg, rgba(18,38,76,.96), rgba(7,22,44,.98));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:30px;
+      padding:34px;
+      box-shadow:0 22px 54px rgba(0,0,0,.28);
+      margin-bottom:24px;
+    }
+
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      height:34px;
+      padding:0 14px;
+      border-radius:999px;
+      background:rgba(81,132,255,.18);
+      color:#dce9ff;
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:-.01em;
+    }
+
+    .hero h1{
+      margin:14px 0 10px;
+      font-size:40px;
+      line-height:1.22;
+      letter-spacing:-.03em;
+      color:#f6f9ff;
+    }
+
+    .hero p{
+      margin:0;
+      color:#aebed6;
+      font-size:16px;
+      line-height:1.8;
+      max-width:780px;
+    }
+
+    .section-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin:16px 0 14px;
+    }
+
+    .section-head h2{
+      margin:0;
+      font-size:22px;
+      letter-spacing:-.02em;
+    }
+
+    .count{
+      color:#9fb3ce;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .grid-posts{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:18px;
+    }
+
+    .post-card{
+      background: linear-gradient(180deg, rgba(7,28,58,.96), rgba(3,19,41,.98));
+      border:1px solid rgba(91,138,214,.22);
+      border-radius:24px;
+      padding:22px;
+      min-height:260px;
+      display:flex;
+      flex-direction:column;
+      box-shadow:0 14px 34px rgba(0,0,0,.24);
+      transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .post-card:hover{
+      transform:translateY(-3px);
+      border-color:rgba(132,176,255,.34);
+      box-shadow:0 20px 40px rgba(0,0,0,.3);
+    }
+
+    .post-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-bottom:18px;
+    }
+
+    .post-date{
+      color:#96aac8;
+      font-size:13px;
+      font-weight:700;
+      white-space:nowrap;
+    }
+
+    .post-title{
+      color:#f3f7ff;
+      font-size:29px;
+      line-height:1.34;
+      font-weight:900;
+      letter-spacing:-.03em;
+      display:block;
+      margin-bottom:14px;
+      word-break:keep-all;
+    }
+
+    .post-summary{
+      color:#c6d3e6;
+      font-size:16px;
+      line-height:1.78;
+      margin:0 0 24px;
+      flex:1;
+      word-break:keep-all;
+    }
+
+    .post-bottom{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      margin-top:auto;
+    }
+
+    .post-author{
+      color:#d6e4ff;
+      font-size:14px;
+      font-weight:800;
+    }
+
+    .post-link{
+      color:#9fc2ff;
+      font-size:14px;
+      font-weight:800;
+      white-space:nowrap;
+    }
+
+    .empty{
+      background: linear-gradient(180deg, rgba(7,28,58,.96), rgba(3,19,41,.98));
+      border:1px solid rgba(91,138,214,.22);
+      border-radius:24px;
+      padding:28px;
+      color:#afc1da;
+      line-height:1.8;
+    }
+
+    .bottom-nav{
+      position:fixed;
+      left:50%;
+      bottom:12px;
+      transform:translateX(-50%);
+      width:min(92vw, 640px);
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:8px;
+      padding:10px;
+      z-index:40;
+      border-radius:24px;
+      background:rgba(6,19,40,.82);
+      backdrop-filter: blur(16px);
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 16px 34px rgba(0,0,0,.28);
+    }
+
+    .bottom-item{
+      padding:12px 10px;
+      border-radius:16px;
+      text-align:center;
+      color:#cad7ec;
+      font-weight:800;
+      font-size:15px;
+    }
+
+    .bottom-item.active{
+      background:#0a2244;
+      color:#ffffff;
+    }
+
+    @media (max-width: 980px){
+      .grid-posts{
+        grid-template-columns:repeat(2, minmax(0,1fr));
+      }
+
+      .hero h1{
+        font-size:34px;
+      }
+
+      .post-title{
+        font-size:25px;
+      }
+    }
+
+    @media (max-width: 640px){
+      .container{
+        width:min(100%, calc(100% - 16px));
+        padding:18px 0 120px;
+      }
+
+      .hero{
+        padding:24px 20px;
+        border-radius:24px;
+      }
+
+      .hero h1{
+        font-size:28px;
+      }
+
+      .hero p{
+        font-size:15px;
+      }
+
+      .grid-posts{
+        grid-template-columns:1fr;
+      }
+
+      .post-card{
+        min-height:auto;
+      }
+
+      .post-title{
+        font-size:23px;
+      }
+
+      .post-summary{
+        font-size:15px;
+      }
+
+      .bottom-nav{
+        width:min(94vw, 640px);
+      }
+
+      .bottom-item{
+        font-size:14px;
+        padding:12px 6px;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="blog-shell">
-    <header class="app-header glass-card" style="margin-bottom:16px;">
-      <div class="brand-row">
-        <img src="assets/logo.svg" alt="MarketHunters 로고" class="brand-logo" />
-        <div>
-          <div class="brand-name">MarketHunters</div>
-          <div class="brand-sub">실전형 AI 투자 정보 허브</div>
-        </div>
-      </div>
-      <div class="lang-switch">
-        <a href="/" class="lang-btn active">홈으로</a>
-      </div>
+  <div class="container">
+    <header class="topbar">
+      <a class="brand" href="/index.html">
+        <span class="brand-badge">MH</span>
+        <span>MarketHunters</span>
+      </a>
     </header>
 
-    <section class="blog-hero glass-card">
-      <div class="blog-hero-top">
-        <div>
-          <span class="blog-badge">MarketHunters Blog</span>
-          <h1>투자자가 끝까지 읽기 좋은 블로그</h1>
-          <p>숫자만 나열하지 않고, 왜 중요한지와 무엇을 조심해야 하는지까지 함께 정리했습니다. 초보 투자자도 읽기 편하게, 경험 있는 투자자도 체크포인트를 얻을 수 있게 구성했습니다.</p>
-        </div>
-        <div class="blog-chip-row">
-          <span class="blog-chip">투자 가이드</span>
-          <span class="blog-chip">종목 분석</span>
-          <span class="blog-chip">시장 해설</span>
-          <span class="blog-chip">테마 인사이트</span>
-        </div>
-      </div>
+    <section class="hero">
+      <span class="chip">블로그</span>
+      <h1>주식, 시장, AI 투자에 대한 읽기 좋은 분석</h1>
+      <p>
+        MarketHunters 블로그에서는 투자 초보자도 이해하기 쉬운 방식으로
+        종목 분석, 시장 흐름, 금리와 경제 지표, AI 투자 트렌드를 정리합니다.
+      </p>
     </section>
 
-    <div class="blog-toolbar">
-      <div class="blog-filter">
-        <button class="filter-btn active" data-category="all">전체</button>
-        <button class="filter-btn" data-category="guide">투자 가이드</button>
-        <button class="filter-btn" data-category="analysis">종목 분석</button>
-        <button class="filter-btn" data-category="market">시장 해설</button>
-        <button class="filter-btn" data-category="top">테마 인사이트</button>
-      </div>
-      <div class="blog-meta-note">새로 생성된 글이 자동으로 아래 목록에 반영됩니다.</div>
+    <div class="section-head">
+      <h2>최신 글</h2>
+      <div class="count" id="countText">불러오는 중...</div>
     </div>
 
-    <section id="featured-wrap"></section>
-    <section id="post-grid" class="post-grid"></section>
+    <div id="posts"></div>
   </div>
 
-  <nav class="bottom-nav glass-card">
-    <a href="index.html" class="bottom-item">홈</a>
-    <a href="index.html#search-section" class="bottom-item">검색</a>
-    <a href="index.html#calendar-section" class="bottom-item">지표</a>
-    <a href="stock.html?symbol=NVDA" class="bottom-item">종목</a>
+  <nav class="bottom-nav">
+    <a href="/index.html" class="bottom-item">홈</a>
+    <a href="/index.html#search-section" class="bottom-item">검색</a>
+    <a href="/index.html#calendar-section" class="bottom-item">지표</a>
+    <a href="/stock.html?symbol=NVDA" class="bottom-item">종목</a>
     <a href="/insights.html" class="bottom-item active">블로그</a>
   </nav>
 
   <script>
     const API_BASE = "https://api.markethunters.kr/api/content";
-    const postGrid = document.getElementById("post-grid");
-    const featuredWrap = document.getElementById("featured-wrap");
-    const filterButtons = Array.from(document.querySelectorAll(".filter-btn"));
 
-    const categoryLabel = {
-      guide: "투자 가이드",
-      analysis: "종목 분석",
-      market: "시장 해설",
-      top: "테마 인사이트",
-    };
+    function stripHtml(html) {
+      return String(html || "").replace(/<[^>]*>/g, " ");
+    }
+
+    function cleanText(text) {
+      return String(text || "")
+        .replace(/```html/gi, "")
+        .replace(/```/g, "")
+        .replace(/<\/?title>/gi, "")
+        .replace(/<\/?html>/gi, "")
+        .replace(/<\/?head>/gi, "")
+        .replace(/<\/?body>/gi, "")
+        .replace(/^\s*제목\s*:\s*/i, "")
+        .replace(/^\s*요약\s*:\s*/i, "")
+        .trim();
+    }
+
+    function excerpt(text, len = 100) {
+      const t = cleanText(stripHtml(text)).replace(/\s+/g, " ").trim();
+      return t.length > len ? t.slice(0, len) + "..." : t;
+    }
 
     function formatDate(value) {
-      if (!value) return "날짜 미정";
-      const d = new Date(value);
-      if (Number.isNaN(d.getTime())) return value;
-      return `${d.getFullYear()}.${String(d.getMonth() + 1).padStart(2, "0")}.${String(d.getDate()).padStart(2, "0")}`;
+      if (!value) return "";
+      return String(value).replaceAll("-", ".");
     }
 
-    function escapeHtml(str) {
-      return String(str ?? "").replace(/[&<>\"]/g, s => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[s]));
-    }
-
-    function renderFeatured(posts) {
-      if (!posts.length) {
-        featuredWrap.innerHTML = "";
-        return;
-      }
-      const [main, ...rest] = posts.slice(0, 3);
-      featuredWrap.innerHTML = `
-        <section class="featured-post glass-card">
-          <a class="featured-main" href="/insight.html?slug=${encodeURIComponent(main.slug)}">
-            <span class="featured-kicker">${escapeHtml(categoryLabel[main.category] || "블로그")}</span>
-            <h2>${escapeHtml(main.title)}</h2>
-            <p>${escapeHtml(main.summary || "핵심 내용을 읽기 좋게 정리한 글입니다.")}</p>
-            <div class="post-meta">
-              <span>작성자 ${escapeHtml(main.author || "Markethunters")}</span>
-              <span>${formatDate(main.published_date)}</span>
-            </div>
-          </a>
-          <div class="featured-side">
-            ${rest.map(item => `
-              <a class="side-mini" href="/insight.html?slug=${encodeURIComponent(item.slug)}">
-                <strong>${escapeHtml(item.title)}</strong>
-                <span>${escapeHtml(item.summary || "핵심 요약을 확인해보세요.")}</span>
-              </a>
-            `).join("")}
-          </div>
-        </section>
-      `;
-    }
-
-    function renderCards(posts) {
-      if (!posts.length) {
-        postGrid.innerHTML = `
-          <div class="empty-state glass-card" style="grid-column:1 / -1;">
-            <strong>표시할 글이 아직 없습니다.</strong>
-            잠시 후 다시 확인하거나 generate_content.py를 먼저 실행해 주세요.
-          </div>
-        `;
-        return;
-      }
-
-      postGrid.innerHTML = posts.map(post => `
-        <a class="post-card glass-card" href="/insight.html?slug=${encodeURIComponent(post.slug)}">
-          <div class="post-top">
-            <span class="cat-pill">${escapeHtml(categoryLabel[post.category] || "블로그")}</span>
-            <span class="post-date">${formatDate(post.published_date)}</span>
-          </div>
-          <h3 class="post-title">${escapeHtml(post.title)}</h3>
-          <p class="post-summary">${escapeHtml(post.summary || "핵심 요약이 준비 중입니다.")}</p>
-          <div class="post-bottom">
-            <span>작성자 ${escapeHtml(post.author || "Markethunters")}</span>
-            <span>읽어보기 →</span>
-          </div>
-        </a>
-      `).join("");
-    }
-
-    async function loadPosts(category = "all") {
-      postGrid.innerHTML = `
-        <div class="loading-state glass-card" style="grid-column:1 / -1;">
-          <strong>글을 불러오는 중입니다.</strong>
-          잠시만 기다려 주세요.
-        </div>
-      `;
-
-      const url = new URL(API_BASE);
-      url.searchParams.set("limit", "60");
-      if (category !== "all") url.searchParams.set("category", category);
+    async function loadPosts() {
+      const wrap = document.getElementById("posts");
+      const countText = document.getElementById("countText");
 
       try {
-        const res = await fetch(url.toString());
+        const res = await fetch(API_BASE);
         const posts = await res.json();
-        renderFeatured(posts);
-        renderCards(posts);
-      } catch (error) {
-        postGrid.innerHTML = `
-          <div class="empty-state glass-card" style="grid-column:1 / -1;">
-            <strong>글을 불러오지 못했습니다.</strong>
-            API 연결 상태와 /api/content 응답을 확인해 주세요.
+
+        countText.textContent = `총 ${posts.length}개 글`;
+
+        if (!posts || !posts.length) {
+          wrap.innerHTML = `
+            <div class="empty">
+              아직 등록된 글이 없습니다.<br>
+              Cron Job이 실행된 뒤 다시 확인해 주세요.
+            </div>
+          `;
+          return;
+        }
+
+        let html = `<section class="grid-posts">`;
+
+        posts.forEach((p) => {
+          const title = cleanText(p.title || "");
+          const summary = p.summary ? excerpt(p.summary, 88) : excerpt(p.content, 88);
+
+          html += `
+            <article class="post-card">
+              <div class="post-top">
+                <span class="chip">${p.category || "블로그"}</span>
+                <span class="post-date">${formatDate(p.published_date || "")}</span>
+              </div>
+
+              <a class="post-title" href="/insight.html?slug=${encodeURIComponent(p.slug)}">
+                ${title}
+              </a>
+
+              <p class="post-summary">${summary}</p>
+
+              <div class="post-bottom">
+                <span class="post-author">작성자 ${p.author || "Markethunters"}</span>
+                <a class="post-link" href="/insight.html?slug=${encodeURIComponent(p.slug)}">읽어보기 →</a>
+              </div>
+            </article>
+          `;
+        });
+
+        html += `</section>`;
+        wrap.innerHTML = html;
+      } catch (e) {
+        countText.textContent = "불러오기 실패";
+        wrap.innerHTML = `
+          <div class="empty">
+            글 목록을 불러오지 못했습니다.<br>
+            API 주소와 CORS, 백엔드 배포 상태를 확인해 주세요.
           </div>
         `;
-        featuredWrap.innerHTML = "";
+        console.error("loadPosts error:", e);
       }
     }
-
-    filterButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        filterButtons.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        loadPosts(btn.dataset.category || "all");
-      });
-    });
 
     loadPosts();
   </script>
