@@ -381,21 +381,27 @@
   let allPosts = [];
   let currentCategory = "전체";
   
-  function getCategoryClass(category) {
-    const c = String(category || "").trim();
+  function getCategoryStyle(category) {
+  const c = String(category || "").trim();
 
-    if (!category) return "default";
+  if (c.includes("투자")) {
+    return "background:#1e40af;color:#dbeafe;border:1px solid rgba(96,165,250,.35);";
+  }
 
-    if (category.includes("투자")) return "guide";
+  if (c.includes("종목")) {
+    return "background:#6b21a8;color:#f3e8ff;border:1px solid rgba(167,139,250,.35);";
+  }
 
-    if (category.includes("종목")) return "stock";
+  if (c.includes("시장")) {
+    return "background:#065f46;color:#d1fae5;border:1px solid rgba(52,211,153,.35);";
+  }
 
-    if (category.includes("시장")) return "market";
+  if (c.includes("테마")) {
+    return "background:#92400e;color:#fef3c7;border:1px solid rgba(251,191,36,.35);";
+  }
 
-    if (category.includes("테마")) return "theme";
-
-    return "default";
-    }  
+  return "background:rgba(81,132,255,.18);color:#dce9ff;border:1px solid rgba(255,255,255,.05);";
+}
 
     function stripHtml(html) {
       return String(html || "").replace(/<[^>]*>/g, " ");
@@ -454,7 +460,7 @@
         html += `
           <article class="post-card">
             <div class="post-top">
-              <span class="chip ${getCategoryClass(p.category)}">${p.category || "블로그"}</span>
+              <span class="chip" style="${getCategoryStyle(p.category)}">${p.category || "블로그"}</span>
               <span class="post-date">${formatDate(p.published_date || "")}</span>
             </div>
 

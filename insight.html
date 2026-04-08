@@ -55,12 +55,19 @@
       height:34px;
       padding:0 14px;
       border-radius:999px;
-      background:rgba(81,132,255,.18);
-      color:#dce9ff;
       font-size:13px;
       font-weight:800;
       letter-spacing:-.01em;
-      border:1px solid rgba(255,255,255,.05);
+    }
+
+    .meta-badge{
+      display:inline-flex;
+      align-items:center;
+      height:28px;
+      padding:0 12px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:800;
     }
 
     h1{
@@ -81,19 +88,6 @@
       font-size:14px;
       margin-bottom:22px;
       font-weight:700;
-    }
-
-    .meta-badge{
-      display:inline-flex;
-      align-items:center;
-      height:28px;
-      padding:0 12px;
-      border-radius:999px;
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.05);
-      color:#d9e6fb;
-      font-size:13px;
-      font-weight:800;
     }
 
     .summary{
@@ -260,6 +254,28 @@
       return String(value).replaceAll("-", ".");
     }
 
+    function getCategoryStyle(category) {
+      const c = String(category || "").trim();
+
+      if (c.includes("투자")) {
+        return "background:#1e40af;color:#dbeafe;border:1px solid rgba(96,165,250,.35);";
+      }
+
+      if (c.includes("종목")) {
+        return "background:#6b21a8;color:#f3e8ff;border:1px solid rgba(167,139,250,.35);";
+      }
+
+      if (c.includes("시장")) {
+        return "background:#065f46;color:#d1fae5;border:1px solid rgba(52,211,153,.35);";
+      }
+
+      if (c.includes("테마")) {
+        return "background:#92400e;color:#fef3c7;border:1px solid rgba(251,191,36,.35);";
+      }
+
+      return "background:rgba(81,132,255,.18);color:#dce9ff;border:1px solid rgba(255,255,255,.05);";
+    }
+
     async function loadPost() {
       const id = getId();
       const wrap = document.getElementById("postWrap");
@@ -283,16 +299,17 @@
         const title = cleanText(post.title || "");
         const summary = cleanText(post.summary || "");
         const category = post.category || "블로그";
+        const categoryStyle = getCategoryStyle(category);
 
         document.title = `${title} | MarketHunters 블로그`;
 
         wrap.className = "article";
         wrap.innerHTML = `
-          <span class="chip">${category}</span>
+          <span class="chip" style="${categoryStyle}">${category}</span>
           <h1>${title}</h1>
 
           <div class="meta">
-            <span class="meta-badge">${category}</span>
+            <span class="meta-badge" style="${categoryStyle}">${category}</span>
             <span>작성자 ${post.author || "Markethunters"}</span>
             <span>작성일 ${formatDate(post.published_date || "")}</span>
           </div>
