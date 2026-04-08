@@ -214,7 +214,7 @@
 
   <script>
     const API_BASE = "https://api.markethunters.kr/api/content";
-
+  
     function cleanHtml(html) {
       return String(html || "")
         .replace(/```html/gi, "")
@@ -225,7 +225,7 @@
         .replace(/<\/?body>/gi, "")
         .trim();
     }
-
+  
     function cleanText(text) {
       return String(text || "")
         .replace(/```html/gi, "")
@@ -235,55 +235,55 @@
         .replace(/^\s*요약\s*:\s*/i, "")
         .trim();
     }
-
-    function getSlug() {
+  
+    function getId() {
       const params = new URLSearchParams(window.location.search);
-      return params.get("slug");
+      return params.get("id");
     }
-
+  
     function formatDate(value) {
       if (!value) return "";
       return String(value).replaceAll("-", ".");
     }
-
+  
     async function loadPost() {
-      const slug = getSlug();
+      const id = getId();
       const wrap = document.getElementById("postWrap");
-
-      if (!slug) {
-        wrap.innerHTML = "잘못된 접근입니다. slug 값이 없습니다.";
+  
+      if (!id) {
+        wrap.innerHTML = "잘못된 접근입니다. id 값이 없습니다.";
         return;
       }
-
+  
       try {
-        const url = `${API_BASE}/detail?slug=${encodeURIComponent(slug)}`;
+        const url = `${API_BASE}/detail?id=${encodeURIComponent(id)}`;
         const res = await fetch(url);
         const data = await res.json();
-
+  
         if (!data || !data.length) {
-          wrap.innerHTML = `글을 찾을 수 없습니다.<br><br>slug: ${slug}`;
+          wrap.innerHTML = `글을 찾을 수 없습니다.<br><br>id: ${id}`;
           return;
         }
-
+  
         const post = data[0];
         const title = cleanText(post.title || "");
         const summary = cleanText(post.summary || "");
-
+  
         document.title = `${title} | MarketHunters 블로그`;
-
+  
         wrap.className = "article";
         wrap.innerHTML = `
           <span class="chip">${post.category || "블로그"}</span>
           <h1>${title}</h1>
-
+  
           <div class="meta">
             작성자 <span>${post.author || "Markethunters"}</span>
             <span class="dot">•</span>
             작성일 <span>${formatDate(post.published_date || "")}</span>
           </div>
-
+  
           <p class="summary">${summary}</p>
-
+  
           <div class="content">${cleanHtml(post.content || "")}</div>
         `;
       } catch (e) {
@@ -291,8 +291,9 @@
         console.error("loadPost error:", e);
       }
     }
-
+  
     loadPost();
   </script>
+    
 </body>
 </html>

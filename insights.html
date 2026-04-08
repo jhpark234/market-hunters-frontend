@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>MarketHunters 블로그</title>
-  <meta name="description" content="주식, 시장, 정보는 MarketHunters 블로그 와 함께" />
+  <meta name="description" content="주식, 시장, 정보는 MarketHunters 블로그 와" />
   <meta name="theme-color" content="#07172f" />
   <link rel="canonical" href="https://markethunters.kr/insights.html" />
   <meta name="robots" content="index, follow" />
@@ -394,7 +394,7 @@
                 <span class="post-date">${formatDate(p.published_date || "")}</span>
               </div>
 
-              <a class="post-title" href="/insight.html?slug=${encodeURIComponent(p.slug)}">
+              <a class="post-title" href="/insight.html?id=${encodeURIComponent(p.id)}">
                 ${title}
               </a>
 
@@ -402,7 +402,7 @@
 
               <div class="post-bottom">
                 <span class="post-author">작성자 ${p.author || "Markethunters"}</span>
-                <a class="post-link" href="/insight.html?slug=${encodeURIComponent(p.slug)}">읽어보기 →</a>
+                <a class="post-link" href="/insight.html?id=${encodeURIComponent(p.id)}">읽어보기 →</a>
               </div>
             </article>
           `;
