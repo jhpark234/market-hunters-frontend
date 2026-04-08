@@ -60,6 +60,7 @@
       font-size:13px;
       font-weight:800;
       letter-spacing:-.01em;
+      border:1px solid rgba(255,255,255,.05);
     }
 
     h1{
@@ -72,14 +73,27 @@
     }
 
     .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
       color:#9fb3ce;
       font-size:14px;
       margin-bottom:22px;
       font-weight:700;
     }
 
-    .dot{
-      margin:0 8px;
+    .meta-badge{
+      display:inline-flex;
+      align-items:center;
+      height:28px;
+      padding:0 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.05);
+      color:#d9e6fb;
+      font-size:13px;
+      font-weight:800;
     }
 
     .summary{
@@ -214,7 +228,7 @@
 
   <script>
     const API_BASE = "https://api.markethunters.kr/api/content";
-  
+
     function cleanHtml(html) {
       return String(html || "")
         .replace(/```html/gi, "")
@@ -225,7 +239,7 @@
         .replace(/<\/?body>/gi, "")
         .trim();
     }
-  
+
     function cleanText(text) {
       return String(text || "")
         .replace(/```html/gi, "")
@@ -235,55 +249,56 @@
         .replace(/^\s*요약\s*:\s*/i, "")
         .trim();
     }
-  
+
     function getId() {
       const params = new URLSearchParams(window.location.search);
       return params.get("id");
     }
-  
+
     function formatDate(value) {
       if (!value) return "";
       return String(value).replaceAll("-", ".");
     }
-  
+
     async function loadPost() {
       const id = getId();
       const wrap = document.getElementById("postWrap");
-  
+
       if (!id) {
         wrap.innerHTML = "잘못된 접근입니다. id 값이 없습니다.";
         return;
       }
-  
+
       try {
         const url = `${API_BASE}/detail?id=${encodeURIComponent(id)}`;
         const res = await fetch(url);
         const data = await res.json();
-  
+
         if (!data || !data.length) {
           wrap.innerHTML = `글을 찾을 수 없습니다.<br><br>id: ${id}`;
           return;
         }
-  
+
         const post = data[0];
         const title = cleanText(post.title || "");
         const summary = cleanText(post.summary || "");
-  
+        const category = post.category || "블로그";
+
         document.title = `${title} | MarketHunters 블로그`;
-  
+
         wrap.className = "article";
         wrap.innerHTML = `
-          <span class="chip">${post.category || "블로그"}</span>
+          <span class="chip">${category}</span>
           <h1>${title}</h1>
-  
+
           <div class="meta">
-            작성자 <span>${post.author || "Markethunters"}</span>
-            <span class="dot">•</span>
-            작성일 <span>${formatDate(post.published_date || "")}</span>
+            <span class="meta-badge">${category}</span>
+            <span>작성자 ${post.author || "Markethunters"}</span>
+            <span>작성일 ${formatDate(post.published_date || "")}</span>
           </div>
-  
+
           <p class="summary">${summary}</p>
-  
+
           <div class="content">${cleanHtml(post.content || "")}</div>
         `;
       } catch (e) {
@@ -291,9 +306,8 @@
         console.error("loadPost error:", e);
       }
     }
-  
+
     loadPost();
   </script>
-    
 </body>
 </html>
