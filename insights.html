@@ -388,19 +388,20 @@
   let currentCategory = "전체";
   
   function getCategoryClass(category) {
-    switch (category) {
-      case "투자 가이드":
-        return "guide";
-      case "종목 분석":
-        return "stock";
-      case "시장 해설":
-        return "market";
-      case "테마 인사이트":
-        return "theme";
-      default:
-        return "default";
-    }
-}   
+    const c = String(category || "").trim();
+
+    if (!category) return "default";
+
+    if (category.includes("투자")) return "guide";
+
+    if (category.includes("종목")) return "stock";
+
+    if (category.includes("시장")) return "market";
+
+    if (category.includes("테마")) return "theme";
+
+    return "default";
+    }  
 
     function stripHtml(html) {
       return String(html || "").replace(/<[^>]*>/g, " ");
