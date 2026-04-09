@@ -34,7 +34,30 @@ const I18N = {
   }
 };
 
-const T = I18N[LANG];
+const EN_EVENT_MAP = {
+  "미국 CPI": "US CPI",
+  "미국 PPI": "US PPI",
+  "미국 기준금리": "US Fed Rate"
+};
+
+const EN_COUNTRY_MAP = {
+  "미국": "US",
+  "GLOBAL": "GLOBAL"
+};
+
+const EN_NOTE_MAP = {
+  "미국 · FRED / BLS · 인플레이션": "US · FRED / BLS · Inflation",
+  "미국 · FRED / Fed · 통화정책": "US · FRED / Fed · Monetary Policy",
+  "미국 · FRED / BLS · 소비자물가": "US · FRED / BLS · Consumer Inflation",
+  "미국 · FRED / BLS · 생산자물가": "US · FRED / BLS · Producer Inflation"
+};
+
+const EN_CATEGORY_MAP = {
+  "인플레이션": "Inflation",
+  "통화정책": "Monetary Policy",
+  "소비자물가": "Consumer Inflation",
+  "생산자물가": "Producer Inflation"
+};
 
 function metaEscapeHtml(str) {
   return String(str ?? "").replace(/[&<>\"]/g, (s) => ({
@@ -43,6 +66,45 @@ function metaEscapeHtml(str) {
     ">": "&gt;",
     "\"": "&quot;",
   }[s]));
+}
+
+function translateEventName(name) {
+  if (LANG !== "en") return name || "-";
+  return EN_EVENT_MAP[name] || name || "-";
+}
+
+function translateCountry(country) {
+  if (LANG !== "en") return country || "-";
+  return EN_COUNTRY_MAP[country] || country || "-";
+}
+
+function translateCategory(category) {
+  if (LANG !== "en") return category || "";
+  return EN_CATEGORY_MAP[category] || category || "";
+}
+
+function translateNote(item) {
+  const note = item.note || "";
+  const category = item.category || "";
+
+  if (LANG !== "en") {
+    return note || category || I18N.ko.realtimeLinked;
+  }
+
+  if (EN_NOTE_MAP[note]) return EN_NOTE_MAP[note];
+
+  if (note) {
+    let translated = note;
+    Object.entries(EN_COUNTRY_MAP).forEach(([ko, en]) => {
+      translated = translated.replaceAll(ko, en);
+    });
+    Object.entries(EN_CATEGORY_MAP).forEach(([ko, en]) => {
+      translated = translated.replaceAll(ko, en);
+    });
+    return translated;
+  }
+
+  return translateCategory(category) || I18N.en.realtimeLinked;
 }
 
 function processEconomicEvents(items) {
@@ -111,10 +173,10 @@ function buildEconomicDetailHref(item) {
 }
 
 function renderEconomicRow(item) {
-  const eventName = item.event || item.title || "-";
-  const country = item.country || "-";
+  const eventName = translateEventName(item.event || item.title || "-");
+  const country = translateCountry(item.country || "-");
   const time = item.time || "--:--";
-  const note = item.note || item.category || T.realtimeLinked;
+  const note = translateNote(item);
   const releaseDate = item.release_date || item.release_at || "-";
   const href = buildEconomicDetailHref(item);
 
@@ -132,8 +194,8 @@ function renderEconomicRow(item) {
         <div class="economic-note">
           ${
             releaseDate === "-"
-              ? metaEscapeHtml(T.checkingReleaseDate)
-              : `${metaEscapeHtml(T.releaseDateLabel)} ${metaEscapeHtml(releaseDate)}`
+              ? metaEscapeHtml(I18N[LANG].checkingReleaseDate)
+              : `${metaEscapeHtml(I18N[LANG].releaseDateLabel)} ${metaEscapeHtml(releaseDate)}`
           }
         </div>
       </div>
@@ -153,7 +215,7 @@ async function loadEconomicCalendar() {
   if (!target) return;
 
   try {
-    target.innerHTML = `<div class="empty-state">${metaEscapeHtml(T.loading)}</div>`;
+    target.innerHTML = `<div class="empty-state">${metaEscapeHtml(I18N[LANG].loading)}</div>`;
 
     const res = await fetch(`${MH_META_API_BASE}/economic/calendar`, {
       cache: "no-store",
@@ -169,9 +231,9 @@ async function loadEconomicCalendar() {
 
     target.innerHTML = ordered.length
       ? ordered.map(renderEconomicRow).join("")
-      : `<div class="empty-state">${metaEscapeHtml(T.empty)}</div>`;
+      : `<div class="empty-state">${metaEscapeHtml(I18N[LANG].empty)}</div>`;
   } catch (err) {
-    target.innerHTML = `<div class="empty-state">${metaEscapeHtml(T.loadFail)}</div>`;
+    target.innerHTML = `<div class="empty-state">${metaEscapeHtml(I18N[LANG].loadFail)}</div>`;
     console.error(err);
   }
 }
