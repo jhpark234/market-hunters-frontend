@@ -6,6 +6,36 @@ const ALLOWED_ECONOMIC_IDS = new Set([
   "us-fed-rate",
 ]);
 
+function detectLang() {
+  const htmlLang = String(document.documentElement.lang || "").trim().toLowerCase();
+  if (htmlLang === "en") return "en";
+  if (window.location.pathname.includes("/en/")) return "en";
+  return "ko";
+}
+
+const LANG = detectLang();
+
+const I18N = {
+  ko: {
+    realtimeLinked: "실시간 연동",
+    checkingReleaseDate: "발표일 확인 중",
+    releaseDateLabel: "발표일",
+    loading: "경제지표를 불러오는 중...",
+    empty: "표시할 경제지표가 없습니다.",
+    loadFail: "경제지표를 불러오지 못했습니다."
+  },
+  en: {
+    realtimeLinked: "Live linked",
+    checkingReleaseDate: "Checking release date",
+    releaseDateLabel: "Release date",
+    loading: "Loading economic indicators...",
+    empty: "No economic indicators available.",
+    loadFail: "Unable to load economic indicators."
+  }
+};
+
+const T = I18N[LANG];
+
 function metaEscapeHtml(str) {
   return String(str ?? "").replace(/[&<>\"]/g, (s) => ({
     "&": "&amp;",
@@ -45,18 +75,46 @@ function processEconomicEvents(items) {
     });
 }
 
-function buildEconomicDetailHref(item) {
-  if (item.detail_path) return item.detail_path;
+function normalizeDetailPath(path, id) {
+  const safeId = encodeURIComponent(id || "");
 
+  if (!path) {
+    return LANG === "en"
+      ? `en/economic-detail.html?id=${safeId}`
+      : `economic-detail.html?id=${safeId}`;
+  }
+
+  let normalized = String(path).trim();
+
+  if (LANG === "en") {
+    if (normalized.startsWith("/en/")) return normalized;
+    if (normalized.startsWith("en/")) return normalized;
+    if (normalized.startsWith("/")) return `/en${normalized}`;
+    return `en/${normalized}`;
+  }
+
+  if (normalized.startsWith("/en/")) {
+    return normalized.replace(/^\/en\//, "/");
+  }
+
+  if (normalized.startsWith("en/")) {
+    return normalized.replace(/^en\//, "");
+  }
+
+  return normalized;
+}
+
+function buildEconomicDetailHref(item) {
   const id = item.id || "";
-  return `economic-detail.html?id=${encodeURIComponent(id)}`;
+  const detailPath = item.detail_path || "";
+  return normalizeDetailPath(detailPath, id);
 }
 
 function renderEconomicRow(item) {
   const eventName = item.event || item.title || "-";
   const country = item.country || "-";
   const time = item.time || "--:--";
-  const note = item.note || item.category || "실시간 연동";
+  const note = item.note || item.category || T.realtimeLinked;
   const releaseDate = item.release_date || item.release_at || "-";
   const href = buildEconomicDetailHref(item);
 
@@ -72,7 +130,11 @@ function renderEconomicRow(item) {
         </div>
 
         <div class="economic-note">
-          ${releaseDate === "-" ? "발표일 확인 중" : `발표일 ${metaEscapeHtml(releaseDate)}`}
+          ${
+            releaseDate === "-"
+              ? metaEscapeHtml(T.checkingReleaseDate)
+              : `${metaEscapeHtml(T.releaseDateLabel)} ${metaEscapeHtml(releaseDate)}`
+          }
         </div>
       </div>
 
@@ -91,12 +153,15 @@ async function loadEconomicCalendar() {
   if (!target) return;
 
   try {
-    target.innerHTML = '<div class="empty-state">경제지표를 불러오는 중...</div>';
+    target.innerHTML = `<div class="empty-state">${metaEscapeHtml(T.loading)}</div>`;
 
     const res = await fetch(`${MH_META_API_BASE}/economic/calendar`, {
       cache: "no-store",
     });
-    if (!res.ok) throw new Error(`calendar failed: ${res.status}`);
+
+    if (!res.ok) {
+      throw new Error(`calendar failed: ${res.status}`);
+    }
 
     const data = await res.json();
     const items = data.items || data.events || [];
@@ -104,9 +169,9 @@ async function loadEconomicCalendar() {
 
     target.innerHTML = ordered.length
       ? ordered.map(renderEconomicRow).join("")
-      : '<div class="empty-state">표시할 경제지표가 없습니다.</div>';
+      : `<div class="empty-state">${metaEscapeHtml(T.empty)}</div>`;
   } catch (err) {
-    target.innerHTML = '<div class="empty-state">경제지표를 불러오지 못했습니다.</div>';
+    target.innerHTML = `<div class="empty-state">${metaEscapeHtml(T.loadFail)}</div>`;
     console.error(err);
   }
 }
