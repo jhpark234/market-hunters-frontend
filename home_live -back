@@ -1,58 +1,13 @@
-// frontend/home_live.js
-
 (() => {
   const HOME_API_BASE = "https://api.markethunters.kr/api";
-  const PAGE_LANG = document.documentElement.lang === "en" ? "en" : "ko";
 
-  const MARKET_BRIEF_CACHE_KEY = `mh_market_brief_cache_v3_${PAGE_LANG}`;
-  const MARKET_BRIEF_LAST_SLOT_KEY = `mh_market_brief_last_slot_v3_${PAGE_LANG}`;
+  const MARKET_BRIEF_CACHE_KEY = "mh_market_brief_cache_v2";
+  const MARKET_BRIEF_LAST_SLOT_KEY = "mh_market_brief_last_slot_v2";
   const BRIEF_REFRESH_HOURS_KST = [9, 18]; // 오전 9시, 오후 6시 기준
   const BRIEF_CHECK_INTERVAL_MS = 60 * 1000; // 1분마다 슬롯 변경 체크
 
   const MARKET_INDEX_CACHE_KEY = "mh_market_index_cache_v1";
   const MARKET_INDEX_CACHE_MINUTES = 1; // 시장지수 1분 캐시
-
-  const TEXT = PAGE_LANG === "en"
-    ? {
-        briefLoadingTitle: "Generating AI market brief",
-        briefLoadingSteps: [
-          "Collecting market data...",
-          "Summarizing key issues...",
-          "Generating AI brief...",
-          "Polishing the wording..."
-        ],
-        briefSuccess: "Brief updated",
-        briefFail: "Unable to load the brief.",
-        briefTitle: "AI Market Brief",
-        briefEmpty: "No market brief is available.",
-        briefGenerated: "Generated",
-        briefStale: "Showing the previously saved brief",
-        indicesLoading: "Loading market indices...",
-        indicesEmpty: "No market index data available",
-        indicesFail: "Unable to load market indices.",
-        nasdaqNote: "U.S. technology benchmark (proxy)",
-        sp500Note: "U.S. large-cap benchmark (proxy)"
-      }
-    : {
-        briefLoadingTitle: "AI 시장 브리핑 생성 중",
-        briefLoadingSteps: [
-          "시장 데이터 수집 중...",
-          "주요 이슈 정리 중...",
-          "AI 브리핑 문장 생성 중...",
-          "표현 다듬는 중..."
-        ],
-        briefSuccess: "브리핑 업데이트 완료",
-        briefFail: "브리핑을 불러오지 못했습니다.",
-        briefTitle: "오늘 시장 브리핑",
-        briefEmpty: "시장 브리핑이 없습니다.",
-        briefGenerated: "생성",
-        briefStale: "이전 저장 브리핑 표시 중",
-        indicesLoading: "시장 지수 불러오는 중...",
-        indicesEmpty: "시장 지수 데이터 없음",
-        indicesFail: "시장 지수를 불러오지 못했습니다.",
-        nasdaqNote: "미국 기술주 지표 (프록시)",
-        sp500Note: "미국 대형주 지표 (프록시)"
-      };
 
   function fmtNumber(value) {
     if (value === null || value === undefined || value === "" || Number.isNaN(Number(value))) {
@@ -332,8 +287,8 @@
       <div class="mh-brief-loading-top">
         <div class="mh-brief-spinner"></div>
         <div>
-          <div class="mh-brief-loading-title">${escapeHtml(TEXT.briefLoadingTitle)}</div>
-          <div class="mh-brief-loading-step">${escapeHtml(TEXT.briefLoadingSteps[0])}</div>
+          <div class="mh-brief-loading-title">AI 시장 브리핑 생성 중</div>
+          <div class="mh-brief-loading-step">시장 데이터 수집 중...</div>
         </div>
       </div>
       <div class="mh-brief-progress">
@@ -359,7 +314,13 @@
     let stepIndex = 0;
     let progressIndex = 0;
 
-    const steps = TEXT.briefLoadingSteps;
+    const steps = [
+      "시장 데이터 수집 중...",
+      "주요 이슈 정리 중...",
+      "AI 브리핑 문장 생성 중...",
+      "표현 다듬는 중..."
+    ];
+
     const progressPattern = [18, 29, 43, 58, 72, 84, 93];
 
     function clearTimers() {
@@ -422,7 +383,7 @@
       }, 900);
     }
 
-    function success(text = TEXT.briefSuccess) {
+    function success(text = "브리핑 업데이트 완료") {
       if (!loadingEl) return;
 
       clearTimers();
@@ -440,7 +401,7 @@
       }, 500);
     }
 
-    function fail(text = TEXT.briefFail) {
+    function fail(text = "브리핑을 불러오지 못했습니다.") {
       if (!loadingEl) return;
 
       clearTimers();
@@ -467,12 +428,10 @@
 
     if (!el) return;
 
-    const titleText = data?.title || TEXT.briefTitle;
-    const briefText = data?.brief || data?.content || TEXT.briefEmpty;
+    const titleText = data?.title || "오늘 시장 브리핑";
+    const briefText = data?.brief || data?.content || "시장 브리핑이 없습니다.";
     const generatedAt = data?.generated_at || data?.created_at || data?.updated_at || null;
-    const staleLabel = options.stale
-      ? `<div style="margin-top:8px; font-size:12px; color:#fbbf24;">${escapeHtml(TEXT.briefStale)}</div>`
-      : "";
+    const staleLabel = options.stale ? '<div style="margin-top:8px; font-size:12px; color:#fbbf24;">이전 저장 브리핑 표시 중</div>' : "";
 
     el.innerHTML = `
       <div class="brief-title">${escapeHtml(titleText)}</div>
@@ -481,7 +440,7 @@
     `;
 
     if (timeEl) {
-      timeEl.textContent = `${TEXT.briefGenerated}: ${formatGeneratedAt(generatedAt)}`;
+      timeEl.textContent = `생성: ${formatGeneratedAt(generatedAt)}`;
     }
   }
 
@@ -490,7 +449,7 @@
     if (!el) return;
 
     if (!items || !items.length) {
-      el.innerHTML = `<div class="empty-row">${escapeHtml(TEXT.indicesEmpty)}</div>`;
+      el.innerHTML = '<div class="empty-row">시장 지수 데이터 없음</div>';
       return;
     }
 
@@ -499,8 +458,8 @@
       const cls = pct > 0 ? "up" : pct < 0 ? "down" : "flat";
 
       const noteMap = {
-        NASDAQ: TEXT.nasdaqNote,
-        SP500: TEXT.sp500Note
+        NASDAQ: "미국 기술주 지표 (프록시)",
+        SP500: "미국 대형주 지표 (프록시)"
       };
 
       const note = noteMap[item?.code] || item?.note || "";
@@ -530,7 +489,7 @@
     if (cached?.length) {
       renderIndices(cached);
     } else {
-      el.innerHTML = `<div class="empty-row">${escapeHtml(TEXT.indicesLoading)}</div>`;
+      el.innerHTML = '<div class="empty-row">시장 지수 불러오는 중...</div>';
     }
 
     try {
@@ -547,7 +506,7 @@
 
       if (!items.length) {
         if (!cached?.length) {
-          el.innerHTML = `<div class="empty-row">${escapeHtml(TEXT.indicesEmpty)}</div>`;
+          el.innerHTML = '<div class="empty-row">시장 지수 데이터 없음</div>';
         }
         return;
       }
@@ -558,7 +517,7 @@
       console.error("loadIndices error:", e);
 
       if (!cached?.length) {
-        el.innerHTML = `<div class="empty-row">${escapeHtml(TEXT.indicesFail)}</div>`;
+        el.innerHTML = '<div class="empty-row">시장 지수를 불러오지 못했습니다.</div>';
       }
     }
   }
@@ -574,7 +533,7 @@
     const currentSlotKey = getCurrentBriefSlotKey();
     const cached = loadBriefCache();
 
-    if (!force && cached?.slotKey === currentSlotKey && cached?.lang === PAGE_LANG && cached?.data) {
+    if (!force && cached?.slotKey === currentSlotKey && cached?.data) {
       renderMarketBrief(cached.data, { stale: false });
       saveLastSlotKey(currentSlotKey);
       return;
@@ -582,12 +541,12 @@
 
     try {
       if (timeEl) {
-        timeEl.textContent = `${TEXT.briefGenerated}: -`;
+        timeEl.textContent = "생성: -";
       }
 
       loader.show();
 
-      const res = await fetch(`${HOME_API_BASE}/ai/market-brief?lang=${encodeURIComponent(PAGE_LANG)}`, {
+      const res = await fetch(`${HOME_API_BASE}/ai/market-brief`, {
         cache: "no-store"
       });
 
@@ -602,25 +561,24 @@
       saveBriefCache({
         slotKey: currentSlotKey,
         fetchedAt: new Date().toISOString(),
-        lang: PAGE_LANG,
         data
       });
 
       saveLastSlotKey(currentSlotKey);
-      loader.success(TEXT.briefSuccess);
+      loader.success("브리핑 업데이트 완료");
     } catch (e) {
       console.error("loadMarketBrief error:", e);
 
       if (cached?.data) {
         renderMarketBrief(cached.data, { stale: true });
       } else {
-        el.innerHTML = `<div class="empty-row">${escapeHtml(TEXT.briefFail)}</div>`;
+        el.innerHTML = '<div class="empty-row">브리핑을 불러오지 못했습니다.</div>';
         if (timeEl) {
-          timeEl.textContent = `${TEXT.briefGenerated}: -`;
+          timeEl.textContent = "생성: -";
         }
       }
 
-      loader.fail(TEXT.briefFail);
+      loader.fail("브리핑을 불러오지 못했습니다.");
     }
   }
 
