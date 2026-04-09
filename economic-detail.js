@@ -30,6 +30,7 @@ const I18N = {
   ko: {
     pageDefaultTitle: "경제지표",
     invalidAccess: "잘못된 접근입니다.",
+    loadFailDescription: "데이터를 불러오지 못했습니다.",
     loadingDescription: "경제지표 데이터를 불러오는 중입니다.",
     noContent: "내용이 없습니다.",
     noSummary: "요약 정보가 없습니다.",
@@ -61,11 +62,8 @@ const I18N = {
     summaryLoadFail: "요약 정보를 불러오지 못했습니다.",
     analysisLoadFail: "시장 영향 해설을 불러오지 못했습니다.",
     retryCheck: "데이터 연결 상태를 확인한 뒤 다시 시도해 주세요.",
-    loadFailDescription: "데이터를 불러오지 못했습니다.",
-    loadFailRelease: "불러오기 실패",
     errorBadge: "오류",
     noData: "데이터 없음",
-    neutral: "중립",
     marketImpactTail:
       "투자자 입장에서 중요한 것은 숫자 하나만 보는 것이 아니라, 이전 발표 대비 변화와 시장 기대의 차이를 함께 해석하는 것입니다. 특히 금리와 환율, 기술주 및 채권시장의 반응은 같은 숫자라도 당시의 매크로 환경에 따라 달라질 수 있습니다.",
     calloutUp:
@@ -84,6 +82,7 @@ const I18N = {
   en: {
     pageDefaultTitle: "Economic Indicator",
     invalidAccess: "Invalid request.",
+    loadFailDescription: "Unable to load data.",
     loadingDescription: "Loading economic indicator data...",
     noContent: "No content available.",
     noSummary: "No summary available.",
@@ -115,11 +114,8 @@ const I18N = {
     summaryLoadFail: "Unable to load summary information.",
     analysisLoadFail: "Unable to load market impact analysis.",
     retryCheck: "Please check the data connection and try again.",
-    loadFailDescription: "Unable to load data.",
-    loadFailRelease: "Load failed",
     errorBadge: "Error",
     noData: "No data",
-    neutral: "Neutral",
     marketImpactTail:
       "For investors, it is important not to focus only on one number. What matters is how the result changes versus the previous release and how it shifts market expectations. Reactions in rates, FX, technology stocks, and bonds can vary depending on the broader macro environment.",
     calloutUp:
@@ -147,6 +143,59 @@ function t(key, vars = {}) {
   return text;
 }
 
+const EN_EVENT_MAP = {
+  "미국 CPI": "US CPI",
+  "미국 PPI": "US PPI",
+  "미국 기준금리": "US Fed Rate"
+};
+
+const EN_COUNTRY_MAP = {
+  "미국": "US",
+  "GLOBAL": "GLOBAL"
+};
+
+const EN_SUMMARY_MAP = {
+  "미국 CPI는 소비자물가지수로, 인플레이션 압력을 보여주는 핵심 경제지표입니다. 금리 기대와 기술주, 채권시장 변동성에 직접적인 영향을 줄 수 있습니다.":
+    "US CPI is a key inflation indicator that measures consumer prices. It can directly affect interest-rate expectations, technology stocks, and bond market volatility.",
+
+  "미국 PPI는 생산자물가지수로, 기업 원가 압력과 향후 소비자물가 방향을 가늠할 때 참고하는 지표입니다. 채권금리와 인플레이션 기대에 영향을 줄 수 있습니다.":
+    "US PPI is a producer price index used to gauge corporate cost pressure and the direction of future consumer inflation. It can influence bond yields and inflation expectations.",
+
+  "미국 기준금리는 연방기금금리 수준을 통해 통화정책 방향을 보여주는 핵심 지표입니다. 주식, 채권, 달러에 동시에 영향을 줄 수 있습니다.":
+    "US Fed Rate is a key indicator that shows the direction of monetary policy through the federal funds rate level. It can affect stocks, bonds, and the US dollar at the same time."
+};
+
+const EN_ANALYSIS_MAP = {
+  "CPI가 예상보다 높게 나오면 금리 인하 기대가 약해질 수 있어 성장주와 위험자산에 부담이 될 수 있습니다.\n\n반대로 CPI가 둔화되면 물가 압력이 완화되는 신호로 해석되며 시장에는 상대적으로 우호적일 수 있습니다.\n\n시장에서는 숫자 절대값보다도 이전 발표 대비 변화와 중앙은행 정책 기대의 변화를 더 중요하게 봅니다.":
+    "If CPI comes in above expectations, rate-cut expectations may weaken, putting pressure on growth stocks and risk assets.\n\nIf CPI cools, it may be interpreted as easing inflation pressure and can be relatively supportive for the market.\n\nMarkets usually care more about the change versus the previous release and the shift in central-bank expectations than the absolute number itself.",
+
+  "PPI가 예상보다 높으면 기업 원가 부담과 인플레이션 재가속 우려가 커질 수 있습니다.\n\n반대로 PPI가 둔화되면 물가 압력이 완화되는 신호로 해석되며 금리 부담이 다소 완화될 수 있습니다.\n\n시장에서는 절대 수치보다도 이전 발표 대비 변화와 CPI에 대한 선행 신호 여부를 중요하게 봅니다.":
+    "If PPI comes in above expectations, concern about corporate cost pressure and renewed inflation may increase.\n\nIf PPI cools, it may be interpreted as easing price pressure and could reduce rate-related pressure somewhat.\n\nMarkets focus more on the change versus the previous release and whether it signals future CPI direction than on the absolute number alone.",
+
+  "연준이 매파적으로 해석되면 금리 부담이 높아지면서 성장주와 위험자산에 부담이 될 수 있습니다.\n\n반대로 비둘기파적 신호가 강화되면 금리 인하 기대가 살아나며 위험자산 선호가 회복될 수 있습니다.\n\n기준금리 숫자 자체보다도 향후 금리 경로와 파월 의장 발언이 시장에 더 큰 영향을 줄 수 있습니다.":
+    "If the Fed is interpreted as hawkish, higher rate pressure can weigh on growth stocks and risk assets.\n\nIf dovish signals strengthen, rate-cut expectations may recover and risk appetite can improve.\n\nMarkets are often influenced more by the future rate path and Chair Powell's comments than by the policy rate number alone."
+};
+
+function translateEventName(name) {
+  if (LANG !== "en") return name || t("pageDefaultTitle");
+  return EN_EVENT_MAP[name] || name || t("pageDefaultTitle");
+}
+
+function translateCountry(country) {
+  if (LANG !== "en") return country || "GLOBAL";
+  return EN_COUNTRY_MAP[country] || country || "GLOBAL";
+}
+
+function translateSummary(text) {
+  if (LANG !== "en") return text || t("noSummary");
+  return EN_SUMMARY_MAP[text] || text || t("noSummary");
+}
+
+function translateAnalysis(text) {
+  if (LANG !== "en") return text || t("noAnalysis");
+  return EN_ANALYSIS_MAP[text] || text || t("noAnalysis");
+}
+
 function nl2p(text) {
   const raw = String(text ?? "").trim();
   if (!raw) return `<p>${escapeHtml(t("noContent"))}</p>`;
@@ -170,10 +219,6 @@ function formatDateTime(value) {
   const day = String(d.getDate()).padStart(2, "0");
   const hh = String(d.getHours()).padStart(2, "0");
   const mm = String(d.getMinutes()).padStart(2, "0");
-
-  if (LANG === "en") {
-    return `${y}-${m}-${day} ${hh}:${mm}`;
-  }
 
   return `${y}-${m}-${day} ${hh}:${mm}`;
 }
@@ -347,16 +392,21 @@ async function loadEconomicDetail() {
 
     const data = await res.json();
 
-    const title = data?.event_name || t("pageDefaultTitle");
-    const country = data?.country || "GLOBAL";
+    const rawTitle = data?.event_name || t("pageDefaultTitle");
+    const rawCountry = data?.country || "GLOBAL";
     const releaseDate = data?.release_date || "";
     const actual = data?.actual || "-";
     const forecast = data?.forecast || "-";
     const previous = data?.previous || "-";
     const source = data?.source || "-";
     const updatedAt = data?.updated_at || "";
-    const summaryText = data?.summary_text || t("noSummary");
-    const analysisText = data?.analysis_text || t("noAnalysis");
+    const rawSummaryText = data?.summary_text || t("noSummary");
+    const rawAnalysisText = data?.analysis_text || t("noAnalysis");
+
+    const title = translateEventName(rawTitle);
+    const country = translateCountry(rawCountry);
+    const summaryText = translateSummary(rawSummaryText);
+    const analysisText = translateAnalysis(rawAnalysisText);
 
     setText("eco-country", country);
     setText("eco-badge", country);
