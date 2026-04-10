@@ -10,7 +10,12 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
-<url>
+  <url>
+    <loc>https://markethunters.kr/en/stock.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://markethunters.kr/en/stocks/000100/</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
