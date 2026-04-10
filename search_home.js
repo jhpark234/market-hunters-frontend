@@ -2,6 +2,31 @@ const MH_API_BASE ="https://api.markethunters.kr/api";
 
 let mhCurrentMarket = 'ALL';
 
+let mhSlugMapPromise = null;
+
+function mhLoadSlugMap() {
+  if (!mhSlugMapPromise) {
+    mhSlugMapPromise = fetch('/slug_map.json', { cache: 'no-store' })
+      .then((res) => (res.ok ? res.json() : {}))
+      .catch(() => ({}));
+  }
+  return mhSlugMapPromise;
+}
+
+function mhStockHref(symbol) {
+  const safe = String(symbol || '').trim().toUpperCase();
+  const slugMap = window.__MH_SLUG_MAP__ || {};
+  for (const [slug, mappedSymbol] of Object.entries(slugMap)) {
+    const canonical = String(mappedSymbol || '').trim().toUpperCase();
+    if (!canonical) continue;
+    if (canonical === safe || canonical.replace(/\.(KS|KQ)$/i, '') === safe.replace(/\.(KS|KQ)$/i, '')) {
+      return `/stocks/${slug}/`;
+    }
+  }
+  return `stock.html?symbol=${encodeURIComponent(safe)}`;
+}
+
+
 function mhEscapeHtml(str) {
   return String(str ?? '').replace(/[&<>\"]/g, (s) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[s]));
 }
@@ -21,7 +46,7 @@ function mhSignClass(value) {
 
 function mhRenderSearchCard(item) {
   return `
-    <a class="search-card link-row" href="stock.html?symbol=${encodeURIComponent(item.symbol)}">
+    <a class="search-card link-row" href="${mhStockHref(item.symbol)}">
       <div>
         <div class="stock-name">${mhEscapeHtml(item.name)}</div>
         <div class="stock-symbol">${mhEscapeHtml(item.symbol)} · ${mhEscapeHtml(item.market || '-')}</div>
@@ -55,6 +80,7 @@ async function mhRunSearch() {
   target.innerHTML = '<div class="empty-state">검색 중...</div>';
 
   try {
+    window.__MH_SLUG_MAP__ = await mhLoadSlugMap();
     const res = await fetch(`${MH_API_BASE}/stocks/search?q=${encodeURIComponent(q)}&market=${encodeURIComponent(mhCurrentMarket)}&limit=18`);
     if (!res.ok) throw new Error(`search failed: ${res.status}`);
     const data = await res.json();

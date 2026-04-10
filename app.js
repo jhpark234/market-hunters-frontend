@@ -1,6 +1,31 @@
 const API_BASE = "https://market-hunters-backend.onrender.com/api";
 let currentMarket = 'ALL';
 
+let mhFrontSlugMapPromise = null;
+
+function loadFrontendSlugMap(){
+  if(!mhFrontSlugMapPromise){
+    mhFrontSlugMapPromise = fetch('/slug_map.json', { cache: 'no-store' })
+      .then(r => r.ok ? r.json() : {})
+      .catch(() => ({}));
+  }
+  return mhFrontSlugMapPromise;
+}
+
+function stockHrefBySymbol(symbol){
+  const safe = String(symbol || '').trim().toUpperCase();
+  const map = window.__MH_SLUG_MAP__ || {};
+  for(const [slug, mapped] of Object.entries(map)){
+    const canonical = String(mapped || '').trim().toUpperCase();
+    if(!canonical) continue;
+    if(canonical === safe || canonical.replace(/\.(KS|KQ)$/i, '') === safe.replace(/\.(KS|KQ)$/i, '')){
+      return `/stocks/${slug}/`;
+    }
+  }
+  return `stock.html?symbol=${encodeURIComponent(safe)}`;
+}
+
+
 function signClass(value){ return Number(value) >= 0 ? "positive" : "negative"; }
 function fmtChange(value){ const num = Number(value || 0); return `${num > 0 ? "+" : ""}${num.toFixed(2)}%`; }
 function escapeHtml(str){ return String(str ?? '').replace(/[&<>\"]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[s])); }
@@ -27,7 +52,7 @@ async function loadIndices(){
 
 function stockTemplate(item, direction){
   return `
-    <a class="stock-row link-row" href="stock.html?symbol=${encodeURIComponent(item.symbol)}">
+    <a class="stock-row link-row" href="${stockHrefBySymbol(item.symbol)}">
       <div class="stock-top">
         <div>
           <div class="stock-name">${item.name}</div>
@@ -41,7 +66,7 @@ function stockTemplate(item, direction){
 
 function searchCard(item){
   return `
-    <a class="search-card link-row" href="stock.html?symbol=${encodeURIComponent(item.symbol)}">
+    <a class="search-card link-row" href="${stockHrefBySymbol(item.symbol)}">
       <div>
         <div class="stock-name">${escapeHtml(item.name)}</div>
         <div class="stock-symbol">${escapeHtml(item.symbol)} · ${escapeHtml(item.market)}</div>
@@ -128,6 +153,7 @@ function bindUI(){
 
 async function boot(){
   bindUI();
+  window.__MH_SLUG_MAP__ = await loadFrontendSlugMap();
   await Promise.all([loadIndices(), loadMovers(), loadEconomic(), loadBrief(), loadLegal()]);
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./sw.js').catch(() => {});

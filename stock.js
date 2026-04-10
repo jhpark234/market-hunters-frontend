@@ -57,6 +57,48 @@ async function resolveSymbolFromPath() {
   }
 }
 
+async function buildStockPathFromSymbol(inputSymbol, lang = PAGE_LANG) {
+  const safeSymbol = String(inputSymbol || "").trim().toUpperCase();
+  if (!safeSymbol) {
+    return lang === "en" ? "/en/stock.html" : "/stock.html";
+  }
+
+  try {
+    const slugMap = await loadSlugMap();
+    let matchedSlug = "";
+
+    for (const [slug, mappedSymbol] of Object.entries(slugMap || {})) {
+      const canonical = String(mappedSymbol || "").trim().toUpperCase();
+      if (!canonical) continue;
+      if (canonical === safeSymbol || cleanSymbol(canonical) === cleanSymbol(safeSymbol)) {
+        matchedSlug = String(slug || "").trim().toLowerCase();
+        break;
+      }
+    }
+
+    if (matchedSlug) {
+      return lang === "en" ? `/en/stocks/${matchedSlug}/` : `/stocks/${matchedSlug}/`;
+    }
+  } catch (e) {
+    console.warn("buildStockPathFromSymbol fallback:", e);
+  }
+
+  return lang === "en"
+    ? `/en/stock.html?symbol=${encodeURIComponent(safeSymbol)}`
+    : `/stock.html?symbol=${encodeURIComponent(safeSymbol)}`;
+}
+
+async function updateLanguageSwitchLinks(inputSymbol) {
+  const safeSymbol = String(inputSymbol || canonicalSymbol || rawSymbol || "").trim().toUpperCase();
+  if (!safeSymbol) return;
+
+  const krBtn = document.querySelector('.lang-switch a[href="/stock.html"], .lang-switch a[href^="/stock.html?"]');
+  const enBtn = document.querySelector('.lang-switch a[href="/en/stock.html"], .lang-switch a[href^="/en/stock.html?"]');
+
+  if (krBtn) krBtn.href = await buildStockPathFromSymbol(safeSymbol, "ko");
+  if (enBtn) enBtn.href = await buildStockPathFromSymbol(safeSymbol, "en");
+}
+
 async function initializeSymbolFromLocation() {
   const resolved = await resolveSymbolFromPath();
   console.log("DEBUG resolved:", resolved);
@@ -197,21 +239,23 @@ function setOrCreateMeta(selector, createTag, attrs, content) {
   return el;
 }
 
-function updateSEO(detail, meta = {}) {
+async function updateSEO(detail, meta = {}) {
   if (!detail && !meta) return;
 
   const safeName = String(
     detail?.name || detail?.name_kr || detail?.name_en || canonicalSymbol || rawSymbol
   ).trim();
-  const safeCode = String(detail?.symbol || canonicalSymbol || rawSymbol).trim();
+  const safeCode = String(detail?.symbol || canonicalSymbol || rawSymbol).trim().toUpperCase();
   const pageTitle = String(
     meta?.title || `${safeName} ${T.seoTitleSuffix}`
   ).trim();
   const pageDesc = String(
     meta?.description || T.seoDesc(safeName, safeCode)
   ).trim();
-  const canonicalHref =
-  "https://www.markethunters.kr" + window.location.pathname;
+
+  const canonicalHref = meta?.canonical_url
+    ? String(meta.canonical_url).trim()
+    : (`https://www.markethunters.kr${await buildStockPathFromSymbol(safeCode, PAGE_LANG)}`);
 
   document.title = pageTitle;
 
@@ -1206,6 +1250,11 @@ function fillOverviewBase(overview, aiDetailFallback = {}) {
   safeSetText("stock-industry", detail?.industry || "-");
   safeSetText("stock-summary", detail?.summary || "-");
 
+  const seoCopy = PAGE_LANG === "en"
+    ? `${displayTitle} is a stock detail page on MarketHunters. Review recent price action, market context, latest news, and AI-generated commentary for ${displayTitle}.`
+    : `${displayTitle} 종목 페이지입니다. 최근 주가 흐름, 시장 구분, 최신 뉴스, AI 분석 코멘트를 한 번에 확인할 수 있도록 구성했습니다.`;
+  safeSetText("stock-seo-copy", seoCopy);
+
   const chartRows = getOverviewChartRows(overview, aiDetailFallback);
   const latest = chartRows.length ? getChartValue(chartRows[chartRows.length - 1]) : null;
   const prev = chartRows.length > 1 ? getChartValue(chartRows[chartRows.length - 2]) : null;
@@ -1400,7 +1449,8 @@ async function loadStock() {
     canonicalSymbol = String(detail?.symbol || finalSymbol).trim().toUpperCase();
 
     fillOverviewBase(overview, {});
-    updateSEO(detail, overview?.meta || {});
+    await updateSEO(detail, overview?.meta || {});
+    await updateLanguageSwitchLinks(canonicalSymbol);
     renderNewsList(normalizeNewsRows(overview?.news || []));
     renderBullets(safeGet("stock-ai-brief"), T.aiAnalysisLoading);
     renderBullets(safeGet("news-summary"), T.newsSummaryLoading);
@@ -1440,21 +1490,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 /* Language switch keep symbol   */
 /* ============================= */
 (function () {
-  const params = new URLSearchParams(window.location.search);
-  const currentSymbol = params.get("symbol");
-
-  if (!currentSymbol) return;
-
-  const krBtn = document.querySelector('a[href="/stock.html"]');
-  const enBtn = document.querySelector('a[href="/en/stock.html"]');
-
-  if (krBtn) {
-    krBtn.href = `/stock.html?symbol=${encodeURIComponent(currentSymbol)}`;
-  }
-
-  if (enBtn) {
-    enBtn.href = `/en/stock.html?symbol=${encodeURIComponent(currentSymbol)}`;
-  }
+  updateLanguageSwitchLinks(rawSymbol || canonicalSymbol || "").catch((e) => {
+    console.warn("language switch init skipped", e);
+  });
 })();
 
 /* ========================= */
