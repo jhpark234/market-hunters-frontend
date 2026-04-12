@@ -642,3 +642,192 @@
     watchBriefRefreshSlot();
   });
 })();
+
+/* ===== LIVE AI SIGNAL (B plan, backend-driven) ===== */
+(() => {
+  const API_BASE = "https://api.markethunters.kr/api";
+  const PAGE_LANG = document.documentElement.lang === "en" ? "en" : "ko";
+  const CACHE_KEY = `mh_live_signal_v2_${PAGE_LANG}`;
+  const CACHE_MINUTES = 10;
+  const REFRESH_MS = 5 * 60 * 1000;
+
+  function $(selector) {
+    return document.querySelector(selector);
+  }
+
+  function $all(selector) {
+    return Array.from(document.querySelectorAll(selector));
+  }
+
+  function escapeHtml(str) {
+    return String(str ?? "").replace(/[&<>"]/g, (s) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+    }[s]));
+  }
+
+  function loadCache() {
+    try {
+      const raw = localStorage.getItem(CACHE_KEY);
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      if (!parsed?.savedAt || !parsed?.data) return null;
+      const diff = Date.now() - new Date(parsed.savedAt).getTime();
+      if (Number.isNaN(diff) || diff > CACHE_MINUTES * 60 * 1000) return null;
+      return parsed.data;
+    } catch {
+      return null;
+    }
+  }
+
+  function saveCache(data) {
+    try {
+      localStorage.setItem(CACHE_KEY, JSON.stringify({
+        savedAt: new Date().toISOString(),
+        data
+      }));
+    } catch {}
+  }
+
+  function signalClass(state) {
+    if (state === "bull") return "mh-live-bull";
+    if (state === "risk") return "mh-live-risk";
+    return "mh-live-off";
+  }
+
+  function ensureLiveSignalStyles() {
+    if (document.getElementById("mh-live-signal-styles")) return;
+
+    const style = document.createElement("style");
+    style.id = "mh-live-signal-styles";
+    style.textContent = `
+      .hero-signal-grid span {
+        transition: transform .18s ease, opacity .18s ease, filter .18s ease, background .18s ease;
+      }
+      .hero-signal-grid span.mh-live-bull {
+        background: linear-gradient(135deg, rgba(34,211,238,.92), rgba(99,102,241,.68));
+        opacity: .98;
+      }
+      .hero-signal-grid span.mh-live-risk {
+        background: linear-gradient(135deg, rgba(168,85,247,.82), rgba(59,130,246,.55));
+        opacity: .96;
+      }
+      .hero-signal-grid span.mh-live-off {
+        background: linear-gradient(135deg, rgba(15,23,42,1), rgba(14,31,57,.96));
+        border: 1px solid rgba(255,255,255,.05);
+        opacity: .9;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  function applyGrid(grid) {
+    const cells = $all(".hero-signal-grid span");
+    const flat = Array.isArray(grid) ? grid.flat() : [];
+    cells.forEach((cell, idx) => {
+      cell.classList.remove("mh-live-bull", "mh-live-risk", "mh-live-off");
+      cell.classList.add(signalClass(flat[idx] || "off"));
+    });
+  }
+
+  function applyHero(data) {
+    const scoreEl = $(".hero-visual .visual-score");
+    const pillEl = $(".hero-visual .visual-pill");
+    if (scoreEl) {
+      scoreEl.innerHTML = `${Number(data?.score || 0)}<span>/100</span>`;
+    }
+    if (pillEl) {
+      pillEl.textContent = data?.status || "AI WATCH";
+    }
+    applyGrid(data?.grid || []);
+  }
+
+  function applySignalStrip(data) {
+    const cards = $all(".signal-strip .signal-card");
+    if (cards.length < 3) return;
+
+    const marketCard = cards[0];
+    const riskCard = cards[1];
+    const sectorCard = cards[2];
+
+    const marketLabel = marketCard.querySelector(".signal-label");
+    const marketValue = marketCard.querySelector(".signal-value");
+    const marketBar = marketCard.querySelector(".signal-bar span");
+    const marketCopy = marketCard.querySelector(".signal-copy");
+
+    if (marketLabel) marketLabel.textContent = PAGE_LANG === "en" ? "AI Market Signal" : "AI MARKET SIGNAL";
+    if (marketValue) marketValue.textContent = `${Number(data?.score || 0)} / 100`;
+    if (marketBar) marketBar.style.width = `${Math.max(0, Math.min(100, Number(data?.score || 0)))}%`;
+    if (marketCopy) marketCopy.textContent = data?.strip_summary || data?.summary || "";
+
+    const riskLabel = riskCard.querySelector(".signal-label");
+    const riskTags = riskCard.querySelector(".signal-tags");
+    const riskCopy = riskCard.querySelector(".signal-copy");
+    if (riskLabel) riskLabel.textContent = PAGE_LANG === "en" ? "Risk Focus" : "RISK FOCUS";
+    if (riskTags) {
+      riskTags.innerHTML = (data?.risk_focus || []).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
+    }
+    if (riskCopy) {
+      riskCopy.textContent = data?.summary || "";
+    }
+
+    const sectorLabel = sectorCard.querySelector(".signal-label");
+    const sectorTags = sectorCard.querySelector(".signal-tags");
+    const sectorCopy = sectorCard.querySelector(".signal-copy");
+    if (sectorLabel) sectorLabel.textContent = PAGE_LANG === "en" ? "Focus Sectors" : "FOCUS SECTORS";
+    if (sectorTags) {
+      sectorTags.innerHTML = (data?.focus_sectors || []).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
+    }
+    if (sectorCopy) {
+      sectorCopy.textContent = data?.strip_summary || "";
+    }
+  }
+
+  function applyData(data) {
+    if (!data) return;
+    applyHero(data);
+    applySignalStrip(data);
+  }
+
+  async function fetchLiveSignal() {
+    const res = await fetch(`${API_BASE}/ai/live-signal?lang=${encodeURIComponent(PAGE_LANG)}`, {
+      cache: "no-store",
+      headers: {
+        "Cache-Control": "no-cache"
+      }
+    });
+    if (!res.ok) throw new Error(`live-signal fetch failed: ${res.status}`);
+    return await res.json();
+  }
+
+  async function loadLiveSignal(force = false) {
+    if (!force) {
+      const cached = loadCache();
+      if (cached) {
+        applyData(cached);
+      }
+    }
+    try {
+      const data = await fetchLiveSignal();
+      saveCache(data);
+      applyData(data);
+    } catch (err) {
+      console.error("loadLiveSignal error:", err);
+    }
+  }
+
+  function bootLiveSignal() {
+    if (!$(".hero-visual") || !$all(".signal-strip .signal-card").length) return;
+    ensureLiveSignalStyles();
+    loadLiveSignal(false);
+    setInterval(() => loadLiveSignal(true), REFRESH_MS);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", bootLiveSignal);
+  } else {
+    bootLiveSignal();
+  }
+})();
