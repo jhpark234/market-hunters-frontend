@@ -3,31 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-
   <title>Stock Detail | MarketHunters</title>
-  
   <meta name="description" content="Detailed stock page with AI analysis, news summary, chart and key checkpoints." />
   <meta name="keywords" content="stock analysis, AI stock analysis, NVDA stock, Tesla stock, Samsung Electronics stock, MarketHunters" />
   <meta name="author" content="MarketHunters" />
   <meta name="theme-color" content="#07172f" />
   <meta name="robots" content="index,follow" />
-
   <link rel="canonical" href="https://markethunters.kr/en/stock.html" />
-
   <meta property="og:title" content="Stock Detail | MarketHunters" />
   <meta property="og:description" content="AI-powered stock analysis, news summary, charts and key checkpoints." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://markethunters.kr/en/stock.html" />
   <meta property="og:image" content="https://markethunters.kr/assets/og-card.svg" />
-
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Stock Detail | MarketHunters" />
   <meta name="twitter:description" content="AI-powered stock analysis, news summary, charts and key checkpoints." />
   <meta name="twitter:image" content="https://markethunters.kr/assets/og-card.svg" />
-
   <link rel="manifest" href="../manifest.webmanifest" />
   <link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G-MNXB2Y6Z61"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -35,83 +28,77 @@
     gtag('js', new Date());
     gtag('config', 'G-G-MNXB2Y6Z61');
   </script>
-
   <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;
-    f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PLXLJ4RX');
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PLXLJ4RX');
   </script>
-
   <link rel="stylesheet" href="../style.css?v=20260331-1">
 </head>
 <body>
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLXLJ4RX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLXLJ4RX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="mobile-app-shell">
-    <div class="detail-shell">
-      <header class="detail-topbar compact-topbar">
+    <div class="detail-shell stock-ai-shell">
+      <header class="detail-topbar compact-topbar stock-ai-topbar">
         <a href="index.html" class="back-link">← Home</a>
-        <div class="detail-title-wrap stock-title-wrap">
-          <div class="detail-kicker">Stock Intelligence</div>
-          <h1 id="stock-title">Stock Detail</h1>
-          <p id="stock-subtitle">AI analysis and news summary in a practical detail view.</p>
-          <div class="lang-switch">
-            <a href="/stock.html" class="lang-btn">🇰🇷 KR</a>
-            <a href="/en/stock.html" class="lang-btn">🇺🇸 EN</a>
-          </div>
-        </div>
-
         <div class="lang-switch">
           <a href="/stock.html" class="lang-btn">🇰🇷 KR</a>
           <a href="/en/stock.html" class="lang-btn">🇺🇸 EN</a>
         </div>
-        
       </header>
 
-      <section class="detail-grid stock-detail-grid">
-        <div class="detail-card">
-          <div class="detail-meta-row">
-            <span id="stock-market" class="detail-pill">-</span>
-            <span id="stock-exchange" class="detail-pill ghost">-</span>
-            <span id="stock-currency" class="detail-pill ghost">-</span>
+      <section class="stock-ai-hero detail-card">
+        <div class="stock-ai-hero-grid">
+          <div class="stock-ai-copy">
+            <div class="detail-kicker">AI Stock Intelligence</div>
+            <div class="stock-ai-name-wrap">
+              <h1 id="stock-title">Stock Detail</h1>
+              <div class="stock-ai-symbol-line">
+                <span id="stock-market" class="detail-pill">-</span>
+                <span id="stock-exchange" class="detail-pill ghost">-</span>
+                <span id="stock-currency" class="detail-pill ghost">-</span>
+              </div>
+            </div>
+            <p id="stock-subtitle" class="stock-ai-subtitle">AI analysis and news summary in a practical detail view.</p>
+            <div class="stock-ai-tags">
+              <span class="stock-ai-tag">AI analysis</span>
+              <span class="stock-ai-tag">Market commentary</span>
+              <span class="stock-ai-tag">News summary</span>
+            </div>
           </div>
 
-          <div class="metric-grid">
-            <div class="metric-card">
+          <div class="stock-ai-price-panel">
+            <div class="stock-ai-price-box">
               <div class="metric-label">Price</div>
-              <div class="metric-value" id="stock-price">-</div>
+              <div class="stock-ai-price" id="stock-price">-</div>
+              <div class="stock-ai-change-wrap">
+                <span class="stock-change flat stock-ai-change" id="stock-change">-</span>
+              </div>
             </div>
-
-            <div class="metric-card">
-              <div class="metric-label">Change</div>
-              <div class="metric-value stock-change flat" id="stock-change">-</div>
-            </div>
-
-            <div class="metric-card">
-              <div class="metric-label">Sector / Note</div>
-              <div class="metric-value small" id="stock-industry">-</div>
-            </div>
-
-            <div class="metric-card">
-              <div class="metric-label">Summary</div>
-              <div class="metric-value small" id="stock-summary">-</div>
-            </div>
-
-            <div class="metric-card metric-card-wide">
-              <div class="metric-label">AI Rating</div>
-              <div class="metric-value small" id="stock-rating">-</div>
+            <div class="stock-ai-signal-grid">
+              <div class="stock-ai-signal-card">
+                <div class="metric-label">AI Rating</div>
+                <div class="stock-ai-signal-value" id="stock-rating">-</div>
+              </div>
+              <div class="stock-ai-signal-card">
+                <div class="metric-label">Sector / Note</div>
+                <div class="stock-ai-signal-text" id="stock-industry">-</div>
+              </div>
+              <div class="stock-ai-signal-card stock-ai-signal-card-wide">
+                <div class="metric-label">AI Summary</div>
+                <div class="stock-ai-signal-text" id="stock-summary">-</div>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="detail-card">
-          <div class="chart-header-row">
-            <h2>Recent Price Trend</h2>
+      <section class="stock-ai-snapshot-grid">
+        <article class="detail-card stock-ai-glow-card">
+          <div class="chart-header-row stock-ai-card-head">
+            <div>
+              <div class="detail-kicker">AI Price Map</div>
+              <h2>Recent Price Trend</h2>
+            </div>
             <select id="chart-period" class="period-select">
               <option value="1D">1D</option>
               <option value="1W">1W</option>
@@ -119,30 +106,45 @@
               <option value="6M">6M</option>
             </select>
           </div>
-          <canvas id="stock-chart" height="280"></canvas>
-        </div>
+          <div class="stock-ai-chart-shell">
+            <canvas id="stock-chart" height="280"></canvas>
+          </div>
+        </article>
+
+        <article class="detail-card stock-ai-brief-card">
+          <div class="stock-ai-brief-head">
+            <div>
+              <div class="detail-kicker">AI Brief</div>
+              <h2>Stock explanation at a glance</h2>
+            </div>
+            <div id="stock-ai-time" class="meta-time">Generated: -</div>
+          </div>
+          <div id="stock-ai-brief" class="bullet-list"></div>
+        </article>
       </section>
 
-      <section class="detail-grid second">
-        <div class="detail-card">
-          <h2>AI Stock Analysis</h2>
-          <div id="stock-ai-time" class="meta-time">Generated: -</div>
-          <div id="stock-ai-brief" class="bullet-list"></div>
-        </div>
-
-        <div class="detail-card">
-          <h2>News Summary</h2>
-          <div id="news-summary-time" class="meta-time">Generated: -</div>
+      <section class="stock-ai-content-grid">
+        <article class="detail-card stock-ai-news-card">
+          <div class="stock-ai-brief-head">
+            <div>
+              <div class="detail-kicker">News Summary</div>
+              <h2>News Summary</h2>
+            </div>
+            <div id="news-summary-time" class="meta-time">Generated: -</div>
+          </div>
           <div id="news-summary" class="bullet-list"></div>
 
-          <h3>Latest News</h3>
-          <div id="news-list" class="history-table"></div>
-        </div>
-      </section>
+          <div class="stock-ai-news-list-wrap">
+            <h3>Latest News</h3>
+            <div id="news-list" class="history-table"></div>
+          </div>
+        </article>
 
-      <section class="detail-card disclaimer-card">
-        <h2>Notice</h2>
-        <div id="stock-legal" class="bullet-list"></div>
+        <article class="detail-card disclaimer-card stock-ai-legal-card">
+          <div class="detail-kicker">Notice</div>
+          <h2>Notice</h2>
+          <div id="stock-legal" class="bullet-list"></div>
+        </article>
       </section>
     </div>
 
