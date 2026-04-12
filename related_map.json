@@ -1,0 +1,46 @@
+{
+  "NVDA": {
+    "related": [
+      "AMD",
+      "TSM",
+      "ASML",
+      "AVGO",
+      "ARM",
+      "MU"
+    ],
+    "ai_picks": [
+      "MSFT",
+      "META",
+      "AMZN",
+      "GOOGL"
+    ],
+    "popular": [
+      "TSLA",
+      "AAPL",
+      "005930.KS",
+      "000660.KS"
+    ]
+  },
+  "005930.KS": {
+    "related": [
+      "000660.KS",
+      "373220.KS",
+      "006400.KS",
+      "051910.KS",
+      "035420.KS",
+      "005380.KS"
+    ],
+    "ai_picks": [
+      "000660.KS",
+      "373220.KS",
+      "005380.KS",
+      "035420.KS"
+    ],
+    "popular": [
+      "NVDA",
+      "TSLA",
+      "AAPL",
+      "AMZN"
+    ]
+  }
+}
