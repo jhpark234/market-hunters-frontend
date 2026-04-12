@@ -1,3 +1,25 @@
+let MH_SYMBOL_SLUG_CACHE = null;
+async function mhLoadSymbolSlugMap(){
+  if (MH_SYMBOL_SLUG_CACHE) return MH_SYMBOL_SLUG_CACHE;
+  try {
+    const res = await fetch('/symbol_slug_map.json', { cache: 'no-store' });
+    MH_SYMBOL_SLUG_CACHE = res.ok ? await res.json() : {};
+  } catch (_) {
+    MH_SYMBOL_SLUG_CACHE = {};
+  }
+  return MH_SYMBOL_SLUG_CACHE;
+}
+function mhCurrentLang(){
+  const p = window.location.pathname || '';
+  return (document.documentElement.lang === 'en' || p.startsWith('/en/')) ? 'en' : 'ko';
+}
+async function mhStockUrl(symbol){
+  const sym = String(symbol || '').trim().toUpperCase();
+  const map = await mhLoadSymbolSlugMap();
+  const entry = map?.[sym];
+  if (entry) return mhCurrentLang() === 'en' ? entry.en_path : entry.ko_path;
+  return mhCurrentLang() === 'en' ? `/en/stock.html?symbol=${encodeURIComponent(sym)}` : `/stock.html?symbol=${encodeURIComponent(sym)}`;
+}
 const API_BASE = "https://market-hunters-backend.onrender.com/api";
 let currentMarket = 'ALL';
 
@@ -25,9 +47,10 @@ async function loadIndices(){
   `).join("");
 }
 
-function stockTemplate(item, direction){
+async function stockTemplate(item, direction){
+  const href = await mhStockUrl(item.symbol);
   return `
-    <a class="stock-row link-row" href="stock.html?symbol=${encodeURIComponent(item.symbol)}">
+    <a class="stock-row link-row" href="${href}">
       <div class="stock-top">
         <div>
           <div class="stock-name">${item.name}</div>
@@ -39,9 +62,10 @@ function stockTemplate(item, direction){
     </a>`;
 }
 
-function searchCard(item){
+async function searchCard(item){
+  const href = await mhStockUrl(item.symbol);
   return `
-    <a class="search-card link-row" href="stock.html?symbol=${encodeURIComponent(item.symbol)}">
+    <a class="search-card link-row" href="${href}">
       <div>
         <div class="stock-name">${escapeHtml(item.name)}</div>
         <div class="stock-symbol">${escapeHtml(item.symbol)} · ${escapeHtml(item.market)}</div>
@@ -59,12 +83,12 @@ async function loadMovers(){
     fetch(`${API_BASE}/market/movers?market=KOSDAQ`).then(r=>r.json()),
     fetch(`${API_BASE}/market/movers?market=NASDAQ`).then(r=>r.json()),
   ]);
-  document.getElementById("kospi-up").innerHTML = k1.up.map(x => stockTemplate(x, "up")).join("");
-  document.getElementById("kospi-down").innerHTML = k1.down.map(x => stockTemplate(x, "down")).join("");
-  document.getElementById("kosdaq-up").innerHTML = k2.up.map(x => stockTemplate(x, "up")).join("");
-  document.getElementById("kosdaq-down").innerHTML = k2.down.map(x => stockTemplate(x, "down")).join("");
-  document.getElementById("nasdaq-up").innerHTML = k3.up.map(x => stockTemplate(x, "up")).join("");
-  document.getElementById("nasdaq-down").innerHTML = k3.down.map(x => stockTemplate(x, "down")).join("");
+  document.getElementById("kospi-up").innerHTML = (await Promise.all(k1.up.map(x => stockTemplate(x, "up")))).join("");
+  document.getElementById("kospi-down").innerHTML = (await Promise.all(k1.down.map(x => stockTemplate(x, "down")))).join("");
+  document.getElementById("kosdaq-up").innerHTML = (await Promise.all(k2.up.map(x => stockTemplate(x, "up")))).join("");
+  document.getElementById("kosdaq-down").innerHTML = (await Promise.all(k2.down.map(x => stockTemplate(x, "down")))).join("");
+  document.getElementById("nasdaq-up").innerHTML = (await Promise.all(k3.up.map(x => stockTemplate(x, "up")))).join("");
+  document.getElementById("nasdaq-down").innerHTML = (await Promise.all(k3.down.map(x => stockTemplate(x, "down")))).join("");
 }
 
 async function loadBrief(){

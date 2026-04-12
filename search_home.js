@@ -1,3 +1,25 @@
+let MH_SYMBOL_SLUG_CACHE = null;
+async function mhLoadSymbolSlugMap(){
+  if (MH_SYMBOL_SLUG_CACHE) return MH_SYMBOL_SLUG_CACHE;
+  try {
+    const res = await fetch('/symbol_slug_map.json', { cache: 'no-store' });
+    MH_SYMBOL_SLUG_CACHE = res.ok ? await res.json() : {};
+  } catch (_) {
+    MH_SYMBOL_SLUG_CACHE = {};
+  }
+  return MH_SYMBOL_SLUG_CACHE;
+}
+function mhCurrentLang(){
+  const p = window.location.pathname || '';
+  return (document.documentElement.lang === 'en' || p.startsWith('/en/')) ? 'en' : 'ko';
+}
+async function mhStockUrl(symbol){
+  const sym = String(symbol || '').trim().toUpperCase();
+  const map = await mhLoadSymbolSlugMap();
+  const entry = map?.[sym];
+  if (entry) return mhCurrentLang() === 'en' ? entry.en_path : entry.ko_path;
+  return mhCurrentLang() === 'en' ? `/en/stock.html?symbol=${encodeURIComponent(sym)}` : `/stock.html?symbol=${encodeURIComponent(sym)}`;
+}
 const MH_API_BASE ="https://api.markethunters.kr/api";
 
 let mhCurrentMarket = 'ALL';
@@ -19,9 +41,10 @@ function mhSignClass(value) {
   return Number(value) >= 0 ? 'positive' : 'negative';
 }
 
-function mhRenderSearchCard(item) {
+async function mhRenderSearchCard(item) {
+  const href = await mhStockUrl(item.symbol);
   return `
-    <a class="search-card link-row" href="stock.html?symbol=${encodeURIComponent(item.symbol)}">
+    <a class="search-card link-row" href="${href}">
       <div>
         <div class="stock-name">${mhEscapeHtml(item.name)}</div>
         <div class="stock-symbol">${mhEscapeHtml(item.symbol)} · ${mhEscapeHtml(item.market || '-')}</div>
@@ -60,9 +83,12 @@ async function mhRunSearch() {
     const data = await res.json();
     const items = data.items || [];
 
-    target.innerHTML = items.length
-      ? items.map(mhRenderSearchCard).join('')
-      : '<div class="empty-state">검색 결과가 없습니다.</div>';
+    if (items.length) {
+      const cards = await Promise.all(items.map(mhRenderSearchCard));
+      target.innerHTML = cards.join('');
+    } else {
+      target.innerHTML = '<div class="empty-state">검색 결과가 없습니다.</div>';
+    }
   } catch (err) {
     target.innerHTML = '<div class="empty-state">검색 중 오류가 발생했습니다.</div>';
     console.error(err);

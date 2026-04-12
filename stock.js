@@ -9,6 +9,40 @@ let symbol = rawSymbol || "";
 
 let slugMapPromise = null;
 
+let symbolSlugMapPromise = null;
+
+function loadSymbolSlugMap() {
+  if (!symbolSlugMapPromise) {
+    symbolSlugMapPromise = fetch("/symbol_slug_map.json", { cache: "no-store" })
+      .then((res) => (res.ok ? res.json() : {}))
+      .catch(() => ({}));
+  }
+  return symbolSlugMapPromise;
+}
+
+async function getPrettyPathForSymbol(inputSymbol, lang) {
+  const sym = String(inputSymbol || "").trim().toUpperCase();
+  if (!sym) return "";
+  try {
+    const map = await loadSymbolSlugMap();
+    const entry = map?.[sym];
+    if (!entry) return "";
+    return lang === "en" ? String(entry.en_path || "") : String(entry.ko_path || "");
+  } catch (_) {
+    return "";
+  }
+}
+
+async function updateLanguageLinksForSymbol(inputSymbol) {
+  const sym = String(inputSymbol || canonicalSymbol || rawSymbol || "").trim().toUpperCase();
+  const krBtn = document.querySelector('a[data-lang="ko"]') || document.querySelector('a[href="/stock.html"]');
+  const enBtn = document.querySelector('a[data-lang="en"]') || document.querySelector('a[href="/en/stock.html"]');
+  if (!sym) return;
+  const [koPath, enPath] = await Promise.all([getPrettyPathForSymbol(sym, "ko"), getPrettyPathForSymbol(sym, "en")]);
+  if (krBtn) krBtn.href = koPath || `/stock.html?symbol=${encodeURIComponent(sym)}`;
+  if (enBtn) enBtn.href = enPath || `/en/stock.html?symbol=${encodeURIComponent(sym)}`;
+}
+
 function loadSlugMap() {
   if (!slugMapPromise) {
     slugMapPromise = fetch("/slug_map.json", { cache: "no-store" })
@@ -1401,6 +1435,7 @@ async function loadStock() {
 
     fillOverviewBase(overview, {});
     updateSEO(detail, overview?.meta || {});
+    await updateLanguageLinksForSymbol(canonicalSymbol || finalSymbol);
     renderNewsList(normalizeNewsRows(overview?.news || []));
     renderBullets(safeGet("stock-ai-brief"), T.aiAnalysisLoading);
     renderBullets(safeGet("news-summary"), T.newsSummaryLoading);
@@ -1439,23 +1474,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 /* ============================= */
 /* Language switch keep symbol   */
 /* ============================= */
-(function () {
-  const params = new URLSearchParams(window.location.search);
-  const currentSymbol = params.get("symbol");
-
-  if (!currentSymbol) return;
-
-  const krBtn = document.querySelector('a[href="/stock.html"]');
-  const enBtn = document.querySelector('a[href="/en/stock.html"]');
-
-  if (krBtn) {
-    krBtn.href = `/stock.html?symbol=${encodeURIComponent(currentSymbol)}`;
-  }
-
-  if (enBtn) {
-    enBtn.href = `/en/stock.html?symbol=${encodeURIComponent(currentSymbol)}`;
-  }
-})();
 
 /* ========================= */
 /* SEO TITLE / DESCRIPTION   */

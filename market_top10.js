@@ -1,3 +1,25 @@
+let MH_SYMBOL_SLUG_CACHE = null;
+async function mhLoadSymbolSlugMap(){
+  if (MH_SYMBOL_SLUG_CACHE) return MH_SYMBOL_SLUG_CACHE;
+  try {
+    const res = await fetch('/symbol_slug_map.json', { cache: 'no-store' });
+    MH_SYMBOL_SLUG_CACHE = res.ok ? await res.json() : {};
+  } catch (_) {
+    MH_SYMBOL_SLUG_CACHE = {};
+  }
+  return MH_SYMBOL_SLUG_CACHE;
+}
+function mhCurrentLang(){
+  const p = window.location.pathname || '';
+  return (document.documentElement.lang === 'en' || p.startsWith('/en/')) ? 'en' : 'ko';
+}
+async function mhStockUrl(symbol){
+  const sym = String(symbol || '').trim().toUpperCase();
+  const map = await mhLoadSymbolSlugMap();
+  const entry = map?.[sym];
+  if (entry) return mhCurrentLang() === 'en' ? entry.en_path : entry.ko_path;
+  return mhCurrentLang() === 'en' ? `/en/stock.html?symbol=${encodeURIComponent(sym)}` : `/stock.html?symbol=${encodeURIComponent(sym)}`;
+}
 const API_BASE ="https://api.markethunters.kr/api";
 
 function formatNumber(value) {
@@ -25,7 +47,7 @@ function renderStockList(containerId, items) {
     return;
   }
 
-  el.innerHTML = items.map((item, idx) => {
+  Promise.all(items.map(async (item, idx) => {
     const pct = Number(item.change_pct ?? 0);
     const pctClass = pct > 0 ? "up" : pct < 0 ? "down" : "flat";
     const name = item.name || item.symbol || "-";
@@ -33,8 +55,9 @@ function renderStockList(containerId, items) {
     const price = formatNumber(item.price);
     const percent = formatPercent(item.change_pct);
 
+    const href = await mhStockUrl(symbol);
     return `
-      <a class="stock-row" href="stock.html?symbol=${encodeURIComponent(symbol)}"
+      <a class="stock-row" href="${href}"
          style="
            display:grid;
            grid-template-columns:28px minmax(0,1fr) 92px;
@@ -123,7 +146,9 @@ function renderStockList(containerId, items) {
         </div>
       </a>
     `;
-  }).join("");
+  })).then((rows) => {
+    el.innerHTML = rows.join("");
+  });
 }
 
 async function fetchLeaders(market, direction, limit = 10) {
