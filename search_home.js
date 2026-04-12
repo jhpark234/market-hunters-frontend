@@ -1,45 +1,80 @@
-const MH_API_BASE ="https://api.markethunters.kr/api";
+const MH_API_BASE = "https://api.markethunters.kr/api";
 
-let mhCurrentMarket = 'ALL';
+let mhCurrentMarket = "ALL";
 let mhSymbolSlugMapPromise = null;
 
 function mhEscapeHtml(str) {
-  return String(str ?? '').replace(/[&<>"]/g, (s) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[s]));
+  return String(str ?? "").replace(/[&<>"]/g, (s) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+  }[s]));
 }
 
 function mhFmtPrice(v) {
-  return (v === null || v === undefined || v === '') ? '-' : Number(v).toLocaleString('ko-KR');
+  return v === null || v === undefined || v === ""
+    ? "-"
+    : Number(v).toLocaleString("ko-KR");
 }
 
 function mhFmtChange(value) {
   const num = Number(value || 0);
-  return `${num > 0 ? '+' : ''}${num.toFixed(2)}%`;
+  return `${num > 0 ? "+" : ""}${num.toFixed(2)}%`;
 }
 
 function mhSignClass(value) {
-  return Number(value) >= 0 ? 'positive' : 'negative';
+  return Number(value) >= 0 ? "positive" : "negative";
+}
+
+function mhGetPageLang() {
+  const lang = String(document.documentElement.lang || "ko").toLowerCase();
+  return lang.startsWith("en") ? "en" : "ko";
+}
+
+function mhGetLegacyStockHref(symbol, lang) {
+  const safeSymbol = encodeURIComponent(String(symbol || "").trim().toUpperCase());
+  return lang === "en"
+    ? `/en/stock.html?symbol=${safeSymbol}`
+    : `/stock.html?symbol=${safeSymbol}`;
 }
 
 function mhLoadSymbolSlugMap() {
   if (!mhSymbolSlugMapPromise) {
-    mhSymbolSlugMapPromise = fetch('/symbol_slug_map.json', { cache: 'no-store' })
+    mhSymbolSlugMapPromise = fetch("/symbol_slug_map.json", { cache: "no-store" })
       .then((res) => (res.ok ? res.json() : {}))
-      .catch(() => ({}));
+      .catch((err) => {
+        console.warn("symbol_slug_map.json load failed:", err);
+        return {};
+      });
   }
   return mhSymbolSlugMapPromise;
 }
 
-async function mhBuildStockHref(symbol) {
-  const sym = String(symbol || '').trim().toUpperCase();
-  if (!sym) return 'stock.html';
+async function mhResolveStockHref(item) {
+  const lang = mhGetPageLang();
+  const symbol = String(item?.symbol || "").trim().toUpperCase();
+
+  if (!symbol) return "#";
 
   try {
     const map = await mhLoadSymbolSlugMap();
-    const entry = map?.[sym];
-    if (entry?.ko_path) return entry.ko_path;
-  } catch (_) {}
+    const entry = map?.[symbol];
 
-  return `stock.html?symbol=${encodeURIComponent(sym)}`;
+    if (entry) {
+      const preferredPath = lang === "en" ? entry.en_path : entry.ko_path;
+      const fallbackPath = lang === "en" ? entry.ko_path : entry.en_path;
+      const resolvedPath = String(preferredPath || fallbackPath || "").trim();
+
+      if (resolvedPath) {
+        return resolvedPath.startsWith("/") ? resolvedPath : `/${resolvedPath}`;
+      }
+    }
+  } catch (err) {
+    console.warn("mhResolveStockHref error:", err);
+  }
+
+  return mhGetLegacyStockHref(symbol, lang);
 }
 
 function mhRenderSearchCard(item, href) {
@@ -47,7 +82,7 @@ function mhRenderSearchCard(item, href) {
     <a class="search-card link-row" href="${mhEscapeHtml(href)}">
       <div>
         <div class="stock-name">${mhEscapeHtml(item.name)}</div>
-        <div class="stock-symbol">${mhEscapeHtml(item.symbol)} · ${mhEscapeHtml(item.market || '-')}</div>
+        <div class="stock-symbol">${mhEscapeHtml(item.symbol)} · ${mhEscapeHtml(item.market || "-")}</div>
       </div>
       <div class="search-right">
         <div class="search-price">${mhFmtPrice(item.price)}</div>
@@ -57,15 +92,15 @@ function mhRenderSearchCard(item, href) {
 }
 
 async function mhRunSearch() {
-  const input = document.getElementById('search-input');
-  const target = document.getElementById('search-results');
+  const input = document.getElementById("search-input");
+  const target = document.getElementById("search-results");
   if (!input || !target) return;
 
   const q = input.value.trim();
 
   if (typeof gtag === "function") {
-    gtag('event','search_stock',{
-      search_term: q
+    gtag("event", "search_stock", {
+      search_term: q,
     });
   }
 
@@ -77,21 +112,31 @@ async function mhRunSearch() {
   target.innerHTML = '<div class="empty-state">검색 중...</div>';
 
   try {
-    const res = await fetch(`${MH_API_BASE}/stocks/search?q=${encodeURIComponent(q)}&market=${encodeURIComponent(mhCurrentMarket)}&limit=18`);
-    if (!res.ok) throw new Error(`search failed: ${res.status}`);
+    const res = await fetch(
+      `${MH_API_BASE}/stocks/search?q=${encodeURIComponent(q)}&market=${encodeURIComponent(mhCurrentMarket)}&limit=18`,
+      { cache: "no-store" }
+    );
+
+    if (!res.ok) {
+      throw new Error(`search failed: ${res.status}`);
+    }
+
     const data = await res.json();
-    const items = data.items || [];
+    const items = Array.isArray(data.items) ? data.items : [];
 
     if (!items.length) {
       target.innerHTML = '<div class="empty-state">검색 결과가 없습니다.</div>';
       return;
     }
 
-    const cards = await Promise.all(
-      items.map(async (item) => mhRenderSearchCard(item, await mhBuildStockHref(item.symbol)))
+    const renderedCards = await Promise.all(
+      items.map(async (item) => {
+        const href = await mhResolveStockHref(item);
+        return mhRenderSearchCard(item, href);
+      })
     );
 
-    target.innerHTML = cards.join('');
+    target.innerHTML = renderedCards.join("");
   } catch (err) {
     target.innerHTML = '<div class="empty-state">검색 중 오류가 발생했습니다.</div>';
     console.error(err);
@@ -99,27 +144,28 @@ async function mhRunSearch() {
 }
 
 function mhBindSearchHome() {
-  const searchBtn = document.getElementById('search-btn');
-  const searchInput = document.getElementById('search-input');
-  const segBtns = document.querySelectorAll('.seg-btn');
+  const searchBtn = document.getElementById("search-btn");
+  const searchInput = document.getElementById("search-input");
+  const segBtns = document.querySelectorAll(".seg-btn");
 
-  searchBtn?.addEventListener('click', mhRunSearch);
-  searchInput?.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') mhRunSearch();
+  searchBtn?.addEventListener("click", mhRunSearch);
+
+  searchInput?.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") mhRunSearch();
   });
 
   segBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      segBtns.forEach((x) => x.classList.remove('active'));
-      btn.classList.add('active');
-      mhCurrentMarket = btn.dataset.market || 'ALL';
-      if ((searchInput?.value || '').trim()) mhRunSearch();
+    btn.addEventListener("click", () => {
+      segBtns.forEach((x) => x.classList.remove("active"));
+      btn.classList.add("active");
+      mhCurrentMarket = btn.dataset.market || "ALL";
+      if ((searchInput?.value || "").trim()) mhRunSearch();
     });
   });
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', mhBindSearchHome);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", mhBindSearchHome);
 } else {
   mhBindSearchHome();
 }
