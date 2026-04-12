@@ -1,2 +1,2 @@
-/stocks/*      /stock.html      200
-/en/stocks/*   /en/stock.html   200
+/stocks/*      /stocks/:splat      200
+/en/stocks/*   /en/stocks/:splat   200

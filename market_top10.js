@@ -1,26 +1,28 @@
-let MH_SYMBOL_SLUG_CACHE = null;
-async function mhLoadSymbolSlugMap(){
-  if (MH_SYMBOL_SLUG_CACHE) return MH_SYMBOL_SLUG_CACHE;
-  try {
-    const res = await fetch('/symbol_slug_map.json', { cache: 'no-store' });
-    MH_SYMBOL_SLUG_CACHE = res.ok ? await res.json() : {};
-  } catch (_) {
-    MH_SYMBOL_SLUG_CACHE = {};
-  }
-  return MH_SYMBOL_SLUG_CACHE;
-}
-function mhCurrentLang(){
-  const p = window.location.pathname || '';
-  return (document.documentElement.lang === 'en' || p.startsWith('/en/')) ? 'en' : 'ko';
-}
-async function mhStockUrl(symbol){
-  const sym = String(symbol || '').trim().toUpperCase();
-  const map = await mhLoadSymbolSlugMap();
-  const entry = map?.[sym];
-  if (entry) return mhCurrentLang() === 'en' ? entry.en_path : entry.ko_path;
-  return mhCurrentLang() === 'en' ? `/en/stock.html?symbol=${encodeURIComponent(sym)}` : `/stock.html?symbol=${encodeURIComponent(sym)}`;
-}
 const API_BASE ="https://api.markethunters.kr/api";
+
+let mhTopSymbolSlugMapPromise = null;
+
+function mhLoadTopSymbolSlugMap() {
+  if (!mhTopSymbolSlugMapPromise) {
+    mhTopSymbolSlugMapPromise = fetch('/symbol_slug_map.json', { cache: 'no-store' })
+      .then((res) => (res.ok ? res.json() : {}))
+      .catch(() => ({}));
+  }
+  return mhTopSymbolSlugMapPromise;
+}
+
+async function mhBuildTopStockHref(symbol) {
+  const sym = String(symbol || '').trim().toUpperCase();
+  if (!sym) return 'stock.html';
+
+  try {
+    const map = await mhLoadTopSymbolSlugMap();
+    const entry = map?.[sym];
+    if (entry?.ko_path) return entry.ko_path;
+  } catch (_) {}
+
+  return `stock.html?symbol=${encodeURIComponent(sym)}`;
+}
 
 function formatNumber(value) {
   if (value === null || value === undefined || value === "" || Number.isNaN(Number(value))) {
@@ -38,7 +40,7 @@ function formatPercent(value) {
   return `${sign}${n.toFixed(2)}%`;
 }
 
-function renderStockList(containerId, items) {
+async function renderStockList(containerId, items) {
   const el = document.getElementById(containerId);
   if (!el) return;
 
@@ -47,15 +49,15 @@ function renderStockList(containerId, items) {
     return;
   }
 
-  Promise.all(items.map(async (item, idx) => {
+  const rows = await Promise.all(items.map(async (item, idx) => {
     const pct = Number(item.change_pct ?? 0);
     const pctClass = pct > 0 ? "up" : pct < 0 ? "down" : "flat";
     const name = item.name || item.symbol || "-";
     const symbol = item.symbol || "-";
     const price = formatNumber(item.price);
     const percent = formatPercent(item.change_pct);
+    const href = await mhBuildTopStockHref(symbol);
 
-    const href = await mhStockUrl(symbol);
     return `
       <a class="stock-row" href="${href}"
          style="
@@ -146,9 +148,9 @@ function renderStockList(containerId, items) {
         </div>
       </a>
     `;
-  })).then((rows) => {
-    el.innerHTML = rows.join("");
-  });
+  }));
+
+  el.innerHTML = rows.join("");
 }
 
 async function fetchLeaders(market, direction, limit = 10) {
@@ -163,8 +165,8 @@ async function loadPair(market, upId, downId) {
     const up = await fetchLeaders(market,"up",10);
     const down = await fetchLeaders(market,"down",10);
 
-    renderStockList(upId, up.items || []);
-    renderStockList(downId, down.items || []);
+    await renderStockList(upId, up.items || []);
+    await renderStockList(downId, down.items || []);
   } catch(err) {
     console.error(err);
     const ids=[upId,downId];
@@ -176,14 +178,8 @@ async function loadPair(market, upId, downId) {
 }
 
 async function loadMarketTopBoards() {
-
-  // 1️⃣ 코스피 먼저
   await loadPair("KOSPI","kospi-up","kospi-down");
-
-  // 2️⃣ 코스닥
   await loadPair("KOSDAQ","kosdaq-up","kosdaq-down");
-
-  // 3️⃣ 나스닥 (약간 늦게)
   setTimeout(()=>{
     loadPair("NASDAQ","nasdaq-up","nasdaq-down");
   },150);

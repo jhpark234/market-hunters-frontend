@@ -1,31 +1,36 @@
-let MH_SYMBOL_SLUG_CACHE = null;
-async function mhLoadSymbolSlugMap(){
-  if (MH_SYMBOL_SLUG_CACHE) return MH_SYMBOL_SLUG_CACHE;
-  try {
-    const res = await fetch('/symbol_slug_map.json', { cache: 'no-store' });
-    MH_SYMBOL_SLUG_CACHE = res.ok ? await res.json() : {};
-  } catch (_) {
-    MH_SYMBOL_SLUG_CACHE = {};
+let mhAppSymbolSlugMapPromise = null;
+
+function mhLoadAppSymbolSlugMap() {
+  if (!mhAppSymbolSlugMapPromise) {
+    mhAppSymbolSlugMapPromise = fetch('/symbol_slug_map.json', { cache: 'no-store' })
+      .then((res) => (res.ok ? res.json() : {}))
+      .catch(() => ({}));
   }
-  return MH_SYMBOL_SLUG_CACHE;
+  return mhAppSymbolSlugMapPromise;
 }
-function mhCurrentLang(){
-  const p = window.location.pathname || '';
-  return (document.documentElement.lang === 'en' || p.startsWith('/en/')) ? 'en' : 'ko';
-}
-async function mhStockUrl(symbol){
+
+async function mhBuildAppStockHref(symbol, lang = 'ko') {
   const sym = String(symbol || '').trim().toUpperCase();
-  const map = await mhLoadSymbolSlugMap();
-  const entry = map?.[sym];
-  if (entry) return mhCurrentLang() === 'en' ? entry.en_path : entry.ko_path;
-  return mhCurrentLang() === 'en' ? `/en/stock.html?symbol=${encodeURIComponent(sym)}` : `/stock.html?symbol=${encodeURIComponent(sym)}`;
+  if (!sym) return lang === 'en' ? '/en/stock.html' : 'stock.html';
+
+  try {
+    const map = await mhLoadAppSymbolSlugMap();
+    const entry = map?.[sym];
+    if (lang === 'en' && entry?.en_path) return entry.en_path;
+    if (lang !== 'en' && entry?.ko_path) return entry.ko_path;
+  } catch (_) {}
+
+  return lang === 'en'
+    ? `/en/stock.html?symbol=${encodeURIComponent(sym)}`
+    : `stock.html?symbol=${encodeURIComponent(sym)}`;
 }
+
 const API_BASE = "https://market-hunters-backend.onrender.com/api";
 let currentMarket = 'ALL';
 
 function signClass(value){ return Number(value) >= 0 ? "positive" : "negative"; }
 function fmtChange(value){ const num = Number(value || 0); return `${num > 0 ? "+" : ""}${num.toFixed(2)}%`; }
-function escapeHtml(str){ return String(str ?? '').replace(/[&<>\"]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[s])); }
+function escapeHtml(str){ return String(str ?? '').replace(/[&<>"]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[s])); }
 function impactClass(impact){ return impact === '상' ? 'impact-high' : impact === '중' ? 'impact-medium' : 'impact-low'; }
 function fmtPrice(v){ return (v === null || v === undefined || v === '') ? '-' : Number(v).toLocaleString('ko-KR'); }
 
@@ -48,7 +53,7 @@ async function loadIndices(){
 }
 
 async function stockTemplate(item, direction){
-  const href = await mhStockUrl(item.symbol);
+  const href = await mhBuildAppStockHref(item.symbol, 'ko');
   return `
     <a class="stock-row link-row" href="${href}">
       <div class="stock-top">
@@ -63,7 +68,7 @@ async function stockTemplate(item, direction){
 }
 
 async function searchCard(item){
-  const href = await mhStockUrl(item.symbol);
+  const href = await mhBuildAppStockHref(item.symbol, 'ko');
   return `
     <a class="search-card link-row" href="${href}">
       <div>
@@ -102,108 +107,46 @@ async function runSearch(){
   const q = document.getElementById('search-input').value.trim();
   const target = document.getElementById('search-results');
   if(!q){
-    target.innerHTML = `<div class="empty-state">종목명 또는 티커를 입력해줘.</div>`;
+    target.innerHTML = '<div class="empty-row">종목명 또는 티커를 입력하세요.</div>';
     return;
   }
-  target.innerHTML = `<div class="empty-state">검색 중...</div>`;
-  const res = await fetch(`${API_BASE}/stocks/search?q=${encodeURIComponent(q)}&market=${encodeURIComponent(currentMarket)}&limit=18`);
+  target.innerHTML = '<div class="empty-row">검색 중...</div>';
+  const res = await fetch(`${API_BASE}/stocks/search?q=${encodeURIComponent(q)}&market=${encodeURIComponent(currentMarket)}`);
   const data = await res.json();
-  target.innerHTML = data.items?.length ? data.items.map(searchCard).join('') : `<div class="empty-state">검색 결과가 없어. 다른 키워드로 다시 찾아봐.</div>`;
+  const items = data.items || [];
+  target.innerHTML = items.length ? (await Promise.all(items.map(searchCard))).join("") : '<div class="empty-row">검색 결과가 없습니다.</div>';
 }
 
-async function loadLegal(){
-  const res = await fetch(`${API_BASE}/meta/legal`);
+async function loadCalendar(){
+  const res = await fetch(`${API_BASE}/economic/upcoming`);
   const data = await res.json();
-  const el = document.getElementById("legal-box");
-  if(!el) return;
-  const principles = (data.safe_analysis_principles || []).map(x => `<div class="brief-item">${escapeHtml(x)}</div>`).join("");
-  el.innerHTML = `<div class="brief-item">${escapeHtml(data.legal_notice || "")}</div>${principles}`;
-}
-
-async function loadEconomic(){
-  const res = await fetch(`${API_BASE}/economic/calendar`);
-  const data = await res.json();
-  const el = document.getElementById("economic");
+  const el = document.getElementById("calendar-list");
   el.innerHTML = data.items.map(item => `
     <a class="economic-row economic-link" href="economic-detail.html?id=${encodeURIComponent(item.id)}">
-      <div class="economic-main">
-        <div class="economic-event">${item.event}</div>
-        <div class="economic-note">${escapeHtml(item.country)} · ${escapeHtml(item.note)}</div>
+      <div>
+        <div class="economic-title">${escapeHtml(item.title)}</div>
+        <div class="economic-meta">${escapeHtml(item.country)} · ${escapeHtml(item.date)}</div>
       </div>
-      <div class="economic-side">
-        <div class="economic-time">${item.time}</div>
-        <div class="economic-impact ${impactClass(item.impact)}">${item.impact}</div>
-      </div>
-    </a>`).join("");
+      <span class="impact-chip ${impactClass(item.impact)}">${escapeHtml(item.impact)}</span>
+    </a>
+  `).join("");
 }
 
-function bindUI(){
-  document.getElementById('search-btn').addEventListener('click', runSearch);
-  document.getElementById('search-input').addEventListener('keydown', e => { if(e.key === 'Enter') runSearch(); });
+function bindSearch(){
+  const input = document.getElementById('search-input');
+  document.getElementById('search-btn')?.addEventListener('click', runSearch);
+  input?.addEventListener('keydown', e => { if(e.key === 'Enter') runSearch(); });
   document.querySelectorAll('.seg-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.seg-btn').forEach(x => x.classList.remove('active'));
       btn.classList.add('active');
-      currentMarket = btn.dataset.market;
-      if(document.getElementById('search-input').value.trim()) runSearch();
+      currentMarket = btn.dataset.market || 'ALL';
+      if(input?.value.trim()) runSearch();
     });
   });
 }
 
-async function boot(){
-  bindUI();
-  await Promise.all([loadIndices(), loadMovers(), loadEconomic(), loadBrief(), loadLegal()]);
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js').catch(() => {});
-  }
-}
-boot();
-
-
-// =========================
-// MARKET TOP LOADER
-// =========================
-
-const API = "https://market-hunters-backend.onrender.com/api";
-
-async function loadMarketTop(market) {
-
-  const upRes = await fetch(`${API}/market/leaders?market=${market}&direction=up`)
-  const downRes = await fetch(`${API}/market/leaders?market=${market}&direction=down`)
-
-  const upData = await upRes.json()
-  const downData = await downRes.json()
-
-  renderList(`${market.toLowerCase()}-up`, upData.items)
-  renderList(`${market.toLowerCase()}-down`, downData.items)
-}
-
-function renderList(id, items) {
-
-  const el = document.getElementById(id)
-
-  if (!el) return
-
-  el.innerHTML = items.map(s => {
-
-    const color = s.change_pct >= 0 ? "up" : "down"
-
-    return `
-      <div class="stock-row">
-        <div class="name">${s.name}</div>
-        <div class="pct ${color}">
-          ${s.change_pct.toFixed(2)}%
-        </div>
-      </div>
-    `
-  }).join("")
-}
-
-async function loadAllMarkets(){
-
-  await loadMarketTop("KOSPI")
-  await loadMarketTop("KOSDAQ")
-  await loadMarketTop("NASDAQ")
-
-}
-loadAllMarkets()
+window.addEventListener('DOMContentLoaded', async () => {
+  bindSearch();
+  await Promise.all([loadIndices(), loadMovers(), loadBrief(), loadCalendar()]);
+});

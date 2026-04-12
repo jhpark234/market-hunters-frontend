@@ -1,31 +1,10 @@
-let MH_SYMBOL_SLUG_CACHE = null;
-async function mhLoadSymbolSlugMap(){
-  if (MH_SYMBOL_SLUG_CACHE) return MH_SYMBOL_SLUG_CACHE;
-  try {
-    const res = await fetch('/symbol_slug_map.json', { cache: 'no-store' });
-    MH_SYMBOL_SLUG_CACHE = res.ok ? await res.json() : {};
-  } catch (_) {
-    MH_SYMBOL_SLUG_CACHE = {};
-  }
-  return MH_SYMBOL_SLUG_CACHE;
-}
-function mhCurrentLang(){
-  const p = window.location.pathname || '';
-  return (document.documentElement.lang === 'en' || p.startsWith('/en/')) ? 'en' : 'ko';
-}
-async function mhStockUrl(symbol){
-  const sym = String(symbol || '').trim().toUpperCase();
-  const map = await mhLoadSymbolSlugMap();
-  const entry = map?.[sym];
-  if (entry) return mhCurrentLang() === 'en' ? entry.en_path : entry.ko_path;
-  return mhCurrentLang() === 'en' ? `/en/stock.html?symbol=${encodeURIComponent(sym)}` : `/stock.html?symbol=${encodeURIComponent(sym)}`;
-}
 const MH_API_BASE ="https://api.markethunters.kr/api";
 
 let mhCurrentMarket = 'ALL';
+let mhSymbolSlugMapPromise = null;
 
 function mhEscapeHtml(str) {
-  return String(str ?? '').replace(/[&<>\"]/g, (s) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[s]));
+  return String(str ?? '').replace(/[&<>"]/g, (s) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[s]));
 }
 
 function mhFmtPrice(v) {
@@ -41,10 +20,31 @@ function mhSignClass(value) {
   return Number(value) >= 0 ? 'positive' : 'negative';
 }
 
-async function mhRenderSearchCard(item) {
-  const href = await mhStockUrl(item.symbol);
+function mhLoadSymbolSlugMap() {
+  if (!mhSymbolSlugMapPromise) {
+    mhSymbolSlugMapPromise = fetch('/symbol_slug_map.json', { cache: 'no-store' })
+      .then((res) => (res.ok ? res.json() : {}))
+      .catch(() => ({}));
+  }
+  return mhSymbolSlugMapPromise;
+}
+
+async function mhBuildStockHref(symbol) {
+  const sym = String(symbol || '').trim().toUpperCase();
+  if (!sym) return 'stock.html';
+
+  try {
+    const map = await mhLoadSymbolSlugMap();
+    const entry = map?.[sym];
+    if (entry?.ko_path) return entry.ko_path;
+  } catch (_) {}
+
+  return `stock.html?symbol=${encodeURIComponent(sym)}`;
+}
+
+function mhRenderSearchCard(item, href) {
   return `
-    <a class="search-card link-row" href="${href}">
+    <a class="search-card link-row" href="${mhEscapeHtml(href)}">
       <div>
         <div class="stock-name">${mhEscapeHtml(item.name)}</div>
         <div class="stock-symbol">${mhEscapeHtml(item.symbol)} · ${mhEscapeHtml(item.market || '-')}</div>
@@ -63,13 +63,12 @@ async function mhRunSearch() {
 
   const q = input.value.trim();
 
-  // ⭐ GA4 이벤트
   if (typeof gtag === "function") {
     gtag('event','search_stock',{
       search_term: q
     });
   }
-  
+
   if (!q) {
     target.innerHTML = '<div class="empty-state">종목명 또는 티커를 입력해줘.</div>';
     return;
@@ -83,12 +82,16 @@ async function mhRunSearch() {
     const data = await res.json();
     const items = data.items || [];
 
-    if (items.length) {
-      const cards = await Promise.all(items.map(mhRenderSearchCard));
-      target.innerHTML = cards.join('');
-    } else {
+    if (!items.length) {
       target.innerHTML = '<div class="empty-state">검색 결과가 없습니다.</div>';
+      return;
     }
+
+    const cards = await Promise.all(
+      items.map(async (item) => mhRenderSearchCard(item, await mhBuildStockHref(item.symbol)))
+    );
+
+    target.innerHTML = cards.join('');
   } catch (err) {
     target.innerHTML = '<div class="empty-state">검색 중 오류가 발생했습니다.</div>';
     console.error(err);
