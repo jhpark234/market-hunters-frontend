@@ -206,7 +206,6 @@ def page_html(rec, symbol_map, lang='ko'):
         <div class="detail-card"><h2>{labels['analysis']}</h2><div id="stock-ai-time" class="meta-time">{labels['generated']}: -</div><div id="stock-ai-brief" class="bullet-list"><div>• {html.escape(labels['loading_summary'])}</div></div></div>
         <div class="detail-card"><h2>{labels['news']}</h2><div id="news-summary-time" class="meta-time">{labels['generated']}: -</div><div id="news-summary" class="bullet-list"><div>• {html.escape(labels['loading_summary'])}</div></div><h3>{labels['latest']}</h3><div id="news-list" class="history-table"></div></div>
       </section>
-      <section id="mh-seo-sections" class="mh-seo-wrap" aria-label="SEO related stocks sections"></section>
       <section class="detail-card disclaimer-card"><h2>{labels['notice']}</h2><div id="stock-legal" class="bullet-list"><div>• {html.escape(labels['notice_text'])}</div></div></section>
     </div>
     <footer style="margin: 30px 0 90px 0; padding: 16px 20px; font-size: 14px; color: #9aa4b2; text-align: center; border-top: 1px solid rgba(255,255,255,0.06);">
@@ -221,7 +220,6 @@ def page_html(rec, symbol_map, lang='ko'):
   </div>
   <script src="/stock.js?v={ASSET_VERSION}"></script>
   <script src="/seo_links.js?v=20260412-1" defer></script>
-  <script src="/stock_seo_sections.js?v=20260412-1" defer></script>
 </body>
 </html>'''
 

@@ -1484,7 +1484,6 @@ async function loadStock() {
     fillOverviewBase(overview, {});
     updateSEO(detail, overview?.meta || {});
     await updateLanguageLinksForSymbol(canonicalSymbol || finalSymbol);
-    await updateLanguageLinksForSymbol(canonicalSymbol || finalSymbol);
     renderNewsList(normalizeNewsRows(overview?.news || []));
     renderBullets(safeGet("stock-ai-brief"), T.aiAnalysisLoading);
     renderBullets(safeGet("news-summary"), T.newsSummaryLoading);

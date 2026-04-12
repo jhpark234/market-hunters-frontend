@@ -1,25 +1,3 @@
-let MH_SYMBOL_SLUG_CACHE = null;
-async function mhLoadSymbolSlugMap(){
-  if (MH_SYMBOL_SLUG_CACHE) return MH_SYMBOL_SLUG_CACHE;
-  try {
-    const res = await fetch('/symbol_slug_map.json', { cache: 'no-store' });
-    MH_SYMBOL_SLUG_CACHE = res.ok ? await res.json() : {};
-  } catch (_) {
-    MH_SYMBOL_SLUG_CACHE = {};
-  }
-  return MH_SYMBOL_SLUG_CACHE;
-}
-function mhCurrentLang(){
-  const p = window.location.pathname || '';
-  return (document.documentElement.lang === 'en' || p.startsWith('/en/')) ? 'en' : 'ko';
-}
-async function mhStockUrl(symbol){
-  const sym = String(symbol || '').trim().toUpperCase();
-  const map = await mhLoadSymbolSlugMap();
-  const entry = map?.[sym];
-  if (entry) return mhCurrentLang() === 'en' ? entry.en_path : entry.ko_path;
-  return mhCurrentLang() === 'en' ? `/en/stock.html?symbol=${encodeURIComponent(sym)}` : `/stock.html?symbol=${encodeURIComponent(sym)}`;
-}
 const API_BASE = "https://api.markethunters.kr/api";
 
 let mhTopSymbolSlugMapPromise = null;

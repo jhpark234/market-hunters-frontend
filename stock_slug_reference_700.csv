@@ -1,701 +1,701 @@
 ﻿symbol,market,exchange,currency,name_kr,name_en,base_slug,ko_slug,en_slug
-000250.KQ,KOSDAQ,KRX,KRW,삼천당제약,000250,,삼천당제약-주가-전망,000250-kq-stock-forecast
-0009K0.KQ,KOSDAQ,KRX,KRW,에임드바이오,0009k0,,에임드바이오-주가-전망,0009k0-kq-stock-forecast
-003380.KQ,KOSDAQ,KRX,KRW,하림지주,003380,,하림지주-주가-전망,003380-kq-stock-forecast
-005290.KQ,KOSDAQ,KRX,KRW,동진쎄미켐,005290,,동진쎄미켐-주가-전망,005290-kq-stock-forecast
-006910.KQ,KOSDAQ,KRX,KRW,보성파워텍,006910,,보성파워텍-주가-전망,006910-kq-stock-forecast
-007390.KQ,KOSDAQ,KRX,KRW,네이처셀,007390,,네이처셀-주가-전망,007390-kq-stock-forecast
-0082N0.KQ,KOSDAQ,KRX,KRW,카나프테라퓨틱스,0082n0,,카나프테라퓨틱스-주가-전망,0082n0-kq-stock-forecast
-009520.KQ,KOSDAQ,KRX,KRW,포스코엠텍,009520,,포스코엠텍-주가-전망,009520-kq-stock-forecast
-010170.KQ,KOSDAQ,KRX,KRW,대한광통신,010170,,대한광통신-주가-전망,010170-kq-stock-forecast
-014620.KQ,KOSDAQ,KRX,KRW,성광벤드,014620,,성광벤드-주가-전망,014620-kq-stock-forecast
-015750.KQ,KOSDAQ,KRX,KRW,성우하이텍,015750,,성우하이텍-주가-전망,015750-kq-stock-forecast
-023160.KQ,KOSDAQ,KRX,KRW,태광,023160,,태광-주가-전망,023160-kq-stock-forecast
-025320.KQ,KOSDAQ,KRX,KRW,시노펙스,025320,,시노펙스-주가-전망,025320-kq-stock-forecast
-030530.KQ,KOSDAQ,KRX,KRW,원익홀딩스,030530,,원익홀딩스-주가-전망,030530-kq-stock-forecast
-031980.KQ,KOSDAQ,KRX,KRW,피에스케이홀딩스,031980,,피에스케이홀딩스-주가-전망,031980-kq-stock-forecast
-032190.KQ,KOSDAQ,KRX,KRW,다우데이타,032190,,다우데이타-주가-전망,032190-kq-stock-forecast
-032500.KQ,KOSDAQ,KRX,KRW,케이엠더블유,032500,,케이엠더블유-주가-전망,032500-kq-stock-forecast
-032820.KQ,KOSDAQ,KRX,KRW,우리기술,032820,,우리기술-주가-전망,032820-kq-stock-forecast
-033100.KQ,KOSDAQ,KRX,KRW,제룡전기,033100,,제룡전기-주가-전망,033100-kq-stock-forecast
-033500.KQ,KOSDAQ,KRX,KRW,동성화인텍,033500,,동성화인텍-주가-전망,033500-kq-stock-forecast
-036810.KQ,KOSDAQ,KRX,KRW,에프에스티,036810,,에프에스티-주가-전망,036810-kq-stock-forecast
-036830.KQ,KOSDAQ,KRX,KRW,솔브레인홀딩스,036830,,솔브레인홀딩스-주가-전망,036830-kq-stock-forecast
-036930.KQ,KOSDAQ,KRX,KRW,주성엔지니어링,036930,,주성엔지니어링-주가-전망,036930-kq-stock-forecast
-038500.KQ,KOSDAQ,KRX,KRW,삼표시멘트,038500,,삼표시멘트-주가-전망,038500-kq-stock-forecast
-039200.KQ,KOSDAQ,KRX,KRW,오스코텍,039200,,오스코텍-주가-전망,039200-kq-stock-forecast
-042520.KQ,KOSDAQ,KRX,KRW,한스바이오메드,042520,,한스바이오메드-주가-전망,042520-kq-stock-forecast
-043260.KQ,KOSDAQ,KRX,KRW,성호전자,043260,,성호전자-주가-전망,043260-kq-stock-forecast
-044490.KQ,KOSDAQ,KRX,KRW,태웅,044490,,태웅-주가-전망,044490-kq-stock-forecast
-046890.KQ,KOSDAQ,KRX,KRW,서울반도체,046890,,서울반도체-주가-전망,046890-kq-stock-forecast
-048410.KQ,KOSDAQ,KRX,KRW,현대바이오,048410,,현대바이오-주가-전망,048410-kq-stock-forecast
-050890.KQ,KOSDAQ,KRX,KRW,쏠리드,050890,,쏠리드-주가-전망,050890-kq-stock-forecast
-052020.KQ,KOSDAQ,KRX,KRW,에스티큐브,052020,,에스티큐브-주가-전망,052020-kq-stock-forecast
-052400.KQ,KOSDAQ,KRX,KRW,코나아이,052400,,코나아이-주가-전망,052400-kq-stock-forecast
-053610.KQ,KOSDAQ,KRX,KRW,프로텍,053610,,프로텍-주가-전망,053610-kq-stock-forecast
-056080.KQ,KOSDAQ,KRX,KRW,유진로봇,056080,,유진로봇-주가-전망,056080-kq-stock-forecast
-056190.KQ,KOSDAQ,KRX,KRW,에스에프에이,056190,,에스에프에이-주가-전망,056190-kq-stock-forecast
-058610.KQ,KOSDAQ,KRX,KRW,에스피지,058610,,에스피지-주가-전망,058610-kq-stock-forecast
-060280.KQ,KOSDAQ,KRX,KRW,큐렉소,060280,,큐렉소-주가-전망,060280-kq-stock-forecast
-064760.KQ,KOSDAQ,KRX,KRW,티씨케이,064760,,티씨케이-주가-전망,064760-kq-stock-forecast
-067310.KQ,KOSDAQ,KRX,KRW,하나마이크론,067310,,하나마이크론-주가-전망,067310-kq-stock-forecast
-077360.KQ,KOSDAQ,KRX,KRW,덕산하이메탈,077360,,덕산하이메탈-주가-전망,077360-kq-stock-forecast
-078160.KQ,KOSDAQ,KRX,KRW,메디포스트,078160,,메디포스트-주가-전망,078160-kq-stock-forecast
-078600.KQ,KOSDAQ,KRX,KRW,대주전자재료,078600,,대주전자재료-주가-전망,078600-kq-stock-forecast
-079370.KQ,KOSDAQ,KRX,KRW,제우스,079370,,제우스-주가-전망,079370-kq-stock-forecast
-080220.KQ,KOSDAQ,KRX,KRW,제주반도체,080220,,제주반도체-주가-전망,080220-kq-stock-forecast
-082270.KQ,KOSDAQ,KRX,KRW,젬백스,082270,,젬백스-주가-전망,082270-kq-stock-forecast
-082920.KQ,KOSDAQ,KRX,KRW,비츠로셀,082920,,비츠로셀-주가-전망,082920-kq-stock-forecast
-083650.KQ,KOSDAQ,KRX,KRW,비에이치아이,083650,,비에이치아이-주가-전망,083650-kq-stock-forecast
-084110.KQ,KOSDAQ,KRX,KRW,휴온스글로벌,084110,,휴온스글로벌-주가-전망,084110-kq-stock-forecast
-085660.KQ,KOSDAQ,KRX,KRW,차바이오텍,085660,,차바이오텍-주가-전망,085660-kq-stock-forecast
-086450.KQ,KOSDAQ,KRX,KRW,동국제약,086450,,동국제약-주가-전망,086450-kq-stock-forecast
-086900.KQ,KOSDAQ,KRX,KRW,메디톡스,086900,,메디톡스-주가-전망,086900-kq-stock-forecast
-087010.KQ,KOSDAQ,KRX,KRW,펩트론,087010,,펩트론-주가-전망,087010-kq-stock-forecast
-089030.KQ,KOSDAQ,KRX,KRW,테크윙,089030,,테크윙-주가-전망,089030-kq-stock-forecast
-089970.KQ,KOSDAQ,KRX,KRW,브이엠,089970,,브이엠-주가-전망,089970-kq-stock-forecast
-090360.KQ,KOSDAQ,KRX,KRW,로보스타,090360,,로보스타-주가-전망,090360-kq-stock-forecast
-090710.KQ,KOSDAQ,KRX,KRW,휴림로봇,090710,,휴림로봇-주가-전망,090710-kq-stock-forecast
-094170.KQ,KOSDAQ,KRX,KRW,동운아나텍,094170,,동운아나텍-주가-전망,094170-kq-stock-forecast
-095610.KQ,KOSDAQ,KRX,KRW,테스,095610,,테스-주가-전망,095610-kq-stock-forecast
-096530.KQ,KOSDAQ,KRX,KRW,씨젠,096530,,씨젠-주가-전망,096530-kq-stock-forecast
-098460.KQ,KOSDAQ,KRX,KRW,고영,098460,,고영-주가-전망,098460-kq-stock-forecast
-099190.KQ,KOSDAQ,KRX,KRW,아이센스,099190,,아이센스-주가-전망,099190-kq-stock-forecast
-099320.KQ,KOSDAQ,KRX,KRW,쎄트렉아이,099320,,쎄트렉아이-주가-전망,099320-kq-stock-forecast
-100790.KQ,KOSDAQ,KRX,KRW,미래에셋벤처투자,100790,,미래에셋벤처투자-주가-전망,100790-kq-stock-forecast
-101490.KQ,KOSDAQ,KRX,KRW,에스앤에스텍,101490,,에스앤에스텍-주가-전망,101490-kq-stock-forecast
-102710.KQ,KOSDAQ,KRX,KRW,이엔에프테크놀로지,102710,,이엔에프테크놀로지-주가-전망,102710-kq-stock-forecast
-102940.KQ,KOSDAQ,KRX,KRW,코오롱생명과학,102940,,코오롱생명과학-주가-전망,102940-kq-stock-forecast
-108490.KQ,KOSDAQ,KRX,KRW,로보티즈,108490,,로보티즈-주가-전망,108490-kq-stock-forecast
-115180.KQ,KOSDAQ,KRX,KRW,큐리언트,115180,,큐리언트-주가-전망,115180-kq-stock-forecast
-119850.KQ,KOSDAQ,KRX,KRW,지엔씨에너지,119850,,지엔씨에너지-주가-전망,119850-kq-stock-forecast
-121600.KQ,KOSDAQ,KRX,KRW,나노신소재,121600,,나노신소재-주가-전망,121600-kq-stock-forecast
-122870.KQ,KOSDAQ,KRX,KRW,와이지엔터테인먼트,122870,,와이지엔터테인먼트-주가-전망,122870-kq-stock-forecast
-124500.KQ,KOSDAQ,KRX,KRW,아이티센글로벌,124500,,아이티센글로벌-주가-전망,124500-kq-stock-forecast
-125490.KQ,KOSDAQ,KRX,KRW,한라캐스트,125490,,한라캐스트-주가-전망,125490-kq-stock-forecast
-126340.KQ,KOSDAQ,KRX,KRW,비나텍,126340,,비나텍-주가-전망,126340-kq-stock-forecast
-127120.KQ,KOSDAQ,KRX,KRW,제이에스링크,127120,,제이에스링크-주가-전망,127120-kq-stock-forecast
-131290.KQ,KOSDAQ,KRX,KRW,티에스이,131290,,티에스이-주가-전망,131290-kq-stock-forecast
-131970.KQ,KOSDAQ,KRX,KRW,두산테스나,131970,,두산테스나-주가-전망,131970-kq-stock-forecast
-137400.KQ,KOSDAQ,KRX,KRW,피엔티,137400,,피엔티-주가-전망,137400-kq-stock-forecast
-140410.KQ,KOSDAQ,KRX,KRW,메지온,140410,,메지온-주가-전망,140410-kq-stock-forecast
-140860.KQ,KOSDAQ,KRX,KRW,파크시스템스,140860,,파크시스템스-주가-전망,140860-kq-stock-forecast
-141080.KQ,KOSDAQ,KRX,KRW,리가켐바이오,141080,,리가켐바이오-주가-전망,141080-kq-stock-forecast
-145020.KQ,KOSDAQ,KRX,KRW,휴젤,145020,,휴젤-주가-전망,145020-kq-stock-forecast
-160190.KQ,KOSDAQ,KRX,KRW,하이젠알앤엠,160190,,하이젠알앤엠-주가-전망,160190-kq-stock-forecast
-161580.KQ,KOSDAQ,KRX,KRW,필옵틱스,161580,,필옵틱스-주가-전망,161580-kq-stock-forecast
-166090.KQ,KOSDAQ,KRX,KRW,하나머티리얼즈,166090,,하나머티리얼즈-주가-전망,166090-kq-stock-forecast
-171090.KQ,KOSDAQ,KRX,KRW,선익시스템,171090,,선익시스템-주가-전망,171090-kq-stock-forecast
-174900.KQ,KOSDAQ,KRX,KRW,앱클론,174900,,앱클론-주가-전망,174900-kq-stock-forecast
-178320.KQ,KOSDAQ,KRX,KRW,서진시스템,178320,,서진시스템-주가-전망,178320-kq-stock-forecast
-183300.KQ,KOSDAQ,KRX,KRW,코미코,183300,,코미코-주가-전망,183300-kq-stock-forecast
-189300.KQ,KOSDAQ,KRX,KRW,인텔리안테크,189300,,인텔리안테크-주가-전망,189300-kq-stock-forecast
-200710.KQ,KOSDAQ,KRX,KRW,에이디테크놀로지,200710,,에이디테크놀로지-주가-전망,200710-kq-stock-forecast
-204270.KQ,KOSDAQ,KRX,KRW,제이앤티씨,204270,,제이앤티씨-주가-전망,204270-kq-stock-forecast
-211050.KQ,KOSDAQ,KRX,KRW,인카금융서비스,211050,,인카금융서비스-주가-전망,211050-kq-stock-forecast
-213420.KQ,KOSDAQ,KRX,KRW,덕산네오룩스,213420,,덕산네오룩스-주가-전망,213420-kq-stock-forecast
-214370.KQ,KOSDAQ,KRX,KRW,케어젠,214370,,케어젠-주가-전망,214370-kq-stock-forecast
-214430.KQ,KOSDAQ,KRX,KRW,아이쓰리시스템,214430,,아이쓰리시스템-주가-전망,214430-kq-stock-forecast
-222080.KQ,KOSDAQ,KRX,KRW,씨아이에스,222080,,씨아이에스-주가-전망,222080-kq-stock-forecast
-222800.KQ,KOSDAQ,KRX,KRW,심텍,222800,,심텍-주가-전망,222800-kq-stock-forecast
-225570.KQ,KOSDAQ,KRX,KRW,넥슨게임즈,225570,,넥슨게임즈-주가-전망,225570-kq-stock-forecast
-226950.KQ,KOSDAQ,KRX,KRW,올릭스,226950,,올릭스-주가-전망,226950-kq-stock-forecast
-232140.KQ,KOSDAQ,KRX,KRW,와이씨,232140,,와이씨-주가-전망,232140-kq-stock-forecast
-237690.KQ,KOSDAQ,KRX,KRW,에스티팜,237690,,에스티팜-주가-전망,237690-kq-stock-forecast
-042000.KQ,KOSDAQ,KRX,KRW,카페24,24,,카페24-주가-전망,042000-kq-stock-forecast
-241710.KQ,KOSDAQ,KRX,KRW,코스메카코리아,241710,,코스메카코리아-주가-전망,241710-kq-stock-forecast
-251970.KQ,KOSDAQ,KRX,KRW,펌텍코리아,251970,,펌텍코리아-주가-전망,251970-kq-stock-forecast
-252990.KQ,KOSDAQ,KRX,KRW,샘씨엔에스,252990,,샘씨엔에스-주가-전망,252990-kq-stock-forecast
-253590.KQ,KOSDAQ,KRX,KRW,네오셈,253590,,네오셈-주가-전망,253590-kq-stock-forecast
-257720.KQ,KOSDAQ,KRX,KRW,실리콘투,257720,,실리콘투-주가-전망,257720-kq-stock-forecast
-272290.KQ,KOSDAQ,KRX,KRW,이녹스첨단소재,272290,,이녹스첨단소재-주가-전망,272290-kq-stock-forecast
-277810.KQ,KOSDAQ,KRX,KRW,레인보우로보틱스,277810,,레인보우로보틱스-주가-전망,277810-kq-stock-forecast
-278280.KQ,KOSDAQ,KRX,KRW,천보,278280,,천보-주가-전망,278280-kq-stock-forecast
-281740.KQ,KOSDAQ,KRX,KRW,레이크머티리얼즈,281740,,레이크머티리얼즈-주가-전망,281740-kq-stock-forecast
-287840.KQ,KOSDAQ,KRX,KRW,인투셀,287840,,인투셀-주가-전망,287840-kq-stock-forecast
-290650.KQ,KOSDAQ,KRX,KRW,엘앤씨바이오,290650,,엘앤씨바이오-주가-전망,290650-kq-stock-forecast
-295310.KQ,KOSDAQ,KRX,KRW,에이치브이엠,295310,,에이치브이엠-주가-전망,295310-kq-stock-forecast
-298380.KQ,KOSDAQ,KRX,KRW,에이비엘바이오,298380,,에이비엘바이오-주가-전망,298380-kq-stock-forecast
-310210.KQ,KOSDAQ,KRX,KRW,보로노이,310210,,보로노이-주가-전망,310210-kq-stock-forecast
-319400.KQ,KOSDAQ,KRX,KRW,현대무벡스,319400,,현대무벡스-주가-전망,319400-kq-stock-forecast
-319660.KQ,KOSDAQ,KRX,KRW,피에스케이,319660,,피에스케이-주가-전망,319660-kq-stock-forecast
-323280.KQ,KOSDAQ,KRX,KRW,태성,323280,,태성-주가-전망,323280-kq-stock-forecast
-328130.KQ,KOSDAQ,KRX,KRW,루닛,328130,,루닛-주가-전망,328130-kq-stock-forecast
-336570.KQ,KOSDAQ,KRX,KRW,원텍,336570,,원텍-주가-전망,336570-kq-stock-forecast
-347700.KQ,KOSDAQ,KRX,KRW,스피어,347700,,스피어-주가-전망,347700-kq-stock-forecast
-347850.KQ,KOSDAQ,KRX,KRW,디앤디파마텍,347850,,디앤디파마텍-주가-전망,347850-kq-stock-forecast
-348210.KQ,KOSDAQ,KRX,KRW,넥스틴,348210,,넥스틴-주가-전망,348210-kq-stock-forecast
-348340.KQ,KOSDAQ,KRX,KRW,뉴로메카,348340,,뉴로메카-주가-전망,348340-kq-stock-forecast
-348370.KQ,KOSDAQ,KRX,KRW,엔켐,348370,,엔켐-주가-전망,348370-kq-stock-forecast
-356860.KQ,KOSDAQ,KRX,KRW,티엘비,356860,,티엘비-주가-전망,356860-kq-stock-forecast
-357780.KQ,KOSDAQ,KRX,KRW,솔브레인,357780,,솔브레인-주가-전망,357780-kq-stock-forecast
-358570.KQ,KOSDAQ,KRX,KRW,지아이이노베이션,358570,,지아이이노베이션-주가-전망,358570-kq-stock-forecast
-365340.KQ,KOSDAQ,KRX,KRW,성일하이텍,365340,,성일하이텍-주가-전망,365340-kq-stock-forecast
-372320.KQ,KOSDAQ,KRX,KRW,큐로셀,372320,,큐로셀-주가-전망,372320-kq-stock-forecast
-376300.KQ,KOSDAQ,KRX,KRW,디어유,376300,,디어유-주가-전망,376300-kq-stock-forecast
-376900.KQ,KOSDAQ,KRX,KRW,로킷헬스케어,376900,,로킷헬스케어-주가-전망,376900-kq-stock-forecast
-383310.KQ,KOSDAQ,KRX,KRW,에코프로에이치엔,383310,,에코프로에이치엔-주가-전망,383310-kq-stock-forecast
-388210.KQ,KOSDAQ,KRX,KRW,씨엠티엑스,388210,,씨엠티엑스-주가-전망,388210-kq-stock-forecast
-388720.KQ,KOSDAQ,KRX,KRW,유일로보틱스,388720,,유일로보틱스-주가-전망,388720-kq-stock-forecast
-389470.KQ,KOSDAQ,KRX,KRW,인벤티지랩,389470,,인벤티지랩-주가-전망,389470-kq-stock-forecast
-389650.KQ,KOSDAQ,KRX,KRW,넥스트바이오메디컬,389650,,넥스트바이오메디컬-주가-전망,389650-kq-stock-forecast
-397030.KQ,KOSDAQ,KRX,KRW,에이프릴바이오,397030,,에이프릴바이오-주가-전망,397030-kq-stock-forecast
-399720.KQ,KOSDAQ,KRX,KRW,가온칩스,399720,,가온칩스-주가-전망,399720-kq-stock-forecast
-420770.KQ,KOSDAQ,KRX,KRW,기가비스,420770,,기가비스-주가-전망,420770-kq-stock-forecast
-424870.KQ,KOSDAQ,KRX,KRW,이뮨온시아,424870,,이뮨온시아-주가-전망,424870-kq-stock-forecast
-425420.KQ,KOSDAQ,KRX,KRW,티에프이,425420,,티에프이-주가-전망,425420-kq-stock-forecast
-437730.KQ,KOSDAQ,KRX,KRW,삼현,437730,,삼현-주가-전망,437730-kq-stock-forecast
-440110.KQ,KOSDAQ,KRX,KRW,파두,440110,,파두-주가-전망,440110-kq-stock-forecast
-445680.KQ,KOSDAQ,KRX,KRW,큐리옥스바이오시스템즈,445680,,큐리옥스바이오시스템즈-주가-전망,445680-kq-stock-forecast
-448900.KQ,KOSDAQ,KRX,KRW,한국피아이엠,448900,,한국피아이엠-주가-전망,448900-kq-stock-forecast
-456160.KQ,KOSDAQ,KRX,KRW,지투지바이오,456160,,지투지바이오-주가-전망,456160-kq-stock-forecast
-458870.KQ,KOSDAQ,KRX,KRW,씨어스테크놀로지,458870,,씨어스테크놀로지-주가-전망,458870-kq-stock-forecast
-460930.KQ,KOSDAQ,KRX,KRW,현대힘스,460930,,현대힘스-주가-전망,460930-kq-stock-forecast
-466100.KQ,KOSDAQ,KRX,KRW,클로봇,466100,,클로봇-주가-전망,466100-kq-stock-forecast
-468530.KQ,KOSDAQ,KRX,KRW,프로티나,468530,,프로티나-주가-전망,468530-kq-stock-forecast
-475830.KQ,KOSDAQ,KRX,KRW,오름테라퓨틱,475830,,오름테라퓨틱-주가-전망,475830-kq-stock-forecast
-475960.KQ,KOSDAQ,KRX,KRW,토모큐브,475960,,토모큐브-주가-전망,475960-kq-stock-forecast
-476060.KQ,KOSDAQ,KRX,KRW,온코닉테라퓨틱스,476060,,온코닉테라퓨틱스-주가-전망,476060-kq-stock-forecast
-476830.KQ,KOSDAQ,KRX,KRW,알지노믹스,476830,,알지노믹스-주가-전망,476830-kq-stock-forecast
-486990.KQ,KOSDAQ,KRX,KRW,노타,486990,,노타-주가-전망,486990-kq-stock-forecast
-488900.KQ,KOSDAQ,KRX,KRW,비츠로넥스텍,488900,,비츠로넥스텍-주가-전망,488900-kq-stock-forecast
-490470.KQ,KOSDAQ,KRX,KRW,세미파이브,490470,,세미파이브-주가-전망,490470-kq-stock-forecast
-491000.KQ,KOSDAQ,KRX,KRW,리브스메드,491000,,리브스메드-주가-전망,491000-kq-stock-forecast
-950160.KQ,KOSDAQ,KRX,KRW,코오롱티슈진,950160,,코오롱티슈진-주가-전망,950160-kq-stock-forecast
-187660.KQ,KOSDAQ,KRX,KRW,현대ADM,Adm,,현대ADM-주가-전망,187660-kq-stock-forecast
-067160.KQ,KOSDAQ,KRX,KRW,SOOP,SOOP,,soop-주가-전망,067160-kq-stock-forecast
-053800.KQ,KOSDAQ,KRX,KRW,안랩,Ahnlab,,안랩-주가-전망,053800-kq-stock-forecast
-196170.KQ,KOSDAQ,KRX,KRW,알테오젠,Alteogen,,알테오젠-주가-전망,196170-kq-stock-forecast
-025980.KQ,KOSDAQ,KRX,KRW,아난티,Ananti,,아난티-주가-전망,025980-kq-stock-forecast
-068760.KQ,KOSDAQ,KRX,KRW,셀트리온제약,Celltrion Pharm,,셀트리온제약-주가-전망,068760-kq-stock-forecast
-035760.KQ,KOSDAQ,KRX,KRW,CJ ENM,CJ ENM,,cj-enm-주가-전망,035760-kq-stock-forecast
-214150.KQ,KOSDAQ,KRX,KRW,클래시스,Classys,,클래시스-주가-전망,214150-kq-stock-forecast
-086520.KQ,KOSDAQ,KRX,KRW,에코프로,Ecopro,,에코프로-주가-전망,086520-kq-stock-forecast
-247540.KQ,KOSDAQ,KRX,KRW,에코프로비엠,Ecopro Bm,,에코프로비엠-주가-전망,247540-kq-stock-forecast
-039030.KQ,KOSDAQ,KRX,KRW,이오테크닉스,Eo Technics,,이오테크닉스-주가-전망,039030-kq-stock-forecast
-084370.KQ,KOSDAQ,KRX,KRW,유진테크,Eugene Technology,,유진테크-주가-전망,084370-kq-stock-forecast
-195940.KQ,KOSDAQ,KRX,KRW,HK이노엔,Hk,,HK이노엔-주가-전망,195940-kq-stock-forecast
-024850.KQ,KOSDAQ,KRX,KRW,HLB이노베이션,HLB,,HLB이노베이션-주가-전망,024850-kq-stock-forecast
-028300.KQ,KOSDAQ,KRX,KRW,HLB,HLB,,hlb-주가-전망,028300-kq-stock-forecast
-403870.KQ,KOSDAQ,KRX,KRW,HPSP,HPSP,,hpsp-주가-전망,403870-kq-stock-forecast
-027360.KQ,KOSDAQ,KRX,KRW,아주IB투자,Ib,,아주IB투자-주가-전망,027360-kq-stock-forecast
-240810.KQ,KOSDAQ,KRX,KRW,원익IPS,Ips,,원익IPS-주가-전망,240810-kq-stock-forecast
-095340.KQ,KOSDAQ,KRX,KRW,ISC,ISC,,isc-주가-전망,095340-kq-stock-forecast
-035900.KQ,KOSDAQ,KRX,KRW,JYP Ent.,JYP Ent.,,jyp-ent-주가-전망,035900-kq-stock-forecast
-293490.KQ,KOSDAQ,KRX,KRW,카카오게임즈,Kakao Games,,카카오게임즈-주가-전망,293490-kq-stock-forecast
-041960.KQ,KOSDAQ,KRX,KRW,코미팜,Komipharm,,코미팜-주가-전망,041960-kq-stock-forecast
-058470.KQ,KOSDAQ,KRX,KRW,리노공업,Leeno Industrial,,리노공업-주가-전망,058470-kq-stock-forecast
-060370.KQ,KOSDAQ,KRX,KRW,LS마린솔루션,LS 2,,LS마린솔루션-주가-전망,060370-kq-stock-forecast
-417200.KQ,KOSDAQ,KRX,KRW,LS머트리얼즈,LS 3,,LS머트리얼즈-주가-전망,417200-kq-stock-forecast
-060250.KQ,KOSDAQ,KRX,KRW,NHN KCP,NHN KCP,,nhn-kcp-주가-전망,060250-kq-stock-forecast
-263750.KQ,KOSDAQ,KRX,KRW,펄어비스,Pearl Abyss,,펄어비스-주가-전망,263750-kq-stock-forecast
-214450.KQ,KOSDAQ,KRX,KRW,파마리서치,Pharmaresearch,,파마리서치-주가-전망,214450-kq-stock-forecast
-074600.KQ,KOSDAQ,KRX,KRW,원익QnC,Qnc,,원익QnC-주가-전망,074600-kq-stock-forecast
-218410.KQ,KOSDAQ,KRX,KRW,RFHIC,RFHIC,,rfhic-주가-전망,218410-kq-stock-forecast
-036540.KQ,KOSDAQ,KRX,KRW,SFA반도체,Sfa Semicon,,SFA반도체-주가-전망,036540-kq-stock-forecast
-065350.KQ,KOSDAQ,KRX,KRW,신성델타테크,Shinsung Delta Tech,,신성델타테크-주가-전망,065350-kq-stock-forecast
-041510.KQ,KOSDAQ,KRX,KRW,에스엠,Sm Entertainment,,에스엠-주가-전망,041510-kq-stock-forecast
-253450.KQ,KOSDAQ,KRX,KRW,스튜디오드래곤,Studio Dragon,,스튜디오드래곤-주가-전망,253450-kq-stock-forecast
-006730.KQ,KOSDAQ,KRX,KRW,서부T&D,T And D,,서부T-D-주가-전망,006730-kq-stock-forecast
-112040.KQ,KOSDAQ,KRX,KRW,위메이드,Wemade,,위메이드-주가-전망,112040-kq-stock-forecast
-041190.KQ,KOSDAQ,KRX,KRW,우리기술투자,Woori Technology Investment,,우리기술투자-주가-전망,041190-kq-stock-forecast
-000100.KS,KOSPI,KRX,KRW,유한양행,000100,,유한양행-주가-전망,000100-ks-stock-forecast
-000120.KS,KOSPI,KRX,KRW,CJ대한통운,000120,,CJ대한통운-주가-전망,000120-ks-stock-forecast
-000150.KS,KOSPI,KRX,KRW,두산,000150,,두산-주가-전망,000150-ks-stock-forecast
-000240.KS,KOSPI,KRX,KRW,한국앤컴퍼니,000240,,한국앤컴퍼니-주가-전망,000240-ks-stock-forecast
-000500.KS,KOSPI,KRX,KRW,가온전선,000500,,가온전선-주가-전망,000500-ks-stock-forecast
-000720.KS,KOSPI,KRX,KRW,현대건설,000720,,현대건설-주가-전망,000720-ks-stock-forecast
-000810.KS,KOSPI,KRX,KRW,삼성화재,000810,,삼성화재-주가-전망,000810-ks-stock-forecast
-000880.KS,KOSPI,KRX,KRW,한화,000880,,한화-주가-전망,000880-ks-stock-forecast
-000990.KS,KOSPI,KRX,KRW,DB하이텍,000990,,DB하이텍-주가-전망,000990-ks-stock-forecast
-001040.KS,KOSPI,KRX,KRW,CJ,CJ,,cj-주가-전망,001040-ks-stock-forecast
-001120.KS,KOSPI,KRX,KRW,LX인터내셔널,001120,,LX인터내셔널-주가-전망,001120-ks-stock-forecast
-001430.KS,KOSPI,KRX,KRW,세아베스틸지주,001430,,세아베스틸지주-주가-전망,001430-ks-stock-forecast
-001440.KS,KOSPI,KRX,KRW,대한전선,001440,,대한전선-주가-전망,001440-ks-stock-forecast
-001450.KS,KOSPI,KRX,KRW,현대해상,001450,,현대해상-주가-전망,001450-ks-stock-forecast
-001720.KS,KOSPI,KRX,KRW,신영증권,001720,,신영증권-주가-전망,001720-ks-stock-forecast
-001800.KS,KOSPI,KRX,KRW,오리온홀딩스,001800,,오리온홀딩스-주가-전망,001800-ks-stock-forecast
-002790.KS,KOSPI,KRX,KRW,아모레퍼시픽홀딩스,002790,,아모레퍼시픽홀딩스-주가-전망,002790-ks-stock-forecast
-003230.KS,KOSPI,KRX,KRW,삼양식품,003230,,삼양식품-주가-전망,003230-ks-stock-forecast
-003490.KS,KOSPI,KRX,KRW,대한항공,003490,,대한항공-주가-전망,003490-ks-stock-forecast
-003530.KS,KOSPI,KRX,KRW,한화투자증권,003530,,한화투자증권-주가-전망,003530-ks-stock-forecast
-003540.KS,KOSPI,KRX,KRW,대신증권,003540,,대신증권-주가-전망,003540-ks-stock-forecast
-003550.KS,KOSPI,KRX,KRW,LG,LG,,lg-주가-전망,003550-ks-stock-forecast
-003690.KS,KOSPI,KRX,KRW,코리안리,003690,,코리안리-주가-전망,003690-ks-stock-forecast
-004020.KS,KOSPI,KRX,KRW,현대제철,004020,,현대제철-주가-전망,004020-ks-stock-forecast
-004170.KS,KOSPI,KRX,KRW,신세계,004170,,신세계-주가-전망,004170-ks-stock-forecast
-004370.KS,KOSPI,KRX,KRW,농심,004370,,농심-주가-전망,004370-ks-stock-forecast
-004800.KS,KOSPI,KRX,KRW,효성,004800,,효성-주가-전망,004800-ks-stock-forecast
-004990.KS,KOSPI,KRX,KRW,롯데지주,004990,,롯데지주-주가-전망,004990-ks-stock-forecast
-005070.KS,KOSPI,KRX,KRW,코스모신소재,005070,,코스모신소재-주가-전망,005070-ks-stock-forecast
-005440.KS,KOSPI,KRX,KRW,현대지에프홀딩스,005440,,현대지에프홀딩스-주가-전망,005440-ks-stock-forecast
-005830.KS,KOSPI,KRX,KRW,DB손해보험,005830,,DB손해보험-주가-전망,005830-ks-stock-forecast
-005850.KS,KOSPI,KRX,KRW,에스엘,005850,,에스엘-주가-전망,005850-ks-stock-forecast
-006040.KS,KOSPI,KRX,KRW,동원산업,006040,,동원산업-주가-전망,006040-ks-stock-forecast
-006280.KS,KOSPI,KRX,KRW,녹십자,006280,,녹십자-주가-전망,006280-ks-stock-forecast
-006800.KS,KOSPI,KRX,KRW,미래에셋증권,006800,,미래에셋증권-주가-전망,006800-ks-stock-forecast
-007660.KS,KOSPI,KRX,KRW,이수페타시스,007660,,이수페타시스-주가-전망,007660-ks-stock-forecast
-008770.KS,KOSPI,KRX,KRW,호텔신라,008770,,호텔신라-주가-전망,008770-ks-stock-forecast
-008930.KS,KOSPI,KRX,KRW,한미사이언스,008930,,한미사이언스-주가-전망,008930-ks-stock-forecast
-009420.KS,KOSPI,KRX,KRW,한올바이오파마,009420,,한올바이오파마-주가-전망,009420-ks-stock-forecast
-009540.KS,KOSPI,KRX,KRW,HD한국조선해양,009540,,HD한국조선해양-주가-전망,009540-ks-stock-forecast
-009830.KS,KOSPI,KRX,KRW,한화솔루션,009830,,한화솔루션-주가-전망,009830-ks-stock-forecast
-009970.KS,KOSPI,KRX,KRW,영원무역홀딩스,009970,,영원무역홀딩스-주가-전망,009970-ks-stock-forecast
-010140.KS,KOSPI,KRX,KRW,삼성중공업,010140,,삼성중공업-주가-전망,010140-ks-stock-forecast
-011070.KS,KOSPI,KRX,KRW,LG이노텍,011070,,LG이노텍-주가-전망,011070-ks-stock-forecast
-011170.KS,KOSPI,KRX,KRW,롯데케미칼,011170,,롯데케미칼-주가-전망,011170-ks-stock-forecast
-011210.KS,KOSPI,KRX,KRW,현대위아,011210,,현대위아-주가-전망,011210-ks-stock-forecast
-011780.KS,KOSPI,KRX,KRW,금호석유화학,011780,,금호석유화학-주가-전망,011780-ks-stock-forecast
-012450.KS,KOSPI,KRX,KRW,한화에어로스페이스,012450,,한화에어로스페이스-주가-전망,012450-ks-stock-forecast
-012510.KS,KOSPI,KRX,KRW,더존비즈온,012510,,더존비즈온-주가-전망,012510-ks-stock-forecast
-0126Z0.KS,KOSPI,KRX,KRW,삼성에피스홀딩스,0126z0,,삼성에피스홀딩스-주가-전망,0126z0-ks-stock-forecast
-012750.KS,KOSPI,KRX,KRW,에스원,012750,,에스원-주가-전망,012750-ks-stock-forecast
-014680.KS,KOSPI,KRX,KRW,한솔케미칼,014680,,한솔케미칼-주가-전망,014680-ks-stock-forecast
-016360.KS,KOSPI,KRX,KRW,삼성증권,016360,,삼성증권-주가-전망,016360-ks-stock-forecast
-017800.KS,KOSPI,KRX,KRW,현대엘리베이터,017800,,현대엘리베이터-주가-전망,017800-ks-stock-forecast
-017960.KS,KOSPI,KRX,KRW,한국카본,017960,,한국카본-주가-전망,017960-ks-stock-forecast
-018670.KS,KOSPI,KRX,KRW,SK가스,018670,,SK가스-주가-전망,018670-ks-stock-forecast
-018880.KS,KOSPI,KRX,KRW,한온시스템,018880,,한온시스템-주가-전망,018880-ks-stock-forecast
-020150.KS,KOSPI,KRX,KRW,롯데에너지머티리얼즈,020150,,롯데에너지머티리얼즈-주가-전망,020150-ks-stock-forecast
-021240.KS,KOSPI,KRX,KRW,코웨이,021240,,코웨이-주가-전망,021240-ks-stock-forecast
-023530.KS,KOSPI,KRX,KRW,롯데쇼핑,023530,,롯데쇼핑-주가-전망,023530-ks-stock-forecast
-023590.KS,KOSPI,KRX,KRW,다우기술,023590,,다우기술-주가-전망,023590-ks-stock-forecast
-026960.KS,KOSPI,KRX,KRW,동서,026960,,동서-주가-전망,026960-ks-stock-forecast
-028670.KS,KOSPI,KRX,KRW,팬오션,028670,,팬오션-주가-전망,028670-ks-stock-forecast
-029780.KS,KOSPI,KRX,KRW,삼성카드,029780,,삼성카드-주가-전망,029780-ks-stock-forecast
-030000.KS,KOSPI,KRX,KRW,제일기획,030000,,제일기획-주가-전망,030000-ks-stock-forecast
-031210.KS,KOSPI,KRX,KRW,서울보증보험,031210,,서울보증보험-주가-전망,031210-ks-stock-forecast
-032350.KS,KOSPI,KRX,KRW,롯데관광개발,032350,,롯데관광개발-주가-전망,032350-ks-stock-forecast
-032640.KS,KOSPI,KRX,KRW,LG유플러스,032640,,LG유플러스-주가-전망,032640-ks-stock-forecast
-034220.KS,KOSPI,KRX,KRW,LG디스플레이,034220,,LG디스플레이-주가-전망,034220-ks-stock-forecast
-035250.KS,KOSPI,KRX,KRW,강원랜드,035250,,강원랜드-주가-전망,035250-ks-stock-forecast
-035720.KS,KOSPI,KRX,KRW,카카오,035720,,카카오-주가-전망,035720-ks-stock-forecast
-036460.KS,KOSPI,KRX,KRW,한국가스공사,036460,,한국가스공사-주가-전망,036460-ks-stock-forecast
-039490.KS,KOSPI,KRX,KRW,키움증권,039490,,키움증권-주가-전망,039490-ks-stock-forecast
-042660.KS,KOSPI,KRX,KRW,한화오션,042660,,한화오션-주가-전망,042660-ks-stock-forecast
-042700.KS,KOSPI,KRX,KRW,한미반도체,042700,,한미반도체-주가-전망,042700-ks-stock-forecast
-047040.KS,KOSPI,KRX,KRW,대우건설,047040,,대우건설-주가-전망,047040-ks-stock-forecast
-047810.KS,KOSPI,KRX,KRW,한국항공우주,047810,,한국항공우주-주가-전망,047810-ks-stock-forecast
-051900.KS,KOSPI,KRX,KRW,LG생활건강,051900,,LG생활건강-주가-전망,051900-ks-stock-forecast
-052690.KS,KOSPI,KRX,KRW,한전기술,052690,,한전기술-주가-전망,052690-ks-stock-forecast
-062040.KS,KOSPI,KRX,KRW,산일전기,062040,,산일전기-주가-전망,062040-ks-stock-forecast
-064350.KS,KOSPI,KRX,KRW,현대로템,064350,,현대로템-주가-전망,064350-ks-stock-forecast
-064400.KS,KOSPI,KRX,KRW,LG씨엔에스,064400,,LG씨엔에스-주가-전망,064400-ks-stock-forecast
-066970.KS,KOSPI,KRX,KRW,엘앤에프,066970,,엘앤에프-주가-전망,066970-ks-stock-forecast
-069620.KS,KOSPI,KRX,KRW,대웅제약,069620,,대웅제약-주가-전망,069620-ks-stock-forecast
-069960.KS,KOSPI,KRX,KRW,현대백화점,069960,,현대백화점-주가-전망,069960-ks-stock-forecast
-071050.KS,KOSPI,KRX,KRW,한국금융지주,071050,,한국금융지주-주가-전망,071050-ks-stock-forecast
-071970.KS,KOSPI,KRX,KRW,HD현대마린엔진,071970,,HD현대마린엔진-주가-전망,071970-ks-stock-forecast
-073240.KS,KOSPI,KRX,KRW,금호타이어,073240,,금호타이어-주가-전망,073240-ks-stock-forecast
-081660.KS,KOSPI,KRX,KRW,미스토홀딩스,081660,,미스토홀딩스-주가-전망,081660-ks-stock-forecast
-082740.KS,KOSPI,KRX,KRW,한화엔진,082740,,한화엔진-주가-전망,082740-ks-stock-forecast
-085620.KS,KOSPI,KRX,KRW,미래에셋생명,085620,,미래에셋생명-주가-전망,085620-ks-stock-forecast
-086280.KS,KOSPI,KRX,KRW,현대글로비스,086280,,현대글로비스-주가-전망,086280-ks-stock-forecast
-088350.KS,KOSPI,KRX,KRW,한화생명,088350,,한화생명-주가-전망,088350-ks-stock-forecast
-088980.KS,KOSPI,KRX,KRW,맥쿼리인프라,088980,,맥쿼리인프라-주가-전망,088980-ks-stock-forecast
-090430.KS,KOSPI,KRX,KRW,아모레퍼시픽,090430,,아모레퍼시픽-주가-전망,090430-ks-stock-forecast
-097950.KS,KOSPI,KRX,KRW,CJ제일제당,097950,,CJ제일제당-주가-전망,097950-ks-stock-forecast
-103140.KS,KOSPI,KRX,KRW,풍산,103140,,풍산-주가-전망,103140-ks-stock-forecast
-103590.KS,KOSPI,KRX,KRW,일진전기,103590,,일진전기-주가-전망,103590-ks-stock-forecast
-111770.KS,KOSPI,KRX,KRW,영원무역,111770,,영원무역-주가-전망,111770-ks-stock-forecast
-112610.KS,KOSPI,KRX,KRW,씨에스윈드,112610,,씨에스윈드-주가-전망,112610-ks-stock-forecast
-120110.KS,KOSPI,KRX,KRW,코오롱인더,120110,,코오롱인더-주가-전망,120110-ks-stock-forecast
-128940.KS,KOSPI,KRX,KRW,한미약품,128940,,한미약품-주가-전망,128940-ks-stock-forecast
-138040.KS,KOSPI,KRX,KRW,메리츠금융지주,138040,,메리츠금융지주-주가-전망,138040-ks-stock-forecast
-139480.KS,KOSPI,KRX,KRW,이마트,139480,,이마트-주가-전망,139480-ks-stock-forecast
-161390.KS,KOSPI,KRX,KRW,한국타이어앤테크놀로지,161390,,한국타이어앤테크놀로지-주가-전망,161390-ks-stock-forecast
-161890.KS,KOSPI,KRX,KRW,한국콜마,161890,,한국콜마-주가-전망,161890-ks-stock-forecast
-180640.KS,KOSPI,KRX,KRW,한진칼,180640,,한진칼-주가-전망,180640-ks-stock-forecast
-192820.KS,KOSPI,KRX,KRW,코스맥스,192820,,코스맥스-주가-전망,192820-ks-stock-forecast
-241560.KS,KOSPI,KRX,KRW,두산밥캣,241560,,두산밥캣-주가-전망,241560-ks-stock-forecast
-251270.KS,KOSPI,KRX,KRW,넷마블,251270,,넷마블-주가-전망,251270-ks-stock-forecast
-259960.KS,KOSPI,KRX,KRW,크래프톤,259960,,크래프톤-주가-전망,259960-ks-stock-forecast
-267250.KS,KOSPI,KRX,KRW,HD현대,267250,,HD현대-주가-전망,267250-ks-stock-forecast
-267260.KS,KOSPI,KRX,KRW,HD현대일렉트릭,267260,,HD현대일렉트릭-주가-전망,267260-ks-stock-forecast
-267270.KS,KOSPI,KRX,KRW,HD건설기계,267270,,HD건설기계-주가-전망,267270-ks-stock-forecast
-271560.KS,KOSPI,KRX,KRW,오리온,271560,,오리온-주가-전망,271560-ks-stock-forecast
-272210.KS,KOSPI,KRX,KRW,한화시스템,272210,,한화시스템-주가-전망,272210-ks-stock-forecast
-278470.KS,KOSPI,KRX,KRW,에이피알,278470,,에이피알-주가-전망,278470-ks-stock-forecast
-279570.KS,KOSPI,KRX,KRW,케이뱅크,279570,,케이뱅크-주가-전망,279570-ks-stock-forecast
-298020.KS,KOSPI,KRX,KRW,효성티앤씨,298020,,효성티앤씨-주가-전망,298020-ks-stock-forecast
-298040.KS,KOSPI,KRX,KRW,효성중공업,298040,,효성중공업-주가-전망,298040-ks-stock-forecast
-302440.KS,KOSPI,KRX,KRW,SK바이오사이언스,302440,,SK바이오사이언스-주가-전망,302440-ks-stock-forecast
-307950.KS,KOSPI,KRX,KRW,현대오토에버,307950,,현대오토에버-주가-전망,307950-ks-stock-forecast
-316140.KS,KOSPI,KRX,KRW,우리금융지주,316140,,우리금융지주-주가-전망,316140-ks-stock-forecast
-323410.KS,KOSPI,KRX,KRW,카카오뱅크,323410,,카카오뱅크-주가-전망,323410-ks-stock-forecast
-326030.KS,KOSPI,KRX,KRW,SK바이오팜,326030,,SK바이오팜-주가-전망,326030-ks-stock-forecast
-329180.KS,KOSPI,KRX,KRW,HD현대중공업,329180,,HD현대중공업-주가-전망,329180-ks-stock-forecast
-336260.KS,KOSPI,KRX,KRW,두산퓨얼셀,336260,,두산퓨얼셀-주가-전망,336260-ks-stock-forecast
-353200.KS,KOSPI,KRX,KRW,대덕전자,353200,,대덕전자-주가-전망,353200-ks-stock-forecast
-361610.KS,KOSPI,KRX,KRW,SK아이이테크놀로지,361610,,SK아이이테크놀로지-주가-전망,361610-ks-stock-forecast
-373220.KS,KOSPI,KRX,KRW,LG에너지솔루션,373220,,LG에너지솔루션-주가-전망,373220-ks-stock-forecast
-377300.KS,KOSPI,KRX,KRW,카카오페이,377300,,카카오페이-주가-전망,377300-ks-stock-forecast
-395400.KS,KOSPI,KRX,KRW,SK리츠,395400,,SK리츠-주가-전망,395400-ks-stock-forecast
-402340.KS,KOSPI,KRX,KRW,SK스퀘어,402340,,SK스퀘어-주가-전망,402340-ks-stock-forecast
-439260.KS,KOSPI,KRX,KRW,대한조선,439260,,대한조선-주가-전망,439260-ks-stock-forecast
-443060.KS,KOSPI,KRX,KRW,HD현대마린솔루션,443060,,HD현대마린솔루션-주가-전망,443060-ks-stock-forecast
-450080.KS,KOSPI,KRX,KRW,에코프로머티,450080,,에코프로머티-주가-전망,450080-ks-stock-forecast
-454910.KS,KOSPI,KRX,KRW,두산로보틱스,454910,,두산로보틱스-주가-전망,454910-ks-stock-forecast
-457190.KS,KOSPI,KRX,KRW,이수스페셜티케미컬,457190,,이수스페셜티케미컬-주가-전망,457190-ks-stock-forecast
-462870.KS,KOSPI,KRX,KRW,시프트업,462870,,시프트업-주가-전망,462870-ks-stock-forecast
-475150.KS,KOSPI,KRX,KRW,SK이터닉스,475150,,SK이터닉스-주가-전망,475150-ks-stock-forecast
-483650.KS,KOSPI,KRX,KRW,달바글로벌,483650,,달바글로벌-주가-전망,483650-ks-stock-forecast
-489790.KS,KOSPI,KRX,KRW,한화비전,489790,,한화비전-주가-전망,489790-ks-stock-forecast
-282330.KS,KOSPI,KRX,KRW,BGF리테일,Bgf,,BGF리테일-주가-전망,282330-ks-stock-forecast
-138930.KS,KOSPI,KRX,KRW,BNK금융지주,BNK,,BNK금융지주-주가-전망,138930-ks-stock-forecast
-068270.KS,KOSPI,KRX,KRW,셀트리온,Celltrion,,셀트리온-주가-전망,068270-ks-stock-forecast
-375500.KS,KOSPI,KRX,KRW,DL이앤씨,Dl,,DL이앤씨-주가-전망,375500-ks-stock-forecast
-007340.KS,KOSPI,KRX,KRW,DN오토모티브,Dn,,DN오토모티브-주가-전망,007340-ks-stock-forecast
-034020.KS,KOSPI,KRX,KRW,두산에너빌리티,Doosan Enerbility,,두산에너빌리티-주가-전망,034020-ks-stock-forecast
-022100.KS,KOSPI,KRX,KRW,포스코DX,Dx,,포스코DX-주가-전망,022100-ks-stock-forecast
-028050.KS,KOSPI,KRX,KRW,삼성E&A,E And A,,삼성E-A-주가-전망,028050-ks-stock-forecast
-383220.KS,KOSPI,KRX,KRW,F&F,F&F,,f-f-주가-전망,383220-ks-stock-forecast
-006360.KS,KOSPI,KRX,KRW,GS건설,GS,,GS건설-주가-전망,006360-ks-stock-forecast
-007070.KS,KOSPI,KRX,KRW,GS리테일,GS 2,,GS리테일-주가-전망,007070-ks-stock-forecast
-078930.KS,KOSPI,KRX,KRW,GS,GS,,gs-주가-전망,078930-ks-stock-forecast
-086790.KS,KOSPI,KRX,KRW,하나금융지주,Hana Financial Group,,하나금융지주-주가-전망,086790-ks-stock-forecast
-097230.KS,KOSPI,KRX,KRW,HJ중공업,Hj,,HJ중공업-주가-전망,097230-ks-stock-forecast
-204320.KS,KOSPI,KRX,KRW,HL만도,Hl,,HL만도-주가-전망,204320-ks-stock-forecast
-011200.KS,KOSPI,KRX,KRW,HMM,HMM,,hmm-주가-전망,011200-ks-stock-forecast
-352820.KS,KOSPI,KRX,KRW,하이브,HYBE,,하이브-주가-전망,352820-ks-stock-forecast
-012330.KS,KOSPI,KRX,KRW,현대모비스,Hyundai Mobis,,현대모비스-주가-전망,012330-ks-stock-forecast
-005380.KS,KOSPI,KRX,KRW,현대차,Hyundai Motor,,현대차-주가-전망,005380-ks-stock-forecast
-024110.KS,KOSPI,KRX,KRW,기업은행,Ibk,,기업은행-주가-전망,024110-ks-stock-forecast
-139130.KS,KOSPI,KRX,KRW,iM금융지주,Im,,iM금융지주-주가-전망,139130-ks-stock-forecast
-175330.KS,KOSPI,KRX,KRW,JB금융지주,JB,,JB금융지주-주가-전망,175330-ks-stock-forecast
-105560.KS,KOSPI,KRX,KRW,KB금융,KB Financial,,KB금융-주가-전망,105560-ks-stock-forecast
-002380.KS,KOSPI,KRX,KRW,KCC,KCC,,kcc-주가-전망,002380-ks-stock-forecast
-015760.KS,KOSPI,KRX,KRW,한국전력,Kepco,,한국전력-주가-전망,015760-ks-stock-forecast
-000270.KS,KOSPI,KRX,KRW,기아,Kia,,기아-주가-전망,000270-ks-stock-forecast
-010130.KS,KOSPI,KRX,KRW,고려아연,Korea Zinc,,고려아연-주가-전망,010130-ks-stock-forecast
-051600.KS,KOSPI,KRX,KRW,한전KPS,Kps,,한전KPS-주가-전망,051600-ks-stock-forecast
-030200.KS,KOSPI,KRX,KRW,KT,KT,,kt-주가-전망,030200-ks-stock-forecast
-033780.KS,KOSPI,KRX,KRW,KT&G,KT&G,,kt-g-주가-전망,033780-ks-stock-forecast
-051910.KS,KOSPI,KRX,KRW,LG화학,LG Chem,,LG화학-주가-전망,051910-ks-stock-forecast
-066570.KS,KOSPI,KRX,KRW,LG전자,LG Electronics,,LG전자-주가-전망,066570-ks-stock-forecast
-079550.KS,KOSPI,KRX,KRW,LIG넥스원,Lig,,LIG넥스원-주가-전망,079550-ks-stock-forecast
-006260.KS,KOSPI,KRX,KRW,LS,LS,,ls-주가-전망,006260-ks-stock-forecast
-010120.KS,KOSPI,KRX,KRW,LS ELECTRIC,LS ELECTRIC,,ls-electric-주가-전망,010120-ks-stock-forecast
-035420.KS,KOSPI,KRX,KRW,NAVER,NAVER,,naver-주가-전망,035420-ks-stock-forecast
-036570.KS,KOSPI,KRX,KRW,엔씨소프트,Ncsoft,,엔씨소프트-주가-전망,036570-ks-stock-forecast
-005940.KS,KOSPI,KRX,KRW,NH투자증권,NH,,NH투자증권-주가-전망,005940-ks-stock-forecast
-010060.KS,KOSPI,KRX,KRW,OCI홀딩스,Oci,,OCI홀딩스-주가-전망,010060-ks-stock-forecast
-034230.KS,KOSPI,KRX,KRW,파라다이스,Paradise,,파라다이스-주가-전망,034230-ks-stock-forecast
-005490.KS,KOSPI,KRX,KRW,POSCO홀딩스,POSCO,,POSCO홀딩스-주가-전망,005490-ks-stock-forecast
-003670.KS,KOSPI,KRX,KRW,포스코퓨처엠,POSCO Holdings,,포스코퓨처엠-주가-전망,003670-ks-stock-forecast
-047050.KS,KOSPI,KRX,KRW,포스코인터내셔널,POSCO International,,포스코인터내셔널-주가-전망,047050-ks-stock-forecast
-010950.KS,KOSPI,KRX,KRW,S-Oil,S-Oil,,s-oil-주가-전망,010950-ks-stock-forecast
-207940.KS,KOSPI,KRX,KRW,삼성바이오로직스,Samsung Biologics,,삼성바이오로직스-주가-전망,207940-ks-stock-forecast
-028260.KS,KOSPI,KRX,KRW,삼성물산,Samsung C T,,삼성물산-주가-전망,028260-ks-stock-forecast
-009150.KS,KOSPI,KRX,KRW,삼성전기,Samsung Electro Mechanics,,삼성전기-주가-전망,009150-ks-stock-forecast
-005930.KS,KOSPI,KRX,KRW,삼성전자,Samsung Electronics,,삼성전자-주가-전망,005930-ks-stock-forecast
-032830.KS,KOSPI,KRX,KRW,삼성생명,Samsung Life,,삼성생명-주가-전망,032830-ks-stock-forecast
-006400.KS,KOSPI,KRX,KRW,삼성SDI,Samsung Sdi,,삼성SDI-주가-전망,006400-ks-stock-forecast
-018260.KS,KOSPI,KRX,KRW,삼성에스디에스,Samsung Sds,,삼성에스디에스-주가-전망,018260-ks-stock-forecast
-055550.KS,KOSPI,KRX,KRW,신한지주,Shinhan Financial,,신한지주-주가-전망,055550-ks-stock-forecast
-000660.KS,KOSPI,KRX,KRW,SK하이닉스,SK Hynix,,SK하이닉스-주가-전망,000660-ks-stock-forecast
-034730.KS,KOSPI,KRX,KRW,SK,SK,,sk-주가-전망,034730-ks-stock-forecast
-096770.KS,KOSPI,KRX,KRW,SK이노베이션,SK Innovation,,SK이노베이션-주가-전망,096770-ks-stock-forecast
-017670.KS,KOSPI,KRX,KRW,SK텔레콤,SK Telecom,,SK텔레콤-주가-전망,017670-ks-stock-forecast
-011790.KS,KOSPI,KRX,KRW,SKC,SKC,,skc-주가-전망,011790-ks-stock-forecast
-003570.KS,KOSPI,KRX,KRW,SNT다이내믹스,Snt,,SNT다이내믹스-주가-전망,003570-ks-stock-forecast
-ABVX,NASDAQ,NASDAQ,USD,Abivax SA,Abivax SA,,abivax-sa-주가-전망,abvx-stock-forecast
-ADBE,NASDAQ,NASDAQ,USD,어도비,Adobe Inc.,,어도비-주가-전망,adbe-stock-forecast
-AEIS,NASDAQ,NASDAQ,USD,"Advanced Energy Industries, Inc","Advanced Energy Industries, Inc",,advanced-energy-industries-inc-주가-전망,aeis-stock-forecast
-AVAV,NASDAQ,NASDAQ,USD,"AeroVironment, Inc.","AeroVironment, Inc.",,aerovironment-inc-주가-전망,avav-stock-forecast
-AFRM,NASDAQ,NASDAQ,USD,어펌,"Affirm Holdings, Inc.",,어펌-주가-전망,afrm-stock-forecast
-AGNC,NASDAQ,NASDAQ,USD,AGNC 인베스트먼트,AGNC Investment Corp.,,AGNC-인베스트먼트-주가-전망,agnc-stock-forecast
-AGNCM,NASDAQ,NASDAQ,USD,AGNC Investment Corp. - Deposit,AGNC Investment Corp. - Deposit,,agnc-investment-corp-deposit-주가-전망,agncm-stock-forecast
-AGNCN,NASDAQ,NASDAQ,USD,AGNC Investment Corp. - Deposit,AGNC Investment Corp. - Deposit,,agnc-investment-corp-deposit-주가-전망-agncn,agncn-stock-forecast
-ABNB,NASDAQ,NASDAQ,USD,에어비앤비,"Airbnb, Inc.",,에어비앤비-주가-전망,abnb-stock-forecast
-AKAM,NASDAQ,NASDAQ,USD,아카마이 테크놀로지,"Akamai Technologies, Inc.",,아카마이-테크놀로지-주가-전망,akam-stock-forecast
-ALGN,NASDAQ,NASDAQ,USD,얼라인 테크놀로지,"Align Technology, Inc.",,얼라인-테크놀로지-주가-전망,algn-stock-forecast
-LNT,NASDAQ,NASDAQ,USD,Alliant Energy Corporation,Alliant Energy Corporation,,alliant-energy-corporation-주가-전망,lnt-stock-forecast
-ALNY,NASDAQ,NASDAQ,USD,알나일람 파마슈티컬스,"Alnylam Pharmaceuticals, Inc.",,알나일람-파마슈티컬스-주가-전망,alny-stock-forecast
-GOOGL,NASDAQ,NASDAQ,USD,알파벳 A,Alphabet Inc.,,알파벳-A-주가-전망,googl-stock-forecast
-GOOG,NASDAQ,NASDAQ,USD,알파벳 C,Alphabet Inc.,,알파벳-C-주가-전망,goog-stock-forecast
-AMZN,NASDAQ,NASDAQ,USD,아마존,"Amazon.com, Inc.",,아마존-주가-전망,amzn-stock-forecast
-AMD,NASDAQ,NASDAQ,USD,AMD,"Advanced Micro Devices, Inc.",,amd-주가-전망,amd-stock-forecast
-AEP,NASDAQ,NASDAQ,USD,아메리칸 일렉트릭 파워,American Electric Power Company,,아메리칸-일렉트릭-파워-주가-전망,aep-stock-forecast
-AMGN,NASDAQ,NASDAQ,USD,암젠,Amgen Inc.,,암젠-주가-전망,amgn-stock-forecast
-AMKR,NASDAQ,NASDAQ,USD,앰코 테크놀로지,"Amkor Technology, Inc.",,앰코-테크놀로지-주가-전망,amkr-stock-forecast
-ADI,NASDAQ,NASDAQ,USD,아나로그 디바이시스,"Analog Devices, Inc.",,아나로그-디바이시스-주가-전망,adi-stock-forecast
-APA,NASDAQ,NASDAQ,USD,APA,APA Corporation,,apa-주가-전망,apa-stock-forecast
-AAPL,NASDAQ,NASDAQ,USD,애플,Apple Inc.,,애플-주가-전망,aapl-stock-forecast
-AMAT,NASDAQ,NASDAQ,USD,어플라이드 머티어리얼즈,"Applied Materials, Inc.",,어플라이드-머티어리얼즈-주가-전망,amat-stock-forecast
-APP,NASDAQ,NASDAQ,USD,앱러빈,Applovin Corporation,,앱러빈-주가-전망,app-stock-forecast
-ACGL,NASDAQ,NASDAQ,USD,아치 캐피털 그룹,Arch Capital Group Ltd.,,아치-캐피털-그룹-주가-전망,acgl-stock-forecast
-ACGLO,NASDAQ,NASDAQ,USD,Arch Capital Group Ltd. - Depos,Arch Capital Group Ltd. - Depos,,arch-capital-group-ltd-depos-주가-전망,acglo-stock-forecast
-ARCC,NASDAQ,NASDAQ,USD,아레스 캐피털,Ares Capital Corporation,,아레스-캐피털-주가-전망,arcc-stock-forecast
-ARGX,NASDAQ,NASDAQ,USD,아젠엑스,argenx SE,,아젠엑스-주가-전망,argx-stock-forecast
-ARM,NASDAQ,NASDAQ,USD,암 홀딩스,Arm Holdings plc,,암-홀딩스-주가-전망,arm-stock-forecast
-ASND,NASDAQ,NASDAQ,USD,아센디스 파마,Ascendis Pharma A/S,,아센디스-파마-주가-전망,asnd-stock-forecast
-ASML,NASDAQ,NASDAQ,USD,ASML,ASML Holding N.V. - New York Re,,asml-주가-전망,asml-stock-forecast
-ASTS,NASDAQ,NASDAQ,USD,AST 스페이스모바일,"AST SpaceMobile, Inc.",,AST-스페이스모바일-주가-전망,asts-stock-forecast
-ALAB,NASDAQ,NASDAQ,USD,아스테라 랩스,"Astera Labs, Inc.",,아스테라-랩스-주가-전망,alab-stock-forecast
-TEAM,NASDAQ,NASDAQ,USD,아틀라시안,Atlassian Corporation,,아틀라시안-주가-전망,team-stock-forecast
-ADSK,NASDAQ,NASDAQ,USD,오토데스크,"Autodesk, Inc.",,오토데스크-주가-전망,adsk-stock-forecast
-ADP,NASDAQ,NASDAQ,USD,오토매틱 데이터 프로세싱,"Automatic Data Processing, Inc.",,오토매틱-데이터-프로세싱-주가-전망,adp-stock-forecast
-AXON,NASDAQ,NASDAQ,USD,액손 엔터프라이즈,"Axon Enterprise, Inc.",,액손-엔터프라이즈-주가-전망,axon-stock-forecast
-BIDU,NASDAQ,NASDAQ,USD,바이두,"Baidu, Inc.",,바이두-주가-전망,bidu-stock-forecast
-BKR,NASDAQ,NASDAQ,USD,베이커휴즈,Baker Hughes Company,,베이커휴즈-주가-전망,bkr-stock-forecast
-BSY,NASDAQ,NASDAQ,USD,벤틀리 시스템즈,"Bentley Systems, Incorporated",,벤틀리-시스템즈-주가-전망,bsy-stock-forecast
-ONC,NASDAQ,NASDAQ,USD,BeOne Medicines Ltd.,BeOne Medicines Ltd.,,beone-medicines-ltd-주가-전망,onc-stock-forecast
-BILI,NASDAQ,NASDAQ,USD,빌리빌리,Bilibili Inc.,,빌리빌리-주가-전망,bili-stock-forecast
-BIIB,NASDAQ,NASDAQ,USD,바이오젠,Biogen Inc.,,바이오젠-주가-전망,biib-stock-forecast
-BMRN,NASDAQ,NASDAQ,USD,바이오마린,BioMarin Pharmaceutical Inc.,,바이오마린-주가-전망,bmrn-stock-forecast
-BNTX,NASDAQ,NASDAQ,USD,바이오엔테크,BioNTech SE,,바이오엔테크-주가-전망,bntx-stock-forecast
-BKNG,NASDAQ,NASDAQ,USD,부킹홀딩스,Booking Holdings Inc. Common St,,부킹홀딩스-주가-전망,bkng-stock-forecast
-BBIO,NASDAQ,NASDAQ,USD,"BridgeBio Pharma, Inc.","BridgeBio Pharma, Inc.",,bridgebio-pharma-inc-주가-전망,bbio-stock-forecast
-AVGO,NASDAQ,NASDAQ,USD,브로드컴,Broadcom Inc.,,브로드컴-주가-전망,avgo-stock-forecast
-BPYPP,NASDAQ,NASDAQ,USD,Brookfield Property Partners L.,Brookfield Property Partners L.,,brookfield-property-partners-l-주가-전망,bpypp-stock-forecast
-CHRW,NASDAQ,NASDAQ,USD,C.H. 로빈슨,"C.H. Robinson Worldwide, Inc.",,CH-로빈슨-주가-전망,chrw-stock-forecast
-CDNS,NASDAQ,NASDAQ,USD,케이던스,"Cadence Design Systems, Inc.",,케이던스-주가-전망,cdns-stock-forecast
-CASY,NASDAQ,NASDAQ,USD,케이시스 제너럴 스토어스,"Caseys General Stores, Inc.",,케이시스-제너럴-스토어스-주가-전망,casy-stock-forecast
-CDW,NASDAQ,NASDAQ,USD,CDW,CDW Corporation,,cdw-주가-전망,cdw-stock-forecast
-CELH,NASDAQ,NASDAQ,USD,셀시우스 홀딩스,"Celsius Holdings, Inc.",,셀시우스-홀딩스-주가-전망,celh-stock-forecast
-CHTR,NASDAQ,NASDAQ,USD,차터 커뮤니케이션스,"Charter Communications, Inc.",,차터-커뮤니케이션스-주가-전망,chtr-stock-forecast
-CHKP,NASDAQ,NASDAQ,USD,체크포인트 소프트웨어,Check Point Software Technologi,,체크포인트-소프트웨어-주가-전망,chkp-stock-forecast
-CINF,NASDAQ,NASDAQ,USD,신시내티 파이낸셜,Cincinnati Financial Corporatio,,신시내티-파이낸셜-주가-전망,cinf-stock-forecast
-CTAS,NASDAQ,NASDAQ,USD,신타스,Cintas Corporation,,신타스-주가-전망,ctas-stock-forecast
-CSCO,NASDAQ,NASDAQ,USD,시스코 시스템즈,"Cisco Systems, Inc.",,시스코-시스템즈-주가-전망,csco-stock-forecast
-CME,NASDAQ,NASDAQ,USD,CME Group Inc.,CME Group Inc.,,cme-group-inc-주가-전망,cme-stock-forecast
-COKE,NASDAQ,NASDAQ,USD,코카콜라 콘솔리데이티드,"Coca-Cola Consolidated, Inc.",,코카콜라-콘솔리데이티드-주가-전망,coke-stock-forecast
-CCEP,NASDAQ,NASDAQ,USD,코카콜라 유로퍼시픽,Coca-Cola Europacific Partners,,코카콜라-유로퍼시픽-주가-전망,ccep-stock-forecast
-CTSH,NASDAQ,NASDAQ,USD,코그니전트,Cognizant Technology Solutions,,코그니전트-주가-전망,ctsh-stock-forecast
-COIN,NASDAQ,NASDAQ,USD,코인베이스,"Coinbase Global, Inc. - 3",,코인베이스-주가-전망,coin-stock-forecast
-CMCSA,NASDAQ,NASDAQ,USD,컴캐스트,Comcast Corporation,,컴캐스트-주가-전망,cmcsa-stock-forecast
-CEG,NASDAQ,NASDAQ,USD,콘스텔레이션 에너지,Constellation Energy Corporatio,,콘스텔레이션-에너지-주가-전망,ceg-stock-forecast
-CPRT,NASDAQ,NASDAQ,USD,코파트,"Copart, Inc.",,코파트-주가-전망,cprt-stock-forecast
-CRWV,NASDAQ,NASDAQ,USD,"CoreWeave, Inc.","CoreWeave, Inc.",,coreweave-inc-주가-전망,crwv-stock-forecast
-CSGP,NASDAQ,NASDAQ,USD,"CoStar Group, Inc.","CoStar Group, Inc.",,costar-group-inc-주가-전망,csgp-stock-forecast
-COST,NASDAQ,NASDAQ,USD,코스트코,Costco Wholesale Corporation,,코스트코-주가-전망,cost-stock-forecast
-CRDO,NASDAQ,NASDAQ,USD,Credo Technology Group Holding,Credo Technology Group Holding,,credo-technology-group-holding-주가-전망,crdo-stock-forecast
-CRWD,NASDAQ,NASDAQ,USD,크라우드스트라이크,"CrowdStrike Holdings, Inc.",,크라우드스트라이크-주가-전망,crwd-stock-forecast
-CSX,NASDAQ,NASDAQ,USD,CSX,CSX Corporation,,csx-주가-전망,csx-stock-forecast
-DDOG,NASDAQ,NASDAQ,USD,데이터독,"Datadog, Inc.",,데이터독-주가-전망,ddog-stock-forecast
-DXCM,NASDAQ,NASDAQ,USD,덱스컴,"DexCom, Inc.",,덱스컴-주가-전망,dxcm-stock-forecast
-FANG,NASDAQ,NASDAQ,USD,다이아몬드백 에너지,"Diamondback Energy, Inc.",,다이아몬드백-에너지-주가-전망,fang-stock-forecast
-DOCU,NASDAQ,NASDAQ,USD,도큐사인,"DocuSign, Inc.",,도큐사인-주가-전망,docu-stock-forecast
-DLTR,NASDAQ,NASDAQ,USD,"Dollar Tree, Inc.","Dollar Tree, Inc.",,dollar-tree-inc-주가-전망,dltr-stock-forecast
-DPZ,NASDAQ,NASDAQ,USD,Domino's Pizza Inc,Domino's Pizza Inc,,dominos-pizza-inc-주가-전망,dpz-stock-forecast
-DASH,NASDAQ,NASDAQ,USD,도어대시,"DoorDash, Inc.",,도어대시-주가-전망,dash-stock-forecast
-DKNG,NASDAQ,NASDAQ,USD,드래프트킹스,DraftKings Inc.,,드래프트킹스-주가-전망,dkng-stock-forecast
-EWBC,NASDAQ,NASDAQ,USD,이스트웨스트 뱅코프,"East West Bancorp, Inc.",,이스트웨스트-뱅코프-주가-전망,ewbc-stock-forecast
-EBAY,NASDAQ,NASDAQ,USD,이베이,eBay Inc.,,이베이-주가-전망,ebay-stock-forecast
-SATS,NASDAQ,NASDAQ,USD,EchoStar Corporation,EchoStar Corporation,,echostar-corporation-주가-전망,sats-stock-forecast
-ESLT,NASDAQ,NASDAQ,USD,Elbit Systems Ltd.,Elbit Systems Ltd.,,elbit-systems-ltd-주가-전망,eslt-stock-forecast
-EA,NASDAQ,NASDAQ,USD,일렉트로닉 아츠,Electronic Arts Inc.,,일렉트로닉-아츠-주가-전망,ea-stock-forecast
-ENLT,NASDAQ,NASDAQ,USD,Enlight Renewable Energy Ltd.,Enlight Renewable Energy Ltd.,,enlight-renewable-energy-ltd-주가-전망,enlt-stock-forecast
-ENTG,NASDAQ,NASDAQ,USD,엔테그리스,"Entegris, Inc.",,엔테그리스-주가-전망,entg-stock-forecast
-EQIX,NASDAQ,NASDAQ,USD,"Equinix, Inc.","Equinix, Inc.",,equinix-inc-주가-전망,eqix-stock-forecast
-ERIC,NASDAQ,NASDAQ,USD,에릭슨,Ericsson,,에릭슨-주가-전망,eric-stock-forecast
-ERIE,NASDAQ,NASDAQ,USD,Erie Indemnity Company,Erie Indemnity Company,,erie-indemnity-company-주가-전망,erie-stock-forecast
-EVRG,NASDAQ,NASDAQ,USD,"Evergy, Inc.","Evergy, Inc.",,evergy-inc-주가-전망,evrg-stock-forecast
-EXAS,NASDAQ,NASDAQ,USD,이그젝트 사이언스,Exact Sciences Corporation,,이그젝트-사이언스-주가-전망,exas-stock-forecast
-EXEL,NASDAQ,NASDAQ,USD,"Exelixis, Inc.","Exelixis, Inc.",,exelixis-inc-주가-전망,exel-stock-forecast
-EXC,NASDAQ,NASDAQ,USD,엑셀론,Exelon Corporation,,엑셀론-주가-전망,exc-stock-forecast
-EXE,NASDAQ,NASDAQ,USD,Expand Energy Corporation,Expand Energy Corporation,,expand-energy-corporation-주가-전망,exe-stock-forecast
-EXPE,NASDAQ,NASDAQ,USD,익스피디아,"Expedia Group, Inc.",,익스피디아-주가-전망,expe-stock-forecast
-FFIV,NASDAQ,NASDAQ,USD,F5,"F5, Inc.",,f5-주가-전망,ffiv-stock-forecast
-FAST,NASDAQ,NASDAQ,USD,패스널,Fastenal Company,,패스널-주가-전망,fast-stock-forecast
-FER,NASDAQ,NASDAQ,USD,Ferrovial SE,Ferrovial SE,,ferrovial-se-주가-전망,fer-stock-forecast
-FITB,NASDAQ,NASDAQ,USD,Fifth Third Bancorp,Fifth Third Bancorp,,fifth-third-bancorp-주가-전망,fitb-stock-forecast
-FITBI,NASDAQ,NASDAQ,USD,Fifth Third Bancorp - Depositar,Fifth Third Bancorp - Depositar,,fifth-third-bancorp-depositar-주가-전망,fitbi-stock-forecast
-FCNCA,NASDAQ,NASDAQ,USD,퍼스트 시티즌스 뱅크셰어즈,"First Citizens BancShares, Inc.",,퍼스트-시티즌스-뱅크셰어즈-주가-전망,fcnca-stock-forecast
-FSLR,NASDAQ,NASDAQ,USD,퍼스트 솔라,"First Solar, Inc.",,퍼스트-솔라-주가-전망,fslr-stock-forecast
-FISV,NASDAQ,NASDAQ,USD,"Fiserv, Inc.","Fiserv, Inc.",,fiserv-inc-주가-전망,fisv-stock-forecast
-FIVE,NASDAQ,NASDAQ,USD,파이브 빌로우,"Five Below, Inc.",,파이브-빌로우-주가-전망,five-stock-forecast
-FLEX,NASDAQ,NASDAQ,USD,플렉스,Flex Ltd.,,플렉스-주가-전망,flex-stock-forecast
-FTNT,NASDAQ,NASDAQ,USD,포티넷,"Fortinet, Inc.",,포티넷-주가-전망,ftnt-stock-forecast
-FOX,NASDAQ,NASDAQ,USD,폭스 B,Fox Corporation,,폭스-B-주가-전망,fox-stock-forecast
-FOXA,NASDAQ,NASDAQ,USD,폭스 A,Fox Corporation,,폭스-A-주가-전망,foxa-stock-forecast
-FTAI,NASDAQ,NASDAQ,USD,FTAI 에비에이션,FTAI Aviation Ltd.,,FTAI-에비에이션-주가-전망,ftai-stock-forecast
-FUTU,NASDAQ,NASDAQ,USD,푸투 홀딩스,Futu Holdings Limited,,푸투-홀딩스-주가-전망,futu-stock-forecast
-GLPI,NASDAQ,NASDAQ,USD,"Gaming and Leisure Properties,","Gaming and Leisure Properties,",,gaming-and-leisure-properties-주가-전망,glpi-stock-forecast
-GDS,NASDAQ,NASDAQ,USD,GDS Holdings Limited,GDS Holdings Limited,,gds-holdings-limited-주가-전망,gds-stock-forecast
-GEHC,NASDAQ,NASDAQ,USD,GE 헬스케어,GE HealthCare Technologies Inc.,,GE-헬스케어-주가-전망,gehc-stock-forecast
-GEN,NASDAQ,NASDAQ,USD,젠 디지털,Gen Digital Inc.,,젠-디지털-주가-전망,gen-stock-forecast
-GMAB,NASDAQ,NASDAQ,USD,Genmab A/S,Genmab A/S,,genmab-a-s-주가-전망,gmab-stock-forecast
-GILD,NASDAQ,NASDAQ,USD,길리어드 사이언스,"Gilead Sciences, Inc.",,길리어드-사이언스-주가-전망,gild-stock-forecast
-GFS,NASDAQ,NASDAQ,USD,글로벌파운드리스,GlobalFoundries Inc.,,글로벌파운드리스-주가-전망,gfs-stock-forecast
-GRAB,NASDAQ,NASDAQ,USD,Grab Holdings Limited,Grab Holdings Limited,,grab-holdings-limited-주가-전망,grab-stock-forecast
-GH,NASDAQ,NASDAQ,USD,"Guardant Health, Inc.","Guardant Health, Inc.",,guardant-health-inc-주가-전망,gh-stock-forecast
-HTHT,NASDAQ,NASDAQ,USD,화주 그룹,H World Group Limited,,화주-그룹-주가-전망,htht-stock-forecast
-HAS,NASDAQ,NASDAQ,USD,해즈브로,"Hasbro, Inc.",,해즈브로-주가-전망,has-stock-forecast
-HOLX,NASDAQ,NASDAQ,USD,홀로직,"Hologic, Inc.",,홀로직-주가-전망,holx-stock-forecast
-HON,NASDAQ,NASDAQ,USD,허니웰,Honeywell International Inc.,,허니웰-주가-전망,hon-stock-forecast
-HST,NASDAQ,NASDAQ,USD,"Host Hotels & Resorts, Inc.","Host Hotels & Resorts, Inc.",,host-hotels-resorts-inc-주가-전망,hst-stock-forecast
-HBAN,NASDAQ,NASDAQ,USD,Huntington Bancshares Incorpora,Huntington Bancshares Incorpora,,huntington-bancshares-incorpora-주가-전망,hban-stock-forecast
-IDXX,NASDAQ,NASDAQ,USD,아이덱스 래버러토리스,"IDEXX Laboratories, Inc.",,아이덱스-래버러토리스-주가-전망,idxx-stock-forecast
-IESC,NASDAQ,NASDAQ,USD,"IES Holdings, Inc.","IES Holdings, Inc.",,ies-holdings-inc-주가-전망,iesc-stock-forecast
-ILMN,NASDAQ,NASDAQ,USD,일루미나,"Illumina, Inc.",,일루미나-주가-전망,ilmn-stock-forecast
-IBRX,NASDAQ,NASDAQ,USD,"ImmunityBio, Inc.","ImmunityBio, Inc.",,immunitybio-inc-주가-전망,ibrx-stock-forecast
-INCY,NASDAQ,NASDAQ,USD,인사이트,Incyte Corporation,,인사이트-주가-전망,incy-stock-forecast
-INSM,NASDAQ,NASDAQ,USD,인스메드,Insmed Incorporated,,인스메드-주가-전망,insm-stock-forecast
-PODD,NASDAQ,NASDAQ,USD,인슐렛,Insulet Corporation,,인슐렛-주가-전망,podd-stock-forecast
-INTC,NASDAQ,NASDAQ,USD,인텔,Intel Corporation,,인텔-주가-전망,intc-stock-forecast
-IBKR,NASDAQ,NASDAQ,USD,인터랙티브 브로커스,"Interactive Brokers Group, Inc.",,인터랙티브-브로커스-주가-전망,ibkr-stock-forecast
-IDCC,NASDAQ,NASDAQ,USD,"InterDigital, Inc.","InterDigital, Inc.",,interdigital-inc-주가-전망,idcc-stock-forecast
-INTU,NASDAQ,NASDAQ,USD,인튜이트,Intuit Inc.,,인튜이트-주가-전망,intu-stock-forecast
-ISRG,NASDAQ,NASDAQ,USD,인튜이티브 서지컬,"Intuitive Surgical, Inc.",,인튜이티브-서지컬-주가-전망,isrg-stock-forecast
-IONS,NASDAQ,NASDAQ,USD,"Ionis Pharmaceuticals, Inc.","Ionis Pharmaceuticals, Inc.",,ionis-pharmaceuticals-inc-주가-전망,ions-stock-forecast
-IREN,NASDAQ,NASDAQ,USD,IREN LIMITED,IREN LIMITED,,iren-limited-주가-전망,iren-stock-forecast
-JBHT,NASDAQ,NASDAQ,USD,"J.B. Hunt Transport Services, I","J.B. Hunt Transport Services, I",,jb-hunt-transport-services-i-주가-전망,jbht-stock-forecast
-JKHY,NASDAQ,NASDAQ,USD,"Jack Henry & Associates, Inc.","Jack Henry & Associates, Inc.",,jack-henry-associates-inc-주가-전망,jkhy-stock-forecast
-JAZZ,NASDAQ,NASDAQ,USD,Jazz Pharmaceuticals plc,Jazz Pharmaceuticals plc,,jazz-pharmaceuticals-plc-주가-전망,jazz-stock-forecast
-JD,NASDAQ,NASDAQ,USD,징둥닷컴,"JD.com, Inc.",,징둥닷컴-주가-전망,jd-stock-forecast
-KSPI,NASDAQ,NASDAQ,USD,Joint Stock Company Kaspi.kz -,Joint Stock Company Kaspi.kz -,,joint-stock-company-kaspikz-주가-전망,kspi-stock-forecast
-KDP,NASDAQ,NASDAQ,USD,큐리그 닥터페퍼,Keurig Dr Pepper Inc.,,큐리그-닥터페퍼-주가-전망,kdp-stock-forecast
-KMB,NASDAQ,NASDAQ,USD,Kimberly-Clark Corporation,Kimberly-Clark Corporation,,kimberly-clark-corporation-주가-전망,kmb-stock-forecast
-KLAC,NASDAQ,NASDAQ,USD,KLA,KLA Corporation,,kla-주가-전망,klac-stock-forecast
-KTOS,NASDAQ,NASDAQ,USD,Kratos Defense & Security Solut,Kratos Defense & Security Solut,,kratos-defense-security-solut-주가-전망,ktos-stock-forecast
-LRCX,NASDAQ,NASDAQ,USD,램리서치,Lam Research Corporation,,램리서치-주가-전망,lrcx-stock-forecast
-LAMR,NASDAQ,NASDAQ,USD,라마 광고,Lamar Advertising Company,,라마-광고-주가-전망,lamr-stock-forecast
-LSCC,NASDAQ,NASDAQ,USD,Lattice Semiconductor Corporati,Lattice Semiconductor Corporati,,lattice-semiconductor-corporati-주가-전망,lscc-stock-forecast
-DRS,NASDAQ,NASDAQ,USD,"Leonardo DRS, Inc.","Leonardo DRS, Inc.",,leonardo-drs-inc-주가-전망,drs-stock-forecast
-LI,NASDAQ,NASDAQ,USD,리 오토,Li Auto Inc.,,리-오토-주가-전망,li-stock-forecast
-LLYVK,NASDAQ,NASDAQ,USD,"Liberty Live Holdings, Inc. - S","Liberty Live Holdings, Inc. - S",,liberty-live-holdings-inc-s-주가-전망,llyvk-stock-forecast
-FWONA,NASDAQ,NASDAQ,USD,Liberty Media Corporation - Ser,Liberty Media Corporation - Ser,,liberty-media-corporation-ser-주가-전망,fwona-stock-forecast
-FWONK,NASDAQ,NASDAQ,USD,Liberty Media Corporation - Ser,Liberty Media Corporation - Ser,,liberty-media-corporation-ser-주가-전망-fwonk,fwonk-stock-forecast
-LECO,NASDAQ,NASDAQ,USD,"Lincoln Electric Holdings, Inc.","Lincoln Electric Holdings, Inc.",,lincoln-electric-holdings-inc-주가-전망,leco-stock-forecast
-LIN,NASDAQ,NASDAQ,USD,린데,Linde plc,,린데-주가-전망,lin-stock-forecast
-LINE,NASDAQ,NASDAQ,USD,"Lineage, Inc.","Lineage, Inc.",,lineage-inc-주가-전망,line-stock-forecast
-LOGI,NASDAQ,NASDAQ,USD,로지텍,Logitech International S.A. - R,,로지텍-주가-전망,logi-stock-forecast
-LPLA,NASDAQ,NASDAQ,USD,LPL 파이낸셜,LPL Financial Holdings Inc.,,LPL-파이낸셜-주가-전망,lpla-stock-forecast
-LULU,NASDAQ,NASDAQ,USD,룰루레몬,lululemon athletica inc.,,룰루레몬-주가-전망,lulu-stock-forecast
-LITE,NASDAQ,NASDAQ,USD,Lumentum Holdings Inc.,Lumentum Holdings Inc.,,lumentum-holdings-inc-주가-전망,lite-stock-forecast
-MTSI,NASDAQ,NASDAQ,USD,MACOM Technology Solutions Hold,MACOM Technology Solutions Hold,,macom-technology-solutions-hold-주가-전망,mtsi-stock-forecast
-MDGL,NASDAQ,NASDAQ,USD,"Madrigal Pharmaceuticals, Inc.","Madrigal Pharmaceuticals, Inc.",,madrigal-pharmaceuticals-inc-주가-전망,mdgl-stock-forecast
-CART,NASDAQ,NASDAQ,USD,인스타카트,Maplebear Inc.,,인스타카트-주가-전망,cart-stock-forecast
-MAR,NASDAQ,NASDAQ,USD,메리어트 인터내셔널,Marriott International,,메리어트-인터내셔널-주가-전망,mar-stock-forecast
-MRVL,NASDAQ,NASDAQ,USD,마벨 테크놀로지,"Marvell Technology, Inc.",,마벨-테크놀로지-주가-전망,mrvl-stock-forecast
-MASI,NASDAQ,NASDAQ,USD,Masimo Corporation,Masimo Corporation,,masimo-corporation-주가-전망,masi-stock-forecast
-MDLN,NASDAQ,NASDAQ,USD,Medline Inc.,Medline Inc.,,medline-inc-주가-전망,mdln-stock-forecast
-MEDP,NASDAQ,NASDAQ,USD,"Medpace Holdings, Inc.","Medpace Holdings, Inc.",,medpace-holdings-inc-주가-전망,medp-stock-forecast
-MELI,NASDAQ,NASDAQ,USD,메르카도리브레,"MercadoLibre, Inc.",,메르카도리브레-주가-전망,meli-stock-forecast
-META,NASDAQ,NASDAQ,USD,메타,"Meta Platforms, Inc.",,메타-주가-전망,meta-stock-forecast
-MCHP,NASDAQ,NASDAQ,USD,마이크로칩 테크놀로지,Microchip Technology Incorporat,,마이크로칩-테크놀로지-주가-전망,mchp-stock-forecast
-MU,NASDAQ,NASDAQ,USD,마이크론 테크놀로지,"Micron Technology, Inc.",,마이크론-테크놀로지-주가-전망,mu-stock-forecast
-MSFT,NASDAQ,NASDAQ,USD,마이크로소프트,Microsoft Corporation,,마이크로소프트-주가-전망,msft-stock-forecast
-TIGO,NASDAQ,NASDAQ,USD,Millicom International Cellular,Millicom International Cellular,,millicom-international-cellular-주가-전망,tigo-stock-forecast
-MKSI,NASDAQ,NASDAQ,USD,MKS Inc.,MKS Inc.,,mks-inc-주가-전망,mksi-stock-forecast
-MRNA,NASDAQ,NASDAQ,USD,모더나,"Moderna, Inc.",,모더나-주가-전망,mrna-stock-forecast
-MDLZ,NASDAQ,NASDAQ,USD,몬델리즈,"Mondelez International, Inc.",,몬델리즈-주가-전망,mdlz-stock-forecast
-MDB,NASDAQ,NASDAQ,USD,몽고DB,"MongoDB, Inc.",,몽고DB-주가-전망,mdb-stock-forecast
-MPWR,NASDAQ,NASDAQ,USD,모놀리식 파워 시스템즈,"Monolithic Power Systems, Inc.",,모놀리식-파워-시스템즈-주가-전망,mpwr-stock-forecast
-MNST,NASDAQ,NASDAQ,USD,몬스터 베버리지,Monster Beverage Corporation,,몬스터-베버리지-주가-전망,mnst-stock-forecast
-NDAQ,NASDAQ,NASDAQ,USD,나스닥,"Nasdaq, Inc.",,나스닥-주가-전망,ndaq-stock-forecast
-NTRA,NASDAQ,NASDAQ,USD,나테라,"Natera, Inc.",,나테라-주가-전망,ntra-stock-forecast
-NBIS,NASDAQ,NASDAQ,USD,Nebius Group N.V.,Nebius Group N.V.,,nebius-group-nv-주가-전망,nbis-stock-forecast
-NTAP,NASDAQ,NASDAQ,USD,넷앱,"NetApp, Inc.",,넷앱-주가-전망,ntap-stock-forecast
-NTES,NASDAQ,NASDAQ,USD,넷이즈,"NetEase, Inc.",,넷이즈-주가-전망,ntes-stock-forecast
-NFLX,NASDAQ,NASDAQ,USD,넷플릭스,"Netflix, Inc.",,넷플릭스-주가-전망,nflx-stock-forecast
-NBIX,NASDAQ,NASDAQ,USD,뉴로크라인 바이오사이언스,"Neurocrine Biosciences, Inc.",,뉴로크라인-바이오사이언스-주가-전망,nbix-stock-forecast
-NWS,NASDAQ,NASDAQ,USD,뉴스 코프 B,News Corporation,,뉴스-코프-B-주가-전망,nws-stock-forecast
-NWSA,NASDAQ,NASDAQ,USD,뉴스 코프 A,News Corporation,,뉴스-코프-A-주가-전망,nwsa-stock-forecast
-NXT,NASDAQ,NASDAQ,USD,넥스터 트래커,Nextpower Inc.,,넥스터-트래커-주가-전망,nxt-stock-forecast
-NDSN,NASDAQ,NASDAQ,USD,Nordson Corporation,Nordson Corporation,,nordson-corporation-주가-전망,ndsn-stock-forecast
-NTRS,NASDAQ,NASDAQ,USD,Northern Trust Corporation,Northern Trust Corporation,,northern-trust-corporation-주가-전망,ntrs-stock-forecast
-NVMI,NASDAQ,NASDAQ,USD,노바,Nova Ltd.,,노바-주가-전망,nvmi-stock-forecast
-NTNX,NASDAQ,NASDAQ,USD,뉴타닉스,"Nutanix, Inc.",,뉴타닉스-주가-전망,ntnx-stock-forecast
-NVDA,NASDAQ,NASDAQ,USD,엔비디아,NVIDIA Corporation,,엔비디아-주가-전망,nvda-stock-forecast
-NXPI,NASDAQ,NASDAQ,USD,NXP 반도체,NXP Semiconductors N.V.,,NXP-반도체-주가-전망,nxpi-stock-forecast
-ORLY,NASDAQ,NASDAQ,USD,오라일리 오토모티브,"O'Reilly Automotive, Inc.",,오라일리-오토모티브-주가-전망,orly-stock-forecast
-OKTA,NASDAQ,NASDAQ,USD,옥타,"Okta, Inc.",,옥타-주가-전망,okta-stock-forecast
-ODFL,NASDAQ,NASDAQ,USD,올드 도미니언 프레이트 라인,"Old Dominion Freight Line, Inc.",,올드-도미니언-프레이트-라인-주가-전망,odfl-stock-forecast
-ON,NASDAQ,NASDAQ,USD,온세미,ON Semiconductor Corporation,,온세미-주가-전망,on-stock-forecast
-PCAR,NASDAQ,NASDAQ,USD,팩카,PACCAR Inc.,,팩카-주가-전망,pcar-stock-forecast
-PLTR,NASDAQ,NASDAQ,USD,팔란티어,Palantir Technologies Inc.,,팔란티어-주가-전망,pltr-stock-forecast
-PANW,NASDAQ,NASDAQ,USD,팔로알토 네트웍스,"Palo Alto Networks, Inc.",,팔로알토-네트웍스-주가-전망,panw-stock-forecast
-PSKY,NASDAQ,NASDAQ,USD,Paramount Skydance Corporation,Paramount Skydance Corporation,,paramount-skydance-corporation-주가-전망,psky-stock-forecast
-PAYX,NASDAQ,NASDAQ,USD,페이첵스,"Paychex, Inc.",,페이첵스-주가-전망,payx-stock-forecast
-PYPL,NASDAQ,NASDAQ,USD,페이팔,"PayPal Holdings, Inc.",,페이팔-주가-전망,pypl-stock-forecast
-PAYP,NASDAQ,NASDAQ,USD,PayPay Corporation - American D,PayPay Corporation - American D,,paypay-corporation-american-d-주가-전망,payp-stock-forecast
-PDD,NASDAQ,NASDAQ,USD,핀둬둬,PDD Holdings Inc.,,핀둬둬-주가-전망,pdd-stock-forecast
-PEP,NASDAQ,NASDAQ,USD,펩시코,"Pepsico, Inc.",,펩시코-주가-전망,pep-stock-forecast
-PAA,NASDAQ,NASDAQ,USD,"Plains All American Pipeline, L","Plains All American Pipeline, L",,plains-all-american-pipeline-l-주가-전망,paa-stock-forecast
-PSNYW,NASDAQ,NASDAQ,USD,Polestar Automotive Holding UK,Polestar Automotive Holding UK,,polestar-automotive-holding-uk-주가-전망,psnyw-stock-forecast
-PFG,NASDAQ,NASDAQ,USD,Principal Financial Group Inc,Principal Financial Group Inc,,principal-financial-group-inc-주가-전망,pfg-stock-forecast
-PTC,NASDAQ,NASDAQ,USD,PTC,PTC Inc.,,ptc-주가-전망,ptc-stock-forecast
-QCOM,NASDAQ,NASDAQ,USD,퀄컴,QUALCOMM Incorporated,,퀄컴-주가-전망,qcom-stock-forecast
-RMBS,NASDAQ,NASDAQ,USD,"Rambus, Inc.","Rambus, Inc.",,rambus-inc-주가-전망,rmbs-stock-forecast
-RGC,NASDAQ,NASDAQ,USD,Regencell Bioscience Holdings L,Regencell Bioscience Holdings L,,regencell-bioscience-holdings-l-주가-전망,rgc-stock-forecast
-REG,NASDAQ,NASDAQ,USD,리젠시 센터스,Regency Centers Corporation,,리젠시-센터스-주가-전망,reg-stock-forecast
-REGN,NASDAQ,NASDAQ,USD,리제네론,"Regeneron Pharmaceuticals, Inc.",,리제네론-주가-전망,regn-stock-forecast
-RVMD,NASDAQ,NASDAQ,USD,"Revolution Medicines, Inc.","Revolution Medicines, Inc.",,revolution-medicines-inc-주가-전망,rvmd-stock-forecast
-RIVN,NASDAQ,NASDAQ,USD,리비안,"Rivian Automotive, Inc.",,리비안-주가-전망,rivn-stock-forecast
-HOOD,NASDAQ,NASDAQ,USD,로빈후드,"Robinhood Markets, Inc.",,로빈후드-주가-전망,hood-stock-forecast
-RKLB,NASDAQ,NASDAQ,USD,로켓 랩 USA,Rocket Lab Corporation,,로켓-랩-USA-주가-전망,rklb-stock-forecast
-ROIV,NASDAQ,NASDAQ,USD,Roivant Sciences Ltd.,Roivant Sciences Ltd.,,roivant-sciences-ltd-주가-전망,roiv-stock-forecast
-ROKU,NASDAQ,NASDAQ,USD,로쿠,"Roku, Inc.",,로쿠-주가-전망,roku-stock-forecast
-ROP,NASDAQ,NASDAQ,USD,"Roper Technologies, Inc.","Roper Technologies, Inc.",,roper-technologies-inc-주가-전망,rop-stock-forecast
-ROST,NASDAQ,NASDAQ,USD,로스 스토어스,"Ross Stores, Inc.",,로스-스토어스-주가-전망,rost-stock-forecast
-RGLD,NASDAQ,NASDAQ,USD,"Royal Gold, Inc.","Royal Gold, Inc.",,royal-gold-inc-주가-전망,rgld-stock-forecast
-RPRX,NASDAQ,NASDAQ,USD,Royalty Pharma plc,Royalty Pharma plc,,royalty-pharma-plc-주가-전망,rprx-stock-forecast
-RYAAY,NASDAQ,NASDAQ,USD,라이언에어,Ryanair Holdings plc,,라이언에어-주가-전망,ryaay-stock-forecast
-SNDK,NASDAQ,NASDAQ,USD,Sandisk Corporation,Sandisk Corporation,,sandisk-corporation-주가-전망,sndk-stock-forecast
-SNY,NASDAQ,NASDAQ,USD,Sanofi,Sanofi,,sanofi-주가-전망,sny-stock-forecast
-SBAC,NASDAQ,NASDAQ,USD,SBA 커뮤니케이션스,SBA Communications Corporation,,SBA-커뮤니케이션스-주가-전망,sbac-stock-forecast
-STX,NASDAQ,NASDAQ,USD,씨게이트 테크놀로지,Seagate Technology Holdings PLC,,씨게이트-테크놀로지-주가-전망,stx-stock-forecast
-SEIC,NASDAQ,NASDAQ,USD,SEI 인베스트먼츠,SEI Investments Company,,SEI-인베스트먼츠-주가-전망,seic-stock-forecast
-SHOP,NASDAQ,NASDAQ,USD,쇼피파이,Shopify Inc.,,쇼피파이-주가-전망,shop-stock-forecast
-SITM,NASDAQ,NASDAQ,USD,SiTime Corporation,SiTime Corporation,,sitime-corporation-주가-전망,sitm-stock-forecast
-SFD,NASDAQ,NASDAQ,USD,"Smithfield Foods, Inc.","Smithfield Foods, Inc.",,smithfield-foods-inc-주가-전망,sfd-stock-forecast
-SOFI,NASDAQ,NASDAQ,USD,소파이,"SoFi Technologies, Inc.",,소파이-주가-전망,sofi-stock-forecast
-SOLS,NASDAQ,NASDAQ,USD,Solstice Advanced Materials Inc,Solstice Advanced Materials Inc,,solstice-advanced-materials-inc-주가-전망,sols-stock-forecast
-SSNC,NASDAQ,NASDAQ,USD,"SS&C Technologies Holdings, Inc","SS&C Technologies Holdings, Inc",,ss-c-technologies-holdings-inc-주가-전망,ssnc-stock-forecast
-SBUX,NASDAQ,NASDAQ,USD,스타벅스,Starbucks Corporation,,스타벅스-주가-전망,sbux-stock-forecast
-STLD,NASDAQ,NASDAQ,USD,"Steel Dynamics, Inc.","Steel Dynamics, Inc.",,steel-dynamics-inc-주가-전망,stld-stock-forecast
-STRL,NASDAQ,NASDAQ,USD,"Sterling Infrastructure, Inc.","Sterling Infrastructure, Inc.",,sterling-infrastructure-inc-주가-전망,strl-stock-forecast
-MSTR,NASDAQ,NASDAQ,USD,마이크로스트래티지,Strategy Inc,,마이크로스트래티지-주가-전망,mstr-stock-forecast
-SMMT,NASDAQ,NASDAQ,USD,Summit Therapeutics Inc.,Summit Therapeutics Inc.,,summit-therapeutics-inc-주가-전망,smmt-stock-forecast
-SMCI,NASDAQ,NASDAQ,USD,슈퍼마이크로컴퓨터,"Super Micro Computer, Inc.",,슈퍼마이크로컴퓨터-주가-전망,smci-stock-forecast
-SYM,NASDAQ,NASDAQ,USD,Symbotic Inc.,Symbotic Inc.,,symbotic-inc-주가-전망,sym-stock-forecast
-SNPS,NASDAQ,NASDAQ,USD,시놉시스,"Synopsys, Inc.",,시놉시스-주가-전망,snps-stock-forecast
-TMUS,NASDAQ,NASDAQ,USD,T모바일 US,"T-Mobile US, Inc.",,T모바일-US-주가-전망,tmus-stock-forecast
-TROW,NASDAQ,NASDAQ,USD,"T. Rowe Price Group, Inc.","T. Rowe Price Group, Inc.",,t-rowe-price-group-inc-주가-전망,trow-stock-forecast
-TTWO,NASDAQ,NASDAQ,USD,테이크투 인터랙티브,"Take-Two Interactive Software,",,테이크투-인터랙티브-주가-전망,ttwo-stock-forecast
-TLN,NASDAQ,NASDAQ,USD,Talen Energy Corporation,Talen Energy Corporation,,talen-energy-corporation-주가-전망,tln-stock-forecast
-TER,NASDAQ,NASDAQ,USD,테라다인,"Teradyne, Inc.",,테라다인-주가-전망,ter-stock-forecast
-TSLA,NASDAQ,NASDAQ,USD,테슬라,"Tesla, Inc.",,테슬라-주가-전망,tsla-stock-forecast
-TXN,NASDAQ,NASDAQ,USD,텍사스 인스트루먼트,Texas Instruments Incorporated,,텍사스-인스트루먼트-주가-전망,txn-stock-forecast
-TXRH,NASDAQ,NASDAQ,USD,"Texas Roadhouse, Inc.","Texas Roadhouse, Inc.",,texas-roadhouse-inc-주가-전망,txrh-stock-forecast
-CG,NASDAQ,NASDAQ,USD,The Carlyle Group Inc.,The Carlyle Group Inc.,,the-carlyle-group-inc-주가-전망,cg-stock-forecast
-COO,NASDAQ,NASDAQ,USD,"The Cooper Companies, Inc.","The Cooper Companies, Inc.",,the-cooper-companies-inc-주가-전망,coo-stock-forecast
-ENSG,NASDAQ,NASDAQ,USD,"The Ensign Group, Inc.","The Ensign Group, Inc.",,the-ensign-group-inc-주가-전망,ensg-stock-forecast
-KHC,NASDAQ,NASDAQ,USD,크래프트 하인즈,The Kraft Heinz Company,,크래프트-하인즈-주가-전망,khc-stock-forecast
-TTD,NASDAQ,NASDAQ,USD,더 트레이드 데스크,"The Trade Desk, Inc.",,더-트레이드-데스크-주가-전망,ttd-stock-forecast
-TRI,NASDAQ,NASDAQ,USD,Thomson Reuters Corp,Thomson Reuters Corp,,thomson-reuters-corp-주가-전망,tri-stock-forecast
-TSEM,NASDAQ,NASDAQ,USD,타워 세미컨덕터,Tower Semiconductor Ltd.,,타워-세미컨덕터-주가-전망,tsem-stock-forecast
-TPG,NASDAQ,NASDAQ,USD,TPG Inc.,TPG Inc.,,tpg-inc-주가-전망,tpg-stock-forecast
-TSCO,NASDAQ,NASDAQ,USD,트랙터 서플라이,Tractor Supply Company,,트랙터-서플라이-주가-전망,tsco-stock-forecast
-TW,NASDAQ,NASDAQ,USD,Tradeweb Markets Inc.,Tradeweb Markets Inc.,,tradeweb-markets-inc-주가-전망,tw-stock-forecast
-TRMB,NASDAQ,NASDAQ,USD,Trimble Inc.,Trimble Inc.,,trimble-inc-주가-전망,trmb-stock-forecast
-TCOM,NASDAQ,NASDAQ,USD,트립닷컴,Trip.com Group Limited,,트립닷컴-주가-전망,tcom-stock-forecast
-TTMI,NASDAQ,NASDAQ,USD,TTM 테크놀로지스,"TTM Technologies, Inc.",,TTM-테크놀로지스-주가-전망,ttmi-stock-forecast
-ULTA,NASDAQ,NASDAQ,USD,"Ulta Beauty, Inc.","Ulta Beauty, Inc.",,ulta-beauty-inc-주가-전망,ulta-stock-forecast
-UAL,NASDAQ,NASDAQ,USD,유나이티드 항공,"United Airlines Holdings, Inc.",,유나이티드-항공-주가-전망,ual-stock-forecast
-UTHR,NASDAQ,NASDAQ,USD,유나이티드 테라퓨틱스,United Therapeutics Corporation,,유나이티드-테라퓨틱스-주가-전망,uthr-stock-forecast
-VRSN,NASDAQ,NASDAQ,USD,"VeriSign, Inc.","VeriSign, Inc.",,verisign-inc-주가-전망,vrsn-stock-forecast
-VRSK,NASDAQ,NASDAQ,USD,베리스크,"Verisk Analytics, Inc.",,베리스크-주가-전망,vrsk-stock-forecast
-VRTX,NASDAQ,NASDAQ,USD,버텍스 파마슈티컬스,Vertex Pharmaceuticals Incorpor,,버텍스-파마슈티컬스-주가-전망,vrtx-stock-forecast
-VTRS,NASDAQ,NASDAQ,USD,Viatris Inc.,Viatris Inc.,,viatris-inc-주가-전망,vtrs-stock-forecast
-VNOM,NASDAQ,NASDAQ,USD,"Viper Energy, Inc.","Viper Energy, Inc.",,viper-energy-inc-주가-전망,vnom-stock-forecast
-VOD,NASDAQ,NASDAQ,USD,보다폰,Vodafone Group Plc,,보다폰-주가-전망,vod-stock-forecast
-WMT,NASDAQ,NASDAQ,USD,Walmart Inc.,Walmart Inc.,,walmart-inc-주가-전망,wmt-stock-forecast
-WBD,NASDAQ,NASDAQ,USD,워너브라더스 디스커버리,"Warner Bros. Discovery, Inc. -",,워너브라더스-디스커버리-주가-전망,wbd-stock-forecast
-WMG,NASDAQ,NASDAQ,USD,Warner Music Group Corp.,Warner Music Group Corp.,,warner-music-group-corp-주가-전망,wmg-stock-forecast
-WDC,NASDAQ,NASDAQ,USD,웨스턴 디지털,Western Digital Corporation,,웨스턴-디지털-주가-전망,wdc-stock-forecast
-WTW,NASDAQ,NASDAQ,USD,Willis Towers Watson Public Lim,Willis Towers Watson Public Lim,,willis-towers-watson-public-lim-주가-전망,wtw-stock-forecast
-WTFC,NASDAQ,NASDAQ,USD,윈트러스트 파이낸셜,Wintrust Financial Corporation,,윈트러스트-파이낸셜-주가-전망,wtfc-stock-forecast
-WWD,NASDAQ,NASDAQ,USD,"Woodward, Inc.","Woodward, Inc.",,woodward-inc-주가-전망,wwd-stock-forecast
-WDAY,NASDAQ,NASDAQ,USD,워크데이,"Workday, Inc.",,워크데이-주가-전망,wday-stock-forecast
-WYNN,NASDAQ,NASDAQ,USD,윈 리조트,"Wynn Resorts, Limited",,윈-리조트-주가-전망,wynn-stock-forecast
-XEL,NASDAQ,NASDAQ,USD,엑셀 에너지,Xcel Energy Inc.,,엑셀-에너지-주가-전망,xel-stock-forecast
-XP,NASDAQ,NASDAQ,USD,XP Inc.,XP Inc.,,xp-inc-주가-전망,xp-stock-forecast
-ZBRA,NASDAQ,NASDAQ,USD,지브라 테크놀로지스,Zebra Technologies Corporation,,지브라-테크놀로지스-주가-전망,zbra-stock-forecast
-Z,NASDAQ,NASDAQ,USD,"Zillow Group, Inc.","Zillow Group, Inc.",,zillow-group-inc-주가-전망,z-stock-forecast
-ZG,NASDAQ,NASDAQ,USD,"Zillow Group, Inc.","Zillow Group, Inc.",,zillow-group-inc-주가-전망-zg,zg-stock-forecast
-ZM,NASDAQ,NASDAQ,USD,줌,"Zoom Communications, Inc.",,줌-주가-전망,zm-stock-forecast
-ZS,NASDAQ,NASDAQ,USD,지스케일러,"Zscaler, Inc.",,지스케일러-주가-전망,zs-stock-forecast
+000250.KQ,KOSDAQ,KRX,KRW,삼천당제약,000250,000250,삼천당제약-주가-전망,000250-stock-forecast
+0009K0.KQ,KOSDAQ,KRX,KRW,에임드바이오,0009k0,0009k0,에임드바이오-주가-전망,0009k0-stock-forecast
+003380.KQ,KOSDAQ,KRX,KRW,하림지주,003380,003380,하림지주-주가-전망,003380-stock-forecast
+005290.KQ,KOSDAQ,KRX,KRW,동진쎄미켐,005290,005290,동진쎄미켐-주가-전망,005290-stock-forecast
+006910.KQ,KOSDAQ,KRX,KRW,보성파워텍,006910,006910,보성파워텍-주가-전망,006910-stock-forecast
+007390.KQ,KOSDAQ,KRX,KRW,네이처셀,007390,007390,네이처셀-주가-전망,007390-stock-forecast
+0082N0.KQ,KOSDAQ,KRX,KRW,카나프테라퓨틱스,0082n0,0082n0,카나프테라퓨틱스-주가-전망,0082n0-stock-forecast
+009520.KQ,KOSDAQ,KRX,KRW,포스코엠텍,009520,009520,포스코엠텍-주가-전망,009520-stock-forecast
+010170.KQ,KOSDAQ,KRX,KRW,대한광통신,010170,010170,대한광통신-주가-전망,010170-stock-forecast
+014620.KQ,KOSDAQ,KRX,KRW,성광벤드,014620,014620,성광벤드-주가-전망,014620-stock-forecast
+015750.KQ,KOSDAQ,KRX,KRW,성우하이텍,015750,015750,성우하이텍-주가-전망,015750-stock-forecast
+023160.KQ,KOSDAQ,KRX,KRW,태광,023160,023160,태광-주가-전망,023160-stock-forecast
+025320.KQ,KOSDAQ,KRX,KRW,시노펙스,025320,025320,시노펙스-주가-전망,025320-stock-forecast
+030530.KQ,KOSDAQ,KRX,KRW,원익홀딩스,030530,030530,원익홀딩스-주가-전망,030530-stock-forecast
+031980.KQ,KOSDAQ,KRX,KRW,피에스케이홀딩스,031980,031980,피에스케이홀딩스-주가-전망,031980-stock-forecast
+032190.KQ,KOSDAQ,KRX,KRW,다우데이타,032190,032190,다우데이타-주가-전망,032190-stock-forecast
+032500.KQ,KOSDAQ,KRX,KRW,케이엠더블유,032500,032500,케이엠더블유-주가-전망,032500-stock-forecast
+032820.KQ,KOSDAQ,KRX,KRW,우리기술,032820,032820,우리기술-주가-전망,032820-stock-forecast
+033100.KQ,KOSDAQ,KRX,KRW,제룡전기,033100,033100,제룡전기-주가-전망,033100-stock-forecast
+033500.KQ,KOSDAQ,KRX,KRW,동성화인텍,033500,033500,동성화인텍-주가-전망,033500-stock-forecast
+036810.KQ,KOSDAQ,KRX,KRW,에프에스티,036810,036810,에프에스티-주가-전망,036810-stock-forecast
+036830.KQ,KOSDAQ,KRX,KRW,솔브레인홀딩스,036830,036830,솔브레인홀딩스-주가-전망,036830-stock-forecast
+036930.KQ,KOSDAQ,KRX,KRW,주성엔지니어링,036930,036930,주성엔지니어링-주가-전망,036930-stock-forecast
+038500.KQ,KOSDAQ,KRX,KRW,삼표시멘트,038500,038500,삼표시멘트-주가-전망,038500-stock-forecast
+039200.KQ,KOSDAQ,KRX,KRW,오스코텍,039200,039200,오스코텍-주가-전망,039200-stock-forecast
+042520.KQ,KOSDAQ,KRX,KRW,한스바이오메드,042520,042520,한스바이오메드-주가-전망,042520-stock-forecast
+043260.KQ,KOSDAQ,KRX,KRW,성호전자,043260,043260,성호전자-주가-전망,043260-stock-forecast
+044490.KQ,KOSDAQ,KRX,KRW,태웅,044490,044490,태웅-주가-전망,044490-stock-forecast
+046890.KQ,KOSDAQ,KRX,KRW,서울반도체,046890,046890,서울반도체-주가-전망,046890-stock-forecast
+048410.KQ,KOSDAQ,KRX,KRW,현대바이오,048410,048410,현대바이오-주가-전망,048410-stock-forecast
+050890.KQ,KOSDAQ,KRX,KRW,쏠리드,050890,050890,쏠리드-주가-전망,050890-stock-forecast
+052020.KQ,KOSDAQ,KRX,KRW,에스티큐브,052020,052020,에스티큐브-주가-전망,052020-stock-forecast
+052400.KQ,KOSDAQ,KRX,KRW,코나아이,052400,052400,코나아이-주가-전망,052400-stock-forecast
+053610.KQ,KOSDAQ,KRX,KRW,프로텍,053610,053610,프로텍-주가-전망,053610-stock-forecast
+056080.KQ,KOSDAQ,KRX,KRW,유진로봇,056080,056080,유진로봇-주가-전망,056080-stock-forecast
+056190.KQ,KOSDAQ,KRX,KRW,에스에프에이,056190,056190,에스에프에이-주가-전망,056190-stock-forecast
+058610.KQ,KOSDAQ,KRX,KRW,에스피지,058610,058610,에스피지-주가-전망,058610-stock-forecast
+060280.KQ,KOSDAQ,KRX,KRW,큐렉소,060280,060280,큐렉소-주가-전망,060280-stock-forecast
+064760.KQ,KOSDAQ,KRX,KRW,티씨케이,064760,064760,티씨케이-주가-전망,064760-stock-forecast
+067310.KQ,KOSDAQ,KRX,KRW,하나마이크론,067310,067310,하나마이크론-주가-전망,067310-stock-forecast
+077360.KQ,KOSDAQ,KRX,KRW,덕산하이메탈,077360,077360,덕산하이메탈-주가-전망,077360-stock-forecast
+078160.KQ,KOSDAQ,KRX,KRW,메디포스트,078160,078160,메디포스트-주가-전망,078160-stock-forecast
+078600.KQ,KOSDAQ,KRX,KRW,대주전자재료,078600,078600,대주전자재료-주가-전망,078600-stock-forecast
+079370.KQ,KOSDAQ,KRX,KRW,제우스,079370,079370,제우스-주가-전망,079370-stock-forecast
+080220.KQ,KOSDAQ,KRX,KRW,제주반도체,080220,080220,제주반도체-주가-전망,080220-stock-forecast
+082270.KQ,KOSDAQ,KRX,KRW,젬백스,082270,082270,젬백스-주가-전망,082270-stock-forecast
+082920.KQ,KOSDAQ,KRX,KRW,비츠로셀,082920,082920,비츠로셀-주가-전망,082920-stock-forecast
+083650.KQ,KOSDAQ,KRX,KRW,비에이치아이,083650,083650,비에이치아이-주가-전망,083650-stock-forecast
+084110.KQ,KOSDAQ,KRX,KRW,휴온스글로벌,084110,084110,휴온스글로벌-주가-전망,084110-stock-forecast
+085660.KQ,KOSDAQ,KRX,KRW,차바이오텍,085660,085660,차바이오텍-주가-전망,085660-stock-forecast
+086450.KQ,KOSDAQ,KRX,KRW,동국제약,086450,086450,동국제약-주가-전망,086450-stock-forecast
+086900.KQ,KOSDAQ,KRX,KRW,메디톡스,086900,086900,메디톡스-주가-전망,086900-stock-forecast
+087010.KQ,KOSDAQ,KRX,KRW,펩트론,087010,087010,펩트론-주가-전망,087010-stock-forecast
+089030.KQ,KOSDAQ,KRX,KRW,테크윙,089030,089030,테크윙-주가-전망,089030-stock-forecast
+089970.KQ,KOSDAQ,KRX,KRW,브이엠,089970,089970,브이엠-주가-전망,089970-stock-forecast
+090360.KQ,KOSDAQ,KRX,KRW,로보스타,090360,090360,로보스타-주가-전망,090360-stock-forecast
+090710.KQ,KOSDAQ,KRX,KRW,휴림로봇,090710,090710,휴림로봇-주가-전망,090710-stock-forecast
+094170.KQ,KOSDAQ,KRX,KRW,동운아나텍,094170,094170,동운아나텍-주가-전망,094170-stock-forecast
+095610.KQ,KOSDAQ,KRX,KRW,테스,095610,095610,테스-주가-전망,095610-stock-forecast
+096530.KQ,KOSDAQ,KRX,KRW,씨젠,096530,096530,씨젠-주가-전망,096530-stock-forecast
+098460.KQ,KOSDAQ,KRX,KRW,고영,098460,098460,고영-주가-전망,098460-stock-forecast
+099190.KQ,KOSDAQ,KRX,KRW,아이센스,099190,099190,아이센스-주가-전망,099190-stock-forecast
+099320.KQ,KOSDAQ,KRX,KRW,쎄트렉아이,099320,099320,쎄트렉아이-주가-전망,099320-stock-forecast
+100790.KQ,KOSDAQ,KRX,KRW,미래에셋벤처투자,100790,100790,미래에셋벤처투자-주가-전망,100790-stock-forecast
+101490.KQ,KOSDAQ,KRX,KRW,에스앤에스텍,101490,101490,에스앤에스텍-주가-전망,101490-stock-forecast
+102710.KQ,KOSDAQ,KRX,KRW,이엔에프테크놀로지,102710,102710,이엔에프테크놀로지-주가-전망,102710-stock-forecast
+102940.KQ,KOSDAQ,KRX,KRW,코오롱생명과학,102940,102940,코오롱생명과학-주가-전망,102940-stock-forecast
+108490.KQ,KOSDAQ,KRX,KRW,로보티즈,108490,108490,로보티즈-주가-전망,108490-stock-forecast
+115180.KQ,KOSDAQ,KRX,KRW,큐리언트,115180,115180,큐리언트-주가-전망,115180-stock-forecast
+119850.KQ,KOSDAQ,KRX,KRW,지엔씨에너지,119850,119850,지엔씨에너지-주가-전망,119850-stock-forecast
+121600.KQ,KOSDAQ,KRX,KRW,나노신소재,121600,121600,나노신소재-주가-전망,121600-stock-forecast
+122870.KQ,KOSDAQ,KRX,KRW,와이지엔터테인먼트,122870,122870,와이지엔터테인먼트-주가-전망,122870-stock-forecast
+124500.KQ,KOSDAQ,KRX,KRW,아이티센글로벌,124500,124500,아이티센글로벌-주가-전망,124500-stock-forecast
+125490.KQ,KOSDAQ,KRX,KRW,한라캐스트,125490,125490,한라캐스트-주가-전망,125490-stock-forecast
+126340.KQ,KOSDAQ,KRX,KRW,비나텍,126340,126340,비나텍-주가-전망,126340-stock-forecast
+127120.KQ,KOSDAQ,KRX,KRW,제이에스링크,127120,127120,제이에스링크-주가-전망,127120-stock-forecast
+131290.KQ,KOSDAQ,KRX,KRW,티에스이,131290,131290,티에스이-주가-전망,131290-stock-forecast
+131970.KQ,KOSDAQ,KRX,KRW,두산테스나,131970,131970,두산테스나-주가-전망,131970-stock-forecast
+137400.KQ,KOSDAQ,KRX,KRW,피엔티,137400,137400,피엔티-주가-전망,137400-stock-forecast
+140410.KQ,KOSDAQ,KRX,KRW,메지온,140410,140410,메지온-주가-전망,140410-stock-forecast
+140860.KQ,KOSDAQ,KRX,KRW,파크시스템스,140860,140860,파크시스템스-주가-전망,140860-stock-forecast
+141080.KQ,KOSDAQ,KRX,KRW,리가켐바이오,141080,141080,리가켐바이오-주가-전망,141080-stock-forecast
+145020.KQ,KOSDAQ,KRX,KRW,휴젤,145020,145020,휴젤-주가-전망,145020-stock-forecast
+160190.KQ,KOSDAQ,KRX,KRW,하이젠알앤엠,160190,160190,하이젠알앤엠-주가-전망,160190-stock-forecast
+161580.KQ,KOSDAQ,KRX,KRW,필옵틱스,161580,161580,필옵틱스-주가-전망,161580-stock-forecast
+166090.KQ,KOSDAQ,KRX,KRW,하나머티리얼즈,166090,166090,하나머티리얼즈-주가-전망,166090-stock-forecast
+171090.KQ,KOSDAQ,KRX,KRW,선익시스템,171090,171090,선익시스템-주가-전망,171090-stock-forecast
+174900.KQ,KOSDAQ,KRX,KRW,앱클론,174900,174900,앱클론-주가-전망,174900-stock-forecast
+178320.KQ,KOSDAQ,KRX,KRW,서진시스템,178320,178320,서진시스템-주가-전망,178320-stock-forecast
+183300.KQ,KOSDAQ,KRX,KRW,코미코,183300,183300,코미코-주가-전망,183300-stock-forecast
+189300.KQ,KOSDAQ,KRX,KRW,인텔리안테크,189300,189300,인텔리안테크-주가-전망,189300-stock-forecast
+200710.KQ,KOSDAQ,KRX,KRW,에이디테크놀로지,200710,200710,에이디테크놀로지-주가-전망,200710-stock-forecast
+204270.KQ,KOSDAQ,KRX,KRW,제이앤티씨,204270,204270,제이앤티씨-주가-전망,204270-stock-forecast
+211050.KQ,KOSDAQ,KRX,KRW,인카금융서비스,211050,211050,인카금융서비스-주가-전망,211050-stock-forecast
+213420.KQ,KOSDAQ,KRX,KRW,덕산네오룩스,213420,213420,덕산네오룩스-주가-전망,213420-stock-forecast
+214370.KQ,KOSDAQ,KRX,KRW,케어젠,214370,214370,케어젠-주가-전망,214370-stock-forecast
+214430.KQ,KOSDAQ,KRX,KRW,아이쓰리시스템,214430,214430,아이쓰리시스템-주가-전망,214430-stock-forecast
+222080.KQ,KOSDAQ,KRX,KRW,씨아이에스,222080,222080,씨아이에스-주가-전망,222080-stock-forecast
+222800.KQ,KOSDAQ,KRX,KRW,심텍,222800,222800,심텍-주가-전망,222800-stock-forecast
+225570.KQ,KOSDAQ,KRX,KRW,넥슨게임즈,225570,225570,넥슨게임즈-주가-전망,225570-stock-forecast
+226950.KQ,KOSDAQ,KRX,KRW,올릭스,226950,226950,올릭스-주가-전망,226950-stock-forecast
+232140.KQ,KOSDAQ,KRX,KRW,와이씨,232140,232140,와이씨-주가-전망,232140-stock-forecast
+237690.KQ,KOSDAQ,KRX,KRW,에스티팜,237690,237690,에스티팜-주가-전망,237690-stock-forecast
+042000.KQ,KOSDAQ,KRX,KRW,카페24,24,24,카페24-주가-전망,24-stock-forecast
+241710.KQ,KOSDAQ,KRX,KRW,코스메카코리아,241710,241710,코스메카코리아-주가-전망,241710-stock-forecast
+251970.KQ,KOSDAQ,KRX,KRW,펌텍코리아,251970,251970,펌텍코리아-주가-전망,251970-stock-forecast
+252990.KQ,KOSDAQ,KRX,KRW,샘씨엔에스,252990,252990,샘씨엔에스-주가-전망,252990-stock-forecast
+253590.KQ,KOSDAQ,KRX,KRW,네오셈,253590,253590,네오셈-주가-전망,253590-stock-forecast
+257720.KQ,KOSDAQ,KRX,KRW,실리콘투,257720,257720,실리콘투-주가-전망,257720-stock-forecast
+272290.KQ,KOSDAQ,KRX,KRW,이녹스첨단소재,272290,272290,이녹스첨단소재-주가-전망,272290-stock-forecast
+277810.KQ,KOSDAQ,KRX,KRW,레인보우로보틱스,277810,277810,레인보우로보틱스-주가-전망,277810-stock-forecast
+278280.KQ,KOSDAQ,KRX,KRW,천보,278280,278280,천보-주가-전망,278280-stock-forecast
+281740.KQ,KOSDAQ,KRX,KRW,레이크머티리얼즈,281740,281740,레이크머티리얼즈-주가-전망,281740-stock-forecast
+287840.KQ,KOSDAQ,KRX,KRW,인투셀,287840,287840,인투셀-주가-전망,287840-stock-forecast
+290650.KQ,KOSDAQ,KRX,KRW,엘앤씨바이오,290650,290650,엘앤씨바이오-주가-전망,290650-stock-forecast
+295310.KQ,KOSDAQ,KRX,KRW,에이치브이엠,295310,295310,에이치브이엠-주가-전망,295310-stock-forecast
+298380.KQ,KOSDAQ,KRX,KRW,에이비엘바이오,298380,298380,에이비엘바이오-주가-전망,298380-stock-forecast
+310210.KQ,KOSDAQ,KRX,KRW,보로노이,310210,310210,보로노이-주가-전망,310210-stock-forecast
+319400.KQ,KOSDAQ,KRX,KRW,현대무벡스,319400,319400,현대무벡스-주가-전망,319400-stock-forecast
+319660.KQ,KOSDAQ,KRX,KRW,피에스케이,319660,319660,피에스케이-주가-전망,319660-stock-forecast
+323280.KQ,KOSDAQ,KRX,KRW,태성,323280,323280,태성-주가-전망,323280-stock-forecast
+328130.KQ,KOSDAQ,KRX,KRW,루닛,328130,328130,루닛-주가-전망,328130-stock-forecast
+336570.KQ,KOSDAQ,KRX,KRW,원텍,336570,336570,원텍-주가-전망,336570-stock-forecast
+347700.KQ,KOSDAQ,KRX,KRW,스피어,347700,347700,스피어-주가-전망,347700-stock-forecast
+347850.KQ,KOSDAQ,KRX,KRW,디앤디파마텍,347850,347850,디앤디파마텍-주가-전망,347850-stock-forecast
+348210.KQ,KOSDAQ,KRX,KRW,넥스틴,348210,348210,넥스틴-주가-전망,348210-stock-forecast
+348340.KQ,KOSDAQ,KRX,KRW,뉴로메카,348340,348340,뉴로메카-주가-전망,348340-stock-forecast
+348370.KQ,KOSDAQ,KRX,KRW,엔켐,348370,348370,엔켐-주가-전망,348370-stock-forecast
+356860.KQ,KOSDAQ,KRX,KRW,티엘비,356860,356860,티엘비-주가-전망,356860-stock-forecast
+357780.KQ,KOSDAQ,KRX,KRW,솔브레인,357780,357780,솔브레인-주가-전망,357780-stock-forecast
+358570.KQ,KOSDAQ,KRX,KRW,지아이이노베이션,358570,358570,지아이이노베이션-주가-전망,358570-stock-forecast
+365340.KQ,KOSDAQ,KRX,KRW,성일하이텍,365340,365340,성일하이텍-주가-전망,365340-stock-forecast
+372320.KQ,KOSDAQ,KRX,KRW,큐로셀,372320,372320,큐로셀-주가-전망,372320-stock-forecast
+376300.KQ,KOSDAQ,KRX,KRW,디어유,376300,376300,디어유-주가-전망,376300-stock-forecast
+376900.KQ,KOSDAQ,KRX,KRW,로킷헬스케어,376900,376900,로킷헬스케어-주가-전망,376900-stock-forecast
+383310.KQ,KOSDAQ,KRX,KRW,에코프로에이치엔,383310,383310,에코프로에이치엔-주가-전망,383310-stock-forecast
+388210.KQ,KOSDAQ,KRX,KRW,씨엠티엑스,388210,388210,씨엠티엑스-주가-전망,388210-stock-forecast
+388720.KQ,KOSDAQ,KRX,KRW,유일로보틱스,388720,388720,유일로보틱스-주가-전망,388720-stock-forecast
+389470.KQ,KOSDAQ,KRX,KRW,인벤티지랩,389470,389470,인벤티지랩-주가-전망,389470-stock-forecast
+389650.KQ,KOSDAQ,KRX,KRW,넥스트바이오메디컬,389650,389650,넥스트바이오메디컬-주가-전망,389650-stock-forecast
+397030.KQ,KOSDAQ,KRX,KRW,에이프릴바이오,397030,397030,에이프릴바이오-주가-전망,397030-stock-forecast
+399720.KQ,KOSDAQ,KRX,KRW,가온칩스,399720,399720,가온칩스-주가-전망,399720-stock-forecast
+420770.KQ,KOSDAQ,KRX,KRW,기가비스,420770,420770,기가비스-주가-전망,420770-stock-forecast
+424870.KQ,KOSDAQ,KRX,KRW,이뮨온시아,424870,424870,이뮨온시아-주가-전망,424870-stock-forecast
+425420.KQ,KOSDAQ,KRX,KRW,티에프이,425420,425420,티에프이-주가-전망,425420-stock-forecast
+437730.KQ,KOSDAQ,KRX,KRW,삼현,437730,437730,삼현-주가-전망,437730-stock-forecast
+440110.KQ,KOSDAQ,KRX,KRW,파두,440110,440110,파두-주가-전망,440110-stock-forecast
+445680.KQ,KOSDAQ,KRX,KRW,큐리옥스바이오시스템즈,445680,445680,큐리옥스바이오시스템즈-주가-전망,445680-stock-forecast
+448900.KQ,KOSDAQ,KRX,KRW,한국피아이엠,448900,448900,한국피아이엠-주가-전망,448900-stock-forecast
+456160.KQ,KOSDAQ,KRX,KRW,지투지바이오,456160,456160,지투지바이오-주가-전망,456160-stock-forecast
+458870.KQ,KOSDAQ,KRX,KRW,씨어스테크놀로지,458870,458870,씨어스테크놀로지-주가-전망,458870-stock-forecast
+460930.KQ,KOSDAQ,KRX,KRW,현대힘스,460930,460930,현대힘스-주가-전망,460930-stock-forecast
+466100.KQ,KOSDAQ,KRX,KRW,클로봇,466100,466100,클로봇-주가-전망,466100-stock-forecast
+468530.KQ,KOSDAQ,KRX,KRW,프로티나,468530,468530,프로티나-주가-전망,468530-stock-forecast
+475830.KQ,KOSDAQ,KRX,KRW,오름테라퓨틱,475830,475830,오름테라퓨틱-주가-전망,475830-stock-forecast
+475960.KQ,KOSDAQ,KRX,KRW,토모큐브,475960,475960,토모큐브-주가-전망,475960-stock-forecast
+476060.KQ,KOSDAQ,KRX,KRW,온코닉테라퓨틱스,476060,476060,온코닉테라퓨틱스-주가-전망,476060-stock-forecast
+476830.KQ,KOSDAQ,KRX,KRW,알지노믹스,476830,476830,알지노믹스-주가-전망,476830-stock-forecast
+486990.KQ,KOSDAQ,KRX,KRW,노타,486990,486990,노타-주가-전망,486990-stock-forecast
+488900.KQ,KOSDAQ,KRX,KRW,비츠로넥스텍,488900,488900,비츠로넥스텍-주가-전망,488900-stock-forecast
+490470.KQ,KOSDAQ,KRX,KRW,세미파이브,490470,490470,세미파이브-주가-전망,490470-stock-forecast
+491000.KQ,KOSDAQ,KRX,KRW,리브스메드,491000,491000,리브스메드-주가-전망,491000-stock-forecast
+950160.KQ,KOSDAQ,KRX,KRW,코오롱티슈진,950160,950160,코오롱티슈진-주가-전망,950160-stock-forecast
+187660.KQ,KOSDAQ,KRX,KRW,현대ADM,Adm,adm,현대ADM-주가-전망,adm-stock-forecast
+067160.KQ,KOSDAQ,KRX,KRW,SOOP,SOOP,afreecatv,soop-주가-전망,afreecatv-stock-forecast
+053800.KQ,KOSDAQ,KRX,KRW,안랩,Ahnlab,ahnlab,안랩-주가-전망,ahnlab-stock-forecast
+196170.KQ,KOSDAQ,KRX,KRW,알테오젠,Alteogen,alteogen,알테오젠-주가-전망,alteogen-stock-forecast
+025980.KQ,KOSDAQ,KRX,KRW,아난티,Ananti,ananti,아난티-주가-전망,ananti-stock-forecast
+068760.KQ,KOSDAQ,KRX,KRW,셀트리온제약,Celltrion Pharm,celltrion-pharm,셀트리온제약-주가-전망,celltrion-pharm-stock-forecast
+035760.KQ,KOSDAQ,KRX,KRW,CJ ENM,CJ ENM,cj-enm,cj-enm-주가-전망,cj-enm-stock-forecast
+214150.KQ,KOSDAQ,KRX,KRW,클래시스,Classys,classys,클래시스-주가-전망,classys-stock-forecast
+086520.KQ,KOSDAQ,KRX,KRW,에코프로,Ecopro,ecopro,에코프로-주가-전망,ecopro-stock-forecast
+247540.KQ,KOSDAQ,KRX,KRW,에코프로비엠,Ecopro Bm,ecopro-bm,에코프로비엠-주가-전망,ecopro-bm-stock-forecast
+039030.KQ,KOSDAQ,KRX,KRW,이오테크닉스,Eo Technics,eo-technics,이오테크닉스-주가-전망,eo-technics-stock-forecast
+084370.KQ,KOSDAQ,KRX,KRW,유진테크,Eugene Technology,eugene-technology,유진테크-주가-전망,eugene-technology-stock-forecast
+195940.KQ,KOSDAQ,KRX,KRW,HK이노엔,Hk,hk,HK이노엔-주가-전망,hk-stock-forecast
+024850.KQ,KOSDAQ,KRX,KRW,HLB이노베이션,HLB,hlb,HLB이노베이션-주가-전망,hlb-stock-forecast
+028300.KQ,KOSDAQ,KRX,KRW,HLB,HLB,hlb-2,hlb-주가-전망,hlb-2-stock-forecast
+403870.KQ,KOSDAQ,KRX,KRW,HPSP,HPSP,hpsp,hpsp-주가-전망,hpsp-stock-forecast
+027360.KQ,KOSDAQ,KRX,KRW,아주IB투자,Ib,ib,아주IB투자-주가-전망,ib-stock-forecast
+240810.KQ,KOSDAQ,KRX,KRW,원익IPS,Ips,ips,원익IPS-주가-전망,ips-stock-forecast
+095340.KQ,KOSDAQ,KRX,KRW,ISC,ISC,isc,isc-주가-전망,isc-stock-forecast
+035900.KQ,KOSDAQ,KRX,KRW,JYP Ent.,JYP Ent.,jyp-ent,jyp-ent-주가-전망,jyp-ent-stock-forecast
+293490.KQ,KOSDAQ,KRX,KRW,카카오게임즈,Kakao Games,kakao-games,카카오게임즈-주가-전망,kakao-games-stock-forecast
+041960.KQ,KOSDAQ,KRX,KRW,코미팜,Komipharm,komipharm,코미팜-주가-전망,komipharm-stock-forecast
+058470.KQ,KOSDAQ,KRX,KRW,리노공업,Leeno Industrial,leeno-industrial,리노공업-주가-전망,leeno-industrial-stock-forecast
+060370.KQ,KOSDAQ,KRX,KRW,LS마린솔루션,LS 2,ls-2,LS마린솔루션-주가-전망,ls-2-stock-forecast
+417200.KQ,KOSDAQ,KRX,KRW,LS머트리얼즈,LS 3,ls-3,LS머트리얼즈-주가-전망,ls-3-stock-forecast
+060250.KQ,KOSDAQ,KRX,KRW,NHN KCP,NHN KCP,nhn-kcp,nhn-kcp-주가-전망,nhn-kcp-stock-forecast
+263750.KQ,KOSDAQ,KRX,KRW,펄어비스,Pearl Abyss,pearl-abyss,펄어비스-주가-전망,pearl-abyss-stock-forecast
+214450.KQ,KOSDAQ,KRX,KRW,파마리서치,Pharmaresearch,pharmaresearch,파마리서치-주가-전망,pharmaresearch-stock-forecast
+074600.KQ,KOSDAQ,KRX,KRW,원익QnC,Qnc,qnc,원익QnC-주가-전망,qnc-stock-forecast
+218410.KQ,KOSDAQ,KRX,KRW,RFHIC,RFHIC,rfhic,rfhic-주가-전망,rfhic-stock-forecast
+036540.KQ,KOSDAQ,KRX,KRW,SFA반도체,Sfa Semicon,sfa-semicon,SFA반도체-주가-전망,sfa-semicon-stock-forecast
+065350.KQ,KOSDAQ,KRX,KRW,신성델타테크,Shinsung Delta Tech,shinsung-delta-tech,신성델타테크-주가-전망,shinsung-delta-tech-stock-forecast
+041510.KQ,KOSDAQ,KRX,KRW,에스엠,Sm Entertainment,sm-entertainment,에스엠-주가-전망,sm-entertainment-stock-forecast
+253450.KQ,KOSDAQ,KRX,KRW,스튜디오드래곤,Studio Dragon,studio-dragon,스튜디오드래곤-주가-전망,studio-dragon-stock-forecast
+006730.KQ,KOSDAQ,KRX,KRW,서부T&D,T And D,t-and-d,서부T-D-주가-전망,t-and-d-stock-forecast
+112040.KQ,KOSDAQ,KRX,KRW,위메이드,Wemade,wemade,위메이드-주가-전망,wemade-stock-forecast
+041190.KQ,KOSDAQ,KRX,KRW,우리기술투자,Woori Technology Investment,woori-technology-investment,우리기술투자-주가-전망,woori-technology-investment-stock-forecast
+000100.KS,KOSPI,KRX,KRW,유한양행,000100,000100,유한양행-주가-전망,000100-stock-forecast
+000120.KS,KOSPI,KRX,KRW,CJ대한통운,000120,000120,CJ대한통운-주가-전망,000120-stock-forecast
+000150.KS,KOSPI,KRX,KRW,두산,000150,000150,두산-주가-전망,000150-stock-forecast
+000240.KS,KOSPI,KRX,KRW,한국앤컴퍼니,000240,000240,한국앤컴퍼니-주가-전망,000240-stock-forecast
+000500.KS,KOSPI,KRX,KRW,가온전선,000500,000500,가온전선-주가-전망,000500-stock-forecast
+000720.KS,KOSPI,KRX,KRW,현대건설,000720,000720,현대건설-주가-전망,000720-stock-forecast
+000810.KS,KOSPI,KRX,KRW,삼성화재,000810,000810,삼성화재-주가-전망,000810-stock-forecast
+000880.KS,KOSPI,KRX,KRW,한화,000880,000880,한화-주가-전망,000880-stock-forecast
+000990.KS,KOSPI,KRX,KRW,DB하이텍,000990,000990,DB하이텍-주가-전망,000990-stock-forecast
+001040.KS,KOSPI,KRX,KRW,CJ,CJ,001040,cj-주가-전망,001040-stock-forecast
+001120.KS,KOSPI,KRX,KRW,LX인터내셔널,001120,001120,LX인터내셔널-주가-전망,001120-stock-forecast
+001430.KS,KOSPI,KRX,KRW,세아베스틸지주,001430,001430,세아베스틸지주-주가-전망,001430-stock-forecast
+001440.KS,KOSPI,KRX,KRW,대한전선,001440,001440,대한전선-주가-전망,001440-stock-forecast
+001450.KS,KOSPI,KRX,KRW,현대해상,001450,001450,현대해상-주가-전망,001450-stock-forecast
+001720.KS,KOSPI,KRX,KRW,신영증권,001720,001720,신영증권-주가-전망,001720-stock-forecast
+001800.KS,KOSPI,KRX,KRW,오리온홀딩스,001800,001800,오리온홀딩스-주가-전망,001800-stock-forecast
+002790.KS,KOSPI,KRX,KRW,아모레퍼시픽홀딩스,002790,002790,아모레퍼시픽홀딩스-주가-전망,002790-stock-forecast
+003230.KS,KOSPI,KRX,KRW,삼양식품,003230,003230,삼양식품-주가-전망,003230-stock-forecast
+003490.KS,KOSPI,KRX,KRW,대한항공,003490,003490,대한항공-주가-전망,003490-stock-forecast
+003530.KS,KOSPI,KRX,KRW,한화투자증권,003530,003530,한화투자증권-주가-전망,003530-stock-forecast
+003540.KS,KOSPI,KRX,KRW,대신증권,003540,003540,대신증권-주가-전망,003540-stock-forecast
+003550.KS,KOSPI,KRX,KRW,LG,LG,003550,lg-주가-전망,003550-stock-forecast
+003690.KS,KOSPI,KRX,KRW,코리안리,003690,003690,코리안리-주가-전망,003690-stock-forecast
+004020.KS,KOSPI,KRX,KRW,현대제철,004020,004020,현대제철-주가-전망,004020-stock-forecast
+004170.KS,KOSPI,KRX,KRW,신세계,004170,004170,신세계-주가-전망,004170-stock-forecast
+004370.KS,KOSPI,KRX,KRW,농심,004370,004370,농심-주가-전망,004370-stock-forecast
+004800.KS,KOSPI,KRX,KRW,효성,004800,004800,효성-주가-전망,004800-stock-forecast
+004990.KS,KOSPI,KRX,KRW,롯데지주,004990,004990,롯데지주-주가-전망,004990-stock-forecast
+005070.KS,KOSPI,KRX,KRW,코스모신소재,005070,005070,코스모신소재-주가-전망,005070-stock-forecast
+005440.KS,KOSPI,KRX,KRW,현대지에프홀딩스,005440,005440,현대지에프홀딩스-주가-전망,005440-stock-forecast
+005830.KS,KOSPI,KRX,KRW,DB손해보험,005830,005830,DB손해보험-주가-전망,005830-stock-forecast
+005850.KS,KOSPI,KRX,KRW,에스엘,005850,005850,에스엘-주가-전망,005850-stock-forecast
+006040.KS,KOSPI,KRX,KRW,동원산업,006040,006040,동원산업-주가-전망,006040-stock-forecast
+006280.KS,KOSPI,KRX,KRW,녹십자,006280,006280,녹십자-주가-전망,006280-stock-forecast
+006800.KS,KOSPI,KRX,KRW,미래에셋증권,006800,006800,미래에셋증권-주가-전망,006800-stock-forecast
+007660.KS,KOSPI,KRX,KRW,이수페타시스,007660,007660,이수페타시스-주가-전망,007660-stock-forecast
+008770.KS,KOSPI,KRX,KRW,호텔신라,008770,008770,호텔신라-주가-전망,008770-stock-forecast
+008930.KS,KOSPI,KRX,KRW,한미사이언스,008930,008930,한미사이언스-주가-전망,008930-stock-forecast
+009420.KS,KOSPI,KRX,KRW,한올바이오파마,009420,009420,한올바이오파마-주가-전망,009420-stock-forecast
+009540.KS,KOSPI,KRX,KRW,HD한국조선해양,009540,009540,HD한국조선해양-주가-전망,009540-stock-forecast
+009830.KS,KOSPI,KRX,KRW,한화솔루션,009830,009830,한화솔루션-주가-전망,009830-stock-forecast
+009970.KS,KOSPI,KRX,KRW,영원무역홀딩스,009970,009970,영원무역홀딩스-주가-전망,009970-stock-forecast
+010140.KS,KOSPI,KRX,KRW,삼성중공업,010140,010140,삼성중공업-주가-전망,010140-stock-forecast
+011070.KS,KOSPI,KRX,KRW,LG이노텍,011070,011070,LG이노텍-주가-전망,011070-stock-forecast
+011170.KS,KOSPI,KRX,KRW,롯데케미칼,011170,011170,롯데케미칼-주가-전망,011170-stock-forecast
+011210.KS,KOSPI,KRX,KRW,현대위아,011210,011210,현대위아-주가-전망,011210-stock-forecast
+011780.KS,KOSPI,KRX,KRW,금호석유화학,011780,011780,금호석유화학-주가-전망,011780-stock-forecast
+012450.KS,KOSPI,KRX,KRW,한화에어로스페이스,012450,012450,한화에어로스페이스-주가-전망,012450-stock-forecast
+012510.KS,KOSPI,KRX,KRW,더존비즈온,012510,012510,더존비즈온-주가-전망,012510-stock-forecast
+0126Z0.KS,KOSPI,KRX,KRW,삼성에피스홀딩스,0126z0,0126z0,삼성에피스홀딩스-주가-전망,0126z0-stock-forecast
+012750.KS,KOSPI,KRX,KRW,에스원,012750,012750,에스원-주가-전망,012750-stock-forecast
+014680.KS,KOSPI,KRX,KRW,한솔케미칼,014680,014680,한솔케미칼-주가-전망,014680-stock-forecast
+016360.KS,KOSPI,KRX,KRW,삼성증권,016360,016360,삼성증권-주가-전망,016360-stock-forecast
+017800.KS,KOSPI,KRX,KRW,현대엘리베이터,017800,017800,현대엘리베이터-주가-전망,017800-stock-forecast
+017960.KS,KOSPI,KRX,KRW,한국카본,017960,017960,한국카본-주가-전망,017960-stock-forecast
+018670.KS,KOSPI,KRX,KRW,SK가스,018670,018670,SK가스-주가-전망,018670-stock-forecast
+018880.KS,KOSPI,KRX,KRW,한온시스템,018880,018880,한온시스템-주가-전망,018880-stock-forecast
+020150.KS,KOSPI,KRX,KRW,롯데에너지머티리얼즈,020150,020150,롯데에너지머티리얼즈-주가-전망,020150-stock-forecast
+021240.KS,KOSPI,KRX,KRW,코웨이,021240,021240,코웨이-주가-전망,021240-stock-forecast
+023530.KS,KOSPI,KRX,KRW,롯데쇼핑,023530,023530,롯데쇼핑-주가-전망,023530-stock-forecast
+023590.KS,KOSPI,KRX,KRW,다우기술,023590,023590,다우기술-주가-전망,023590-stock-forecast
+026960.KS,KOSPI,KRX,KRW,동서,026960,026960,동서-주가-전망,026960-stock-forecast
+028670.KS,KOSPI,KRX,KRW,팬오션,028670,028670,팬오션-주가-전망,028670-stock-forecast
+029780.KS,KOSPI,KRX,KRW,삼성카드,029780,029780,삼성카드-주가-전망,029780-stock-forecast
+030000.KS,KOSPI,KRX,KRW,제일기획,030000,030000,제일기획-주가-전망,030000-stock-forecast
+031210.KS,KOSPI,KRX,KRW,서울보증보험,031210,031210,서울보증보험-주가-전망,031210-stock-forecast
+032350.KS,KOSPI,KRX,KRW,롯데관광개발,032350,032350,롯데관광개발-주가-전망,032350-stock-forecast
+032640.KS,KOSPI,KRX,KRW,LG유플러스,032640,032640,LG유플러스-주가-전망,032640-stock-forecast
+034220.KS,KOSPI,KRX,KRW,LG디스플레이,034220,034220,LG디스플레이-주가-전망,034220-stock-forecast
+035250.KS,KOSPI,KRX,KRW,강원랜드,035250,035250,강원랜드-주가-전망,035250-stock-forecast
+035720.KS,KOSPI,KRX,KRW,카카오,035720,035720,카카오-주가-전망,035720-stock-forecast
+036460.KS,KOSPI,KRX,KRW,한국가스공사,036460,036460,한국가스공사-주가-전망,036460-stock-forecast
+039490.KS,KOSPI,KRX,KRW,키움증권,039490,039490,키움증권-주가-전망,039490-stock-forecast
+042660.KS,KOSPI,KRX,KRW,한화오션,042660,042660,한화오션-주가-전망,042660-stock-forecast
+042700.KS,KOSPI,KRX,KRW,한미반도체,042700,042700,한미반도체-주가-전망,042700-stock-forecast
+047040.KS,KOSPI,KRX,KRW,대우건설,047040,047040,대우건설-주가-전망,047040-stock-forecast
+047810.KS,KOSPI,KRX,KRW,한국항공우주,047810,047810,한국항공우주-주가-전망,047810-stock-forecast
+051900.KS,KOSPI,KRX,KRW,LG생활건강,051900,051900,LG생활건강-주가-전망,051900-stock-forecast
+052690.KS,KOSPI,KRX,KRW,한전기술,052690,052690,한전기술-주가-전망,052690-stock-forecast
+062040.KS,KOSPI,KRX,KRW,산일전기,062040,062040,산일전기-주가-전망,062040-stock-forecast
+064350.KS,KOSPI,KRX,KRW,현대로템,064350,064350,현대로템-주가-전망,064350-stock-forecast
+064400.KS,KOSPI,KRX,KRW,LG씨엔에스,064400,064400,LG씨엔에스-주가-전망,064400-stock-forecast
+066970.KS,KOSPI,KRX,KRW,엘앤에프,066970,066970,엘앤에프-주가-전망,066970-stock-forecast
+069620.KS,KOSPI,KRX,KRW,대웅제약,069620,069620,대웅제약-주가-전망,069620-stock-forecast
+069960.KS,KOSPI,KRX,KRW,현대백화점,069960,069960,현대백화점-주가-전망,069960-stock-forecast
+071050.KS,KOSPI,KRX,KRW,한국금융지주,071050,071050,한국금융지주-주가-전망,071050-stock-forecast
+071970.KS,KOSPI,KRX,KRW,HD현대마린엔진,071970,071970,HD현대마린엔진-주가-전망,071970-stock-forecast
+073240.KS,KOSPI,KRX,KRW,금호타이어,073240,073240,금호타이어-주가-전망,073240-stock-forecast
+081660.KS,KOSPI,KRX,KRW,미스토홀딩스,081660,081660,미스토홀딩스-주가-전망,081660-stock-forecast
+082740.KS,KOSPI,KRX,KRW,한화엔진,082740,082740,한화엔진-주가-전망,082740-stock-forecast
+085620.KS,KOSPI,KRX,KRW,미래에셋생명,085620,085620,미래에셋생명-주가-전망,085620-stock-forecast
+086280.KS,KOSPI,KRX,KRW,현대글로비스,086280,086280,현대글로비스-주가-전망,086280-stock-forecast
+088350.KS,KOSPI,KRX,KRW,한화생명,088350,088350,한화생명-주가-전망,088350-stock-forecast
+088980.KS,KOSPI,KRX,KRW,맥쿼리인프라,088980,088980,맥쿼리인프라-주가-전망,088980-stock-forecast
+090430.KS,KOSPI,KRX,KRW,아모레퍼시픽,090430,090430,아모레퍼시픽-주가-전망,090430-stock-forecast
+097950.KS,KOSPI,KRX,KRW,CJ제일제당,097950,097950,CJ제일제당-주가-전망,097950-stock-forecast
+103140.KS,KOSPI,KRX,KRW,풍산,103140,103140,풍산-주가-전망,103140-stock-forecast
+103590.KS,KOSPI,KRX,KRW,일진전기,103590,103590,일진전기-주가-전망,103590-stock-forecast
+111770.KS,KOSPI,KRX,KRW,영원무역,111770,111770,영원무역-주가-전망,111770-stock-forecast
+112610.KS,KOSPI,KRX,KRW,씨에스윈드,112610,112610,씨에스윈드-주가-전망,112610-stock-forecast
+120110.KS,KOSPI,KRX,KRW,코오롱인더,120110,120110,코오롱인더-주가-전망,120110-stock-forecast
+128940.KS,KOSPI,KRX,KRW,한미약품,128940,128940,한미약품-주가-전망,128940-stock-forecast
+138040.KS,KOSPI,KRX,KRW,메리츠금융지주,138040,138040,메리츠금융지주-주가-전망,138040-stock-forecast
+139480.KS,KOSPI,KRX,KRW,이마트,139480,139480,이마트-주가-전망,139480-stock-forecast
+161390.KS,KOSPI,KRX,KRW,한국타이어앤테크놀로지,161390,161390,한국타이어앤테크놀로지-주가-전망,161390-stock-forecast
+161890.KS,KOSPI,KRX,KRW,한국콜마,161890,161890,한국콜마-주가-전망,161890-stock-forecast
+180640.KS,KOSPI,KRX,KRW,한진칼,180640,180640,한진칼-주가-전망,180640-stock-forecast
+192820.KS,KOSPI,KRX,KRW,코스맥스,192820,192820,코스맥스-주가-전망,192820-stock-forecast
+241560.KS,KOSPI,KRX,KRW,두산밥캣,241560,241560,두산밥캣-주가-전망,241560-stock-forecast
+251270.KS,KOSPI,KRX,KRW,넷마블,251270,251270,넷마블-주가-전망,251270-stock-forecast
+259960.KS,KOSPI,KRX,KRW,크래프톤,259960,259960,크래프톤-주가-전망,259960-stock-forecast
+267250.KS,KOSPI,KRX,KRW,HD현대,267250,267250,HD현대-주가-전망,267250-stock-forecast
+267260.KS,KOSPI,KRX,KRW,HD현대일렉트릭,267260,267260,HD현대일렉트릭-주가-전망,267260-stock-forecast
+267270.KS,KOSPI,KRX,KRW,HD건설기계,267270,267270,HD건설기계-주가-전망,267270-stock-forecast
+271560.KS,KOSPI,KRX,KRW,오리온,271560,271560,오리온-주가-전망,271560-stock-forecast
+272210.KS,KOSPI,KRX,KRW,한화시스템,272210,272210,한화시스템-주가-전망,272210-stock-forecast
+278470.KS,KOSPI,KRX,KRW,에이피알,278470,278470,에이피알-주가-전망,278470-stock-forecast
+279570.KS,KOSPI,KRX,KRW,케이뱅크,279570,279570,케이뱅크-주가-전망,279570-stock-forecast
+298020.KS,KOSPI,KRX,KRW,효성티앤씨,298020,298020,효성티앤씨-주가-전망,298020-stock-forecast
+298040.KS,KOSPI,KRX,KRW,효성중공업,298040,298040,효성중공업-주가-전망,298040-stock-forecast
+302440.KS,KOSPI,KRX,KRW,SK바이오사이언스,302440,302440,SK바이오사이언스-주가-전망,302440-stock-forecast
+307950.KS,KOSPI,KRX,KRW,현대오토에버,307950,307950,현대오토에버-주가-전망,307950-stock-forecast
+316140.KS,KOSPI,KRX,KRW,우리금융지주,316140,316140,우리금융지주-주가-전망,316140-stock-forecast
+323410.KS,KOSPI,KRX,KRW,카카오뱅크,323410,323410,카카오뱅크-주가-전망,323410-stock-forecast
+326030.KS,KOSPI,KRX,KRW,SK바이오팜,326030,326030,SK바이오팜-주가-전망,326030-stock-forecast
+329180.KS,KOSPI,KRX,KRW,HD현대중공업,329180,329180,HD현대중공업-주가-전망,329180-stock-forecast
+336260.KS,KOSPI,KRX,KRW,두산퓨얼셀,336260,336260,두산퓨얼셀-주가-전망,336260-stock-forecast
+353200.KS,KOSPI,KRX,KRW,대덕전자,353200,353200,대덕전자-주가-전망,353200-stock-forecast
+361610.KS,KOSPI,KRX,KRW,SK아이이테크놀로지,361610,361610,SK아이이테크놀로지-주가-전망,361610-stock-forecast
+373220.KS,KOSPI,KRX,KRW,LG에너지솔루션,373220,373220,LG에너지솔루션-주가-전망,373220-stock-forecast
+377300.KS,KOSPI,KRX,KRW,카카오페이,377300,377300,카카오페이-주가-전망,377300-stock-forecast
+395400.KS,KOSPI,KRX,KRW,SK리츠,395400,395400,SK리츠-주가-전망,395400-stock-forecast
+402340.KS,KOSPI,KRX,KRW,SK스퀘어,402340,402340,SK스퀘어-주가-전망,402340-stock-forecast
+439260.KS,KOSPI,KRX,KRW,대한조선,439260,439260,대한조선-주가-전망,439260-stock-forecast
+443060.KS,KOSPI,KRX,KRW,HD현대마린솔루션,443060,443060,HD현대마린솔루션-주가-전망,443060-stock-forecast
+450080.KS,KOSPI,KRX,KRW,에코프로머티,450080,450080,에코프로머티-주가-전망,450080-stock-forecast
+454910.KS,KOSPI,KRX,KRW,두산로보틱스,454910,454910,두산로보틱스-주가-전망,454910-stock-forecast
+457190.KS,KOSPI,KRX,KRW,이수스페셜티케미컬,457190,457190,이수스페셜티케미컬-주가-전망,457190-stock-forecast
+462870.KS,KOSPI,KRX,KRW,시프트업,462870,462870,시프트업-주가-전망,462870-stock-forecast
+475150.KS,KOSPI,KRX,KRW,SK이터닉스,475150,475150,SK이터닉스-주가-전망,475150-stock-forecast
+483650.KS,KOSPI,KRX,KRW,달바글로벌,483650,483650,달바글로벌-주가-전망,483650-stock-forecast
+489790.KS,KOSPI,KRX,KRW,한화비전,489790,489790,한화비전-주가-전망,489790-stock-forecast
+282330.KS,KOSPI,KRX,KRW,BGF리테일,Bgf,bgf,BGF리테일-주가-전망,bgf-stock-forecast
+138930.KS,KOSPI,KRX,KRW,BNK금융지주,BNK,bnk,BNK금융지주-주가-전망,bnk-stock-forecast
+068270.KS,KOSPI,KRX,KRW,셀트리온,Celltrion,celltrion,셀트리온-주가-전망,celltrion-stock-forecast
+375500.KS,KOSPI,KRX,KRW,DL이앤씨,Dl,dl,DL이앤씨-주가-전망,dl-stock-forecast
+007340.KS,KOSPI,KRX,KRW,DN오토모티브,Dn,dn,DN오토모티브-주가-전망,dn-stock-forecast
+034020.KS,KOSPI,KRX,KRW,두산에너빌리티,Doosan Enerbility,doosan-enerbility,두산에너빌리티-주가-전망,doosan-enerbility-stock-forecast
+022100.KS,KOSPI,KRX,KRW,포스코DX,Dx,dx,포스코DX-주가-전망,dx-stock-forecast
+028050.KS,KOSPI,KRX,KRW,삼성E&A,E And A,e-and-a,삼성E-A-주가-전망,e-and-a-stock-forecast
+383220.KS,KOSPI,KRX,KRW,F&F,F&F,f-and-f,f-f-주가-전망,f-and-f-stock-forecast
+006360.KS,KOSPI,KRX,KRW,GS건설,GS,gs,GS건설-주가-전망,gs-stock-forecast
+007070.KS,KOSPI,KRX,KRW,GS리테일,GS 2,gs-2,GS리테일-주가-전망,gs-2-stock-forecast
+078930.KS,KOSPI,KRX,KRW,GS,GS,gs-3,gs-주가-전망,gs-3-stock-forecast
+086790.KS,KOSPI,KRX,KRW,하나금융지주,Hana Financial Group,hana-financial-group,하나금융지주-주가-전망,hana-financial-group-stock-forecast
+097230.KS,KOSPI,KRX,KRW,HJ중공업,Hj,hj,HJ중공업-주가-전망,hj-stock-forecast
+204320.KS,KOSPI,KRX,KRW,HL만도,Hl,hl,HL만도-주가-전망,hl-stock-forecast
+011200.KS,KOSPI,KRX,KRW,HMM,HMM,hmm,hmm-주가-전망,hmm-stock-forecast
+352820.KS,KOSPI,KRX,KRW,하이브,HYBE,hybe,하이브-주가-전망,hybe-stock-forecast
+012330.KS,KOSPI,KRX,KRW,현대모비스,Hyundai Mobis,hyundai-mobis,현대모비스-주가-전망,hyundai-mobis-stock-forecast
+005380.KS,KOSPI,KRX,KRW,현대차,Hyundai Motor,hyundai-motor,현대차-주가-전망,hyundai-motor-stock-forecast
+024110.KS,KOSPI,KRX,KRW,기업은행,Ibk,ibk,기업은행-주가-전망,ibk-stock-forecast
+139130.KS,KOSPI,KRX,KRW,iM금융지주,Im,im,iM금융지주-주가-전망,im-stock-forecast
+175330.KS,KOSPI,KRX,KRW,JB금융지주,JB,jb,JB금융지주-주가-전망,jb-stock-forecast
+105560.KS,KOSPI,KRX,KRW,KB금융,KB Financial,kb-financial,KB금융-주가-전망,kb-financial-stock-forecast
+002380.KS,KOSPI,KRX,KRW,KCC,KCC,kcc,kcc-주가-전망,kcc-stock-forecast
+015760.KS,KOSPI,KRX,KRW,한국전력,Kepco,kepco,한국전력-주가-전망,kepco-stock-forecast
+000270.KS,KOSPI,KRX,KRW,기아,Kia,kia,기아-주가-전망,kia-stock-forecast
+010130.KS,KOSPI,KRX,KRW,고려아연,Korea Zinc,korea-zinc,고려아연-주가-전망,korea-zinc-stock-forecast
+051600.KS,KOSPI,KRX,KRW,한전KPS,Kps,kps,한전KPS-주가-전망,kps-stock-forecast
+030200.KS,KOSPI,KRX,KRW,KT,KT,kt,kt-주가-전망,kt-stock-forecast
+033780.KS,KOSPI,KRX,KRW,KT&G,KT&G,kt-and-g,kt-g-주가-전망,kt-and-g-stock-forecast
+051910.KS,KOSPI,KRX,KRW,LG화학,LG Chem,lg-chem,LG화학-주가-전망,lg-chem-stock-forecast
+066570.KS,KOSPI,KRX,KRW,LG전자,LG Electronics,lg-electronics,LG전자-주가-전망,lg-electronics-stock-forecast
+079550.KS,KOSPI,KRX,KRW,LIG넥스원,Lig,lig,LIG넥스원-주가-전망,lig-stock-forecast
+006260.KS,KOSPI,KRX,KRW,LS,LS,ls,ls-주가-전망,ls-stock-forecast
+010120.KS,KOSPI,KRX,KRW,LS ELECTRIC,LS ELECTRIC,ls-electric,ls-electric-주가-전망,ls-electric-stock-forecast
+035420.KS,KOSPI,KRX,KRW,NAVER,NAVER,naver,naver-주가-전망,naver-stock-forecast
+036570.KS,KOSPI,KRX,KRW,엔씨소프트,Ncsoft,ncsoft,엔씨소프트-주가-전망,ncsoft-stock-forecast
+005940.KS,KOSPI,KRX,KRW,NH투자증권,NH,nh,NH투자증권-주가-전망,nh-stock-forecast
+010060.KS,KOSPI,KRX,KRW,OCI홀딩스,Oci,oci,OCI홀딩스-주가-전망,oci-stock-forecast
+034230.KS,KOSPI,KRX,KRW,파라다이스,Paradise,paradise,파라다이스-주가-전망,paradise-stock-forecast
+005490.KS,KOSPI,KRX,KRW,POSCO홀딩스,POSCO,posco,POSCO홀딩스-주가-전망,posco-stock-forecast
+003670.KS,KOSPI,KRX,KRW,포스코퓨처엠,POSCO Holdings,posco-holdings,포스코퓨처엠-주가-전망,posco-holdings-stock-forecast
+047050.KS,KOSPI,KRX,KRW,포스코인터내셔널,POSCO International,posco-international,포스코인터내셔널-주가-전망,posco-international-stock-forecast
+010950.KS,KOSPI,KRX,KRW,S-Oil,S-Oil,s-oil,s-oil-주가-전망,s-oil-stock-forecast
+207940.KS,KOSPI,KRX,KRW,삼성바이오로직스,Samsung Biologics,samsung-biologics,삼성바이오로직스-주가-전망,samsung-biologics-stock-forecast
+028260.KS,KOSPI,KRX,KRW,삼성물산,Samsung C T,samsung-c-t,삼성물산-주가-전망,samsung-c-t-stock-forecast
+009150.KS,KOSPI,KRX,KRW,삼성전기,Samsung Electro Mechanics,samsung-electro-mechanics,삼성전기-주가-전망,samsung-electro-mechanics-stock-forecast
+005930.KS,KOSPI,KRX,KRW,삼성전자,Samsung Electronics,samsung-electronics,삼성전자-주가-전망,samsung-electronics-stock-forecast
+032830.KS,KOSPI,KRX,KRW,삼성생명,Samsung Life,samsung-life,삼성생명-주가-전망,samsung-life-stock-forecast
+006400.KS,KOSPI,KRX,KRW,삼성SDI,Samsung Sdi,samsung-sdi,삼성SDI-주가-전망,samsung-sdi-stock-forecast
+018260.KS,KOSPI,KRX,KRW,삼성에스디에스,Samsung Sds,samsung-sds,삼성에스디에스-주가-전망,samsung-sds-stock-forecast
+055550.KS,KOSPI,KRX,KRW,신한지주,Shinhan Financial,shinhan-financial,신한지주-주가-전망,shinhan-financial-stock-forecast
+000660.KS,KOSPI,KRX,KRW,SK하이닉스,SK Hynix,sk-hynix,SK하이닉스-주가-전망,sk-hynix-stock-forecast
+034730.KS,KOSPI,KRX,KRW,SK,SK,sk-inc,sk-주가-전망,sk-inc-stock-forecast
+096770.KS,KOSPI,KRX,KRW,SK이노베이션,SK Innovation,sk-innovation,SK이노베이션-주가-전망,sk-innovation-stock-forecast
+017670.KS,KOSPI,KRX,KRW,SK텔레콤,SK Telecom,sk-telecom,SK텔레콤-주가-전망,sk-telecom-stock-forecast
+011790.KS,KOSPI,KRX,KRW,SKC,SKC,skc,skc-주가-전망,skc-stock-forecast
+003570.KS,KOSPI,KRX,KRW,SNT다이내믹스,Snt,snt,SNT다이내믹스-주가-전망,snt-stock-forecast
+ABVX,NASDAQ,NASDAQ,USD,Abivax SA,Abivax SA,abivax-sa,abivax-sa-주가-전망,abivax-sa-stock-forecast
+ADBE,NASDAQ,NASDAQ,USD,어도비,Adobe Inc.,adobe,어도비-주가-전망,adobe-stock-forecast
+AEIS,NASDAQ,NASDAQ,USD,"Advanced Energy Industries, Inc","Advanced Energy Industries, Inc",advanced-energy-industries-inc,advanced-energy-industries-inc-주가-전망,advanced-energy-industries-inc-stock-forecast
+AVAV,NASDAQ,NASDAQ,USD,"AeroVironment, Inc.","AeroVironment, Inc.",aerovironment-inc,aerovironment-inc-주가-전망,aerovironment-inc-stock-forecast
+AFRM,NASDAQ,NASDAQ,USD,어펌,"Affirm Holdings, Inc.",affirm-holdings-inc,어펌-주가-전망,affirm-holdings-inc-stock-forecast
+AGNC,NASDAQ,NASDAQ,USD,AGNC 인베스트먼트,AGNC Investment Corp.,agnc-investment-corp,AGNC-인베스트먼트-주가-전망,agnc-investment-corp-stock-forecast
+AGNCM,NASDAQ,NASDAQ,USD,AGNC Investment Corp. - Deposit,AGNC Investment Corp. - Deposit,agnc-investment-corp-deposit,agnc-investment-corp-deposit-주가-전망,agnc-investment-corp-deposit-stock-forecast
+AGNCN,NASDAQ,NASDAQ,USD,AGNC Investment Corp. - Deposit,AGNC Investment Corp. - Deposit,agnc-investment-corp-deposit-2,agnc-investment-corp-deposit-주가-전망-agncn,agnc-investment-corp-deposit-2-stock-forecast
+ABNB,NASDAQ,NASDAQ,USD,에어비앤비,"Airbnb, Inc.",airbnb-inc,에어비앤비-주가-전망,airbnb-inc-stock-forecast
+AKAM,NASDAQ,NASDAQ,USD,아카마이 테크놀로지,"Akamai Technologies, Inc.",akamai-technologies-inc,아카마이-테크놀로지-주가-전망,akamai-technologies-inc-stock-forecast
+ALGN,NASDAQ,NASDAQ,USD,얼라인 테크놀로지,"Align Technology, Inc.",align-technology-inc,얼라인-테크놀로지-주가-전망,align-technology-inc-stock-forecast
+LNT,NASDAQ,NASDAQ,USD,Alliant Energy Corporation,Alliant Energy Corporation,alliant-energy-corporation,alliant-energy-corporation-주가-전망,alliant-energy-corporation-stock-forecast
+ALNY,NASDAQ,NASDAQ,USD,알나일람 파마슈티컬스,"Alnylam Pharmaceuticals, Inc.",alnylam-pharmaceuticals-inc,알나일람-파마슈티컬스-주가-전망,alnylam-pharmaceuticals-inc-stock-forecast
+GOOGL,NASDAQ,NASDAQ,USD,알파벳 A,Alphabet Inc.,alphabet,알파벳-A-주가-전망,alphabet-stock-forecast
+GOOG,NASDAQ,NASDAQ,USD,알파벳 C,Alphabet Inc.,alphabet-inc,알파벳-C-주가-전망,alphabet-inc-stock-forecast
+AMZN,NASDAQ,NASDAQ,USD,아마존,"Amazon.com, Inc.",amazon,아마존-주가-전망,amazon-stock-forecast
+AMD,NASDAQ,NASDAQ,USD,AMD,"Advanced Micro Devices, Inc.",amd,amd-주가-전망,amd-stock-forecast
+AEP,NASDAQ,NASDAQ,USD,아메리칸 일렉트릭 파워,American Electric Power Company,american-electric-power-company,아메리칸-일렉트릭-파워-주가-전망,american-electric-power-company-stock-forecast
+AMGN,NASDAQ,NASDAQ,USD,암젠,Amgen Inc.,amgen-inc,암젠-주가-전망,amgen-inc-stock-forecast
+AMKR,NASDAQ,NASDAQ,USD,앰코 테크놀로지,"Amkor Technology, Inc.",amkor-technology-inc,앰코-테크놀로지-주가-전망,amkor-technology-inc-stock-forecast
+ADI,NASDAQ,NASDAQ,USD,아나로그 디바이시스,"Analog Devices, Inc.",analog-devices-inc,아나로그-디바이시스-주가-전망,analog-devices-inc-stock-forecast
+APA,NASDAQ,NASDAQ,USD,APA,APA Corporation,apa-corporation,apa-주가-전망,apa-corporation-stock-forecast
+AAPL,NASDAQ,NASDAQ,USD,애플,Apple Inc.,apple,애플-주가-전망,apple-stock-forecast
+AMAT,NASDAQ,NASDAQ,USD,어플라이드 머티어리얼즈,"Applied Materials, Inc.",applied-materials-inc,어플라이드-머티어리얼즈-주가-전망,applied-materials-inc-stock-forecast
+APP,NASDAQ,NASDAQ,USD,앱러빈,Applovin Corporation,applovin-corporation,앱러빈-주가-전망,applovin-corporation-stock-forecast
+ACGL,NASDAQ,NASDAQ,USD,아치 캐피털 그룹,Arch Capital Group Ltd.,arch-capital-group-ltd,아치-캐피털-그룹-주가-전망,arch-capital-group-ltd-stock-forecast
+ACGLO,NASDAQ,NASDAQ,USD,Arch Capital Group Ltd. - Depos,Arch Capital Group Ltd. - Depos,arch-capital-group-ltd-depos,arch-capital-group-ltd-depos-주가-전망,arch-capital-group-ltd-depos-stock-forecast
+ARCC,NASDAQ,NASDAQ,USD,아레스 캐피털,Ares Capital Corporation,ares-capital-corporation,아레스-캐피털-주가-전망,ares-capital-corporation-stock-forecast
+ARGX,NASDAQ,NASDAQ,USD,아젠엑스,argenx SE,argenx-se,아젠엑스-주가-전망,argenx-se-stock-forecast
+ARM,NASDAQ,NASDAQ,USD,암 홀딩스,Arm Holdings plc,arm-holdings-plc,암-홀딩스-주가-전망,arm-holdings-plc-stock-forecast
+ASND,NASDAQ,NASDAQ,USD,아센디스 파마,Ascendis Pharma A/S,ascendis-pharma-a-s,아센디스-파마-주가-전망,ascendis-pharma-a-s-stock-forecast
+ASML,NASDAQ,NASDAQ,USD,ASML,ASML Holding N.V. - New York Re,asml-holding-n-v-new-york-re,asml-주가-전망,asml-holding-n-v-new-york-re-stock-forecast
+ASTS,NASDAQ,NASDAQ,USD,AST 스페이스모바일,"AST SpaceMobile, Inc.",ast-spacemobile-inc,AST-스페이스모바일-주가-전망,ast-spacemobile-inc-stock-forecast
+ALAB,NASDAQ,NASDAQ,USD,아스테라 랩스,"Astera Labs, Inc.",astera-labs-inc,아스테라-랩스-주가-전망,astera-labs-inc-stock-forecast
+TEAM,NASDAQ,NASDAQ,USD,아틀라시안,Atlassian Corporation,atlassian-corporation,아틀라시안-주가-전망,atlassian-corporation-stock-forecast
+ADSK,NASDAQ,NASDAQ,USD,오토데스크,"Autodesk, Inc.",autodesk-inc,오토데스크-주가-전망,autodesk-inc-stock-forecast
+ADP,NASDAQ,NASDAQ,USD,오토매틱 데이터 프로세싱,"Automatic Data Processing, Inc.",automatic-data-processing-inc,오토매틱-데이터-프로세싱-주가-전망,automatic-data-processing-inc-stock-forecast
+AXON,NASDAQ,NASDAQ,USD,액손 엔터프라이즈,"Axon Enterprise, Inc.",axon-enterprise-inc,액손-엔터프라이즈-주가-전망,axon-enterprise-inc-stock-forecast
+BIDU,NASDAQ,NASDAQ,USD,바이두,"Baidu, Inc.",baidu-inc,바이두-주가-전망,baidu-inc-stock-forecast
+BKR,NASDAQ,NASDAQ,USD,베이커휴즈,Baker Hughes Company,baker-hughes-company,베이커휴즈-주가-전망,baker-hughes-company-stock-forecast
+BSY,NASDAQ,NASDAQ,USD,벤틀리 시스템즈,"Bentley Systems, Incorporated",bentley-systems-incorporated,벤틀리-시스템즈-주가-전망,bentley-systems-incorporated-stock-forecast
+ONC,NASDAQ,NASDAQ,USD,BeOne Medicines Ltd.,BeOne Medicines Ltd.,beone-medicines-ltd,beone-medicines-ltd-주가-전망,beone-medicines-ltd-stock-forecast
+BILI,NASDAQ,NASDAQ,USD,빌리빌리,Bilibili Inc.,bilibili-inc,빌리빌리-주가-전망,bilibili-inc-stock-forecast
+BIIB,NASDAQ,NASDAQ,USD,바이오젠,Biogen Inc.,biogen-inc,바이오젠-주가-전망,biogen-inc-stock-forecast
+BMRN,NASDAQ,NASDAQ,USD,바이오마린,BioMarin Pharmaceutical Inc.,biomarin-pharmaceutical-inc,바이오마린-주가-전망,biomarin-pharmaceutical-inc-stock-forecast
+BNTX,NASDAQ,NASDAQ,USD,바이오엔테크,BioNTech SE,biontech-se,바이오엔테크-주가-전망,biontech-se-stock-forecast
+BKNG,NASDAQ,NASDAQ,USD,부킹홀딩스,Booking Holdings Inc. Common St,booking-holdings-inc-common-st,부킹홀딩스-주가-전망,booking-holdings-inc-common-st-stock-forecast
+BBIO,NASDAQ,NASDAQ,USD,"BridgeBio Pharma, Inc.","BridgeBio Pharma, Inc.",bridgebio-pharma-inc,bridgebio-pharma-inc-주가-전망,bridgebio-pharma-inc-stock-forecast
+AVGO,NASDAQ,NASDAQ,USD,브로드컴,Broadcom Inc.,broadcom,브로드컴-주가-전망,broadcom-stock-forecast
+BPYPP,NASDAQ,NASDAQ,USD,Brookfield Property Partners L.,Brookfield Property Partners L.,brookfield-property-partners-l,brookfield-property-partners-l-주가-전망,brookfield-property-partners-l-stock-forecast
+CHRW,NASDAQ,NASDAQ,USD,C.H. 로빈슨,"C.H. Robinson Worldwide, Inc.",c-h-robinson-worldwide-inc,CH-로빈슨-주가-전망,c-h-robinson-worldwide-inc-stock-forecast
+CDNS,NASDAQ,NASDAQ,USD,케이던스,"Cadence Design Systems, Inc.",cadence-design-systems-inc,케이던스-주가-전망,cadence-design-systems-inc-stock-forecast
+CASY,NASDAQ,NASDAQ,USD,케이시스 제너럴 스토어스,"Caseys General Stores, Inc.",caseys-general-stores-inc,케이시스-제너럴-스토어스-주가-전망,caseys-general-stores-inc-stock-forecast
+CDW,NASDAQ,NASDAQ,USD,CDW,CDW Corporation,cdw-corporation,cdw-주가-전망,cdw-corporation-stock-forecast
+CELH,NASDAQ,NASDAQ,USD,셀시우스 홀딩스,"Celsius Holdings, Inc.",celsius-holdings-inc,셀시우스-홀딩스-주가-전망,celsius-holdings-inc-stock-forecast
+CHTR,NASDAQ,NASDAQ,USD,차터 커뮤니케이션스,"Charter Communications, Inc.",charter-communications-inc,차터-커뮤니케이션스-주가-전망,charter-communications-inc-stock-forecast
+CHKP,NASDAQ,NASDAQ,USD,체크포인트 소프트웨어,Check Point Software Technologi,check-point-software-technologi,체크포인트-소프트웨어-주가-전망,check-point-software-technologi-stock-forecast
+CINF,NASDAQ,NASDAQ,USD,신시내티 파이낸셜,Cincinnati Financial Corporatio,cincinnati-financial-corporatio,신시내티-파이낸셜-주가-전망,cincinnati-financial-corporatio-stock-forecast
+CTAS,NASDAQ,NASDAQ,USD,신타스,Cintas Corporation,cintas-corporation,신타스-주가-전망,cintas-corporation-stock-forecast
+CSCO,NASDAQ,NASDAQ,USD,시스코 시스템즈,"Cisco Systems, Inc.",cisco-systems-inc,시스코-시스템즈-주가-전망,cisco-systems-inc-stock-forecast
+CME,NASDAQ,NASDAQ,USD,CME Group Inc.,CME Group Inc.,cme-group-inc,cme-group-inc-주가-전망,cme-group-inc-stock-forecast
+COKE,NASDAQ,NASDAQ,USD,코카콜라 콘솔리데이티드,"Coca-Cola Consolidated, Inc.",coca-cola-consolidated-inc,코카콜라-콘솔리데이티드-주가-전망,coca-cola-consolidated-inc-stock-forecast
+CCEP,NASDAQ,NASDAQ,USD,코카콜라 유로퍼시픽,Coca-Cola Europacific Partners,coca-cola-europacific-partners,코카콜라-유로퍼시픽-주가-전망,coca-cola-europacific-partners-stock-forecast
+CTSH,NASDAQ,NASDAQ,USD,코그니전트,Cognizant Technology Solutions,cognizant-technology-solutions,코그니전트-주가-전망,cognizant-technology-solutions-stock-forecast
+COIN,NASDAQ,NASDAQ,USD,코인베이스,"Coinbase Global, Inc. - 3",coinbase,코인베이스-주가-전망,coinbase-stock-forecast
+CMCSA,NASDAQ,NASDAQ,USD,컴캐스트,Comcast Corporation,comcast-corporation,컴캐스트-주가-전망,comcast-corporation-stock-forecast
+CEG,NASDAQ,NASDAQ,USD,콘스텔레이션 에너지,Constellation Energy Corporatio,constellation-energy-corporatio,콘스텔레이션-에너지-주가-전망,constellation-energy-corporatio-stock-forecast
+CPRT,NASDAQ,NASDAQ,USD,코파트,"Copart, Inc.",copart-inc,코파트-주가-전망,copart-inc-stock-forecast
+CRWV,NASDAQ,NASDAQ,USD,"CoreWeave, Inc.","CoreWeave, Inc.",coreweave-inc,coreweave-inc-주가-전망,coreweave-inc-stock-forecast
+CSGP,NASDAQ,NASDAQ,USD,"CoStar Group, Inc.","CoStar Group, Inc.",costar-group-inc,costar-group-inc-주가-전망,costar-group-inc-stock-forecast
+COST,NASDAQ,NASDAQ,USD,코스트코,Costco Wholesale Corporation,costco-wholesale-corporation,코스트코-주가-전망,costco-wholesale-corporation-stock-forecast
+CRDO,NASDAQ,NASDAQ,USD,Credo Technology Group Holding,Credo Technology Group Holding,credo-technology-group-holding,credo-technology-group-holding-주가-전망,credo-technology-group-holding-stock-forecast
+CRWD,NASDAQ,NASDAQ,USD,크라우드스트라이크,"CrowdStrike Holdings, Inc.",crowdstrike-holdings-inc,크라우드스트라이크-주가-전망,crowdstrike-holdings-inc-stock-forecast
+CSX,NASDAQ,NASDAQ,USD,CSX,CSX Corporation,csx-corporation,csx-주가-전망,csx-corporation-stock-forecast
+DDOG,NASDAQ,NASDAQ,USD,데이터독,"Datadog, Inc.",datadog-inc,데이터독-주가-전망,datadog-inc-stock-forecast
+DXCM,NASDAQ,NASDAQ,USD,덱스컴,"DexCom, Inc.",dexcom-inc,덱스컴-주가-전망,dexcom-inc-stock-forecast
+FANG,NASDAQ,NASDAQ,USD,다이아몬드백 에너지,"Diamondback Energy, Inc.",diamondback-energy-inc,다이아몬드백-에너지-주가-전망,diamondback-energy-inc-stock-forecast
+DOCU,NASDAQ,NASDAQ,USD,도큐사인,"DocuSign, Inc.",docusign-inc,도큐사인-주가-전망,docusign-inc-stock-forecast
+DLTR,NASDAQ,NASDAQ,USD,"Dollar Tree, Inc.","Dollar Tree, Inc.",dollar-tree-inc,dollar-tree-inc-주가-전망,dollar-tree-inc-stock-forecast
+DPZ,NASDAQ,NASDAQ,USD,Domino's Pizza Inc,Domino's Pizza Inc,domino-s-pizza-inc,dominos-pizza-inc-주가-전망,domino-s-pizza-inc-stock-forecast
+DASH,NASDAQ,NASDAQ,USD,도어대시,"DoorDash, Inc.",doordash-inc,도어대시-주가-전망,doordash-inc-stock-forecast
+DKNG,NASDAQ,NASDAQ,USD,드래프트킹스,DraftKings Inc.,draftkings-inc,드래프트킹스-주가-전망,draftkings-inc-stock-forecast
+EWBC,NASDAQ,NASDAQ,USD,이스트웨스트 뱅코프,"East West Bancorp, Inc.",east-west-bancorp-inc,이스트웨스트-뱅코프-주가-전망,east-west-bancorp-inc-stock-forecast
+EBAY,NASDAQ,NASDAQ,USD,이베이,eBay Inc.,ebay-inc,이베이-주가-전망,ebay-inc-stock-forecast
+SATS,NASDAQ,NASDAQ,USD,EchoStar Corporation,EchoStar Corporation,echostar-corporation,echostar-corporation-주가-전망,echostar-corporation-stock-forecast
+ESLT,NASDAQ,NASDAQ,USD,Elbit Systems Ltd.,Elbit Systems Ltd.,elbit-systems-ltd,elbit-systems-ltd-주가-전망,elbit-systems-ltd-stock-forecast
+EA,NASDAQ,NASDAQ,USD,일렉트로닉 아츠,Electronic Arts Inc.,electronic-arts-inc,일렉트로닉-아츠-주가-전망,electronic-arts-inc-stock-forecast
+ENLT,NASDAQ,NASDAQ,USD,Enlight Renewable Energy Ltd.,Enlight Renewable Energy Ltd.,enlight-renewable-energy-ltd,enlight-renewable-energy-ltd-주가-전망,enlight-renewable-energy-ltd-stock-forecast
+ENTG,NASDAQ,NASDAQ,USD,엔테그리스,"Entegris, Inc.",entegris-inc,엔테그리스-주가-전망,entegris-inc-stock-forecast
+EQIX,NASDAQ,NASDAQ,USD,"Equinix, Inc.","Equinix, Inc.",equinix-inc,equinix-inc-주가-전망,equinix-inc-stock-forecast
+ERIC,NASDAQ,NASDAQ,USD,에릭슨,Ericsson,ericsson,에릭슨-주가-전망,ericsson-stock-forecast
+ERIE,NASDAQ,NASDAQ,USD,Erie Indemnity Company,Erie Indemnity Company,erie-indemnity-company,erie-indemnity-company-주가-전망,erie-indemnity-company-stock-forecast
+EVRG,NASDAQ,NASDAQ,USD,"Evergy, Inc.","Evergy, Inc.",evergy-inc,evergy-inc-주가-전망,evergy-inc-stock-forecast
+EXAS,NASDAQ,NASDAQ,USD,이그젝트 사이언스,Exact Sciences Corporation,exact-sciences-corporation,이그젝트-사이언스-주가-전망,exact-sciences-corporation-stock-forecast
+EXEL,NASDAQ,NASDAQ,USD,"Exelixis, Inc.","Exelixis, Inc.",exelixis-inc,exelixis-inc-주가-전망,exelixis-inc-stock-forecast
+EXC,NASDAQ,NASDAQ,USD,엑셀론,Exelon Corporation,exelon-corporation,엑셀론-주가-전망,exelon-corporation-stock-forecast
+EXE,NASDAQ,NASDAQ,USD,Expand Energy Corporation,Expand Energy Corporation,expand-energy-corporation,expand-energy-corporation-주가-전망,expand-energy-corporation-stock-forecast
+EXPE,NASDAQ,NASDAQ,USD,익스피디아,"Expedia Group, Inc.",expedia-group-inc,익스피디아-주가-전망,expedia-group-inc-stock-forecast
+FFIV,NASDAQ,NASDAQ,USD,F5,"F5, Inc.",f5-inc,f5-주가-전망,f5-inc-stock-forecast
+FAST,NASDAQ,NASDAQ,USD,패스널,Fastenal Company,fastenal-company,패스널-주가-전망,fastenal-company-stock-forecast
+FER,NASDAQ,NASDAQ,USD,Ferrovial SE,Ferrovial SE,ferrovial-se,ferrovial-se-주가-전망,ferrovial-se-stock-forecast
+FITB,NASDAQ,NASDAQ,USD,Fifth Third Bancorp,Fifth Third Bancorp,fifth-third-bancorp,fifth-third-bancorp-주가-전망,fifth-third-bancorp-stock-forecast
+FITBI,NASDAQ,NASDAQ,USD,Fifth Third Bancorp - Depositar,Fifth Third Bancorp - Depositar,fifth-third-bancorp-depositar,fifth-third-bancorp-depositar-주가-전망,fifth-third-bancorp-depositar-stock-forecast
+FCNCA,NASDAQ,NASDAQ,USD,퍼스트 시티즌스 뱅크셰어즈,"First Citizens BancShares, Inc.",first-citizens-bancshares-inc,퍼스트-시티즌스-뱅크셰어즈-주가-전망,first-citizens-bancshares-inc-stock-forecast
+FSLR,NASDAQ,NASDAQ,USD,퍼스트 솔라,"First Solar, Inc.",first-solar-inc,퍼스트-솔라-주가-전망,first-solar-inc-stock-forecast
+FISV,NASDAQ,NASDAQ,USD,"Fiserv, Inc.","Fiserv, Inc.",fiserv-inc,fiserv-inc-주가-전망,fiserv-inc-stock-forecast
+FIVE,NASDAQ,NASDAQ,USD,파이브 빌로우,"Five Below, Inc.",five-below-inc,파이브-빌로우-주가-전망,five-below-inc-stock-forecast
+FLEX,NASDAQ,NASDAQ,USD,플렉스,Flex Ltd.,flex-ltd,플렉스-주가-전망,flex-ltd-stock-forecast
+FTNT,NASDAQ,NASDAQ,USD,포티넷,"Fortinet, Inc.",fortinet-inc,포티넷-주가-전망,fortinet-inc-stock-forecast
+FOX,NASDAQ,NASDAQ,USD,폭스 B,Fox Corporation,fox-corporation,폭스-B-주가-전망,fox-corporation-stock-forecast
+FOXA,NASDAQ,NASDAQ,USD,폭스 A,Fox Corporation,fox-corporation-2,폭스-A-주가-전망,fox-corporation-2-stock-forecast
+FTAI,NASDAQ,NASDAQ,USD,FTAI 에비에이션,FTAI Aviation Ltd.,ftai-aviation-ltd,FTAI-에비에이션-주가-전망,ftai-aviation-ltd-stock-forecast
+FUTU,NASDAQ,NASDAQ,USD,푸투 홀딩스,Futu Holdings Limited,futu-holdings-limited,푸투-홀딩스-주가-전망,futu-holdings-limited-stock-forecast
+GLPI,NASDAQ,NASDAQ,USD,"Gaming and Leisure Properties,","Gaming and Leisure Properties,",gaming-and-leisure-properties,gaming-and-leisure-properties-주가-전망,gaming-and-leisure-properties-stock-forecast
+GDS,NASDAQ,NASDAQ,USD,GDS Holdings Limited,GDS Holdings Limited,gds-holdings-limited,gds-holdings-limited-주가-전망,gds-holdings-limited-stock-forecast
+GEHC,NASDAQ,NASDAQ,USD,GE 헬스케어,GE HealthCare Technologies Inc.,ge-healthcare-technologies-inc,GE-헬스케어-주가-전망,ge-healthcare-technologies-inc-stock-forecast
+GEN,NASDAQ,NASDAQ,USD,젠 디지털,Gen Digital Inc.,gen-digital-inc,젠-디지털-주가-전망,gen-digital-inc-stock-forecast
+GMAB,NASDAQ,NASDAQ,USD,Genmab A/S,Genmab A/S,genmab-a-s,genmab-a-s-주가-전망,genmab-a-s-stock-forecast
+GILD,NASDAQ,NASDAQ,USD,길리어드 사이언스,"Gilead Sciences, Inc.",gilead-sciences-inc,길리어드-사이언스-주가-전망,gilead-sciences-inc-stock-forecast
+GFS,NASDAQ,NASDAQ,USD,글로벌파운드리스,GlobalFoundries Inc.,globalfoundries-inc,글로벌파운드리스-주가-전망,globalfoundries-inc-stock-forecast
+GRAB,NASDAQ,NASDAQ,USD,Grab Holdings Limited,Grab Holdings Limited,grab-holdings-limited,grab-holdings-limited-주가-전망,grab-holdings-limited-stock-forecast
+GH,NASDAQ,NASDAQ,USD,"Guardant Health, Inc.","Guardant Health, Inc.",guardant-health-inc,guardant-health-inc-주가-전망,guardant-health-inc-stock-forecast
+HTHT,NASDAQ,NASDAQ,USD,화주 그룹,H World Group Limited,h-world-group-limited,화주-그룹-주가-전망,h-world-group-limited-stock-forecast
+HAS,NASDAQ,NASDAQ,USD,해즈브로,"Hasbro, Inc.",hasbro-inc,해즈브로-주가-전망,hasbro-inc-stock-forecast
+HOLX,NASDAQ,NASDAQ,USD,홀로직,"Hologic, Inc.",hologic-inc,홀로직-주가-전망,hologic-inc-stock-forecast
+HON,NASDAQ,NASDAQ,USD,허니웰,Honeywell International Inc.,honeywell-international-inc,허니웰-주가-전망,honeywell-international-inc-stock-forecast
+HST,NASDAQ,NASDAQ,USD,"Host Hotels & Resorts, Inc.","Host Hotels & Resorts, Inc.",host-hotels-and-resorts-inc,host-hotels-resorts-inc-주가-전망,host-hotels-and-resorts-inc-stock-forecast
+HBAN,NASDAQ,NASDAQ,USD,Huntington Bancshares Incorpora,Huntington Bancshares Incorpora,huntington-bancshares-incorpora,huntington-bancshares-incorpora-주가-전망,huntington-bancshares-incorpora-stock-forecast
+IDXX,NASDAQ,NASDAQ,USD,아이덱스 래버러토리스,"IDEXX Laboratories, Inc.",idexx-laboratories-inc,아이덱스-래버러토리스-주가-전망,idexx-laboratories-inc-stock-forecast
+IESC,NASDAQ,NASDAQ,USD,"IES Holdings, Inc.","IES Holdings, Inc.",ies-holdings-inc,ies-holdings-inc-주가-전망,ies-holdings-inc-stock-forecast
+ILMN,NASDAQ,NASDAQ,USD,일루미나,"Illumina, Inc.",illumina-inc,일루미나-주가-전망,illumina-inc-stock-forecast
+IBRX,NASDAQ,NASDAQ,USD,"ImmunityBio, Inc.","ImmunityBio, Inc.",immunitybio-inc,immunitybio-inc-주가-전망,immunitybio-inc-stock-forecast
+INCY,NASDAQ,NASDAQ,USD,인사이트,Incyte Corporation,incyte-corporation,인사이트-주가-전망,incyte-corporation-stock-forecast
+INSM,NASDAQ,NASDAQ,USD,인스메드,Insmed Incorporated,insmed-incorporated,인스메드-주가-전망,insmed-incorporated-stock-forecast
+PODD,NASDAQ,NASDAQ,USD,인슐렛,Insulet Corporation,insulet-corporation,인슐렛-주가-전망,insulet-corporation-stock-forecast
+INTC,NASDAQ,NASDAQ,USD,인텔,Intel Corporation,intel,인텔-주가-전망,intel-stock-forecast
+IBKR,NASDAQ,NASDAQ,USD,인터랙티브 브로커스,"Interactive Brokers Group, Inc.",interactive-brokers-group-inc,인터랙티브-브로커스-주가-전망,interactive-brokers-group-inc-stock-forecast
+IDCC,NASDAQ,NASDAQ,USD,"InterDigital, Inc.","InterDigital, Inc.",interdigital-inc,interdigital-inc-주가-전망,interdigital-inc-stock-forecast
+INTU,NASDAQ,NASDAQ,USD,인튜이트,Intuit Inc.,intuit-inc,인튜이트-주가-전망,intuit-inc-stock-forecast
+ISRG,NASDAQ,NASDAQ,USD,인튜이티브 서지컬,"Intuitive Surgical, Inc.",intuitive-surgical-inc,인튜이티브-서지컬-주가-전망,intuitive-surgical-inc-stock-forecast
+IONS,NASDAQ,NASDAQ,USD,"Ionis Pharmaceuticals, Inc.","Ionis Pharmaceuticals, Inc.",ionis-pharmaceuticals-inc,ionis-pharmaceuticals-inc-주가-전망,ionis-pharmaceuticals-inc-stock-forecast
+IREN,NASDAQ,NASDAQ,USD,IREN LIMITED,IREN LIMITED,iren-limited,iren-limited-주가-전망,iren-limited-stock-forecast
+JBHT,NASDAQ,NASDAQ,USD,"J.B. Hunt Transport Services, I","J.B. Hunt Transport Services, I",j-b-hunt-transport-services-i,jb-hunt-transport-services-i-주가-전망,j-b-hunt-transport-services-i-stock-forecast
+JKHY,NASDAQ,NASDAQ,USD,"Jack Henry & Associates, Inc.","Jack Henry & Associates, Inc.",jack-henry-and-associates-inc,jack-henry-associates-inc-주가-전망,jack-henry-and-associates-inc-stock-forecast
+JAZZ,NASDAQ,NASDAQ,USD,Jazz Pharmaceuticals plc,Jazz Pharmaceuticals plc,jazz-pharmaceuticals-plc,jazz-pharmaceuticals-plc-주가-전망,jazz-pharmaceuticals-plc-stock-forecast
+JD,NASDAQ,NASDAQ,USD,징둥닷컴,"JD.com, Inc.",jd-com-inc,징둥닷컴-주가-전망,jd-com-inc-stock-forecast
+KSPI,NASDAQ,NASDAQ,USD,Joint Stock Company Kaspi.kz -,Joint Stock Company Kaspi.kz -,joint-stock-company-kaspi-kz,joint-stock-company-kaspikz-주가-전망,joint-stock-company-kaspi-kz-stock-forecast
+KDP,NASDAQ,NASDAQ,USD,큐리그 닥터페퍼,Keurig Dr Pepper Inc.,keurig-dr-pepper-inc,큐리그-닥터페퍼-주가-전망,keurig-dr-pepper-inc-stock-forecast
+KMB,NASDAQ,NASDAQ,USD,Kimberly-Clark Corporation,Kimberly-Clark Corporation,kimberly-clark-corporation,kimberly-clark-corporation-주가-전망,kimberly-clark-corporation-stock-forecast
+KLAC,NASDAQ,NASDAQ,USD,KLA,KLA Corporation,kla-corporation,kla-주가-전망,kla-corporation-stock-forecast
+KTOS,NASDAQ,NASDAQ,USD,Kratos Defense & Security Solut,Kratos Defense & Security Solut,kratos-defense-and-security-solut,kratos-defense-security-solut-주가-전망,kratos-defense-and-security-solut-stock-forecast
+LRCX,NASDAQ,NASDAQ,USD,램리서치,Lam Research Corporation,lam-research-corporation,램리서치-주가-전망,lam-research-corporation-stock-forecast
+LAMR,NASDAQ,NASDAQ,USD,라마 광고,Lamar Advertising Company,lamar-advertising-company,라마-광고-주가-전망,lamar-advertising-company-stock-forecast
+LSCC,NASDAQ,NASDAQ,USD,Lattice Semiconductor Corporati,Lattice Semiconductor Corporati,lattice-semiconductor-corporati,lattice-semiconductor-corporati-주가-전망,lattice-semiconductor-corporati-stock-forecast
+DRS,NASDAQ,NASDAQ,USD,"Leonardo DRS, Inc.","Leonardo DRS, Inc.",leonardo-drs-inc,leonardo-drs-inc-주가-전망,leonardo-drs-inc-stock-forecast
+LI,NASDAQ,NASDAQ,USD,리 오토,Li Auto Inc.,li-auto-inc,리-오토-주가-전망,li-auto-inc-stock-forecast
+LLYVK,NASDAQ,NASDAQ,USD,"Liberty Live Holdings, Inc. - S","Liberty Live Holdings, Inc. - S",liberty-live-holdings-inc-s,liberty-live-holdings-inc-s-주가-전망,liberty-live-holdings-inc-s-stock-forecast
+FWONA,NASDAQ,NASDAQ,USD,Liberty Media Corporation - Ser,Liberty Media Corporation - Ser,liberty-media-corporation-ser,liberty-media-corporation-ser-주가-전망,liberty-media-corporation-ser-stock-forecast
+FWONK,NASDAQ,NASDAQ,USD,Liberty Media Corporation - Ser,Liberty Media Corporation - Ser,liberty-media-corporation-ser-2,liberty-media-corporation-ser-주가-전망-fwonk,liberty-media-corporation-ser-2-stock-forecast
+LECO,NASDAQ,NASDAQ,USD,"Lincoln Electric Holdings, Inc.","Lincoln Electric Holdings, Inc.",lincoln-electric-holdings-inc,lincoln-electric-holdings-inc-주가-전망,lincoln-electric-holdings-inc-stock-forecast
+LIN,NASDAQ,NASDAQ,USD,린데,Linde plc,linde-plc,린데-주가-전망,linde-plc-stock-forecast
+LINE,NASDAQ,NASDAQ,USD,"Lineage, Inc.","Lineage, Inc.",lineage-inc,lineage-inc-주가-전망,lineage-inc-stock-forecast
+LOGI,NASDAQ,NASDAQ,USD,로지텍,Logitech International S.A. - R,logitech-international-s-a-r,로지텍-주가-전망,logitech-international-s-a-r-stock-forecast
+LPLA,NASDAQ,NASDAQ,USD,LPL 파이낸셜,LPL Financial Holdings Inc.,lpl-financial-holdings-inc,LPL-파이낸셜-주가-전망,lpl-financial-holdings-inc-stock-forecast
+LULU,NASDAQ,NASDAQ,USD,룰루레몬,lululemon athletica inc.,lululemon-athletica-inc,룰루레몬-주가-전망,lululemon-athletica-inc-stock-forecast
+LITE,NASDAQ,NASDAQ,USD,Lumentum Holdings Inc.,Lumentum Holdings Inc.,lumentum-holdings-inc,lumentum-holdings-inc-주가-전망,lumentum-holdings-inc-stock-forecast
+MTSI,NASDAQ,NASDAQ,USD,MACOM Technology Solutions Hold,MACOM Technology Solutions Hold,macom-technology-solutions-hold,macom-technology-solutions-hold-주가-전망,macom-technology-solutions-hold-stock-forecast
+MDGL,NASDAQ,NASDAQ,USD,"Madrigal Pharmaceuticals, Inc.","Madrigal Pharmaceuticals, Inc.",madrigal-pharmaceuticals-inc,madrigal-pharmaceuticals-inc-주가-전망,madrigal-pharmaceuticals-inc-stock-forecast
+CART,NASDAQ,NASDAQ,USD,인스타카트,Maplebear Inc.,maplebear-inc,인스타카트-주가-전망,maplebear-inc-stock-forecast
+MAR,NASDAQ,NASDAQ,USD,메리어트 인터내셔널,Marriott International,marriott-international,메리어트-인터내셔널-주가-전망,marriott-international-stock-forecast
+MRVL,NASDAQ,NASDAQ,USD,마벨 테크놀로지,"Marvell Technology, Inc.",marvell-technology-inc,마벨-테크놀로지-주가-전망,marvell-technology-inc-stock-forecast
+MASI,NASDAQ,NASDAQ,USD,Masimo Corporation,Masimo Corporation,masimo-corporation,masimo-corporation-주가-전망,masimo-corporation-stock-forecast
+MDLN,NASDAQ,NASDAQ,USD,Medline Inc.,Medline Inc.,medline-inc,medline-inc-주가-전망,medline-inc-stock-forecast
+MEDP,NASDAQ,NASDAQ,USD,"Medpace Holdings, Inc.","Medpace Holdings, Inc.",medpace-holdings-inc,medpace-holdings-inc-주가-전망,medpace-holdings-inc-stock-forecast
+MELI,NASDAQ,NASDAQ,USD,메르카도리브레,"MercadoLibre, Inc.",mercadolibre-inc,메르카도리브레-주가-전망,mercadolibre-inc-stock-forecast
+META,NASDAQ,NASDAQ,USD,메타,"Meta Platforms, Inc.",meta,메타-주가-전망,meta-stock-forecast
+MCHP,NASDAQ,NASDAQ,USD,마이크로칩 테크놀로지,Microchip Technology Incorporat,microchip-technology-incorporat,마이크로칩-테크놀로지-주가-전망,microchip-technology-incorporat-stock-forecast
+MU,NASDAQ,NASDAQ,USD,마이크론 테크놀로지,"Micron Technology, Inc.",micron-technology-inc,마이크론-테크놀로지-주가-전망,micron-technology-inc-stock-forecast
+MSFT,NASDAQ,NASDAQ,USD,마이크로소프트,Microsoft Corporation,microsoft,마이크로소프트-주가-전망,microsoft-stock-forecast
+TIGO,NASDAQ,NASDAQ,USD,Millicom International Cellular,Millicom International Cellular,millicom-international-cellular,millicom-international-cellular-주가-전망,millicom-international-cellular-stock-forecast
+MKSI,NASDAQ,NASDAQ,USD,MKS Inc.,MKS Inc.,mks-inc,mks-inc-주가-전망,mks-inc-stock-forecast
+MRNA,NASDAQ,NASDAQ,USD,모더나,"Moderna, Inc.",moderna-inc,모더나-주가-전망,moderna-inc-stock-forecast
+MDLZ,NASDAQ,NASDAQ,USD,몬델리즈,"Mondelez International, Inc.",mondelez-international-inc,몬델리즈-주가-전망,mondelez-international-inc-stock-forecast
+MDB,NASDAQ,NASDAQ,USD,몽고DB,"MongoDB, Inc.",mongodb-inc,몽고DB-주가-전망,mongodb-inc-stock-forecast
+MPWR,NASDAQ,NASDAQ,USD,모놀리식 파워 시스템즈,"Monolithic Power Systems, Inc.",monolithic-power-systems-inc,모놀리식-파워-시스템즈-주가-전망,monolithic-power-systems-inc-stock-forecast
+MNST,NASDAQ,NASDAQ,USD,몬스터 베버리지,Monster Beverage Corporation,monster-beverage-corporation,몬스터-베버리지-주가-전망,monster-beverage-corporation-stock-forecast
+NDAQ,NASDAQ,NASDAQ,USD,나스닥,"Nasdaq, Inc.",nasdaq-inc,나스닥-주가-전망,nasdaq-inc-stock-forecast
+NTRA,NASDAQ,NASDAQ,USD,나테라,"Natera, Inc.",natera-inc,나테라-주가-전망,natera-inc-stock-forecast
+NBIS,NASDAQ,NASDAQ,USD,Nebius Group N.V.,Nebius Group N.V.,nebius-group-n-v,nebius-group-nv-주가-전망,nebius-group-n-v-stock-forecast
+NTAP,NASDAQ,NASDAQ,USD,넷앱,"NetApp, Inc.",netapp-inc,넷앱-주가-전망,netapp-inc-stock-forecast
+NTES,NASDAQ,NASDAQ,USD,넷이즈,"NetEase, Inc.",netease-inc,넷이즈-주가-전망,netease-inc-stock-forecast
+NFLX,NASDAQ,NASDAQ,USD,넷플릭스,"Netflix, Inc.",netflix,넷플릭스-주가-전망,netflix-stock-forecast
+NBIX,NASDAQ,NASDAQ,USD,뉴로크라인 바이오사이언스,"Neurocrine Biosciences, Inc.",neurocrine-biosciences-inc,뉴로크라인-바이오사이언스-주가-전망,neurocrine-biosciences-inc-stock-forecast
+NWS,NASDAQ,NASDAQ,USD,뉴스 코프 B,News Corporation,news-corporation,뉴스-코프-B-주가-전망,news-corporation-stock-forecast
+NWSA,NASDAQ,NASDAQ,USD,뉴스 코프 A,News Corporation,news-corporation-2,뉴스-코프-A-주가-전망,news-corporation-2-stock-forecast
+NXT,NASDAQ,NASDAQ,USD,넥스터 트래커,Nextpower Inc.,nextpower-inc,넥스터-트래커-주가-전망,nextpower-inc-stock-forecast
+NDSN,NASDAQ,NASDAQ,USD,Nordson Corporation,Nordson Corporation,nordson-corporation,nordson-corporation-주가-전망,nordson-corporation-stock-forecast
+NTRS,NASDAQ,NASDAQ,USD,Northern Trust Corporation,Northern Trust Corporation,northern-trust-corporation,northern-trust-corporation-주가-전망,northern-trust-corporation-stock-forecast
+NVMI,NASDAQ,NASDAQ,USD,노바,Nova Ltd.,nova-ltd,노바-주가-전망,nova-ltd-stock-forecast
+NTNX,NASDAQ,NASDAQ,USD,뉴타닉스,"Nutanix, Inc.",nutanix-inc,뉴타닉스-주가-전망,nutanix-inc-stock-forecast
+NVDA,NASDAQ,NASDAQ,USD,엔비디아,NVIDIA Corporation,nvidia,엔비디아-주가-전망,nvidia-stock-forecast
+NXPI,NASDAQ,NASDAQ,USD,NXP 반도체,NXP Semiconductors N.V.,nxp-semiconductors-n-v,NXP-반도체-주가-전망,nxp-semiconductors-n-v-stock-forecast
+ORLY,NASDAQ,NASDAQ,USD,오라일리 오토모티브,"O'Reilly Automotive, Inc.",o-reilly-automotive-inc,오라일리-오토모티브-주가-전망,o-reilly-automotive-inc-stock-forecast
+OKTA,NASDAQ,NASDAQ,USD,옥타,"Okta, Inc.",okta-inc,옥타-주가-전망,okta-inc-stock-forecast
+ODFL,NASDAQ,NASDAQ,USD,올드 도미니언 프레이트 라인,"Old Dominion Freight Line, Inc.",old-dominion-freight-line-inc,올드-도미니언-프레이트-라인-주가-전망,old-dominion-freight-line-inc-stock-forecast
+ON,NASDAQ,NASDAQ,USD,온세미,ON Semiconductor Corporation,on-semiconductor-corporation,온세미-주가-전망,on-semiconductor-corporation-stock-forecast
+PCAR,NASDAQ,NASDAQ,USD,팩카,PACCAR Inc.,paccar-inc,팩카-주가-전망,paccar-inc-stock-forecast
+PLTR,NASDAQ,NASDAQ,USD,팔란티어,Palantir Technologies Inc.,palantir,팔란티어-주가-전망,palantir-stock-forecast
+PANW,NASDAQ,NASDAQ,USD,팔로알토 네트웍스,"Palo Alto Networks, Inc.",palo-alto-networks,팔로알토-네트웍스-주가-전망,palo-alto-networks-stock-forecast
+PSKY,NASDAQ,NASDAQ,USD,Paramount Skydance Corporation,Paramount Skydance Corporation,paramount-skydance-corporation,paramount-skydance-corporation-주가-전망,paramount-skydance-corporation-stock-forecast
+PAYX,NASDAQ,NASDAQ,USD,페이첵스,"Paychex, Inc.",paychex-inc,페이첵스-주가-전망,paychex-inc-stock-forecast
+PYPL,NASDAQ,NASDAQ,USD,페이팔,"PayPal Holdings, Inc.",paypal,페이팔-주가-전망,paypal-stock-forecast
+PAYP,NASDAQ,NASDAQ,USD,PayPay Corporation - American D,PayPay Corporation - American D,paypay-corporation-american-d,paypay-corporation-american-d-주가-전망,paypay-corporation-american-d-stock-forecast
+PDD,NASDAQ,NASDAQ,USD,핀둬둬,PDD Holdings Inc.,pdd-holdings-inc,핀둬둬-주가-전망,pdd-holdings-inc-stock-forecast
+PEP,NASDAQ,NASDAQ,USD,펩시코,"Pepsico, Inc.",pepsico-inc,펩시코-주가-전망,pepsico-inc-stock-forecast
+PAA,NASDAQ,NASDAQ,USD,"Plains All American Pipeline, L","Plains All American Pipeline, L",plains-all-american-pipeline-l,plains-all-american-pipeline-l-주가-전망,plains-all-american-pipeline-l-stock-forecast
+PSNYW,NASDAQ,NASDAQ,USD,Polestar Automotive Holding UK,Polestar Automotive Holding UK,polestar-automotive-holding-uk,polestar-automotive-holding-uk-주가-전망,polestar-automotive-holding-uk-stock-forecast
+PFG,NASDAQ,NASDAQ,USD,Principal Financial Group Inc,Principal Financial Group Inc,principal-financial-group-inc,principal-financial-group-inc-주가-전망,principal-financial-group-inc-stock-forecast
+PTC,NASDAQ,NASDAQ,USD,PTC,PTC Inc.,ptc-inc,ptc-주가-전망,ptc-inc-stock-forecast
+QCOM,NASDAQ,NASDAQ,USD,퀄컴,QUALCOMM Incorporated,qualcomm,퀄컴-주가-전망,qualcomm-stock-forecast
+RMBS,NASDAQ,NASDAQ,USD,"Rambus, Inc.","Rambus, Inc.",rambus-inc,rambus-inc-주가-전망,rambus-inc-stock-forecast
+RGC,NASDAQ,NASDAQ,USD,Regencell Bioscience Holdings L,Regencell Bioscience Holdings L,regencell-bioscience-holdings-l,regencell-bioscience-holdings-l-주가-전망,regencell-bioscience-holdings-l-stock-forecast
+REG,NASDAQ,NASDAQ,USD,리젠시 센터스,Regency Centers Corporation,regency-centers-corporation,리젠시-센터스-주가-전망,regency-centers-corporation-stock-forecast
+REGN,NASDAQ,NASDAQ,USD,리제네론,"Regeneron Pharmaceuticals, Inc.",regeneron-pharmaceuticals-inc,리제네론-주가-전망,regeneron-pharmaceuticals-inc-stock-forecast
+RVMD,NASDAQ,NASDAQ,USD,"Revolution Medicines, Inc.","Revolution Medicines, Inc.",revolution-medicines-inc,revolution-medicines-inc-주가-전망,revolution-medicines-inc-stock-forecast
+RIVN,NASDAQ,NASDAQ,USD,리비안,"Rivian Automotive, Inc.",rivian-automotive-inc,리비안-주가-전망,rivian-automotive-inc-stock-forecast
+HOOD,NASDAQ,NASDAQ,USD,로빈후드,"Robinhood Markets, Inc.",robinhood-markets-inc,로빈후드-주가-전망,robinhood-markets-inc-stock-forecast
+RKLB,NASDAQ,NASDAQ,USD,로켓 랩 USA,Rocket Lab Corporation,rocket-lab-corporation,로켓-랩-USA-주가-전망,rocket-lab-corporation-stock-forecast
+ROIV,NASDAQ,NASDAQ,USD,Roivant Sciences Ltd.,Roivant Sciences Ltd.,roivant-sciences-ltd,roivant-sciences-ltd-주가-전망,roivant-sciences-ltd-stock-forecast
+ROKU,NASDAQ,NASDAQ,USD,로쿠,"Roku, Inc.",roku-inc,로쿠-주가-전망,roku-inc-stock-forecast
+ROP,NASDAQ,NASDAQ,USD,"Roper Technologies, Inc.","Roper Technologies, Inc.",roper-technologies-inc,roper-technologies-inc-주가-전망,roper-technologies-inc-stock-forecast
+ROST,NASDAQ,NASDAQ,USD,로스 스토어스,"Ross Stores, Inc.",ross-stores-inc,로스-스토어스-주가-전망,ross-stores-inc-stock-forecast
+RGLD,NASDAQ,NASDAQ,USD,"Royal Gold, Inc.","Royal Gold, Inc.",royal-gold-inc,royal-gold-inc-주가-전망,royal-gold-inc-stock-forecast
+RPRX,NASDAQ,NASDAQ,USD,Royalty Pharma plc,Royalty Pharma plc,royalty-pharma-plc,royalty-pharma-plc-주가-전망,royalty-pharma-plc-stock-forecast
+RYAAY,NASDAQ,NASDAQ,USD,라이언에어,Ryanair Holdings plc,ryanair-holdings-plc,라이언에어-주가-전망,ryanair-holdings-plc-stock-forecast
+SNDK,NASDAQ,NASDAQ,USD,Sandisk Corporation,Sandisk Corporation,sandisk-corporation,sandisk-corporation-주가-전망,sandisk-corporation-stock-forecast
+SNY,NASDAQ,NASDAQ,USD,Sanofi,Sanofi,sanofi,sanofi-주가-전망,sanofi-stock-forecast
+SBAC,NASDAQ,NASDAQ,USD,SBA 커뮤니케이션스,SBA Communications Corporation,sba-communications-corporation,SBA-커뮤니케이션스-주가-전망,sba-communications-corporation-stock-forecast
+STX,NASDAQ,NASDAQ,USD,씨게이트 테크놀로지,Seagate Technology Holdings PLC,seagate-technology-holdings-plc,씨게이트-테크놀로지-주가-전망,seagate-technology-holdings-plc-stock-forecast
+SEIC,NASDAQ,NASDAQ,USD,SEI 인베스트먼츠,SEI Investments Company,sei-investments-company,SEI-인베스트먼츠-주가-전망,sei-investments-company-stock-forecast
+SHOP,NASDAQ,NASDAQ,USD,쇼피파이,Shopify Inc.,shopify,쇼피파이-주가-전망,shopify-stock-forecast
+SITM,NASDAQ,NASDAQ,USD,SiTime Corporation,SiTime Corporation,sitime-corporation,sitime-corporation-주가-전망,sitime-corporation-stock-forecast
+SFD,NASDAQ,NASDAQ,USD,"Smithfield Foods, Inc.","Smithfield Foods, Inc.",smithfield-foods-inc,smithfield-foods-inc-주가-전망,smithfield-foods-inc-stock-forecast
+SOFI,NASDAQ,NASDAQ,USD,소파이,"SoFi Technologies, Inc.",sofi-technologies-inc,소파이-주가-전망,sofi-technologies-inc-stock-forecast
+SOLS,NASDAQ,NASDAQ,USD,Solstice Advanced Materials Inc,Solstice Advanced Materials Inc,solstice-advanced-materials-inc,solstice-advanced-materials-inc-주가-전망,solstice-advanced-materials-inc-stock-forecast
+SSNC,NASDAQ,NASDAQ,USD,"SS&C Technologies Holdings, Inc","SS&C Technologies Holdings, Inc",ss-and-c-technologies-holdings-inc,ss-c-technologies-holdings-inc-주가-전망,ss-and-c-technologies-holdings-inc-stock-forecast
+SBUX,NASDAQ,NASDAQ,USD,스타벅스,Starbucks Corporation,starbucks-corporation,스타벅스-주가-전망,starbucks-corporation-stock-forecast
+STLD,NASDAQ,NASDAQ,USD,"Steel Dynamics, Inc.","Steel Dynamics, Inc.",steel-dynamics-inc,steel-dynamics-inc-주가-전망,steel-dynamics-inc-stock-forecast
+STRL,NASDAQ,NASDAQ,USD,"Sterling Infrastructure, Inc.","Sterling Infrastructure, Inc.",sterling-infrastructure-inc,sterling-infrastructure-inc-주가-전망,sterling-infrastructure-inc-stock-forecast
+MSTR,NASDAQ,NASDAQ,USD,마이크로스트래티지,Strategy Inc,strategy-inc,마이크로스트래티지-주가-전망,strategy-inc-stock-forecast
+SMMT,NASDAQ,NASDAQ,USD,Summit Therapeutics Inc.,Summit Therapeutics Inc.,summit-therapeutics-inc,summit-therapeutics-inc-주가-전망,summit-therapeutics-inc-stock-forecast
+SMCI,NASDAQ,NASDAQ,USD,슈퍼마이크로컴퓨터,"Super Micro Computer, Inc.",super-micro-computer,슈퍼마이크로컴퓨터-주가-전망,super-micro-computer-stock-forecast
+SYM,NASDAQ,NASDAQ,USD,Symbotic Inc.,Symbotic Inc.,symbotic-inc,symbotic-inc-주가-전망,symbotic-inc-stock-forecast
+SNPS,NASDAQ,NASDAQ,USD,시놉시스,"Synopsys, Inc.",synopsys-inc,시놉시스-주가-전망,synopsys-inc-stock-forecast
+TMUS,NASDAQ,NASDAQ,USD,T모바일 US,"T-Mobile US, Inc.",t-mobile-us-inc,T모바일-US-주가-전망,t-mobile-us-inc-stock-forecast
+TROW,NASDAQ,NASDAQ,USD,"T. Rowe Price Group, Inc.","T. Rowe Price Group, Inc.",t-rowe-price-group-inc,t-rowe-price-group-inc-주가-전망,t-rowe-price-group-inc-stock-forecast
+TTWO,NASDAQ,NASDAQ,USD,테이크투 인터랙티브,"Take-Two Interactive Software,",take-two-interactive-software,테이크투-인터랙티브-주가-전망,take-two-interactive-software-stock-forecast
+TLN,NASDAQ,NASDAQ,USD,Talen Energy Corporation,Talen Energy Corporation,talen-energy-corporation,talen-energy-corporation-주가-전망,talen-energy-corporation-stock-forecast
+TER,NASDAQ,NASDAQ,USD,테라다인,"Teradyne, Inc.",teradyne-inc,테라다인-주가-전망,teradyne-inc-stock-forecast
+TSLA,NASDAQ,NASDAQ,USD,테슬라,"Tesla, Inc.",tesla,테슬라-주가-전망,tesla-stock-forecast
+TXN,NASDAQ,NASDAQ,USD,텍사스 인스트루먼트,Texas Instruments Incorporated,texas-instruments-incorporated,텍사스-인스트루먼트-주가-전망,texas-instruments-incorporated-stock-forecast
+TXRH,NASDAQ,NASDAQ,USD,"Texas Roadhouse, Inc.","Texas Roadhouse, Inc.",texas-roadhouse-inc,texas-roadhouse-inc-주가-전망,texas-roadhouse-inc-stock-forecast
+CG,NASDAQ,NASDAQ,USD,The Carlyle Group Inc.,The Carlyle Group Inc.,the-carlyle-group-inc,the-carlyle-group-inc-주가-전망,the-carlyle-group-inc-stock-forecast
+COO,NASDAQ,NASDAQ,USD,"The Cooper Companies, Inc.","The Cooper Companies, Inc.",the-cooper-companies-inc,the-cooper-companies-inc-주가-전망,the-cooper-companies-inc-stock-forecast
+ENSG,NASDAQ,NASDAQ,USD,"The Ensign Group, Inc.","The Ensign Group, Inc.",the-ensign-group-inc,the-ensign-group-inc-주가-전망,the-ensign-group-inc-stock-forecast
+KHC,NASDAQ,NASDAQ,USD,크래프트 하인즈,The Kraft Heinz Company,the-kraft-heinz-company,크래프트-하인즈-주가-전망,the-kraft-heinz-company-stock-forecast
+TTD,NASDAQ,NASDAQ,USD,더 트레이드 데스크,"The Trade Desk, Inc.",the-trade-desk-inc,더-트레이드-데스크-주가-전망,the-trade-desk-inc-stock-forecast
+TRI,NASDAQ,NASDAQ,USD,Thomson Reuters Corp,Thomson Reuters Corp,thomson-reuters-corp,thomson-reuters-corp-주가-전망,thomson-reuters-corp-stock-forecast
+TSEM,NASDAQ,NASDAQ,USD,타워 세미컨덕터,Tower Semiconductor Ltd.,tower-semiconductor-ltd,타워-세미컨덕터-주가-전망,tower-semiconductor-ltd-stock-forecast
+TPG,NASDAQ,NASDAQ,USD,TPG Inc.,TPG Inc.,tpg-inc,tpg-inc-주가-전망,tpg-inc-stock-forecast
+TSCO,NASDAQ,NASDAQ,USD,트랙터 서플라이,Tractor Supply Company,tractor-supply-company,트랙터-서플라이-주가-전망,tractor-supply-company-stock-forecast
+TW,NASDAQ,NASDAQ,USD,Tradeweb Markets Inc.,Tradeweb Markets Inc.,tradeweb-markets-inc,tradeweb-markets-inc-주가-전망,tradeweb-markets-inc-stock-forecast
+TRMB,NASDAQ,NASDAQ,USD,Trimble Inc.,Trimble Inc.,trimble-inc,trimble-inc-주가-전망,trimble-inc-stock-forecast
+TCOM,NASDAQ,NASDAQ,USD,트립닷컴,Trip.com Group Limited,trip-com-group-limited,트립닷컴-주가-전망,trip-com-group-limited-stock-forecast
+TTMI,NASDAQ,NASDAQ,USD,TTM 테크놀로지스,"TTM Technologies, Inc.",ttm-technologies-inc,TTM-테크놀로지스-주가-전망,ttm-technologies-inc-stock-forecast
+ULTA,NASDAQ,NASDAQ,USD,"Ulta Beauty, Inc.","Ulta Beauty, Inc.",ulta-beauty-inc,ulta-beauty-inc-주가-전망,ulta-beauty-inc-stock-forecast
+UAL,NASDAQ,NASDAQ,USD,유나이티드 항공,"United Airlines Holdings, Inc.",united-airlines-holdings-inc,유나이티드-항공-주가-전망,united-airlines-holdings-inc-stock-forecast
+UTHR,NASDAQ,NASDAQ,USD,유나이티드 테라퓨틱스,United Therapeutics Corporation,united-therapeutics-corporation,유나이티드-테라퓨틱스-주가-전망,united-therapeutics-corporation-stock-forecast
+VRSN,NASDAQ,NASDAQ,USD,"VeriSign, Inc.","VeriSign, Inc.",verisign-inc,verisign-inc-주가-전망,verisign-inc-stock-forecast
+VRSK,NASDAQ,NASDAQ,USD,베리스크,"Verisk Analytics, Inc.",verisk-analytics-inc,베리스크-주가-전망,verisk-analytics-inc-stock-forecast
+VRTX,NASDAQ,NASDAQ,USD,버텍스 파마슈티컬스,Vertex Pharmaceuticals Incorpor,vertex-pharmaceuticals-incorpor,버텍스-파마슈티컬스-주가-전망,vertex-pharmaceuticals-incorpor-stock-forecast
+VTRS,NASDAQ,NASDAQ,USD,Viatris Inc.,Viatris Inc.,viatris-inc,viatris-inc-주가-전망,viatris-inc-stock-forecast
+VNOM,NASDAQ,NASDAQ,USD,"Viper Energy, Inc.","Viper Energy, Inc.",viper-energy-inc,viper-energy-inc-주가-전망,viper-energy-inc-stock-forecast
+VOD,NASDAQ,NASDAQ,USD,보다폰,Vodafone Group Plc,vodafone-group-plc,보다폰-주가-전망,vodafone-group-plc-stock-forecast
+WMT,NASDAQ,NASDAQ,USD,Walmart Inc.,Walmart Inc.,walmart,walmart-inc-주가-전망,walmart-stock-forecast
+WBD,NASDAQ,NASDAQ,USD,워너브라더스 디스커버리,"Warner Bros. Discovery, Inc. -",warner-bros-discovery-inc,워너브라더스-디스커버리-주가-전망,warner-bros-discovery-inc-stock-forecast
+WMG,NASDAQ,NASDAQ,USD,Warner Music Group Corp.,Warner Music Group Corp.,warner-music-group-corp,warner-music-group-corp-주가-전망,warner-music-group-corp-stock-forecast
+WDC,NASDAQ,NASDAQ,USD,웨스턴 디지털,Western Digital Corporation,western-digital-corporation,웨스턴-디지털-주가-전망,western-digital-corporation-stock-forecast
+WTW,NASDAQ,NASDAQ,USD,Willis Towers Watson Public Lim,Willis Towers Watson Public Lim,willis-towers-watson-public-lim,willis-towers-watson-public-lim-주가-전망,willis-towers-watson-public-lim-stock-forecast
+WTFC,NASDAQ,NASDAQ,USD,윈트러스트 파이낸셜,Wintrust Financial Corporation,wintrust-financial-corporation,윈트러스트-파이낸셜-주가-전망,wintrust-financial-corporation-stock-forecast
+WWD,NASDAQ,NASDAQ,USD,"Woodward, Inc.","Woodward, Inc.",woodward-inc,woodward-inc-주가-전망,woodward-inc-stock-forecast
+WDAY,NASDAQ,NASDAQ,USD,워크데이,"Workday, Inc.",workday-inc,워크데이-주가-전망,workday-inc-stock-forecast
+WYNN,NASDAQ,NASDAQ,USD,윈 리조트,"Wynn Resorts, Limited",wynn-resorts-limited,윈-리조트-주가-전망,wynn-resorts-limited-stock-forecast
+XEL,NASDAQ,NASDAQ,USD,엑셀 에너지,Xcel Energy Inc.,xcel-energy-inc,엑셀-에너지-주가-전망,xcel-energy-inc-stock-forecast
+XP,NASDAQ,NASDAQ,USD,XP Inc.,XP Inc.,xp-inc,xp-inc-주가-전망,xp-inc-stock-forecast
+ZBRA,NASDAQ,NASDAQ,USD,지브라 테크놀로지스,Zebra Technologies Corporation,zebra-technologies-corporation,지브라-테크놀로지스-주가-전망,zebra-technologies-corporation-stock-forecast
+Z,NASDAQ,NASDAQ,USD,"Zillow Group, Inc.","Zillow Group, Inc.",zillow-group-inc,zillow-group-inc-주가-전망,zillow-group-inc-stock-forecast
+ZG,NASDAQ,NASDAQ,USD,"Zillow Group, Inc.","Zillow Group, Inc.",zillow-group-inc-2,zillow-group-inc-주가-전망-zg,zillow-group-inc-2-stock-forecast
+ZM,NASDAQ,NASDAQ,USD,줌,"Zoom Communications, Inc.",zoom-communications-inc,줌-주가-전망,zoom-communications-inc-stock-forecast
+ZS,NASDAQ,NASDAQ,USD,지스케일러,"Zscaler, Inc.",zscaler-inc,지스케일러-주가-전망,zscaler-inc-stock-forecast
