@@ -4,7 +4,38 @@ const API_TIMEOUT_MS = 60000;
 
 const params = new URLSearchParams(window.location.search);
 
-let rawSymbol = (params.get("symbol") || "").toUpperCase().trim();
+function normalizeSymbol(value) {
+  const raw = String(value || "").trim();
+  if (!raw) return "";
+
+  if (/^\d{6}\.(KS|KQ)$/i.test(raw)) return raw.toUpperCase();
+  if (/^\d{6}$/i.test(raw)) return `${raw}.KS`;
+  if (/\.(KS|KQ|US)$/i.test(raw)) return raw.toUpperCase();
+
+  return raw.toUpperCase();
+}
+
+function persistResolvedSymbol(input) {
+  const resolved = normalizeSymbol(input);
+  if (!resolved) return;
+
+  try {
+    sessionStorage.setItem("mh:last_symbol", resolved);
+    localStorage.setItem("mh:last_symbol", resolved);
+  } catch (_) {}
+}
+
+function restorePersistedSymbol() {
+  try {
+    return normalizeSymbol(
+      sessionStorage.getItem("mh:last_symbol") || localStorage.getItem("mh:last_symbol") || ""
+    );
+  } catch (_) {
+    return "";
+  }
+}
+
+let rawSymbol = normalizeSymbol(params.get("symbol") || params.get("code") || "");
 let symbol = rawSymbol || "";
 
 let slugMapPromise = null;
@@ -92,13 +123,29 @@ async function resolveSymbolFromPath() {
 }
 
 async function initializeSymbolFromLocation() {
-  const resolved = await resolveSymbolFromPath();
+  let resolved = normalizeSymbol(rawSymbol || symbol);
+
+  if (!resolved) {
+    resolved = normalizeSymbol(await resolveSymbolFromPath());
+  }
+
+  if (!resolved) {
+    const metaSymbol = document.querySelector('meta[name="mh:symbol"]')?.content || "";
+    const bodySymbol = document.body?.dataset?.symbol || "";
+    resolved = normalizeSymbol(metaSymbol || bodySymbol);
+  }
+
+  if (!resolved && /^\/stock(?:\.html)?$/i.test(window.location.pathname || "")) {
+    resolved = restorePersistedSymbol();
+  }
+
   console.log("DEBUG resolved:", resolved);
   console.log("DEBUG raw/symbol before set:", rawSymbol, symbol);
 
   if (resolved) {
     rawSymbol = resolved;
     symbol = resolved;
+    persistResolvedSymbol(resolved);
     return;
   }
 
@@ -1432,6 +1479,7 @@ async function loadStock() {
     const detail = overview?.detail || {};
 
     canonicalSymbol = String(detail?.symbol || finalSymbol).trim().toUpperCase();
+    persistResolvedSymbol(canonicalSymbol || finalSymbol);
 
     fillOverviewBase(overview, {});
     updateSEO(detail, overview?.meta || {});
@@ -1481,7 +1529,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 (function () {
   try {
     const params = new URLSearchParams(window.location.search);
-    const currentSymbol = params.get("symbol");
+    const currentSymbol = normalizeSymbol(params.get("symbol") || params.get("code") || canonicalSymbol || rawSymbol);
 
     if (!currentSymbol) return;
 
